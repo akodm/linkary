@@ -6,9 +6,16 @@ export const runtime = 'nodejs';
 export async function POST(req: NextRequest) {
   const { url } = await req.json();
   const urlObj = new URL(url);
+  const data = {
+    title: '',
+    description: '',
+    thumbnail: '',
+    safe: true,
+  };
 
   if (urlObj.protocol !== 'https:') {
-    return NextResponse.json({ error: 'Invalid URL' }, { status: 400 });
+    data.safe = false;
+    return NextResponse.json({ data }, { status: 201 });
   }
 
   const { result, error } = await ogs({
@@ -31,13 +38,9 @@ export async function POST(req: NextRequest) {
   });
 
   const { success, ogTitle, ogDescription, ogImage } = result;
-  const data = {
-    title: '',
-    description: '',
-    thumbnail: '',
-  };
 
   if (error || !success) {
+    data.safe = false;
     return NextResponse.json({ data }, { status: 201 });
   }
 
