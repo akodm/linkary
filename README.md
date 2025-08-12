@@ -35,101 +35,86 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## Docker 개발 환경
+## 모니터링 및 분석
 
-이 프로젝트는 Docker를 사용하여 개발 환경을 구성할 수 있습니다.
+이 프로젝트는 Sentry와 Google Analytics를 통합하여 에러 모니터링과 사용자 분석을 제공합니다.
 
-### 환경 변수 설정
+### Sentry 설정
 
-프로젝트 루트에 `.env.development` 파일을 생성하고 필요한 환경 변수를 설정하세요:
+Sentry는 애플리케이션의 에러를 실시간으로 모니터링하고 추적합니다.
 
-```bash
-# .env.development 예시
-NEXT_PUBLIC_API_URL=http://localhost:3000
-DATABASE_URL=your_database_url
-```
-
-### 기본 사용법
+#### 환경 변수 설정
 
 ```bash
-# 개발용 이미지 빌드
-docker build -t linkary-dev .
-
-# 개발용 컨테이너 실행 (기본: 3000:3000)
-docker run -p 3000:3000 linkary-dev
-
-# 다른 포트로 매핑 (예: 로컬 3333 → 컨테이너 3000)
-docker run -p 3333:3000 linkary-dev
+# .env.development 또는 .env.production
+NEXT_PUBLIC_SENTRY_DSN=https://your-dsn@sentry.io/your-project
+SENTRY_ORG=your_organization
+SENTRY_PROJECT=your_project
 ```
 
-### 실시간 개발 (권장)
+#### 사용법
 
-소스 코드 변경사항이 실시간으로 반영되도록 볼륨을 마운트하여 실행:
+```typescript
+import * as Sentry from '@sentry/nextjs';
+
+// 에러 발생 시 Sentry로 전송
+try {
+  // 위험한 코드
+} catch (error) {
+  Sentry.captureException(error);
+}
+
+// 커스텀 에러 발생
+throw new Error('사용자 정의 에러 메시지');
+
+// 성능 측정
+Sentry.startSpan(
+  {
+    name: '사용자 액션',
+    op: 'user.action',
+  },
+  async () => {
+    // 측정할 작업
+  },
+);
+```
+
+### Google Analytics 설정
+
+Google Analytics를 통해 사용자 행동과 웹사이트 성능을 분석할 수 있습니다.
+
+#### 환경 변수 설정
 
 ```bash
-# 소스 코드를 볼륨으로 마운트하여 실시간 개발 (기본: 3000:3000)
-docker run -p 3000:3000 -v $(pwd):/app -v /app/node_modules linkary-dev
-
-# 다른 포트로 매핑 (예: 로컬 3333 → 컨테이너 3000)
-docker run -p 3333:3000 -v $(pwd):/app -v /app/node_modules linkary-dev
+# .env.development 또는 .env.production
+NEXT_PUBLIC_GA_TAG=G-XXXXXXXXXX
 ```
 
-### Docker Compose 사용 (권장)
+#### 자동 추적
 
-프로젝트 루트에 `docker-compose.yml` 파일이 포함되어 있어 더 간편하게 실행할 수 있습니다.
+- ✅ **페이지 뷰** - 자동으로 페이지 방문 추적
+- ✅ **사용자 세션** - 사용자별 세션 정보 수집
+- ✅ **성능 메트릭** - Core Web Vitals 자동 수집
 
-#### 실행 명령어
+#### 커스텀 이벤트 추적
 
-```bash
-# 개발 환경 실행 (포트 3333으로 접속)
-docker-compose up
+```typescript
+// 커스텀 이벤트 전송
+gtag('event', 'button_click', {
+  event_category: 'engagement',
+  event_label: 'signup_button',
+  value: 1,
+});
 
-# 백그라운드 실행
-docker-compose up -d
-
-# 로그 확인
-docker-compose logs -f
-
-# 중지
-docker-compose down
-
-# 이미지 재빌드 후 실행
-docker-compose up --build
+// 사용자 속성 설정
+gtag('config', 'G-XXXXXXXXXX', {
+  custom_map: {
+    custom_parameter: 'custom_value',
+  },
+});
 ```
 
-#### 접속 방법
+### 모니터링 대시보드
 
-- **로컬 포트**: `http://localhost:3333`
-- **컨테이너 포트**: 3000 (내부)
-
-#### 컨테이너 관리
-
-```bash
-# 특정 컨테이너만 중지
-docker stop linkary-dev
-
-# 특정 컨테이너만 제거
-docker rm linkary-dev
-
-# 이미지 확인
-docker images | grep linkary-dev
-
-# 컨테이너 상태 확인
-docker ps | grep linkary-dev
-```
-
-#### 설정 변경
-
-`docker-compose.yml`에서 포트를 변경하려면:
-
-```yaml
-ports:
-  - '8080:3000' # 로컬 8080 포트로 변경
-```
-
-### 개발 환경 특징
-
-- ✅ **핫 리로드** - 소스 코드 변경 시 자동 새로고침
-- ✅ **볼륨 마운트** - 로컬 파일과 컨테이너 동기화
-- ✅ **간단한 설정** - 개발에 필요한 최소한의 구성
-- ✅ **일관된 환경** - 팀원 간 동일한 개발 환경
+- **Sentry**: [https://sentry.io](https://sentry.io) - 에러 및 성능 모니터링
+- **Google Analytics**: [https://analytics.google.com](https://analytics.google.com) - 사용자 행동 분석
