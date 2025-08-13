@@ -15,7 +15,9 @@ export const linkView = pgTable('link_view', {
       onDelete: 'cascade',
     })
     .notNull(),
-  createdAt: timestamp('created_at').notNull().defaultNow(),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
 });
 
 export const linkViewRelations = relations(linkView, ({ one }) => ({

@@ -21,8 +21,12 @@ export const link = pgTable('link', {
   tags: text('tags').notNull().default('[]'),
   verified: boolean('verified').notNull().default(false),
   view: integer('view').notNull().default(0),
-  createdAt: timestamp('created_at').notNull().defaultNow(),
-  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
   userId: integer('user_id')
     .references(() => users.id, {
       onDelete: 'cascade',

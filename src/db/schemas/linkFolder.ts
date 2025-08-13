@@ -10,8 +10,12 @@ export const linkFolder = pgTable('link_folder', {
     .unique()
     .default(sql`gen_random_uuid()`),
   name: text('name').notNull().default(''),
-  createdAt: timestamp('created_at').notNull().defaultNow(),
-  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
   userId: integer('user_id')
     .references(() => users.id, {
       onDelete: 'cascade',

@@ -15,8 +15,12 @@ export const users = pgTable('users', {
     .default(sql`gen_random_uuid()`),
   provider: text('provider').notNull().default(''),
   providerId: text('provider_id').notNull().default(''),
-  createdAt: timestamp('created_at').notNull().defaultNow(),
-  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
 });
 
 export const usersRelations = relations(users, ({ many }) => ({

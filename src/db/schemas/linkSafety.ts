@@ -13,7 +13,9 @@ export const linkSafety = pgTable('link_safety', {
   id: serial('id').primaryKey(),
   safe: boolean('safe').notNull().default(false),
   reason: text('reason').notNull().default(''),
-  createdAt: timestamp('created_at').notNull().defaultNow(),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
   linkId: integer('link_id')
     .references(() => link.id, {
       onDelete: 'cascade',
