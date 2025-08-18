@@ -24,8 +24,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  intercept,
 }: Readonly<{
   children: React.ReactNode;
+  intercept: React.ReactNode;
 }>) {
   return (
     <html lang="ko">
@@ -33,6 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {intercept}
         <SpeedInsights />
         <Script id="ga-stub" strategy="beforeInteractive">
           {`
