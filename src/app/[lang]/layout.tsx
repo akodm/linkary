@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Geist, Geist_Mono } from 'next/font/google';
-import '@/app/[lang]/globals.css';
+import '@/css/globals.css';
 import Script from 'next/script';
+import { allMessages } from '@/appRouterI18n';
+import { LinguiClientProvider } from '@/components/LinguiClientProvider';
 
 const { NEXT_PUBLIC_GA_TAG = '' } = process.env;
 
@@ -38,17 +40,22 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        {intercept}
-        <SpeedInsights />
-        <Script id="ga-stub" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${NEXT_PUBLIC_GA_TAG}');
-          `}
-        </Script>
+        <LinguiClientProvider
+          initialLocale={lang}
+          initialMessages={allMessages[lang]}
+        >
+          {children}
+          {intercept}
+          <SpeedInsights />
+          <Script id="ga-stub" strategy="beforeInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${NEXT_PUBLIC_GA_TAG}');
+            `}
+          </Script>
+        </LinguiClientProvider>
       </body>
       <GoogleAnalytics gaId={NEXT_PUBLIC_GA_TAG} />
     </html>

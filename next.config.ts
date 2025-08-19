@@ -3,6 +3,19 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  experimental: {
+    swcPlugins: [['@lingui/swc-plugin', {}]],
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.po$/,
+      use: {
+        loader: '@lingui/loader',
+      },
+    });
+
+    return config;
+  },
 };
 
 export default withSentryConfig(nextConfig, {

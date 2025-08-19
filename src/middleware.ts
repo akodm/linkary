@@ -1,19 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Negotiator from 'negotiator';
+import linguiConfig from 'lingui.config';
 
-const LOCALES = ['en', 'ko', 'cn', 'jp', 'es'];
+const { locales } = linguiConfig;
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const pathnameHasLocale = LOCALES.some(
+  const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}`) || pathname === `/${locale}`,
   );
 
-  console.log(pathnameHasLocale, pathname);
-
-  if (pathnameHasLocale) {
-    return NextResponse.next();
-  }
+  if (pathnameHasLocale) return;
 
   const locale = getLocale(request.headers);
 
@@ -26,9 +23,9 @@ function getLocale(requestHeaders: Headers): string {
   const langHeader = requestHeaders.get('accept-language') || undefined;
   const languages = new Negotiator({
     headers: { 'accept-language': langHeader },
-  }).languages(LOCALES.slice());
+  }).languages(locales.slice());
 
-  const activeLocale = languages[0] || LOCALES[0] || 'en';
+  const activeLocale = languages[0] || locales[0] || 'en';
 
   return activeLocale;
 }
