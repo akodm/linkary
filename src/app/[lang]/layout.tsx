@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Geist, Geist_Mono } from 'next/font/google';
-import '@/app/globals.css';
+import '@/app/[lang]/globals.css';
 import Script from 'next/script';
 
 const { NEXT_PUBLIC_GA_TAG = '' } = process.env;
@@ -22,15 +22,19 @@ export const metadata: Metadata = {
   description: 'Linkary is a platform for creating and sharing links.',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   intercept,
+  params,
 }: Readonly<{
   children: React.ReactNode;
   intercept: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
+
   return (
-    <html lang="ko">
+    <html lang={lang}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
