@@ -22,5 +22,5 @@ export default function I18nLink({
     return href;
   }, [href, i18n.locale]);
 
-  return <Link {...props} href={parseHref} />;
+  return <Link {...props} href={parseHref} locale={i18n.locale} />;
 }
