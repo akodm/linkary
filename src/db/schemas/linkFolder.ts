@@ -5,22 +5,23 @@ import { link } from '@/db/schemas/link';
 
 export const linkFolder = pgTable('link_folder', {
   id: serial('id').primaryKey(),
+  // 폴더 고유 식별자
   slug: text('slug')
     .notNull()
     .unique()
     .default(sql`gen_random_uuid()`),
-  name: text('name').notNull().default(''),
+  name: text('name').notNull().default(''), // 폴더 이름
+  userId: integer('user_id')
+    .references(() => users.id, {
+      onDelete: 'cascade',
+    })
+    .notNull(),
   createdAt: timestamp('created_at', { withTimezone: true })
     .notNull()
     .defaultNow(),
   updatedAt: timestamp('updated_at', { withTimezone: true })
     .notNull()
     .defaultNow(),
-  userId: integer('user_id')
-    .references(() => users.id, {
-      onDelete: 'cascade',
-    })
-    .notNull(),
 });
 
 export const linkFolderRelations = relations(linkFolder, ({ one, many }) => ({

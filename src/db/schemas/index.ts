@@ -5,5 +5,15 @@ import { link } from '@/db/schemas/link';
 import { linkFolder } from '@/db/schemas/linkFolder';
 import { linkSafety } from '@/db/schemas/linkSafety';
 import { linkView } from '@/db/schemas/linkView';
+import { linkReport } from '@/db/schemas/linkReport';
 
-export { users, api, userApi, link, linkFolder, linkSafety, linkView };
+export {
+  users,
+  api,
+  userApi,
+  link,
+  linkFolder,
+  linkSafety,
+  linkView,
+  linkReport,
+};

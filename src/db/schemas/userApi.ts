@@ -5,14 +5,9 @@ import { api } from '@/db/schemas/api';
 
 export const userApi = pgTable('user_api', {
   id: serial('id').primaryKey(),
-  usage: integer('usage').notNull().default(0),
-  cumulativeUsage: integer('cumulative_usage').notNull().default(0),
-  createdAt: timestamp('created_at', { withTimezone: true })
-    .notNull()
-    .defaultNow(),
-  updatedAt: timestamp('updated_at', { withTimezone: true })
-    .notNull()
-    .defaultNow(),
+  usage: integer('usage').notNull().default(0), // 현재 사용량 (사용량 초기화 시 0으로 초기화)
+  cumulativeUsage: integer('cumulative_usage').notNull().default(0), // 누적 사용량
+  // 사용자
   userId: integer('user_id')
     .references(() => users.id, {
       onDelete: 'cascade',
@@ -23,6 +18,12 @@ export const userApi = pgTable('user_api', {
       onDelete: 'cascade',
     })
     .notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
 });
 
 export const userApiRelations = relations(userApi, ({ one }) => ({
