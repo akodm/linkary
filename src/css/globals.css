@@ -120,3 +120,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  @apply font-sans;
+}
+
+html,
+body {
+  @apply h-full w-full;
+}

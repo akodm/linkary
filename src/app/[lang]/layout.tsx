@@ -4,6 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { Geist, Geist_Mono } from 'next/font/google';
 import '@/css/globals.css';
 import Script from 'next/script';
+import { ThemeProvider } from 'next-themes';
 import { allMessages } from '@/appRouterI18n';
 import { LinguiClientProvider } from '@/components/LinguiClientProvider';
 
@@ -36,26 +37,33 @@ export default async function RootLayout({
   const { lang } = await params;
 
   return (
-    <html lang={lang}>
+    <html lang={lang} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LinguiClientProvider
-          initialLocale={lang}
-          initialMessages={allMessages[lang]}
+        <ThemeProvider
+          enableSystem
+          disableTransitionOnChange
+          attribute="class"
+          defaultTheme="system"
         >
-          {children}
-          {intercept}
-          <SpeedInsights />
-          <Script id="ga-stub" strategy="beforeInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${NEXT_PUBLIC_GA_TAG}');
-            `}
-          </Script>
-        </LinguiClientProvider>
+          <LinguiClientProvider
+            initialLocale={lang}
+            initialMessages={allMessages[lang]}
+          >
+            {children}
+            {intercept}
+            <SpeedInsights />
+            <Script id="ga-stub" strategy="beforeInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${NEXT_PUBLIC_GA_TAG}');
+              `}
+            </Script>
+          </LinguiClientProvider>
+        </ThemeProvider>
       </body>
       <GoogleAnalytics gaId={NEXT_PUBLIC_GA_TAG} />
     </html>

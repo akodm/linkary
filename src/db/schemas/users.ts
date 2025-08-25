@@ -18,6 +18,7 @@ export const users = pgTable('users', {
     .default(sql`gen_random_uuid()`),
   provider: text('provider').notNull().default(''), // 사용자 제공자 (google, github 등)
   providerId: text('provider_id').notNull().default(''), // 사용자 제공자 고유 식별자
+  locale: text('locale').notNull().default('en'), // 사용자 언어
   createdAt: timestamp('created_at', { withTimezone: true })
     .notNull()
     .defaultNow(),
