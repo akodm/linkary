@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Geist, Geist_Mono } from 'next/font/google';
-import '@/css/globals.css';
+import 'src/css/globals.css';
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
-import { allMessages } from '@/appRouterI18n';
-import { LinguiClientProvider } from '@/components/LinguiClientProvider';
+import { allMessages } from 'src/appRouterI18n';
+import { LinguiClientProvider } from 'src/components/LinguiClientProvider';
 
 const { NEXT_PUBLIC_GA_TAG = '' } = process.env;
 
