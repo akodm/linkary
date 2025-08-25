@@ -1,3 +1,5 @@
+import AsideForm from '@/components/auth/AsideForm';
+
 export default function InterceptAuthPage() {
-  return <div>InterceptAuthPage</div>;
+  return <AsideForm />;
 }
