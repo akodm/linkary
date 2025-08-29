@@ -25,6 +25,22 @@ export const metadata: Metadata = {
   description: 'Linkary is a platform for creating and sharing links.',
   icons: {
     icon: '/favicon.ico',
+    apple: '/icons/apple-touch-icon.png',
+  },
+  manifest: '/manifest.json',
+  themeColor: '#000000',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Linkary',
+  },
+  formatDetection: {
+    telephone: false,
   },
 };
 
