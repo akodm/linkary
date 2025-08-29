@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Viewport } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -20,28 +20,40 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'Linkary',
-  description: 'Linkary is a platform for creating and sharing links.',
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/icons/apple-touch-icon.png',
-  },
-  manifest: '/manifest.json',
+export const generateMetadata = async ({
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  intercept: React.ReactNode;
+  params: Promise<{ lang: string }>;
+}>) => {
+  const { lang } = await params;
+  const manifest = await import(`public/manifest-${lang}.json`);
+
+  return {
+    title: manifest.name,
+    description: manifest.description,
+    favicon: '/favicon.ico',
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/icons/apple-touch-icon.png',
+    },
+    appleWebApp: {
+      title: manifest.name,
+      capable: true,
+      statusBarStyle: 'default',
+    },
+    formatDetection: {
+      telephone: false,
+    },
+  };
+};
+
+export const viewport: Viewport = {
   themeColor: '#000000',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'Linkary',
-  },
-  formatDetection: {
-    telephone: false,
-  },
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default async function RootLayout({
@@ -57,6 +69,9 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href={`/manifest-${lang}.json`} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

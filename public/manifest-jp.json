@@ -1,0 +1,51 @@
+{
+  "name": "Linkary",
+  "short_name": "Linkary",
+  "description": "Linkaryは重要なリンクを体系的に管理し、チームメンバーと簡単に共有できるスマートなプラットフォームです。",
+  "lang": "jp",
+  "dir": "auto",
+  "start_url": "/jp",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "icons": [
+    { "src": "/icons/icon-48x48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/icons/icon-72x72.png", "sizes": "72x72", "type": "image/png" },
+    { "src": "/icons/icon-96x96.png", "sizes": "96x96", "type": "image/png" },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Linkary デスクトップ表示"
+    },
+    {
+      "src": "/screenshots/mobile-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Linkary モバイル表示"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "prefer_related_applications": false
+}

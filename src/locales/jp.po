@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/[lang]/page.tsx:22
-msgid "Test Hello World"
-msgstr "Test Hello World jp"
+#: src/components/Header.tsx:40
+msgid "Move to Auth Page"
+msgstr "ログインページへ移動"
+
+#: src/components/Header.tsx:53
+msgid "Select Language"
+msgstr "言語を選択"

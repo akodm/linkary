@@ -1,1 +1,1 @@
-/*eslint-disable*/module.exports={messages:JSON.parse("{\"6ci6cq\":[\"Test Hello World cn\"]}")};
+/*eslint-disable*/module.exports={messages:JSON.parse("{\"MHm/fc\":[\"选择语言\"],\"TMN0Vi\":[\"前往登录页面\"]}")};
