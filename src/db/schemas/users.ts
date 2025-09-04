@@ -16,6 +16,7 @@ export const users = pgTable('users', {
     .notNull()
     .unique()
     .default(sql`gen_random_uuid()`),
+  email: text('email').notNull().default(''), // 사용자 이메일 (google email, github email 등)
   provider: text('provider').notNull().default(''), // 사용자 제공자 (google, github 등)
   providerId: text('provider_id').notNull().default(''), // 사용자 제공자 고유 식별자
   locale: text('locale').notNull().default('en'), // 사용자 언어

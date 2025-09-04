@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import 'src/css/globals.css';
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
+import { Analytics } from '@vercel/analytics/next';
 import { allMessages } from 'src/appRouterI18n';
 import { LinguiClientProvider } from 'src/components/LinguiClientProvider';
 
@@ -96,6 +97,7 @@ export default async function RootLayout({
                 gtag('config', '${NEXT_PUBLIC_GA_TAG}');
               `}
             </Script>
+            <Analytics />
           </LinguiClientProvider>
         </ThemeProvider>
       </body>
