@@ -1,4 +1,5 @@
-import Header from 'src/components/Header';
+import HeaderWeb from '@/components/Header.Web';
+import HeaderMobile from '@/components/Header.Mobile';
 import Footer from 'src/components/Footer';
 import MainProvider from 'src/components/MainProvider';
 import Banner from 'src/components/home/Banner';
@@ -10,7 +11,8 @@ import Contact from 'src/components/home/Contact';
 export default function HomeLayout() {
   return (
     <>
-      <Header />
+      <HeaderWeb />
+      <HeaderMobile />
       <MainProvider>
         <Banner />
         <Description />
