@@ -4,7 +4,7 @@ import { HTMLAttributes } from 'react';
 import clsx from 'clsx';
 import { Button } from 'src/components/ui/button';
 import { useLingui } from '@lingui/react';
-import LanguageButton from '@/components/common/LanguageButton';
+import LanguageButton from '@/components/common/LanguageButton.Web';
 import { colorPresets } from '@/css/colors';
 import Logo from 'src/components/common/Logo';
 import useI18nRouter from '@/hooks/useI18nRouter';

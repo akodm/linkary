@@ -1,7 +1,7 @@
 'use client';
 
 import { useLingui } from '@lingui/react';
-import { CheckIcon, LanguagesIcon } from 'lucide-react';
+import { CheckIcon } from 'lucide-react';
 import { ComponentProps, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import {
@@ -48,22 +48,13 @@ export default function LanguageButton({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild className="hidden md:block">
+      <DropdownMenuTrigger asChild>
         <Button
           variant="secondary"
-          className={twMerge('hidden md:block cursor-pointer', className)}
+          className={twMerge('cursor-pointer', className)}
           {...props}
         >
           {i18n.t('Select Language')}
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuTrigger asChild className="block md:hidden">
-        <Button
-          variant="secondary"
-          className={twMerge('block md:hidden cursor-pointer', className)}
-          {...props}
-        >
-          <LanguagesIcon />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
