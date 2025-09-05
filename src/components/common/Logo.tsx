@@ -1,3 +1,29 @@
+'use client';
+
+import { useLingui } from '@lingui/react';
+import Image from 'next/image';
+
 export default function Logo() {
-  return <span className="font-mono text-base/[1.2] font-medium">Linkary</span>;
+  const { i18n } = useLingui();
+  return (
+    <div className="flex flex-row items-center gap-2">
+      <Image
+        width={72}
+        height={72}
+        src="/icons/icon-72x72.png"
+        alt={i18n.t('Logo')}
+        className="w-9 h-9 block md:hidden"
+      />
+      <Image
+        width={72}
+        height={72}
+        src="/icons/icon-72x72.png"
+        alt={i18n.t('Logo')}
+        className="w-12 h-12 hidden md:block"
+      />
+      <span className="font-mono text-sm/[1.2] md:text-base/[1.2] font-medium">
+        {'Linkary'}
+      </span>
+    </div>
+  );
 }

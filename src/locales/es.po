@@ -14,36 +14,84 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/Header.Web.tsx:65
-msgid "한국어"
-msgstr "한국어"
+#: src/components/common/Logo.tsx:14
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "Logotipo"
 
 #. js-lingui-explicit-id
-#: src/components/Header.Web.tsx:68
-msgid "日本語"
-msgstr "日本語"
+#: src/components/home/Banner.tsx:21
+msgid "Banner"
+msgstr "Banner"
 
 #. js-lingui-explicit-id
-#: src/components/Header.Web.tsx:71
-msgid "Español"
-msgstr "Español"
+#: src/components/home/Banner.tsx:26
+msgid "Save links and"
+msgstr "Guarda enlaces"
 
 #. js-lingui-explicit-id
-#: src/components/Header.Web.tsx:74
-msgid "中文"
-msgstr "中文"
+#: src/components/home/Banner.tsx:28
+msgid "share them."
+msgstr "y compártelos"
 
 #. js-lingui-explicit-id
-#: src/components/Header.Web.tsx:56
-msgid "Select Language"
-msgstr "Seleccionar idioma"
+#: src/components/home/Banner.tsx:31
+msgid "A platform to organize and view your important links at a glance"
+msgstr "Una plataforma para organizar y ver tus enlaces importantes de un vistazo"
 
 #. js-lingui-explicit-id
-#: src/components/Header.Web.tsx:61
+#: src/components/home/Banner.tsx:42
+#: src/components/home/Banner.tsx:51
+msgid "Get started"
+msgstr "Comenzar"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:43
+#: src/components/common/Header.Web.tsx:43
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:27
 msgid "English"
 msgstr "English"
 
 #. js-lingui-explicit-id
-#: src/components/Header.Web.tsx:82
-msgid "Sign in"
+#: src/components/common/LanguageButton.tsx:31
+msgid "한국어"
+msgstr "한국어"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:35
+msgid "日本語"
+msgstr "日本語"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:39
+msgid "Español"
+msgstr "Español"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:43
+msgid "中文"
+msgstr "中文"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:57
+msgid "Select Language"
+msgstr "Seleccionar idioma"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:32
+msgid "Login"
 msgstr "Iniciar sesión"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:33
+msgid "Login to your account"
+msgstr "Inicia sesión en tu cuenta"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:40
+msgid "Close"
+msgstr "Cerrar"
