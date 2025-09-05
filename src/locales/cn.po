@@ -13,10 +13,37 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/Header.tsx:40
-msgid "Move to Auth Page"
-msgstr "前往登录页面"
+#. js-lingui-explicit-id
+#: src/components/Header.Web.tsx:65
+msgid "한국어"
+msgstr "한국어"
 
-#: src/components/Header.tsx:53
+#. js-lingui-explicit-id
+#: src/components/Header.Web.tsx:68
+msgid "日本語"
+msgstr "日本語"
+
+#. js-lingui-explicit-id
+#: src/components/Header.Web.tsx:71
+msgid "Español"
+msgstr "Español"
+
+#. js-lingui-explicit-id
+#: src/components/Header.Web.tsx:74
+msgid "中文"
+msgstr "中文"
+
+#. js-lingui-explicit-id
+#: src/components/Header.Web.tsx:56
 msgid "Select Language"
 msgstr "选择语言"
+
+#. js-lingui-explicit-id
+#: src/components/Header.Web.tsx:61
+msgid "English"
+msgstr "English"
+
+#. js-lingui-explicit-id
+#: src/components/Header.Web.tsx:82
+msgid "Sign in"
+msgstr "登录"
