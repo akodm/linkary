@@ -1,4 +1,4 @@
-import { cva } from 'class-variance-authority';
+import { cva, VariantProps } from 'class-variance-authority';
 
 export const colorPresets = cva('outline-none cursor-pointer', {
   variants: {
@@ -30,3 +30,5 @@ export const colorPresets = cva('outline-none cursor-pointer', {
     },
   },
 });
+
+export type ColorPreset = VariantProps<typeof colorPresets>;

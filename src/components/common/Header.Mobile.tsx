@@ -28,7 +28,7 @@ export default function HeaderMobile({
         className,
       )}
     >
-      <div className="flex flex-row justify-between items-center w-full max-w-320 mx-auto p-4">
+      <div className="flex flex-row justify-between items-center w-full max-w-320 mx-auto p-2">
         <div className="flex flex-row items-center gap-2">
           <Logo />
         </div>

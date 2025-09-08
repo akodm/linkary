@@ -2,6 +2,7 @@
 
 import { colorPresets } from '@/css/colors';
 import { useLingui } from '@lingui/react';
+import { ArrowDownIcon } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from 'src/components/ui/button';
 import { twMerge } from 'tailwind-merge';
@@ -10,10 +11,7 @@ export default function Banner() {
   const { i18n } = useLingui();
 
   return (
-    <section
-      id="banner"
-      className="flex justify-center items-center w-full h-auto relative"
-    >
+    <section className="flex justify-center items-center w-full h-auto relative">
       <Image
         width={1280}
         height={174}
@@ -27,7 +25,7 @@ export default function Banner() {
           <span>&nbsp;</span>
           <span className="text-blue-500">{i18n.t('share them.')}</span>
         </h1>
-        <h2 className="text-sm md:text-xl font-medium text-gray-500">
+        <h2 className="text-sm md:text-xl font-medium text-gray-500 break-keep">
           {i18n.t(
             'A platform to organize and view your important links at a glance',
           )}
@@ -51,6 +49,10 @@ export default function Banner() {
           {i18n.t('Get started')}
         </Button>
       </div>
+      <ArrowDownIcon
+        size={15}
+        className="text-gray-700 absolute bottom-1 md:bottom-2 animate-bounce"
+      />
     </section>
   );
 }
