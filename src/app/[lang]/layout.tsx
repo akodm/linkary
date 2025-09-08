@@ -12,8 +12,8 @@ const {
   NEXT_PUBLIC_GA_TAG = '',
   NEXT_PUBLIC_BASE_URL = '',
   NEXT_PUBLIC_VERCEL_URL = '',
-  NEXT_PUBLIC_GOOGLE_VERIFICATION = '',
-  NEXT_PUBLIC_NAVER_VERIFICATION = '',
+  NEXT_PUBLIC_GOOGLE_VERIFICATION = '', // TODO: 구글 서치 콘솔 등록 시
+  NEXT_PUBLIC_NAVER_VERIFICATION = '', // TODO: 네이버 서치 콘솔 등록 시
 } = process.env;
 
 const geistSans = Geist({
