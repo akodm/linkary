@@ -3,7 +3,5 @@ export default function MainProvider({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <main className="flex flex-col w-full h-full relative">{children}</main>
-  );
+  return <main className="flex flex-col w-full min-h-full">{children}</main>;
 }

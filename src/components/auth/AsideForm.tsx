@@ -36,7 +36,7 @@ export default function AsideForm() {
           <Form />
         </div>
         <SheetFooter>
-          <Button variant="outline" onClick={onBack}>
+          <Button variant="outline" className="cursor-pointer" onClick={onBack}>
             {i18n.t('Close')}
           </Button>
         </SheetFooter>

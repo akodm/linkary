@@ -14,72 +14,191 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:14
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "Logotipo"
+#: src/components/home/Guest.tsx:16
+msgid "Use as Guest"
+msgstr "Usar como Invitado"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:21
+#: src/components/home/Guest.tsx:28
+msgid "Sign Up"
+msgstr "Registrarse"
+
+#. js-lingui-explicit-id
+#: src/components/common/ProvidedFunctionCard.tsx:77
+msgid "Recommended"
+msgstr "Recomendado"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:13
+msgid "Guest User"
+msgstr "Usuario Invitado"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:14
+msgid "Start right away without signing up"
+msgstr "Comienza de inmediato sin registrarte"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:19
+#: src/components/home/Guest.tsx:31
+msgid "Unlimited Link Saving"
+msgstr "Guardado de Enlaces (Ilimitado)"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:25
+msgid "Member User"
+msgstr "Usuario Miembro"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:26
+msgid "Access to all features"
+msgstr "Acceso a todas las funciones"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:35
+msgid "Database Storage"
+msgstr "Almacenamiento en Base de Datos"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:33
+#: src/components/home/Guest.tsx:39
+msgid "Threat Link Check"
+msgstr "Verificación de Enlaces Amenazantes"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:40
+#: src/components/home/Guest.tsx:43
+msgid "AI Link Recommendations"
+msgstr "Recomendaciones de Enlaces con IA"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:47
+msgid "Share Links with the Community"
+msgstr "Compartir Enlaces con la Comunidad"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:61
+#: src/components/home/Guest.tsx:63
+msgid "Log in to access more features."
+msgstr "Inicia sesión para acceder a <span>más funciones</span>."
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:70
+msgid "You can use it without signing up, but logging in lets you try more features for free."
+msgstr "Puedes usarlo sin registrarte, pero iniciar sesión te permite probar más funciones gratis."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:19
+msgid "Smart Link Management"
+msgstr "Gestión Inteligente de Enlaces"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:20
+msgid "Organize your links by folders and view them at a glance."
+msgstr "Organiza tus enlaces por carpetas y visualízalos de un vistazo."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:26
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "Generación Automática de Miniaturas y Metadatos"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:27
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "Genera automáticamente miniaturas, títulos y descripciones breves para los enlaces que agregues."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:34
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "Verifica si un enlace es seguro usando la API de Google Web Risk."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:41
+msgid "Get personalized link suggestions powered by AI."
+msgstr "Obtén sugerencias de enlaces personalizadas impulsadas por IA."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:53
+msgid "Convenient and Secure Link Management"
+msgstr "Gestión de Enlaces Conveniente y Segura"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:56
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "Visualiza todos tus enlaces guardados de un vistazo. Verifica la seguridad de cada enlace, recibe recomendaciones personalizadas y permite que el sistema complete automáticamente los detalles para facilitar su búsqueda."
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:19
 msgid "Banner"
 msgstr "Banner"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:26
+#: src/components/home/Banner.tsx:24
 msgid "Save links and"
 msgstr "Guarda enlaces"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:28
+#: src/components/home/Banner.tsx:26
 msgid "share them."
 msgstr "y compártelos"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
+#: src/components/home/Banner.tsx:29
 msgid "A platform to organize and view your important links at a glance"
 msgstr "Una plataforma para organizar y ver tus enlaces importantes de un vistazo"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:42
-#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:40
+#: src/components/home/Banner.tsx:49
 msgid "Get started"
 msgstr "Comenzar"
+
+#. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+#: src/components/common/Logo.tsx:28
+msgid "Logo"
+msgstr "Logotipo"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.Mobile.tsx:27
+#: src/components/common/LanguageButton.Web.tsx:27
+msgid "English"
+msgstr "English"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.Mobile.tsx:31
+#: src/components/common/LanguageButton.Web.tsx:31
+msgid "한국어"
+msgstr "한국어"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.Mobile.tsx:35
+#: src/components/common/LanguageButton.Web.tsx:35
+msgid "日本語"
+msgstr "日本語"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.Mobile.tsx:39
+#: src/components/common/LanguageButton.Web.tsx:39
+msgid "Español"
+msgstr "Español"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.Mobile.tsx:43
+#: src/components/common/LanguageButton.Web.tsx:43
+msgid "中文"
+msgstr "中文"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.Web.tsx:57
+msgid "Select Language"
+msgstr "Seleccionar idioma"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.Mobile.tsx:43
 #: src/components/common/Header.Web.tsx:43
 msgid "Sign in"
 msgstr "Iniciar sesión"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:27
-msgid "English"
-msgstr "English"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:31
-msgid "한국어"
-msgstr "한국어"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:35
-msgid "日本語"
-msgstr "日本語"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:39
-msgid "Español"
-msgstr "Español"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:43
-msgid "中文"
-msgstr "中文"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:57
-msgid "Select Language"
-msgstr "Seleccionar idioma"
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:32

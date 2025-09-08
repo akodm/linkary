@@ -20,7 +20,7 @@ export default function HeaderMobile({
     <header
       {...props}
       className={clsx(
-        'block md:hidden',
+        'block md:hidden w-full',
         'border-b border-border',
         'backdrop-blur-sm bg-white/50 dark:bg-gray-900/50',
         'supports-[backdrop-filter]:bg-white/30 supports-[backdrop-filter]:dark:bg-gray-900/30',

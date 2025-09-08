@@ -19,7 +19,7 @@ export default function Banner() {
         alt={i18n.t('Banner')}
         className="w-full h-auto min-h-178.5 object-cover opacity-60"
       />
-      <div className="flex flex-col items-center gap-4 px-2 md:px-4 text-center absolute">
+      <div className="flex flex-col items-center gap-2 md:gap-4 px-2 md:px-4 text-center absolute">
         <h1 className="text-2xl md:text-6xl font-bold">
           <span>{i18n.t('Save links and')}</span>
           <span>&nbsp;</span>
