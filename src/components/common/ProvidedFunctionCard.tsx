@@ -11,9 +11,9 @@ const containerCva = cva(
   {
     variants: {
       isGuest: {
-        true: 'bg-gray-100 border-gray-200 [&_h4]:text-gray-700 [&_button]:bg-gray-200 [&_button]:text-black',
+        true: 'bg-gray-100 border-gray-200 [&_h4]:text-gray-700 [&_button]:bg-gray-200 [&_button]:text-black [&_button]:hover:bg-gray-300',
         false:
-          'bg-white border-blue-500 [&_h4]:text-blue-500 [&_button]:bg-blue-500 [&_button]:text-white',
+          'bg-white border-blue-500 [&_h4]:text-blue-500 [&_button]:bg-blue-500 [&_button]:text-white [&_button]:hover:bg-blue-600',
       },
     },
     defaultVariants: {
@@ -57,6 +57,7 @@ interface ProvidedFunctionCardProps {
   isGuest?: boolean;
   message: string;
   providedContent: ProvidedFunctionCardProvidedContent[];
+  onClick?: () => void;
 }
 
 export default function ProvidedFunctionCard({
@@ -65,6 +66,7 @@ export default function ProvidedFunctionCard({
   isGuest = false,
   message,
   providedContent,
+  onClick,
 }: ProvidedFunctionCardProps) {
   const { i18n } = useLingui();
 
@@ -100,7 +102,9 @@ export default function ProvidedFunctionCard({
           })}
         </div>
       </div>
-      <Button className="w-full mt-4 md:mt-6">{message}</Button>
+      <Button className="w-full mt-4 md:mt-6 cursor-pointer" onClick={onClick}>
+        {message}
+      </Button>
     </div>
   );
 }

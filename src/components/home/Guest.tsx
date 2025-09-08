@@ -3,9 +3,11 @@
 import { Trans, useLingui } from '@lingui/react';
 import { useMemo } from 'react';
 import ProvidedFunctionCard from 'src/components/common/ProvidedFunctionCard';
+import useI18nRouter from '@/hooks/useI18nRouter';
 
 export default function Guest() {
   const { i18n } = useLingui();
+  const { push } = useI18nRouter();
 
   const functionContents = useMemo(
     () => [
@@ -20,6 +22,7 @@ export default function Guest() {
             checked: false,
           },
         ],
+        onClick: () => push('/user'),
       },
       {
         title: i18n.t('Member User'),
@@ -48,9 +51,10 @@ export default function Guest() {
             checked: true,
           },
         ],
+        onClick: () => push('/auth'),
       },
     ],
-    [i18n],
+    [i18n, push],
   );
 
   return (
