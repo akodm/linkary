@@ -14,80 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:16
-msgid "Use as Guest"
-msgstr "게스트로 사용하기"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:28
-msgid "Sign Up"
-msgstr "회원가입하기"
-
-#. js-lingui-explicit-id
-#: src/components/common/ProvidedFunctionCard.tsx:77
-msgid "Recommended"
-msgstr "추천"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:13
-msgid "Guest User"
-msgstr "게스트 사용자"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:14
-msgid "Start right away without signing up"
-msgstr "회원가입 없이 바로 시작하기"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:19
-#: src/components/home/Guest.tsx:31
-msgid "Unlimited Link Saving"
-msgstr "링크 저장 (무제한)"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:25
-msgid "Member User"
-msgstr "회원 사용자"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:26
-msgid "Access to all features"
-msgstr "모든 기능 이용 가능"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:35
-msgid "Database Storage"
-msgstr "데이터베이스 저장"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:33
-#: src/components/home/Guest.tsx:39
-msgid "Threat Link Check"
-msgstr "위협 링크 확인"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:40
-#: src/components/home/Guest.tsx:43
-msgid "AI Link Recommendations"
-msgstr "AI 링크 추천"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:47
-msgid "Share Links with the Community"
-msgstr "커뮤니티에 링크 공유"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:61
-#: src/components/home/Guest.tsx:63
-msgid "Log in to access more features."
-msgstr "로그인하여 <span>더 많은 기능</span>을 이용하세요."
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:70
-msgid "You can use it without signing up, but logging in lets you try more features for free."
-msgstr "회원가입 없이도 사용할 수 있지만, 로그인하면 더 많은 기능을 무료로 이용할 수 있습니다."
-
-#. js-lingui-explicit-id
 #: src/components/home/Description.tsx:19
 msgid "Smart Link Management"
 msgstr "스마트한 링크 관리"
@@ -108,9 +34,21 @@ msgid "Automatically generates thumbnails, titles, and short descriptions for yo
 msgstr "추가한 링크의 썸네일, 제목, 간략 설명 등을 자동으로 생성해줍니다."
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:33
+#: src/components/home/Guest.tsx:42
+msgid "Threat Link Check"
+msgstr "위협 링크 확인"
+
+#. js-lingui-explicit-id
 #: src/components/home/Description.tsx:34
 msgid "Verify whether a link is safe using the Google Web Risk API."
 msgstr "링크가 안전한지 Google Web Risk API 를 통해 확인할 수 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:40
+#: src/components/home/Guest.tsx:46
+msgid "AI Link Recommendations"
+msgstr "AI 링크 추천"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:41
@@ -160,6 +98,74 @@ msgid "Logo"
 msgstr "로고"
 
 #. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:15
+msgid "Guest User"
+msgstr "게스트 사용자"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:16
+msgid "Start right away without signing up"
+msgstr "회원가입 없이 바로 시작하기"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:18
+msgid "Use as Guest"
+msgstr "게스트로 사용하기"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:21
+#: src/components/home/Guest.tsx:34
+msgid "Unlimited Link Saving"
+msgstr "링크 저장 (무제한)"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:28
+msgid "Member User"
+msgstr "회원 사용자"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:29
+msgid "Access to all features"
+msgstr "모든 기능 이용 가능"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:31
+msgid "Sign Up"
+msgstr "회원가입하기"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:38
+msgid "Database Storage"
+msgstr "데이터베이스 저장"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:50
+msgid "Share Links with the Community"
+msgstr "커뮤니티에 링크 공유"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:65
+#: src/components/home/Guest.tsx:67
+msgid "Log in to access more features."
+msgstr "로그인하여 <span>더 많은 기능</span>을 이용하세요."
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:74
+msgid "You can use it without signing up, but logging in lets you try more features for free."
+msgstr "회원가입 없이도 사용할 수 있지만, 로그인하면 더 많은 기능을 무료로 이용할 수 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/common/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "추천"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:43
+#: src/components/common/Header.Web.tsx:43
+msgid "Sign in"
+msgstr "로그인"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:27
 #: src/components/common/LanguageButton.Web.tsx:27
 msgid "English"
@@ -193,12 +199,6 @@ msgstr "中文"
 #: src/components/common/LanguageButton.Web.tsx:57
 msgid "Select Language"
 msgstr "언어 선택"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:43
-#: src/components/common/Header.Web.tsx:43
-msgid "Sign in"
-msgstr "로그인"
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:32

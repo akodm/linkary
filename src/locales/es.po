@@ -14,80 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:16
-msgid "Use as Guest"
-msgstr "Usar como Invitado"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:28
-msgid "Sign Up"
-msgstr "Registrarse"
-
-#. js-lingui-explicit-id
-#: src/components/common/ProvidedFunctionCard.tsx:77
-msgid "Recommended"
-msgstr "Recomendado"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:13
-msgid "Guest User"
-msgstr "Usuario Invitado"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:14
-msgid "Start right away without signing up"
-msgstr "Comienza de inmediato sin registrarte"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:19
-#: src/components/home/Guest.tsx:31
-msgid "Unlimited Link Saving"
-msgstr "Guardado de Enlaces (Ilimitado)"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:25
-msgid "Member User"
-msgstr "Usuario Miembro"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:26
-msgid "Access to all features"
-msgstr "Acceso a todas las funciones"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:35
-msgid "Database Storage"
-msgstr "Almacenamiento en Base de Datos"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:33
-#: src/components/home/Guest.tsx:39
-msgid "Threat Link Check"
-msgstr "Verificación de Enlaces Amenazantes"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:40
-#: src/components/home/Guest.tsx:43
-msgid "AI Link Recommendations"
-msgstr "Recomendaciones de Enlaces con IA"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:47
-msgid "Share Links with the Community"
-msgstr "Compartir Enlaces con la Comunidad"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:61
-#: src/components/home/Guest.tsx:63
-msgid "Log in to access more features."
-msgstr "Inicia sesión para acceder a <span>más funciones</span>."
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:70
-msgid "You can use it without signing up, but logging in lets you try more features for free."
-msgstr "Puedes usarlo sin registrarte, pero iniciar sesión te permite probar más funciones gratis."
-
-#. js-lingui-explicit-id
 #: src/components/home/Description.tsx:19
 msgid "Smart Link Management"
 msgstr "Gestión Inteligente de Enlaces"
@@ -108,9 +34,21 @@ msgid "Automatically generates thumbnails, titles, and short descriptions for yo
 msgstr "Genera automáticamente miniaturas, títulos y descripciones breves para los enlaces que agregues."
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:33
+#: src/components/home/Guest.tsx:42
+msgid "Threat Link Check"
+msgstr "Verificación de Enlaces Amenazantes"
+
+#. js-lingui-explicit-id
 #: src/components/home/Description.tsx:34
 msgid "Verify whether a link is safe using the Google Web Risk API."
 msgstr "Verifica si un enlace es seguro usando la API de Google Web Risk."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:40
+#: src/components/home/Guest.tsx:46
+msgid "AI Link Recommendations"
+msgstr "Recomendaciones de Enlaces con IA"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:41
@@ -160,6 +98,74 @@ msgid "Logo"
 msgstr "Logotipo"
 
 #. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:15
+msgid "Guest User"
+msgstr "Usuario Invitado"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:16
+msgid "Start right away without signing up"
+msgstr "Comienza de inmediato sin registrarte"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:18
+msgid "Use as Guest"
+msgstr "Usar como Invitado"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:21
+#: src/components/home/Guest.tsx:34
+msgid "Unlimited Link Saving"
+msgstr "Guardado de Enlaces (Ilimitado)"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:28
+msgid "Member User"
+msgstr "Usuario Miembro"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:29
+msgid "Access to all features"
+msgstr "Acceso a todas las funciones"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:31
+msgid "Sign Up"
+msgstr "Registrarse"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:38
+msgid "Database Storage"
+msgstr "Almacenamiento en Base de Datos"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:50
+msgid "Share Links with the Community"
+msgstr "Compartir Enlaces con la Comunidad"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:65
+#: src/components/home/Guest.tsx:67
+msgid "Log in to access more features."
+msgstr "Inicia sesión para acceder a <span>más funciones</span>."
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:74
+msgid "You can use it without signing up, but logging in lets you try more features for free."
+msgstr "Puedes usarlo sin registrarte, pero iniciar sesión te permite probar más funciones gratis."
+
+#. js-lingui-explicit-id
+#: src/components/common/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "Recomendado"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:43
+#: src/components/common/Header.Web.tsx:43
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:27
 #: src/components/common/LanguageButton.Web.tsx:27
 msgid "English"
@@ -193,12 +199,6 @@ msgstr "中文"
 #: src/components/common/LanguageButton.Web.tsx:57
 msgid "Select Language"
 msgstr "Seleccionar idioma"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:43
-#: src/components/common/Header.Web.tsx:43
-msgid "Sign in"
-msgstr "Iniciar sesión"
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:32

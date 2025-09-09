@@ -14,80 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:16
-msgid "Use as Guest"
-msgstr "Use as Guest"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:28
-msgid "Sign Up"
-msgstr "Sign Up"
-
-#. js-lingui-explicit-id
-#: src/components/common/ProvidedFunctionCard.tsx:77
-msgid "Recommended"
-msgstr "Recommended"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:13
-msgid "Guest User"
-msgstr "Guest User"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:14
-msgid "Start right away without signing up"
-msgstr "Start right away without signing up"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:19
-#: src/components/home/Guest.tsx:31
-msgid "Unlimited Link Saving"
-msgstr "Unlimited Link Saving"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:25
-msgid "Member User"
-msgstr "Member User"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:26
-msgid "Access to all features"
-msgstr "Access to all features"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:35
-msgid "Database Storage"
-msgstr "Database Storage"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:33
-#: src/components/home/Guest.tsx:39
-msgid "Threat Link Check"
-msgstr "Threat Link Check"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:40
-#: src/components/home/Guest.tsx:43
-msgid "AI Link Recommendations"
-msgstr "AI Link Recommendations"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:47
-msgid "Share Links with the Community"
-msgstr "Share Links with the Community"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:61
-#: src/components/home/Guest.tsx:63
-msgid "Log in to access more features."
-msgstr "Log in to access <span>more features.</span>"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:70
-msgid "You can use it without signing up, but logging in lets you try more features for free."
-msgstr "You can use it without signing up, but logging in lets you try more features for free."
-
-#. js-lingui-explicit-id
 #: src/components/home/Description.tsx:19
 msgid "Smart Link Management"
 msgstr "Smart Link Management"
@@ -108,9 +34,21 @@ msgid "Automatically generates thumbnails, titles, and short descriptions for yo
 msgstr "Automatically generates thumbnails, titles, and short descriptions for your added links."
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:33
+#: src/components/home/Guest.tsx:42
+msgid "Threat Link Check"
+msgstr "Threat Link Check"
+
+#. js-lingui-explicit-id
 #: src/components/home/Description.tsx:34
 msgid "Verify whether a link is safe using the Google Web Risk API."
 msgstr "Verify whether a link is safe using the Google Web Risk API."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:40
+#: src/components/home/Guest.tsx:46
+msgid "AI Link Recommendations"
+msgstr "AI Link Recommendations"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:41
@@ -160,6 +98,74 @@ msgid "Logo"
 msgstr "Logo"
 
 #. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:15
+msgid "Guest User"
+msgstr "Guest User"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:16
+msgid "Start right away without signing up"
+msgstr "Start right away without signing up"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:18
+msgid "Use as Guest"
+msgstr "Use as Guest"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:21
+#: src/components/home/Guest.tsx:34
+msgid "Unlimited Link Saving"
+msgstr "Unlimited Link Saving"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:28
+msgid "Member User"
+msgstr "Member User"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:29
+msgid "Access to all features"
+msgstr "Access to all features"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:31
+msgid "Sign Up"
+msgstr "Sign Up"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:38
+msgid "Database Storage"
+msgstr "Database Storage"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:50
+msgid "Share Links with the Community"
+msgstr "Share Links with the Community"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:65
+#: src/components/home/Guest.tsx:67
+msgid "Log in to access more features."
+msgstr "Log in to access <span>more features.</span>"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:74
+msgid "You can use it without signing up, but logging in lets you try more features for free."
+msgstr "You can use it without signing up, but logging in lets you try more features for free."
+
+#. js-lingui-explicit-id
+#: src/components/common/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "Recommended"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:43
+#: src/components/common/Header.Web.tsx:43
+msgid "Sign in"
+msgstr "Sign in"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:27
 #: src/components/common/LanguageButton.Web.tsx:27
 msgid "English"
@@ -193,12 +199,6 @@ msgstr "中文"
 #: src/components/common/LanguageButton.Web.tsx:57
 msgid "Select Language"
 msgstr "Select Language"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:43
-#: src/components/common/Header.Web.tsx:43
-msgid "Sign in"
-msgstr "Sign in"
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:32
