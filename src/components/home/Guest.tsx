@@ -5,6 +5,7 @@ import { useMemo } from 'react';
 import ProvidedFunctionCard from 'src/components/common/ProvidedFunctionCard';
 import useI18nRouter from '@/hooks/useI18nRouter';
 import clsx from 'clsx';
+import HeadingFadeAnimator from 'src/components/common/HeadingFadeAnimator';
 
 export default function Guest() {
   const { i18n } = useLingui();
@@ -59,7 +60,7 @@ export default function Guest() {
   );
 
   return (
-    <section className="flex flex-col items-center w-full py-10 md:py-20">
+    <section className="flex flex-col items-center w-full py-10 md:py-20 bg-white">
       <div className="flex flex-col items-center gap-y-10 md:gap-y-20 w-full max-w-320 px-4 md:px-6 mx-auto">
         <div
           className={clsx(
@@ -67,7 +68,10 @@ export default function Guest() {
             i18n.locale === 'ko' ? 'break-keep' : 'break-words',
           )}
         >
-          <h2 className="text-2xl md:text-4xl font-bold">
+          <HeadingFadeAnimator
+            as="h2"
+            className="text-2xl md:text-4xl font-bold"
+          >
             <Trans
               id="Log in to access more features."
               message={i18n.t('Log in to access more features.')}
@@ -75,12 +79,16 @@ export default function Guest() {
                 span: <span className="text-blue-500" />,
               }}
             />
-          </h2>
-          <h3 className="text-sm md:text-lg font-medium text-gray-500">
+          </HeadingFadeAnimator>
+          <HeadingFadeAnimator
+            as="h3"
+            className="text-sm md:text-lg font-medium text-gray-500"
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             {i18n.t(
               'You can use it without signing up, but logging in lets you try more features for free.',
             )}
-          </h3>
+          </HeadingFadeAnimator>
         </div>
         <div className="flex flex-col md:flex-row gap-3 md:gap-5 w-full max-w-md md:max-w-5xl">
           {functionContents.map((content) => {

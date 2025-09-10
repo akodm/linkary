@@ -12,7 +12,7 @@ export default function Banner() {
   const { i18n } = useLingui();
 
   return (
-    <section className="flex justify-center items-center w-full h-auto relative">
+    <section className="flex justify-center items-center w-full h-auto bg-white relative">
       <div className="w-full h-auto min-h-178.5 relative">
         <Image
           priority

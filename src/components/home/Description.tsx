@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { useMemo } from 'react';
 import DescriptionIconCard from 'src/components/common/DescriptionIconCard';
+import HeadingFadeAnimator from 'src/components/common/HeadingFadeAnimator';
 
 export default function Description() {
   const { i18n } = useLingui();
@@ -55,14 +56,21 @@ export default function Description() {
             i18n.locale === 'ko' ? 'break-keep' : 'break-words',
           )}
         >
-          <h2 className="text-2xl md:text-4xl font-bold">
+          <HeadingFadeAnimator
+            as="h2"
+            className="text-2xl md:text-4xl font-bold"
+          >
             {i18n.t('Convenient and Secure Link Management')}
-          </h2>
-          <h3 className="text-sm md:text-lg font-medium text-gray-500">
+          </HeadingFadeAnimator>
+          <HeadingFadeAnimator
+            as="h3"
+            className="text-sm md:text-lg font-medium text-gray-500"
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             {i18n.t(
               'View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find.',
             )}
-          </h3>
+          </HeadingFadeAnimator>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 md:gap-5 w-full">
           {descriptionContents.map((content) => {

@@ -45,6 +45,7 @@
     "drizzle-orm": "^0.44.4",
     "haikunator": "^2.1.2",
     "lucide-react": "^0.539.0",
+    "motion": "^12.23.12",
     "negotiator": "^1.0.0",
     "next": "15.4.5",
     "open-graph-scraper": "^6.10.0",

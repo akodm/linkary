@@ -1,11 +1,10 @@
 import Header from '@/components/common/Header';
-// import Footer from '@/components/common/Footer';
+import Footer from '@/components/common/Footer';
 import MainProvider from 'src/components/MainProvider';
 import Banner from 'src/components/home/Banner';
 import Description from 'src/components/home/Description';
 import Guest from 'src/components/home/Guest';
-// import Tutorial from 'src/components/home/Tutorial';
-// import Contact from 'src/components/home/Contact';
+import Tutorial from 'src/components/home/Tutorial';
 
 export default function HomeLayout() {
   return (
@@ -15,10 +14,9 @@ export default function HomeLayout() {
         <Banner />
         <Description />
         <Guest />
-        {/* <Tutorial />
-        <Contact /> */}
+        <Tutorial />
       </MainProvider>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
