@@ -4,6 +4,7 @@ import { Trans, useLingui } from '@lingui/react';
 import { useMemo } from 'react';
 import ProvidedFunctionCard from 'src/components/common/ProvidedFunctionCard';
 import useI18nRouter from '@/hooks/useI18nRouter';
+import clsx from 'clsx';
 
 export default function Guest() {
   const { i18n } = useLingui();
@@ -59,8 +60,13 @@ export default function Guest() {
 
   return (
     <section className="flex flex-col items-center w-full py-10 md:py-20">
-      <div className="flex flex-col items-center gap-y-10 md:gap-y-20 w-full max-w-320 px-2 md:px-4 mx-auto">
-        <div className="flex flex-col items-center gap-2 md:gap-4 w-full text-center break-keep">
+      <div className="flex flex-col items-center gap-y-10 md:gap-y-20 w-full max-w-320 px-4 md:px-6 mx-auto">
+        <div
+          className={clsx(
+            'flex flex-col items-center gap-2 md:gap-4 w-full text-center',
+            i18n.locale === 'ko' ? 'break-keep' : 'break-words',
+          )}
+        >
           <h2 className="text-2xl md:text-4xl font-bold">
             <Trans
               id="Log in to access more features."

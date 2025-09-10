@@ -1,6 +1,7 @@
 'use client';
 
 import { useLingui } from '@lingui/react';
+import clsx from 'clsx';
 import {
   BookmarkIcon,
   BrainCogIcon,
@@ -47,8 +48,13 @@ export default function Description() {
 
   return (
     <section className="flex flex-col items-center w-full py-10 md:py-20 bg-gray-50">
-      <div className="flex flex-col items-center gap-y-10 md:gap-y-20 w-full max-w-320 px-2 md:px-4 mx-auto">
-        <div className="flex flex-col items-center gap-2 md:gap-4 w-full text-center break-keep">
+      <div className="flex flex-col items-center gap-y-10 md:gap-y-20 w-full max-w-320 px-4 md:px-6 mx-auto">
+        <div
+          className={clsx(
+            'flex flex-col items-center gap-2 md:gap-4 w-full text-center',
+            i18n.locale === 'ko' ? 'break-keep' : 'break-words',
+          )}
+        >
           <h2 className="text-2xl md:text-4xl font-bold">
             {i18n.t('Convenient and Secure Link Management')}
           </h2>
