@@ -1,5 +1,4 @@
-import HeaderWeb from '@/components/common/Header.Web';
-import HeaderMobile from '@/components/common/Header.Mobile';
+import Header from '@/components/common/Header';
 // import Footer from '@/components/common/Footer';
 import MainProvider from 'src/components/MainProvider';
 import Banner from 'src/components/home/Banner';
@@ -11,8 +10,7 @@ import Guest from 'src/components/home/Guest';
 export default function HomeLayout() {
   return (
     <div className="flex flex-col items-center w-full relative">
-      <HeaderWeb />
-      <HeaderMobile />
+      <Header />
       <MainProvider>
         <Banner />
         <Description />

@@ -32,15 +32,15 @@
   ],
   "screenshots": [
     {
-      "src": "/screenshots/desktop-wide.png",
+      "src": "/screenshots/desktop-wide-jp.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Linkary デスクトップ表示"
     },
     {
-      "src": "/screenshots/mobile-narrow.png",
-      "sizes": "750x1334",
+      "src": "/screenshots/mobile-narrow-jp.png",
+      "sizes": "375x812",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Linkary モバイル表示"

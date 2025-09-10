@@ -32,15 +32,15 @@
   ],
   "screenshots": [
     {
-      "src": "/screenshots/desktop-wide.png",
+      "src": "/screenshots/desktop-wide-es.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Vista de escritorio de Linkary"
     },
     {
-      "src": "/screenshots/mobile-narrow.png",
-      "sizes": "750x1334",
+      "src": "/screenshots/mobile-narrow-es.png",
+      "sizes": "375x812",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Vista móvil de Linkary"
