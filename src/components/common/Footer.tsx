@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex flex-row items-center gap-x-1.5">
           <FileCheckIcon size={14} className="text-white" />
           <Link href="/terms-of-service">
-            <span className="underline text-sm md:text-base text-white hover:text-blue-50 transition-colors duration-200">
+            <span className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200">
               {i18n.t('Terms of Service')}
             </span>
           </Link>
@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="flex flex-row items-center gap-x-1.5">
           <FileUserIcon size={14} className="text-white" />
           <Link href="/privacy">
-            <span className="underline text-sm md:text-base text-white hover:text-blue-500 transition-colors duration-200">
+            <span className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200">
               {i18n.t('Privacy Policy')}
             </span>
           </Link>
@@ -33,7 +33,7 @@ export default function Footer() {
           <ContactIcon size={14} className="text-white" />
           <a
             href="mailto:a8456452@gmail.com"
-            className="underline text-sm md:text-base text-white hover:text-blue-500 transition-colors duration-200"
+            className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200"
           >
             {i18n.t('Contact Us')}
           </a>
