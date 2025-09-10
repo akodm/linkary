@@ -1,6 +1,7 @@
 'use client';
 
 import { ColorPreset, colorPresets } from '@/css/colors';
+import clsx from 'clsx';
 import { LucideProps } from 'lucide-react';
 import { ForwardRefExoticComponent, RefAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -22,11 +23,16 @@ export default function DescriptionIconCard({
   ...iconProps
 }: DescriptionIconCardProps) {
   return (
-    <div className="flex flex-col gap-y-2 w-full min-w-65 min-h-40 md:min-h-56 p-4 md:p-6 rounded-lg md:rounded-xl shadow-md">
+    <div
+      className={clsx(
+        'flex flex-col gap-y-2 w-full min-w-65 min-h-40 md:min-h-56 p-4 md:p-6 rounded-lg md:rounded-xl',
+        'shadow-md transition-transform duration-300 hover:scale-105',
+      )}
+    >
       <div
         className={twMerge(
           'flex justify-center items-center w-9 h-9 md:w-12 md:h-12 rounded-md md:rounded-lg',
-          colorPresets({ preset }),
+          colorPresets({ preset, hover: false }),
         )}
       >
         <Icon {...iconProps} />

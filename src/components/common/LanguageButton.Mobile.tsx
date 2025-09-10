@@ -12,6 +12,7 @@ import {
 } from 'src/components/ui/dropdown-menu';
 import { Button } from 'src/components/ui/button';
 import useChangeLocale from '@/hooks/useChangeLocale';
+import { colorPresets } from '@/css/colors';
 
 export default function LanguageButton({
   className,
@@ -51,7 +52,11 @@ export default function LanguageButton({
       <DropdownMenuTrigger asChild>
         <Button
           variant="secondary"
-          className={twMerge('cursor-pointer', className)}
+          className={twMerge(
+            'cursor-pointer',
+            colorPresets({ preset: 'gray-light' }),
+            className,
+          )}
           {...props}
         >
           <LanguagesIcon />

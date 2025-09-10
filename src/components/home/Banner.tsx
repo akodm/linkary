@@ -42,7 +42,7 @@ export default function Banner() {
         <Button
           size="sm"
           className={twMerge(
-            'block md:hidden min-w-40 mt-2 md:mt-5',
+            'block md:hidden min-w-40 mt-2 md:mt-5 cursor-pointer',
             colorPresets({ preset: 'primary' }),
           )}
         >
@@ -51,7 +51,7 @@ export default function Banner() {
         <Button
           size="lg"
           className={twMerge(
-            'hidden md:block md:min-w-80 mt-2 md:mt-5',
+            'hidden md:block md:min-w-80 mt-2 md:mt-5 cursor-pointer',
             colorPresets({ preset: 'primary' }),
           )}
         >

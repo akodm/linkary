@@ -37,7 +37,10 @@ export default function HeaderWeb({
           <Button
             size="lg"
             variant="secondary"
-            className={colorPresets({ preset: 'primary' })}
+            className={clsx(
+              'cursor-pointer',
+              colorPresets({ preset: 'primary' }),
+            )}
             onClick={() => push('/auth')}
           >
             <span>{i18n.t('Sign in')}</span>

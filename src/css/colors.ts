@@ -1,6 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority';
 
-export const colorPresets = cva('outline-none cursor-pointer', {
+export const colorPresets = cva('outline-none! focus:ring-0!', {
   variants: {
     preset: {
       primary: 'bg-blue-500 hover:bg-blue-600 text-white',
@@ -24,9 +24,17 @@ export const colorPresets = cva('outline-none cursor-pointer', {
       pink: 'bg-pink-500 hover:bg-pink-600 text-white',
       'pink-dark': 'bg-pink-600 hover:bg-pink-700 text-white',
       'pink-light': 'bg-pink-50 hover:bg-pink-100 text-pink-500',
+      gray: 'bg-gray-500 hover:bg-gray-600 text-white',
+      'gray-dark': 'bg-gray-600 hover:bg-gray-700 text-white',
+      'gray-light': 'bg-gray-100 hover:bg-gray-200 text-gray-600',
+    },
+    hover: {
+      true: '',
+      false: 'hover:bg-[*]',
     },
     defaultVariants: {
       preset: 'primary',
+      hover: true,
     },
   },
 });
