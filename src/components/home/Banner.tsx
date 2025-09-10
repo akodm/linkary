@@ -12,13 +12,16 @@ export default function Banner() {
 
   return (
     <section className="flex justify-center items-center w-full h-auto relative">
-      <Image
-        width={1280}
-        height={174}
-        src="/main-banner.webp"
-        alt={i18n.t('Banner')}
-        className="w-full h-auto min-h-178.5 object-cover opacity-60"
-      />
+      <div className="w-full h-auto min-h-178.5 relative">
+        <Image
+          priority
+          fill
+          sizes="100vw"
+          src="/main-banner.webp"
+          alt={i18n.t('Banner')}
+          className="w-full h-auto object-cover opacity-60"
+        />
+      </div>
       <div className="flex flex-col items-center gap-2 md:gap-4 px-2 md:px-4 text-center absolute">
         <h1 className="text-2xl md:text-6xl font-bold">
           <span>{i18n.t('Save links and')}</span>
