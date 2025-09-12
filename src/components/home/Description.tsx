@@ -9,8 +9,8 @@ import {
   ShieldCheckIcon,
 } from 'lucide-react';
 import { useMemo } from 'react';
-import DescriptionIconCard from 'src/components/common/DescriptionIconCard';
-import HeadingFadeAnimator from 'src/components/common/HeadingFadeAnimator';
+import DescriptionIconCard from '@/components/home/DescriptionIconCard';
+import GeneralAnimator from '@/components/common/GeneralAnimator';
 
 export default function Description() {
   const { i18n } = useLingui();
@@ -56,13 +56,10 @@ export default function Description() {
             i18n.locale === 'ko' ? 'break-keep' : 'break-words',
           )}
         >
-          <HeadingFadeAnimator
-            as="h2"
-            className="text-2xl md:text-4xl font-bold"
-          >
+          <GeneralAnimator as="h2" className="text-2xl md:text-4xl font-bold">
             {i18n.t('Convenient and Secure Link Management')}
-          </HeadingFadeAnimator>
-          <HeadingFadeAnimator
+          </GeneralAnimator>
+          <GeneralAnimator
             as="h3"
             className="text-sm md:text-lg font-medium text-gray-500"
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -70,7 +67,7 @@ export default function Description() {
             {i18n.t(
               'View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find.',
             )}
-          </HeadingFadeAnimator>
+          </GeneralAnimator>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 md:gap-5 w-full">
           {descriptionContents.map((content) => {

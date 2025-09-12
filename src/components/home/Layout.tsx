@@ -1,6 +1,6 @@
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
-import MainProvider from 'src/components/MainProvider';
+import MainProvider from '@/components/common/MainProvider';
 import Banner from 'src/components/home/Banner';
 import Description from 'src/components/home/Description';
 import Guest from 'src/components/home/Guest';

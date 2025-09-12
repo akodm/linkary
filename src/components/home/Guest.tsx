@@ -2,10 +2,10 @@
 
 import { Trans, useLingui } from '@lingui/react';
 import { useMemo } from 'react';
-import ProvidedFunctionCard from 'src/components/common/ProvidedFunctionCard';
+import ProvidedFunctionCard from '@/components/home/ProvidedFunctionCard';
 import useI18nRouter from '@/hooks/useI18nRouter';
 import clsx from 'clsx';
-import HeadingFadeAnimator from 'src/components/common/HeadingFadeAnimator';
+import GeneralAnimator from '@/components/common/GeneralAnimator';
 
 export default function Guest() {
   const { i18n } = useLingui();
@@ -68,10 +68,7 @@ export default function Guest() {
             i18n.locale === 'ko' ? 'break-keep' : 'break-words',
           )}
         >
-          <HeadingFadeAnimator
-            as="h2"
-            className="text-2xl md:text-4xl font-bold"
-          >
+          <GeneralAnimator as="h2" className="text-2xl md:text-4xl font-bold">
             <Trans
               id="Log in to access more features."
               message={i18n.t('Log in to access more features.')}
@@ -79,8 +76,8 @@ export default function Guest() {
                 span: <span className="text-blue-500" />,
               }}
             />
-          </HeadingFadeAnimator>
-          <HeadingFadeAnimator
+          </GeneralAnimator>
+          <GeneralAnimator
             as="h3"
             className="text-sm md:text-lg font-medium text-gray-500"
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -88,7 +85,7 @@ export default function Guest() {
             {i18n.t(
               'You can use it without signing up, but logging in lets you try more features for free.',
             )}
-          </HeadingFadeAnimator>
+          </GeneralAnimator>
         </div>
         <div className="flex flex-col md:flex-row gap-3 md:gap-5 w-full max-w-md md:max-w-5xl">
           {functionContents.map((content) => {

@@ -20,7 +20,7 @@ type PolymorphicProps<E extends ElementType> = Omit<
     as?: E;
   };
 
-export default function HeadingFadeAnimator<E extends ElementType = 'h1'>(
+export default function GeneralAnimator<E extends ElementType = 'h1'>(
   props: PolymorphicProps<E>,
 ) {
   const { as, children, ...rest } = props as PolymorphicProps<ElementType>;

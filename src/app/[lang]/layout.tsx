@@ -6,7 +6,7 @@ import 'src/css/globals.css';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { allMessages } from 'src/appRouterI18n';
-import { LinguiClientProvider } from 'src/components/LinguiClientProvider';
+import { LinguiClientProvider } from '@/components/common/LinguiClientProvider';
 
 const {
   NEXT_PUBLIC_GA_TAG = '',

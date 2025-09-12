@@ -9,10 +9,19 @@ import { colorPresets } from '@/css/colors';
 import Logo from 'src/components/common/Logo';
 import useI18nRouter from '@/hooks/useI18nRouter';
 
+export interface HeaderWebProps extends HTMLAttributes<HTMLHeadElement> {
+  isLogo?: boolean;
+  isLanguage?: boolean;
+  isSignIn?: boolean;
+}
+
 export default function HeaderWeb({
   className,
+  isLogo = true,
+  isLanguage = true,
+  isSignIn = true,
   ...props
-}: HTMLAttributes<HTMLHeadElement>) {
+}: HeaderWebProps) {
   const { i18n } = useLingui();
   const { push } = useI18nRouter();
 
@@ -28,23 +37,25 @@ export default function HeaderWeb({
         className,
       )}
     >
-      <div className="flex flex-row justify-between items-center w-full max-w-320 mx-auto p-4">
-        <div className="flex flex-row items-center gap-2">
-          <Logo />
+      <div className="flex flex-row justify-between items-center w-full min-h-20 max-w-320 mx-auto p-4">
+        <div className="flex flex-row items-center gap-2 absolute left-4">
+          {isLogo && <Logo />}
         </div>
-        <div className="flex flex-row items-center gap-2">
-          <LanguageButton size="lg" />
-          <Button
-            size="lg"
-            variant="secondary"
-            className={clsx(
-              'cursor-pointer',
-              colorPresets({ preset: 'primary' }),
-            )}
-            onClick={() => push('/auth')}
-          >
-            <span>{i18n.t('Sign in')}</span>
-          </Button>
+        <div className="flex flex-row items-center gap-2 absolute right-4">
+          {isLanguage && <LanguageButton size="lg" />}
+          {isSignIn && (
+            <Button
+              size="lg"
+              variant="secondary"
+              className={clsx(
+                'cursor-pointer',
+                colorPresets({ preset: 'primary' }),
+              )}
+              onClick={() => push('/auth')}
+            >
+              <span>{i18n.t('Sign in')}</span>
+            </Button>
+          )}
         </div>
       </div>
     </header>

@@ -4,8 +4,8 @@ import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
 import { AppWindowIcon, BrainCogIcon, ShareIcon } from 'lucide-react';
 import { useMemo } from 'react';
-import HeadingFadeAnimator from 'src/components/common/HeadingFadeAnimator';
-import DescriptionStep from 'src/components/common/DescriptionStep';
+import GeneralAnimator from '@/components/common/GeneralAnimator';
+import DescriptionStep from '@/components/home/DescriptionStep';
 
 export default function Tutorial() {
   const { i18n } = useLingui();
@@ -44,13 +44,10 @@ export default function Tutorial() {
             i18n.locale === 'ko' ? 'break-keep' : 'break-words',
           )}
         >
-          <HeadingFadeAnimator
-            as="h2"
-            className="text-2xl md:text-4xl font-bold"
-          >
+          <GeneralAnimator as="h2" className="text-2xl md:text-4xl font-bold">
             {i18n.t('Additional Features for Easy Use')}
-          </HeadingFadeAnimator>
-          <HeadingFadeAnimator
+          </GeneralAnimator>
+          <GeneralAnimator
             as="h3"
             className="text-sm md:text-lg font-medium text-gray-500"
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -58,7 +55,7 @@ export default function Tutorial() {
             {i18n.t(
               'Not only can you add links, but you can also take advantage of various provided features.',
             )}
-          </HeadingFadeAnimator>
+          </GeneralAnimator>
         </div>
         <div className="flex flex-col md:flex-row gap-5 w-full max-w-md md:max-w-5xl">
           {tutorialContents.map((content) => {
