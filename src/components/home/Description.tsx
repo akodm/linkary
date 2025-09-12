@@ -8,7 +8,7 @@ import {
   ShieldCheckIcon,
 } from 'lucide-react';
 import { useMemo } from 'react';
-import DescriptionIconCard from '@/components/home/DescriptionIconCard';
+import DescriptionIconCard from '@/components/common/DescriptionIconCard';
 import GeneralAnimator from '@/components/common/GeneralAnimator';
 import Section from 'src/components/common/Section';
 import Heading from 'src/components/common/Heading';
