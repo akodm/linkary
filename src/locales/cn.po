@@ -14,6 +14,56 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
+#: src/components/common/Header.tsx:29
+msgid "Introduction"
+msgstr "介绍"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:32
+msgid "Project Introduction"
+msgstr "项目介绍"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:33
+msgid "This is an introduction to the project."
+msgstr "这是项目介绍。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:37
+msgid "Developer Introduction"
+msgstr "开发者介绍"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:38
+msgid "This is an introduction to the developer."
+msgstr "这是开发者介绍。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:44
+msgid "Terms and Privacy"
+msgstr "条款和隐私"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:48
+msgid "These are the Terms of Service for using the service."
+msgstr "这些是使用服务的服务条款。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:55
+msgid "This is the Privacy Policy regarding the personal information handled by the service."
+msgstr "这是关于服务处理个人信息的隐私政策。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:63
+msgid "FAQ"
+msgstr "常见问题"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "推荐"
+
+#. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:16
 msgid "Install App Shortcut"
 msgstr "安装应用快捷方式"
@@ -47,60 +97,40 @@ msgid "Share your links with other users."
 msgstr "与其他用户分享你的链接。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:51
+#: src/components/home/Tutorial.tsx:48
 msgid "Additional Features for Easy Use"
 msgstr "便捷使用的附加功能"
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:58
+#: src/components/home/Tutorial.tsx:55
 msgid "Not only can you add links, but you can also take advantage of various provided features."
 msgstr "不仅可以添加链接，还可以利用提供的多种功能。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:21
-msgid "Smart Link Management"
-msgstr "智能链接管理"
+#: src/components/home/Banner.tsx:22
+msgid "Banner"
+msgstr "横幅"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Organize your links by folders and view them at a glance."
-msgstr "按文件夹整理链接，一目了然地查看。"
+#: src/components/home/Banner.tsx:28
+msgid "Save links and"
+msgstr "保存链接"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:28
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "自动缩略图和元数据生成"
+#: src/components/home/Banner.tsx:30
+msgid "share them."
+msgstr "并分享。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "自动为您添加的链接生成缩略图、标题和简短描述。"
+#: src/components/home/Banner.tsx:38
+msgid "A platform to organize and view your important links at a glance"
+msgstr "一个能系统管理并一目了然查看重要链接的平台"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:35
-#: src/components/home/Guest.tsx:44
-msgid "Threat Link Check"
-msgstr "威胁链接检查"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "使用 Google Web Risk API 验证链接是否安全。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:43
-msgid "Get personalized link suggestions powered by AI."
-msgstr "通过 AI 获取个性化的链接建议。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:63
-msgid "Convenient and Secure Link Management"
-msgstr "便捷安全的链接管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:70
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
+#: src/components/home/Banner.tsx:49
+#: src/components/home/Banner.tsx:58
+msgid "Get started"
+msgstr "开始使用"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:17
@@ -144,52 +174,61 @@ msgid "Database Storage"
 msgstr "数据库存储"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:75
-#: src/components/home/Guest.tsx:77
+#: src/components/home/Description.tsx:35
+#: src/components/home/Guest.tsx:44
+msgid "Threat Link Check"
+msgstr "威胁链接检查"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:72
+#: src/components/home/Guest.tsx:74
 msgid "Log in to access more features."
 msgstr "登录以使用<span>更多功能</span>。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:88
+#: src/components/home/Guest.tsx:85
 msgid "You can use it without signing up, but logging in lets you try more features for free."
 msgstr "无需注册即可使用，但登录后可以免费体验更多功能。"
 
 #. js-lingui-explicit-id
-#: src/components/common/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "推荐"
+#: src/components/home/Description.tsx:21
+msgid "Smart Link Management"
+msgstr "智能链接管理"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:22
-msgid "Banner"
-msgstr "横幅"
+#: src/components/home/Description.tsx:22
+msgid "Organize your links by folders and view them at a glance."
+msgstr "按文件夹整理链接，一目了然地查看。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:28
-msgid "Save links and"
-msgstr "保存链接"
+#: src/components/home/Description.tsx:28
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "自动缩略图和元数据生成"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:30
-msgid "share them."
-msgstr "并分享。"
+#: src/components/home/Description.tsx:29
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "自动为您添加的链接生成缩略图、标题和简短描述。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:38
-msgid "A platform to organize and view your important links at a glance"
-msgstr "一个能系统管理并一目了然查看重要链接的平台"
+#: src/components/home/Description.tsx:36
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "使用 Google Web Risk API 验证链接是否安全。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:49
-#: src/components/home/Banner.tsx:58
-msgid "Get started"
-msgstr "开始使用"
+#: src/components/home/Description.tsx:43
+msgid "Get personalized link suggestions powered by AI."
+msgstr "通过 AI 获取个性化的链接建议。"
 
 #. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-#: src/components/common/Logo.tsx:28
-msgid "Logo"
-msgstr "标志"
+#: src/components/home/Description.tsx:60
+msgid "Convenient and Secure Link Management"
+msgstr "便捷安全的链接管理"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:67
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
@@ -222,13 +261,31 @@ msgid "中文"
 msgstr "中文"
 
 #. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+#: src/components/common/Logo.tsx:28
+msgid "Logo"
+msgstr "标志"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Web.tsx:62
 msgid "Select Language"
 msgstr "选择语言"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:46
-#: src/components/common/Header.Web.tsx:46
+#: src/components/common/Footer.tsx:20
+#: src/components/common/Header.tsx:47
+msgid "Terms of Service"
+msgstr "服务条款"
+
+#. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:28
+#: src/components/common/Header.tsx:54
+msgid "Privacy Policy"
+msgstr "隐私政策"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:58
+#: src/components/common/Header.Web.tsx:109
 msgid "Sign in"
 msgstr "登录"
 
@@ -236,16 +293,6 @@ msgstr "登录"
 #: src/components/common/Footer.tsx:14
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. 保留所有权利。"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:20
-msgid "Terms of Service"
-msgstr "服务条款"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:28
-msgid "Privacy Policy"
-msgstr "隐私政策"
 
 #. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:38

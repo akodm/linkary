@@ -14,6 +14,56 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
+#: src/components/common/Header.tsx:29
+msgid "Introduction"
+msgstr "Introducción"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:32
+msgid "Project Introduction"
+msgstr "Introducción del Proyecto"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:33
+msgid "This is an introduction to the project."
+msgstr "Esta es una introducción al proyecto."
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:37
+msgid "Developer Introduction"
+msgstr "Introducción del Desarrollador"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:38
+msgid "This is an introduction to the developer."
+msgstr "Esta es una introducción al desarrollador."
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:44
+msgid "Terms and Privacy"
+msgstr "Términos y Privacidad"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:48
+msgid "These are the Terms of Service for using the service."
+msgstr "Estos son los Términos de Servicio para usar el servicio."
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:55
+msgid "This is the Privacy Policy regarding the personal information handled by the service."
+msgstr "Esta es la Política de Privacidad sobre la información personal manejada por el servicio."
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:63
+msgid "FAQ"
+msgstr "Preguntas Frecuentes"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "Recomendado"
+
+#. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:16
 msgid "Install App Shortcut"
 msgstr "Instalar acceso directo de la app"
@@ -47,60 +97,40 @@ msgid "Share your links with other users."
 msgstr "Comparte tus enlaces con otros usuarios."
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:51
+#: src/components/home/Tutorial.tsx:48
 msgid "Additional Features for Easy Use"
 msgstr "Funciones adicionales para un uso sencillo"
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:58
+#: src/components/home/Tutorial.tsx:55
 msgid "Not only can you add links, but you can also take advantage of various provided features."
 msgstr "No solo puedes añadir enlaces, también aprovechar diversas funciones disponibles."
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:21
-msgid "Smart Link Management"
-msgstr "Gestión Inteligente de Enlaces"
+#: src/components/home/Banner.tsx:22
+msgid "Banner"
+msgstr "Banner"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Organize your links by folders and view them at a glance."
-msgstr "Organiza tus enlaces por carpetas y visualízalos de un vistazo."
+#: src/components/home/Banner.tsx:28
+msgid "Save links and"
+msgstr "Guarda enlaces"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:28
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "Generación Automática de Miniaturas y Metadatos"
+#: src/components/home/Banner.tsx:30
+msgid "share them."
+msgstr "y compártelos"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "Genera automáticamente miniaturas, títulos y descripciones breves para los enlaces que agregues."
+#: src/components/home/Banner.tsx:38
+msgid "A platform to organize and view your important links at a glance"
+msgstr "Una plataforma para organizar y ver tus enlaces importantes de un vistazo"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:35
-#: src/components/home/Guest.tsx:44
-msgid "Threat Link Check"
-msgstr "Verificación de Enlaces Amenazantes"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "Verifica si un enlace es seguro usando la API de Google Web Risk."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:43
-msgid "Get personalized link suggestions powered by AI."
-msgstr "Obtén sugerencias de enlaces personalizadas impulsadas por IA."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:63
-msgid "Convenient and Secure Link Management"
-msgstr "Gestión de Enlaces Conveniente y Segura"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:70
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "Visualiza todos tus enlaces guardados de un vistazo. Verifica la seguridad de cada enlace, recibe recomendaciones personalizadas y permite que el sistema complete automáticamente los detalles para facilitar su búsqueda."
+#: src/components/home/Banner.tsx:49
+#: src/components/home/Banner.tsx:58
+msgid "Get started"
+msgstr "Comenzar"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:17
@@ -144,52 +174,61 @@ msgid "Database Storage"
 msgstr "Almacenamiento en Base de Datos"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:75
-#: src/components/home/Guest.tsx:77
+#: src/components/home/Description.tsx:35
+#: src/components/home/Guest.tsx:44
+msgid "Threat Link Check"
+msgstr "Verificación de Enlaces Amenazantes"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:72
+#: src/components/home/Guest.tsx:74
 msgid "Log in to access more features."
 msgstr "Inicia sesión para acceder a <span>más funciones</span>."
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:88
+#: src/components/home/Guest.tsx:85
 msgid "You can use it without signing up, but logging in lets you try more features for free."
 msgstr "Puedes usarlo sin registrarte, pero iniciar sesión te permite probar más funciones gratis."
 
 #. js-lingui-explicit-id
-#: src/components/common/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "Recomendado"
+#: src/components/home/Description.tsx:21
+msgid "Smart Link Management"
+msgstr "Gestión Inteligente de Enlaces"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:22
-msgid "Banner"
-msgstr "Banner"
+#: src/components/home/Description.tsx:22
+msgid "Organize your links by folders and view them at a glance."
+msgstr "Organiza tus enlaces por carpetas y visualízalos de un vistazo."
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:28
-msgid "Save links and"
-msgstr "Guarda enlaces"
+#: src/components/home/Description.tsx:28
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "Generación Automática de Miniaturas y Metadatos"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:30
-msgid "share them."
-msgstr "y compártelos"
+#: src/components/home/Description.tsx:29
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "Genera automáticamente miniaturas, títulos y descripciones breves para los enlaces que agregues."
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:38
-msgid "A platform to organize and view your important links at a glance"
-msgstr "Una plataforma para organizar y ver tus enlaces importantes de un vistazo"
+#: src/components/home/Description.tsx:36
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "Verifica si un enlace es seguro usando la API de Google Web Risk."
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:49
-#: src/components/home/Banner.tsx:58
-msgid "Get started"
-msgstr "Comenzar"
+#: src/components/home/Description.tsx:43
+msgid "Get personalized link suggestions powered by AI."
+msgstr "Obtén sugerencias de enlaces personalizadas impulsadas por IA."
 
 #. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-#: src/components/common/Logo.tsx:28
-msgid "Logo"
-msgstr "Logotipo"
+#: src/components/home/Description.tsx:60
+msgid "Convenient and Secure Link Management"
+msgstr "Gestión de Enlaces Conveniente y Segura"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:67
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "Visualiza todos tus enlaces guardados de un vistazo. Verifica la seguridad de cada enlace, recibe recomendaciones personalizadas y permite que el sistema complete automáticamente los detalles para facilitar su búsqueda."
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
@@ -222,13 +261,31 @@ msgid "中文"
 msgstr "中文"
 
 #. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+#: src/components/common/Logo.tsx:28
+msgid "Logo"
+msgstr "Logotipo"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Web.tsx:62
 msgid "Select Language"
 msgstr "Seleccionar idioma"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:46
-#: src/components/common/Header.Web.tsx:46
+#: src/components/common/Footer.tsx:20
+#: src/components/common/Header.tsx:47
+msgid "Terms of Service"
+msgstr "Términos de Servicio"
+
+#. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:28
+#: src/components/common/Header.tsx:54
+msgid "Privacy Policy"
+msgstr "Política de Privacidad"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:58
+#: src/components/common/Header.Web.tsx:109
 msgid "Sign in"
 msgstr "Iniciar sesión"
 
@@ -236,16 +293,6 @@ msgstr "Iniciar sesión"
 #: src/components/common/Footer.tsx:14
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. Todos los derechos reservados."
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:20
-msgid "Terms of Service"
-msgstr "Términos de Servicio"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:28
-msgid "Privacy Policy"
-msgstr "Política de Privacidad"
 
 #. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:38

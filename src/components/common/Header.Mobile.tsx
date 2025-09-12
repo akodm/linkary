@@ -8,11 +8,14 @@ import LanguageButton from '@/components/common/LanguageButton.Mobile';
 import { colorPresets } from '@/css/colors';
 import { useLingui } from '@lingui/react';
 import useI18nRouter from '@/hooks/useI18nRouter';
+import { Menu } from 'src/components/common/Header';
+import NavigatorMobile from 'src/components/common/Navigator.Mobile';
 
 export interface HeaderMobileProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
   isLanguage?: boolean;
   isSignIn?: boolean;
+  menus: Menu[];
 }
 
 export default function HeaderMobile({
@@ -20,6 +23,7 @@ export default function HeaderMobile({
   isLogo = true,
   isLanguage = true,
   isSignIn = true,
+  menus,
   ...props
 }: HeaderMobileProps) {
   const { i18n } = useLingui();
@@ -42,6 +46,7 @@ export default function HeaderMobile({
           {isLogo && <Logo />}
         </div>
         <div className="flex flex-row items-center gap-2 absolute right-2">
+          <NavigatorMobile menus={menus} />
           {isLanguage && <LanguageButton size="sm" />}
           {isSignIn && (
             <Button

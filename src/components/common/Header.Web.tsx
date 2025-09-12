@@ -8,11 +8,15 @@ import LanguageButton from '@/components/common/LanguageButton.Web';
 import { colorPresets } from '@/css/colors';
 import Logo from 'src/components/common/Logo';
 import useI18nRouter from '@/hooks/useI18nRouter';
+import { Menu } from 'src/components/common/Header';
+import NavigatorWeb from 'src/components/common/Navigator.Web';
+import NavigatorMobile from 'src/components/common/Navigator.Mobile';
 
 export interface HeaderWebProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
   isLanguage?: boolean;
   isSignIn?: boolean;
+  menus: Menu[];
 }
 
 export default function HeaderWeb({
@@ -20,6 +24,7 @@ export default function HeaderWeb({
   isLogo = true,
   isLanguage = true,
   isSignIn = true,
+  menus,
   ...props
 }: HeaderWebProps) {
   const { i18n } = useLingui();
@@ -38,10 +43,14 @@ export default function HeaderWeb({
       )}
     >
       <div className="flex flex-row justify-between items-center w-full min-h-20 max-w-320 mx-auto p-4">
-        <div className="flex flex-row items-center gap-2 absolute left-4">
-          {isLogo && <Logo />}
-        </div>
+        {isLogo && (
+          <div className="flex flex-row items-center gap-2 absolute left-4">
+            <Logo />
+          </div>
+        )}
+        <NavigatorWeb menus={menus} />
         <div className="flex flex-row items-center gap-2 absolute right-4">
+          <NavigatorMobile menus={menus} />
           {isLanguage && <LanguageButton size="lg" />}
           {isSignIn && (
             <Button

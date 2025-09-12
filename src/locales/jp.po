@@ -14,6 +14,56 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
+#: src/components/common/Header.tsx:29
+msgid "Introduction"
+msgstr "紹介"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:32
+msgid "Project Introduction"
+msgstr "プロジェクト紹介"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:33
+msgid "This is an introduction to the project."
+msgstr "これはプロジェクトの紹介です。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:37
+msgid "Developer Introduction"
+msgstr "開発者紹介"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:38
+msgid "This is an introduction to the developer."
+msgstr "これは開発者の紹介です。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:44
+msgid "Terms and Privacy"
+msgstr "利用規約とプライバシー"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:48
+msgid "These are the Terms of Service for using the service."
+msgstr "これらはサービスを使用するための利用規約です。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:55
+msgid "This is the Privacy Policy regarding the personal information handled by the service."
+msgstr "これはサービスが取り扱う個人情報に関するプライバシーポリシーです。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:63
+msgid "FAQ"
+msgstr "よくある質問"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "おすすめ"
+
+#. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:16
 msgid "Install App Shortcut"
 msgstr "アプリのショートカットをインストール"
@@ -47,60 +97,40 @@ msgid "Share your links with other users."
 msgstr "自分のリンクを他のユーザーと共有しましょう。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:51
+#: src/components/home/Tutorial.tsx:48
 msgid "Additional Features for Easy Use"
 msgstr "便利に使うための追加機能"
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:58
+#: src/components/home/Tutorial.tsx:55
 msgid "Not only can you add links, but you can also take advantage of various provided features."
 msgstr "リンクの追加だけでなく、提供されているさまざまな機能も活用できます。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:21
-msgid "Smart Link Management"
-msgstr "スマートなリンク管理"
+#: src/components/home/Banner.tsx:22
+msgid "Banner"
+msgstr "バナー"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Organize your links by folders and view them at a glance."
-msgstr "リンクをフォルダごとに整理して、一目で確認できます。"
+#: src/components/home/Banner.tsx:28
+msgid "Save links and"
+msgstr "リンクを保存して"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:28
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "自動サムネイルとメタデータ生成"
+#: src/components/home/Banner.tsx:30
+msgid "share them."
+msgstr "共有しましょう。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "追加したリンクのサムネイル、タイトル、簡単な説明を自動生成します。"
+#: src/components/home/Banner.tsx:38
+msgid "A platform to organize and view your important links at a glance"
+msgstr "重要なリンクを体系的に管理し、一目で確認できるプラットフォーム"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:35
-#: src/components/home/Guest.tsx:44
-msgid "Threat Link Check"
-msgstr "危険リンクの確認"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "Google Web Risk API を通じてリンクが安全かどうか確認できます。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:43
-msgid "Get personalized link suggestions powered by AI."
-msgstr "AI によって自分に合ったリンクをおすすめしてもらえます。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:63
-msgid "Convenient and Secure Link Management"
-msgstr "便利で安全なリンク管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:70
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "保存したリンクを一目で確認できます。リンクの安全性をチェックし、パーソナライズされたリンク推薦を受け取り、システムが自動で簡単な詳細を入力して簡単に検索できるようにします。"
+#: src/components/home/Banner.tsx:49
+#: src/components/home/Banner.tsx:58
+msgid "Get started"
+msgstr "はじめる"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:17
@@ -144,52 +174,61 @@ msgid "Database Storage"
 msgstr "データベース保存"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:75
-#: src/components/home/Guest.tsx:77
+#: src/components/home/Description.tsx:35
+#: src/components/home/Guest.tsx:44
+msgid "Threat Link Check"
+msgstr "危険リンクの確認"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:72
+#: src/components/home/Guest.tsx:74
 msgid "Log in to access more features."
 msgstr "ログインして<span>より多くの機能</span>を利用しましょう。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:88
+#: src/components/home/Guest.tsx:85
 msgid "You can use it without signing up, but logging in lets you try more features for free."
 msgstr "登録なしでも使用できますが、ログインするとより多くの機能を無料で体験できます。"
 
 #. js-lingui-explicit-id
-#: src/components/common/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "おすすめ"
+#: src/components/home/Description.tsx:21
+msgid "Smart Link Management"
+msgstr "スマートなリンク管理"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:22
-msgid "Banner"
-msgstr "バナー"
+#: src/components/home/Description.tsx:22
+msgid "Organize your links by folders and view them at a glance."
+msgstr "リンクをフォルダごとに整理して、一目で確認できます。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:28
-msgid "Save links and"
-msgstr "リンクを保存して"
+#: src/components/home/Description.tsx:28
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "自動サムネイルとメタデータ生成"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:30
-msgid "share them."
-msgstr "共有しましょう。"
+#: src/components/home/Description.tsx:29
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "追加したリンクのサムネイル、タイトル、簡単な説明を自動生成します。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:38
-msgid "A platform to organize and view your important links at a glance"
-msgstr "重要なリンクを体系的に管理し、一目で確認できるプラットフォーム"
+#: src/components/home/Description.tsx:36
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "Google Web Risk API を通じてリンクが安全かどうか確認できます。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:49
-#: src/components/home/Banner.tsx:58
-msgid "Get started"
-msgstr "はじめる"
+#: src/components/home/Description.tsx:43
+msgid "Get personalized link suggestions powered by AI."
+msgstr "AI によって自分に合ったリンクをおすすめしてもらえます。"
 
 #. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-#: src/components/common/Logo.tsx:28
-msgid "Logo"
-msgstr "ロゴ"
+#: src/components/home/Description.tsx:60
+msgid "Convenient and Secure Link Management"
+msgstr "便利で安全なリンク管理"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:67
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "保存したリンクを一目で確認できます。リンクの安全性をチェックし、パーソナライズされたリンク推薦を受け取り、システムが自動で簡単な詳細を入力して簡単に検索できるようにします。"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
@@ -222,13 +261,31 @@ msgid "中文"
 msgstr "中文"
 
 #. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+#: src/components/common/Logo.tsx:28
+msgid "Logo"
+msgstr "ロゴ"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Web.tsx:62
 msgid "Select Language"
 msgstr "言語を選択"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:46
-#: src/components/common/Header.Web.tsx:46
+#: src/components/common/Footer.tsx:20
+#: src/components/common/Header.tsx:47
+msgid "Terms of Service"
+msgstr "利用規約"
+
+#. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:28
+#: src/components/common/Header.tsx:54
+msgid "Privacy Policy"
+msgstr "プライバシーポリシー"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:58
+#: src/components/common/Header.Web.tsx:109
 msgid "Sign in"
 msgstr "ログイン"
 
@@ -236,16 +293,6 @@ msgstr "ログイン"
 #: src/components/common/Footer.tsx:14
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. 全ての権利を保有。"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:20
-msgid "Terms of Service"
-msgstr "利用規約"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:28
-msgid "Privacy Policy"
-msgstr "プライバシーポリシー"
 
 #. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:38
