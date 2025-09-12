@@ -16,7 +16,6 @@ export interface HeaderWebProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
   isLanguage?: boolean;
   isSignIn?: boolean;
-  menus: Menu[];
 }
 
 export default function HeaderWeb({
@@ -26,7 +25,7 @@ export default function HeaderWeb({
   isSignIn = true,
   menus,
   ...props
-}: HeaderWebProps) {
+}: HeaderWebProps & { menus: Menu[] }) {
   const { i18n } = useLingui();
   const { push } = useI18nRouter();
 

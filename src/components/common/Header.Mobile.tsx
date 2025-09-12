@@ -15,7 +15,6 @@ export interface HeaderMobileProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
   isLanguage?: boolean;
   isSignIn?: boolean;
-  menus: Menu[];
 }
 
 export default function HeaderMobile({
@@ -25,7 +24,7 @@ export default function HeaderMobile({
   isSignIn = true,
   menus,
   ...props
-}: HeaderMobileProps) {
+}: HeaderMobileProps & { menus: Menu[] }) {
   const { i18n } = useLingui();
   const { push } = useI18nRouter();
 
