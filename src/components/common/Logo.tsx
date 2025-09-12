@@ -19,14 +19,7 @@ export default function Logo() {
         height={72}
         src="/icons/icon-72x72.png"
         alt={i18n.t('Logo')}
-        className="w-9 h-9 block md:hidden"
-      />
-      <Image
-        width={72}
-        height={72}
-        src="/icons/icon-72x72.png"
-        alt={i18n.t('Logo')}
-        className="w-12 h-12 hidden md:block"
+        className="w-9 h-9 md:w-12 md:h-12"
       />
       <span className="font-mono text-sm/[1.2] md:text-base/[1.2] font-medium">
         {'Linkary'}

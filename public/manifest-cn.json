@@ -1,7 +1,7 @@
 {
   "name": "Linkary",
   "short_name": "Linkary",
-  "description": "Linkary是一个用于系统化管理重要链接并与团队成员轻松共享的智能平台。",
+  "description": "Linkary 是一个检查链接安全性、通过 AI 提供推荐，并能便捷管理和分享的平台。",
   "lang": "cn",
   "dir": "auto",
   "start_url": "/cn",

@@ -1,7 +1,7 @@
 {
   "name": "Linkary",
   "short_name": "Linkary",
-  "description": "Linkary는 중요한 링크들을 체계적으로 관리하고 팀원들과 쉽게 공유할 수 있는 스마트한 플랫폼입니다.",
+  "description": "Linkary 는 링크의 안전성을 검사하고 AI 를 통해 추천 받으며, 편리한 관리 및 공유할 수 있는 플랫폼입니다.",
   "lang": "ko",
   "dir": "auto",
   "start_url": "/ko",

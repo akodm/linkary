@@ -1,7 +1,7 @@
 {
   "name": "Linkary",
   "short_name": "Linkary",
-  "description": "Linkary es una plataforma inteligente para gestionar sistemáticamente enlaces importantes y compartirlos fácilmente con los miembros del equipo.",
+  "description": "Linkary es una plataforma que verifica la seguridad de los enlaces, proporciona recomendaciones con IA y permite una gestión y compartición conveniente.",
   "lang": "es",
   "dir": "auto",
   "start_url": "/es",

@@ -7,9 +7,9 @@ import { Button } from 'src/components/ui/button';
 import LanguageButton from '@/components/common/LanguageButton.Mobile';
 import { colorPresets } from '@/css/colors';
 import { useLingui } from '@lingui/react';
-import useI18nRouter from '@/hooks/useI18nRouter';
 import { Menu } from 'src/components/common/Header';
 import NavigatorMobile from 'src/components/common/Navigator.Mobile';
+import I18nLink from 'src/components/common/I18nLink';
 
 export interface HeaderMobileProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
@@ -26,7 +26,6 @@ export default function HeaderMobile({
   ...props
 }: HeaderMobileProps & { menus: Menu[] }) {
   const { i18n } = useLingui();
-  const { push } = useI18nRouter();
 
   return (
     <header
@@ -48,17 +47,18 @@ export default function HeaderMobile({
           <NavigatorMobile menus={menus} />
           {isLanguage && <LanguageButton size="sm" />}
           {isSignIn && (
-            <Button
-              size="sm"
-              variant="secondary"
-              className={clsx(
-                'cursor-pointer',
-                colorPresets({ preset: 'primary' }),
-              )}
-              onClick={() => push('/auth')}
-            >
-              <span>{i18n.t('Sign in')}</span>
-            </Button>
+            <I18nLink href="/auth">
+              <Button
+                size="sm"
+                variant="secondary"
+                className={clsx(
+                  'cursor-pointer',
+                  colorPresets({ preset: 'primary' }),
+                )}
+              >
+                <span>{i18n.t('Sign in')}</span>
+              </Button>
+            </I18nLink>
           )}
         </div>
       </div>

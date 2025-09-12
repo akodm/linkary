@@ -174,50 +174,6 @@ export default async function RootLayout({
 }>) {
   const { lang } = await params;
   const manifest = await import(`public/manifest-${lang}.json`);
-  const baseUrl = NEXT_PUBLIC_BASE_URL || NEXT_PUBLIC_VERCEL_URL;
-
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: manifest.name,
-    description: manifest.description,
-    url: `${baseUrl}/${lang}`,
-    applicationCategory: 'ProductivityApplication',
-    operatingSystem: 'Web Browser',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Linkary Team',
-      url: baseUrl,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Linkary',
-      url: baseUrl,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${baseUrl}/icons/icon-512x512.png`,
-      },
-    },
-    inLanguage: lang,
-    potentialAction: {
-      '@type': 'UseAction',
-      target: `${baseUrl}/${lang}`,
-    },
-    featureList: [
-      'Smart Link Management',
-      'Automatic Thumbnail Generation',
-      'Threat Link Check',
-      'AI Link Recommendations',
-      'Team Collaboration',
-      'Multi-language Support',
-    ],
-  };
 
   return (
     <html lang={lang} suppressHydrationWarning>
@@ -231,20 +187,13 @@ export default async function RootLayout({
         />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
         <link
           rel="preload"
           href="/main-banner.webp"
           as="image"
           type="image/webp"
         />
+        <meta name="description" content={manifest.description} />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta

@@ -1,7 +1,7 @@
 {
   "name": "Linkary",
   "short_name": "Linkary",
-  "description": "Linkary is a smart platform for systematically managing important links and easily sharing them with team members.",
+  "description": "Linkary is a platform that checks link safety, provides AI-powered recommendations, and enables convenient management and sharing.",
   "lang": "en",
   "dir": "auto",
   "start_url": "/en",

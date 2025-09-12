@@ -7,10 +7,10 @@ import { useLingui } from '@lingui/react';
 import LanguageButton from '@/components/common/LanguageButton.Web';
 import { colorPresets } from '@/css/colors';
 import Logo from 'src/components/common/Logo';
-import useI18nRouter from '@/hooks/useI18nRouter';
 import { Menu } from 'src/components/common/Header';
 import NavigatorWeb from 'src/components/common/Navigator.Web';
 import NavigatorMobile from 'src/components/common/Navigator.Mobile';
+import I18nLink from 'src/components/common/I18nLink';
 
 export interface HeaderWebProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
@@ -27,7 +27,6 @@ export default function HeaderWeb({
   ...props
 }: HeaderWebProps & { menus: Menu[] }) {
   const { i18n } = useLingui();
-  const { push } = useI18nRouter();
 
   return (
     <header
@@ -52,17 +51,18 @@ export default function HeaderWeb({
           <NavigatorMobile menus={menus} />
           {isLanguage && <LanguageButton size="lg" />}
           {isSignIn && (
-            <Button
-              size="lg"
-              variant="secondary"
-              className={clsx(
-                'cursor-pointer',
-                colorPresets({ preset: 'primary' }),
-              )}
-              onClick={() => push('/auth')}
-            >
-              <span>{i18n.t('Sign in')}</span>
-            </Button>
+            <I18nLink href="/auth">
+              <Button
+                size="lg"
+                variant="secondary"
+                className={clsx(
+                  'cursor-pointer',
+                  colorPresets({ preset: 'primary' }),
+                )}
+              >
+                <span>{i18n.t('Sign in')}</span>
+              </Button>
+            </I18nLink>
           )}
         </div>
       </div>
