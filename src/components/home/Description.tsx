@@ -1,7 +1,6 @@
 'use client';
 
 import { useLingui } from '@lingui/react';
-import clsx from 'clsx';
 import {
   BookmarkIcon,
   BrainCogIcon,
@@ -11,6 +10,8 @@ import {
 import { useMemo } from 'react';
 import DescriptionIconCard from '@/components/home/DescriptionIconCard';
 import GeneralAnimator from '@/components/common/GeneralAnimator';
+import Section from 'src/components/common/Section';
+import Heading from 'src/components/common/Heading';
 
 export default function Description() {
   const { i18n } = useLingui();
@@ -48,39 +49,32 @@ export default function Description() {
   );
 
   return (
-    <section className="flex flex-col items-center w-full py-10 md:py-20 bg-gray-50">
-      <div className="flex flex-col items-center gap-y-10 md:gap-y-20 w-full max-w-320 px-4 md:px-6 mx-auto">
-        <div
-          className={clsx(
-            'flex flex-col items-center gap-2 md:gap-4 w-full text-center',
-            i18n.locale === 'ko' ? 'break-keep' : 'break-words',
-          )}
+    <Section className="bg-gray-50">
+      <Heading>
+        <GeneralAnimator as="h2" className="text-2xl md:text-4xl font-bold">
+          {i18n.t('Convenient and Secure Link Management')}
+        </GeneralAnimator>
+        <GeneralAnimator
+          as="h3"
+          className="text-sm md:text-lg font-medium text-gray-500"
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <GeneralAnimator as="h2" className="text-2xl md:text-4xl font-bold">
-            {i18n.t('Convenient and Secure Link Management')}
-          </GeneralAnimator>
-          <GeneralAnimator
-            as="h3"
-            className="text-sm md:text-lg font-medium text-gray-500"
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            {i18n.t(
-              'View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find.',
-            )}
-          </GeneralAnimator>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 md:gap-5 w-full">
-          {descriptionContents.map((content) => {
-            return (
-              <DescriptionIconCard
-                key={content.title}
-                preset="primary-light"
-                {...content}
-              />
-            );
-          })}
-        </div>
+          {i18n.t(
+            'View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find.',
+          )}
+        </GeneralAnimator>
+      </Heading>
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 md:gap-5 w-full">
+        {descriptionContents.map((content) => {
+          return (
+            <DescriptionIconCard
+              key={content.title}
+              preset="primary-light"
+              {...content}
+            />
+          );
+        })}
       </div>
-    </section>
+    </Section>
   );
 }
