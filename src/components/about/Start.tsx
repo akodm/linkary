@@ -9,7 +9,7 @@ import { colorPresets } from '@/css/colors';
 import clsx from 'clsx';
 import I18nLink from 'src/components/common/I18nLink';
 
-export default function Content() {
+export default function Start() {
   const { i18n } = useLingui();
 
   return (
