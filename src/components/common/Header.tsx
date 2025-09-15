@@ -39,10 +39,6 @@ export default function Header(props: HeaderWebProps | HeaderMobileProps) {
             title: i18n.t('Project Introduction'),
             href: '/about',
           },
-          {
-            title: i18n.t('Developer Introduction'),
-            href: '/tech',
-          },
         ],
       },
       {

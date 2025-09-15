@@ -39,9 +39,20 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <span className="mx-auto text-xs text-gray-300">
-        {i18n.t('Site created by 🤖 akodm')}
-      </span>
+      <div className="flex flex-row flex-wrap items-center gap-x-1.5 mx-auto">
+        <span className="text-xs text-gray-300">
+          {i18n.t('Site created by 🤖 akodm')}
+        </span>
+        <a
+          href="https://github.com/akodm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="underline text-xs md:text-sm text-white hover:text-gray-200 transition-colors duration-200">
+            {'https://github.com/akodm'}
+          </span>
+        </a>
+      </div>
     </footer>
   );
 }

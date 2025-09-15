@@ -14,96 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/tech/Technology.tsx:68
-msgid "Tech Stack & More"
-msgstr "技術スタックとその他"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Technology.tsx:74
-msgid "Technologies and external services used to build Linkary."
-msgstr "Linkaryの構築に使用された技術と外部サービス。"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:15
-msgid "Planning in Notion: requirements, folder structure, URL structure, and simple design wireframes"
-msgstr "Notionでの計画：要件、フォルダ構造、URL構造、シンプルなデザインワイヤーフレーム"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:20
-msgid "Design request to Readdy AI"
-msgstr "Readdy AIへのデザイン依頼"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:23
-msgid "Database modeling and refactoring of folder/URL structures during the process"
-msgstr "プロセス中のデータベースモデリングとフォルダ/URL構造のリファクタリング"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:28
-msgid "Review, integration, and testing of required external APIs"
-msgstr "必要な外部APIのレビュー、統合、テスト"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:33
-msgid "Component implementation and static pages"
-msgstr "コンポーネント実装と静的ページ"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:36
-msgid "Dynamic pages and API implementation"
-msgstr "動的ページとAPI実装"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:39
-msgid "SEO optimization"
-msgstr "SEO最適化"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:42
-msgid "Admin features"
-msgstr "管理者機能"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:45
-msgid "QA and deployment"
-msgstr "QAとデプロイメント"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:55
-msgid "Development Roadmap"
-msgstr "開発ロードマップ"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:61
-msgid "Project build process"
-msgstr "プロジェクト構築プロセス"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:48
-msgid "About the Developer"
-msgstr "開発者について"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:54
-msgid "brief introduction."
-msgstr "簡単な紹介。"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:69
-msgid "Developer Profile Image"
-msgstr "開発者プロフィール画像"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:78
-msgid "Front-end Developer"
-msgstr "フロントエンド開発者"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:81
-msgid "work across the full stack with JavaScript but primarily focus on the front end. I have limited design experience and leveraged AI for assistance."
-msgstr "JavaScriptでフルスタック開発を行いますが、主にフロントエンドに焦点を当てています。デザイン経験は限定的で、AIの支援を活用しました。"
-
-#. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:17
 msgid "Install App Shortcut"
 msgstr "アプリのショートカットをインストール"
@@ -200,32 +110,6 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "保存したリンクを一目で確認できます。リンクの安全性をチェックし、パーソナライズされたリンク推薦を受け取り、システムが自動で簡単な詳細を入力して簡単に検索できるようにします。"
 
 #. js-lingui-explicit-id
-#: src/components/about/Start.tsx:19
-#: src/components/tech/Start.tsx:19
-msgid "Get started now"
-msgstr "今すぐ始める"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:26
-#: src/components/tech/Start.tsx:26
-msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
-msgstr "アカウントなしでも Linkary を使用できますが、より多くの機能を解除するためにサインアップをお勧めします。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:40
-#: src/components/home/Guest.tsx:21
-#: src/components/tech/Start.tsx:40
-msgid "Use as Guest"
-msgstr "ゲストとして使用"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:50
-#: src/components/home/Guest.tsx:34
-#: src/components/tech/Start.tsx:50
-msgid "Sign Up"
-msgstr "会員登録"
-
-#. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "ゲストユーザー"
@@ -234,6 +118,12 @@ msgstr "ゲストユーザー"
 #: src/components/home/Guest.tsx:19
 msgid "Start right away without signing up"
 msgstr "登録なしですぐに始める"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:40
+#: src/components/home/Guest.tsx:21
+msgid "Use as Guest"
+msgstr "ゲストとして使用"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:24
@@ -250,6 +140,12 @@ msgstr "メンバーユーザー"
 #: src/components/home/Guest.tsx:32
 msgid "Access to all features"
 msgstr "すべての機能利用可能"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:50
+#: src/components/home/Guest.tsx:34
+msgid "Sign Up"
+msgstr "会員登録"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:41
@@ -349,6 +245,12 @@ msgid "FAQ"
 msgstr "よくある質問"
 
 #. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:59
+#: src/components/common/Header.Web.tsx:63
+msgid "Sign in"
+msgstr "ログイン"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
 #: src/components/common/LanguageButton.Web.tsx:28
 msgid "English"
@@ -382,27 +284,6 @@ msgstr "中文"
 #: src/components/common/LanguageButton.Web.tsx:62
 msgid "Select Language"
 msgstr "言語を選択"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:59
-#: src/components/common/Header.Web.tsx:63
-msgid "Sign in"
-msgstr "ログイン"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:32
-msgid "Login"
-msgstr "ログイン"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:33
-msgid "Login to your account"
-msgstr "アカウントにログイン"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:40
-msgid "Close"
-msgstr "閉じる"
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
@@ -441,6 +322,31 @@ msgid "Find more details in other sections of the site."
 msgstr "サイトの他のセクションで詳細をご確認ください。"
 
 #. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:32
+msgid "Login"
+msgstr "ログイン"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:33
+msgid "Login to your account"
+msgstr "アカウントにログイン"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:40
+msgid "Close"
+msgstr "閉じる"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:19
+msgid "Get started now"
+msgstr "今すぐ始める"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:26
+msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
+msgstr "アカウントなしでも Linkary を使用できますが、より多くの機能を解除するためにサインアップをお勧めします。"
+
+#. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:14
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. 全ての権利を保有。"
@@ -449,21 +355,6 @@ msgstr "© 2025 Linkary. 全ての権利を保有。"
 #: src/components/common/Footer.tsx:43
 msgid "Site created by 🤖 akodm"
 msgstr "🤖 akodm によって作成されたサイト"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "紹介バナー"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "Linkary とは"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "リンクを簡単に管理し、信頼性を保ちましょう。"
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -524,3 +415,18 @@ msgstr "Linkary で利用可能な機能"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "異なる環境で機能をお試しください。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "紹介バナー"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "Linkary とは"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "リンクを簡単に管理し、信頼性を保ちましょう。"

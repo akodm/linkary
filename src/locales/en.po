@@ -14,96 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/tech/Technology.tsx:68
-msgid "Tech Stack & More"
-msgstr "Tech Stack & More"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Technology.tsx:74
-msgid "Technologies and external services used to build Linkary."
-msgstr "Technologies and external services used to build Linkary."
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:15
-msgid "Planning in Notion: requirements, folder structure, URL structure, and simple design wireframes"
-msgstr "Planning in Notion: requirements, folder structure, URL structure, and simple design wireframes"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:20
-msgid "Design request to Readdy AI"
-msgstr "Design request to Readdy AI"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:23
-msgid "Database modeling and refactoring of folder/URL structures during the process"
-msgstr "Database modeling and refactoring of folder/URL structures during the process"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:28
-msgid "Review, integration, and testing of required external APIs"
-msgstr "Review, integration, and testing of required external APIs"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:33
-msgid "Component implementation and static pages"
-msgstr "Component implementation and static pages"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:36
-msgid "Dynamic pages and API implementation"
-msgstr "Dynamic pages and API implementation"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:39
-msgid "SEO optimization"
-msgstr "SEO optimization"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:42
-msgid "Admin features"
-msgstr "Admin features"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:45
-msgid "QA and deployment"
-msgstr "QA and deployment"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:55
-msgid "Development Roadmap"
-msgstr "Development Roadmap"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Roadmap.tsx:61
-msgid "Project build process"
-msgstr "Project build process"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:48
-msgid "About the Developer"
-msgstr "About the Developer"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:54
-msgid "brief introduction."
-msgstr "brief introduction."
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:69
-msgid "Developer Profile Image"
-msgstr "Developer Profile Image"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:78
-msgid "Front-end Developer"
-msgstr "Front-end Developer"
-
-#. js-lingui-explicit-id
-#: src/components/tech/Developer.tsx:81
-msgid "work across the full stack with JavaScript but primarily focus on the front end. I have limited design experience and leveraged AI for assistance."
-msgstr "work across the full stack with JavaScript but primarily focus on the front end. I have limited design experience and leveraged AI for assistance."
-
-#. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:17
 msgid "Install App Shortcut"
 msgstr "Install App Shortcut"
@@ -200,32 +110,6 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
 
 #. js-lingui-explicit-id
-#: src/components/about/Start.tsx:19
-#: src/components/tech/Start.tsx:19
-msgid "Get started now"
-msgstr "Get started now"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:26
-#: src/components/tech/Start.tsx:26
-msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
-msgstr "You can use Linkary without an account, but we recommend signing up to unlock more features."
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:40
-#: src/components/home/Guest.tsx:21
-#: src/components/tech/Start.tsx:40
-msgid "Use as Guest"
-msgstr "Use as Guest"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:50
-#: src/components/home/Guest.tsx:34
-#: src/components/tech/Start.tsx:50
-msgid "Sign Up"
-msgstr "Sign Up"
-
-#. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "Guest User"
@@ -234,6 +118,12 @@ msgstr "Guest User"
 #: src/components/home/Guest.tsx:19
 msgid "Start right away without signing up"
 msgstr "Start right away without signing up"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:40
+#: src/components/home/Guest.tsx:21
+msgid "Use as Guest"
+msgstr "Use as Guest"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:24
@@ -250,6 +140,12 @@ msgstr "Member User"
 #: src/components/home/Guest.tsx:32
 msgid "Access to all features"
 msgstr "Access to all features"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:50
+#: src/components/home/Guest.tsx:34
+msgid "Sign Up"
+msgstr "Sign Up"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:41
@@ -349,6 +245,12 @@ msgid "FAQ"
 msgstr "FAQ"
 
 #. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:59
+#: src/components/common/Header.Web.tsx:63
+msgid "Sign in"
+msgstr "Sign in"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
 #: src/components/common/LanguageButton.Web.tsx:28
 msgid "English"
@@ -382,27 +284,6 @@ msgstr "中文"
 #: src/components/common/LanguageButton.Web.tsx:62
 msgid "Select Language"
 msgstr "Select Language"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:59
-#: src/components/common/Header.Web.tsx:63
-msgid "Sign in"
-msgstr "Sign in"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:32
-msgid "Login"
-msgstr "Login"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:33
-msgid "Login to your account"
-msgstr "Login to your account"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:40
-msgid "Close"
-msgstr "Close"
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
@@ -441,6 +322,31 @@ msgid "Find more details in other sections of the site."
 msgstr "Find more details in other sections of the site."
 
 #. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:32
+msgid "Login"
+msgstr "Login"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:33
+msgid "Login to your account"
+msgstr "Login to your account"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:40
+msgid "Close"
+msgstr "Close"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:19
+msgid "Get started now"
+msgstr "Get started now"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:26
+msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
+msgstr "You can use Linkary without an account, but we recommend signing up to unlock more features."
+
+#. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:14
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. All rights reserved."
@@ -449,21 +355,6 @@ msgstr "© 2025 Linkary. All rights reserved."
 #: src/components/common/Footer.tsx:43
 msgid "Site created by 🤖 akodm"
 msgstr "Site created by 🤖 akodm"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "Introduction Banner"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "What is Linkary"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "Manage your links with ease and keep them trustworthy."
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -524,3 +415,18 @@ msgstr "Features available in Linkary"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "Try our features across different environments."
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "Introduction Banner"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "What is Linkary"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "Manage your links with ease and keep them trustworthy."
