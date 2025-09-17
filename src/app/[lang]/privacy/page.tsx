@@ -1,3 +1,5 @@
+import PrivacyLayout from '@/components/privacy/Layout';
+
 export default function PrivacyPage() {
-  return <div>PrivacyPage</div>;
+  return <PrivacyLayout />;
 }

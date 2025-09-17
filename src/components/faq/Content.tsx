@@ -1,0 +1,58 @@
+'use client';
+
+import { useLingui } from '@lingui/react';
+import { useMemo } from 'react';
+
+export default function Content() {
+  const { i18n } = useLingui();
+
+  const faqContents = useMemo(
+    () => [
+      {
+        title: i18n.t('What is Linkary?'),
+        description: i18n.t(
+          'Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations.',
+        ),
+      },
+      {
+        title: i18n.t('Do you offer a paid plan?'),
+        description: i18n.t(
+          'No. There is no paid plan. Each user has a daily usage quota, which resets at 00:00 KST (Korea Standard Time).',
+        ),
+      },
+      {
+        title: i18n.t('Are links marked “safe” guaranteed to be safe?'),
+        description: i18n.t(
+          'We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview',
+        ),
+      },
+      {
+        title: i18n.t('Can I use Linkary without signing up?'),
+        description: i18n.t(
+          'Yes. In that case, data is stored only on your device (e.g., browser local storage) and not on Linkary’s servers.',
+        ),
+      },
+      {
+        title: i18n.t('Can I save links without sharing them?'),
+        description: i18n.t(
+          'Yes. Sharing is optional, and the default is private (not shared).',
+        ),
+      },
+      {
+        title: i18n.t('How is my personal data used?'),
+        description: i18n.t(
+          'We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law.',
+        ),
+      },
+      {
+        title: i18n.t('How were the translations produced?'),
+        description: i18n.t(
+          'Translations are AI-generated and may contain minor contextual inaccuracies.',
+        ),
+      },
+    ],
+    [i18n],
+  );
+
+  return <div>Content</div>;
+}
