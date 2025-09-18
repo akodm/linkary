@@ -14,76 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:12
-msgid "What is Linkary?"
-msgstr "¿Qué es Linkary?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:13
-msgid "Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations."
-msgstr "Linkary es un servicio web para guardar y gestionar enlaces de forma confiable y, si quieres, compartirlos con la comunidad. Verifica enlaces potencialmente dañinos y proporciona recomendaciones personalizadas impulsadas por IA."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:18
-msgid "Do you offer a paid plan?"
-msgstr "¿Ofrecen un plan de pago?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:19
-msgid "No. There is no paid plan. Each user has a daily usage quota, which resets at 00:00 KST (Korea Standard Time)."
-msgstr "No. No hay plan de pago. Cada usuario tiene una cuota de uso diario que se restablece a las 00:00 KST (Hora Estándar de Corea)."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:24
-msgid "Are links marked "safe" guaranteed to be safe?"
-msgstr "¿Los enlaces marcados como "seguros" garantizan ser seguros?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:25
-msgid "We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview"
-msgstr "Evaluamos el riesgo a través de la API de Google Web Risk, pero pueden ocurrir amenazas no detectadas o errores, por lo que no se puede garantizar la seguridad absoluta. Detalles: <a>https://cloud.google.com/web-risk/docs/overview?hl=es</a>"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:30
-msgid "Can I use Linkary without signing up?"
-msgstr "¿Puedo usar Linkary sin registrarme?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:31
-msgid "Yes. In that case, data is stored only on your device (e.g., browser local storage) and not on Linkary's servers."
-msgstr "Sí. En ese caso, los datos se almacenan solo en tu dispositivo (por ejemplo, almacenamiento local del navegador) y no en los servidores de Linkary."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:36
-msgid "Can I save links without sharing them?"
-msgstr "¿Puedo guardar enlaces sin compartirlos?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:37
-msgid "Yes. Sharing is optional, and the default is private (not shared)."
-msgstr "Sí. Compartir es opcional, y el valor predeterminado es privado (no compartido)."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:42
-msgid "How is my personal data used?"
-msgstr "¿Cómo se usan mis datos personales?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:43
-msgid "We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law."
-msgstr "Recopilamos solo datos mínimos (identificador de Google OAuth y correo electrónico) para el registro y los usamos únicamente para el inicio de sesión/gestión de cuenta. Al eliminarlos, los datos se borran sin demora indebida, excepto cuando la retención es requerida por ley."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:48
-msgid "How were the translations produced?"
-msgstr "¿Cómo se produjeron las traducciones?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:49
-msgid "Translations are AI-generated and may contain minor contextual inaccuracies."
-msgstr "Las traducciones son generadas por IA y pueden contener inexactitudes contextuales menores."
-
-#. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:17
 msgid "Install App Shortcut"
 msgstr "Instalar acceso directo de la app"
@@ -180,6 +110,88 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "Visualiza todos tus enlaces guardados de un vistazo. Verifica la seguridad de cada enlace, recibe recomendaciones personalizadas y permite que el sistema complete automáticamente los detalles para facilitar su búsqueda."
 
 #. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:18
+msgid "What is Linkary?"
+msgstr "¿Qué es Linkary?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:19
+msgid "Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations."
+msgstr "Linkary es un servicio web para guardar y gestionar enlaces de forma confiable y, si quieres, compartirlos con la comunidad. Verifica enlaces potencialmente dañinos y proporciona recomendaciones personalizadas impulsadas por IA."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:25
+msgid "Do you offer a paid plan?"
+msgstr "¿Ofrecen un plan de pago?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:26
+msgid "No. There is no paid plan. Each user has a daily usage quota, which resets at 00:00 KST (Korea Standard Time)."
+msgstr "No. No hay plan de pago. Cada usuario tiene una cuota de uso diario que se restablece a las 00:00 KST (Hora Estándar de Corea)."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:32
+msgid "Are links marked \"safe\" guaranteed to be safe?"
+msgstr "¿Los enlaces marcados como \"seguros\" garantizan ser seguros?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:33
+msgid "We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview"
+msgstr "Evaluamos el riesgo a través de la API de Google Web Risk, pero pueden ocurrir amenazas no detectadas o errores, por lo que no se puede garantizar la seguridad absoluta. Detalles: <a>https://cloud.google.com/web-risk/docs/overview</a>"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:39
+msgid "Can I use Linkary without signing up?"
+msgstr "¿Puedo usar Linkary sin registrarme?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:40
+msgid "Yes. In that case, data is stored only on your device (e.g., browser local storage) and not on Linkary's servers."
+msgstr "Sí. En ese caso, los datos se almacenan solo en tu dispositivo (por ejemplo, almacenamiento local del navegador) y no en los servidores de Linkary."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:46
+msgid "Can I save links without sharing them?"
+msgstr "¿Puedo guardar enlaces sin compartirlos?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:47
+msgid "Yes. Sharing is optional, and the default is private (not shared)."
+msgstr "Sí. Compartir es opcional, y el valor predeterminado es privado (no compartido)."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:53
+msgid "How is my personal data used?"
+msgstr "¿Cómo se usan mis datos personales?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:54
+msgid "We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law."
+msgstr "Recopilamos solo datos mínimos (identificador de Google OAuth y correo electrónico) para el registro y los usamos únicamente para el inicio de sesión/gestión de cuenta. Al eliminarlos, los datos se borran sin demora indebida, excepto cuando la retención es requerida por ley."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:60
+msgid "How were the translations produced?"
+msgstr "¿Cómo se produjeron las traducciones?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:61
+msgid "Translations are AI-generated and may contain minor contextual inaccuracies."
+msgstr "Las traducciones son generadas por IA y pueden contener inexactitudes contextuales menores."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:17
+#: src/components/common/Header.tsx:64
+#: src/components/faq/Content.tsx:73
+msgid "FAQ"
+msgstr "Preguntas Frecuentes"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:76
+msgid "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
+msgstr "Consulta nuestras Preguntas Frecuentes. Si no encuentras lo que necesitas o la respuesta no resuelve tu problema, no dudes en contactarnos en cualquier momento."
+
+#. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "Usuario Invitado"
@@ -265,6 +277,12 @@ msgid "Logo"
 msgstr "Logotipo"
 
 #. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:59
+#: src/components/common/Header.Web.tsx:63
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
 #: src/components/common/LanguageButton.Web.tsx:28
 msgid "English"
@@ -298,12 +316,6 @@ msgstr "中文"
 #: src/components/common/LanguageButton.Web.tsx:62
 msgid "Select Language"
 msgstr "Seleccionar idioma"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:59
-#: src/components/common/Header.Web.tsx:63
-msgid "Sign in"
-msgstr "Iniciar sesión"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.tsx:36
@@ -343,12 +355,6 @@ msgstr "Política de Privacidad"
 #: src/components/common/Header.tsx:56
 msgid "This is the Privacy Policy regarding the personal information handled by the service."
 msgstr "Esta es la Política de Privacidad sobre la información personal manejada por el servicio."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:17
-#: src/components/common/Header.tsx:64
-msgid "FAQ"
-msgstr "Preguntas Frecuentes"
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:32
