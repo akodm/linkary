@@ -7,6 +7,9 @@ import Heading from 'src/components/common/Heading';
 import GeneralAnimator from 'src/components/common/GeneralAnimator';
 import { Accordion } from 'src/components/ui/accordion';
 import FaqAccorionItem from 'src/components/faq/FaqAccorionItem';
+import { Button } from 'src/components/ui/button';
+import clsx from 'clsx';
+import { colorPresets } from '@/css/colors';
 
 export default function Content() {
   const { i18n } = useLingui();
@@ -78,12 +81,25 @@ export default function Content() {
           )}
         </GeneralAnimator>
       </Heading>
-      <div className="w-full max-w-3xl px-2 pb-25 pt-10 md:pb-15 md:pt-0">
+      <div className="w-full max-w-3xl px-2 pb-10 pt-10 md:pb-5 md:pt-0">
         <Accordion collapsible type="single" className="w-full">
           {faqContents.map((faqContent) => (
             <FaqAccorionItem key={faqContent.id} {...faqContent} />
           ))}
         </Accordion>
+      </div>
+      <div className="flex flex-col items-center gap-5 w-full max-w-3xl p-3 md:p-6 border border-gray-200 bg-gray-50 rounded-md md:rounded-lg text-center">
+        <h3 className="text-base md:text-lg font-medium">
+          {i18n.t('If you have any questions, feel free to contact us.')}
+        </h3>
+        <Button
+          className={clsx(
+            'cursor-pointer',
+            colorPresets({ preset: 'primary' }),
+          )}
+        >
+          <a href="mailto:a8456452@gmail.com">{i18n.t('Contact Us')}</a>
+        </Button>
       </div>
     </Section>
   );

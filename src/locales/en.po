@@ -62,134 +62,99 @@ msgid "Recommended"
 msgstr "Recommended"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "Smart Link Management"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "Organize your links by folders and view them at a glance."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "Automatic Thumbnail & Metadata Generation"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "Automatically generates thumbnails, titles, and short descriptions for your added links."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-#: src/components/home/Guest.tsx:45
-msgid "Threat Link Check"
-msgstr "Threat Link Check"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "Verify whether a link is safe using the Google Web Risk API."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "Get personalized link suggestions powered by AI."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "Convenient and Secure Link Management"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:18
+#: src/components/faq/Content.tsx:21
 msgid "What is Linkary?"
 msgstr "What is Linkary?"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:19
+#: src/components/faq/Content.tsx:22
 msgid "Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations."
 msgstr "Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations."
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:25
+#: src/components/faq/Content.tsx:28
 msgid "Do you offer a paid plan?"
 msgstr "Do you offer a paid plan?"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:26
+#: src/components/faq/Content.tsx:29
 msgid "No. There is no paid plan. Each user has a daily usage quota, which resets at 00:00 KST (Korea Standard Time)."
 msgstr "No. There is no paid plan. Each user has a daily usage quota, which resets at 00:00 KST (Korea Standard Time)."
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:32
+#: src/components/faq/Content.tsx:35
 msgid "Are links marked \"safe\" guaranteed to be safe?"
 msgstr "Are links marked \"safe\" guaranteed to be safe?"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:33
+#: src/components/faq/Content.tsx:36
 msgid "We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview"
 msgstr "We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: <a>https://cloud.google.com/web-risk/docs/overview</a>"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:39
+#: src/components/faq/Content.tsx:42
 msgid "Can I use Linkary without signing up?"
 msgstr "Can I use Linkary without signing up?"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:40
+#: src/components/faq/Content.tsx:43
 msgid "Yes. In that case, data is stored only on your device (e.g., browser local storage) and not on Linkary's servers."
 msgstr "Yes. In that case, data is stored only on your device (e.g., browser local storage) and not on Linkary's servers."
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:46
+#: src/components/faq/Content.tsx:49
 msgid "Can I save links without sharing them?"
 msgstr "Can I save links without sharing them?"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:47
+#: src/components/faq/Content.tsx:50
 msgid "Yes. Sharing is optional, and the default is private (not shared)."
 msgstr "Yes. Sharing is optional, and the default is private (not shared)."
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:53
+#: src/components/faq/Content.tsx:56
 msgid "How is my personal data used?"
 msgstr "How is my personal data used?"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:54
+#: src/components/faq/Content.tsx:57
 msgid "We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law."
 msgstr "We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law."
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:60
+#: src/components/faq/Content.tsx:63
 msgid "How were the translations produced?"
 msgstr "How were the translations produced?"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:61
+#: src/components/faq/Content.tsx:64
 msgid "Translations are AI-generated and may contain minor contextual inaccuracies."
 msgstr "Translations are AI-generated and may contain minor contextual inaccuracies."
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:17
 #: src/components/common/Header.tsx:64
-#: src/components/faq/Content.tsx:73
+#: src/components/faq/Content.tsx:76
 msgid "FAQ"
 msgstr "FAQ"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:76
+#: src/components/faq/Content.tsx:79
 msgid "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
 msgstr "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:36
+#: src/components/faq/Content.tsx:93
+msgid "If you have any questions, feel free to contact us."
+msgstr "If you have any questions, feel free to contact us."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:35
+#: src/components/common/Footer.tsx:38
+#: src/components/faq/Content.tsx:101
+msgid "Contact Us"
+msgstr "Contact Us"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:18
@@ -235,6 +200,12 @@ msgid "Database Storage"
 msgstr "Database Storage"
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:36
+#: src/components/home/Guest.tsx:45
+msgid "Threat Link Check"
+msgstr "Threat Link Check"
+
+#. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:67
 #: src/components/home/Guest.tsx:69
 msgid "Log in to access more features."
@@ -272,15 +243,51 @@ msgid "Get started"
 msgstr "Get started"
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "Smart Link Management"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "Organize your links by folders and view them at a glance."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "Automatic Thumbnail & Metadata Generation"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "Automatically generates thumbnails, titles, and short descriptions for your added links."
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "Verify whether a link is safe using the Google Web Risk API."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "Get personalized link suggestions powered by AI."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "Convenient and Secure Link Management"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+
+#. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
 msgid "Logo"
 msgstr "Logo"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:59
-#: src/components/common/Header.Web.tsx:63
-msgid "Sign in"
-msgstr "Sign in"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
@@ -316,6 +323,12 @@ msgstr "中文"
 #: src/components/common/LanguageButton.Web.tsx:62
 msgid "Select Language"
 msgstr "Select Language"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:59
+#: src/components/common/Header.Web.tsx:63
+msgid "Sign in"
+msgstr "Sign in"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.tsx:36
@@ -357,6 +370,16 @@ msgid "This is the Privacy Policy regarding the personal information handled by 
 msgstr "This is the Privacy Policy regarding the personal information handled by the service."
 
 #. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:14
+msgid "© 2025 Linkary. All rights reserved."
+msgstr "© 2025 Linkary. All rights reserved."
+
+#. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:44
+msgid "Site created by 🤖 akodm"
+msgstr "Site created by 🤖 akodm"
+
+#. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:32
 msgid "Login"
 msgstr "Login"
@@ -387,17 +410,6 @@ msgid "Review Linkary's Terms of Service."
 msgstr "Review Linkary's Terms of Service."
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:35
-#: src/components/common/Footer.tsx:38
-msgid "Contact Us"
-msgstr "Contact Us"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:36
-msgid "If you have any questions, feel free to contact us."
-msgstr "If you have any questions, feel free to contact us."
-
-#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:52
 msgid "Need more information?"
 msgstr "Need more information?"
@@ -406,6 +418,21 @@ msgstr "Need more information?"
 #: src/components/about/Infomation.tsx:59
 msgid "Find more details in other sections of the site."
 msgstr "Find more details in other sections of the site."
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "Introduction Banner"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "What is Linkary"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "Manage your links with ease and keep them trustworthy."
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -468,21 +495,6 @@ msgid "Try our features across different environments."
 msgstr "Try our features across different environments."
 
 #. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "Introduction Banner"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "What is Linkary"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "Manage your links with ease and keep them trustworthy."
-
-#. js-lingui-explicit-id
 #: src/components/about/Start.tsx:19
 msgid "Get started now"
 msgstr "Get started now"
@@ -491,13 +503,3 @@ msgstr "Get started now"
 #: src/components/about/Start.tsx:26
 msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
 msgstr "You can use Linkary without an account, but we recommend signing up to unlock more features."
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:14
-msgid "© 2025 Linkary. All rights reserved."
-msgstr "© 2025 Linkary. All rights reserved."
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:44
-msgid "Site created by 🤖 akodm"
-msgstr "Site created by 🤖 akodm"
