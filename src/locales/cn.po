@@ -14,14 +14,14 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/app/[lang]/not-found.tsx:19
-msgid "Page not found"
-msgstr "页面未找到"
+#: src/components/user/Layout.tsx:36
+msgid "Failed to get user data"
+msgstr "获取用户数据失败"
 
 #. js-lingui-explicit-id
-#: src/app/[lang]/not-found.tsx:21
-msgid "Go to home"
-msgstr "返回首页"
+#: src/components/user/Layout.tsx:37
+msgid "Please try reloading the page"
+msgstr "请尝试刷新页面"
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:29
@@ -95,6 +95,11 @@ msgid "Not only can you add links, but you can also take advantage of various pr
 msgstr "不仅可以添加链接，还可以利用提供的多种功能。"
 
 #. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "推荐"
+
+#. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "访客用户"
@@ -155,9 +160,30 @@ msgid "You can use it without signing up, but logging in lets you try more featu
 msgstr "无需注册即可使用，但登录后可以免费体验更多功能。"
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "推荐"
+#: src/components/home/Banner.tsx:22
+msgid "Banner"
+msgstr "横幅"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:28
+msgid "Save links and"
+msgstr "保存链接"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:30
+msgid "share them."
+msgstr "并分享。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:38
+msgid "A platform to organize and view your important links at a glance"
+msgstr "一个能系统管理并一目了然查看重要链接的平台"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:49
+#: src/components/home/Banner.tsx:58
+msgid "Get started"
+msgstr "开始使用"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -200,32 +226,6 @@ msgstr "便捷安全的链接管理"
 #: src/components/home/Description.tsx:62
 msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
 msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:22
-msgid "Banner"
-msgstr "横幅"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:28
-msgid "Save links and"
-msgstr "保存链接"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:30
-msgid "share them."
-msgstr "并分享。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:38
-msgid "A platform to organize and view your important links at a glance"
-msgstr "一个能系统管理并一目了然查看重要链接的平台"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:49
-#: src/components/home/Banner.tsx:58
-msgid "Get started"
-msgstr "开始使用"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -323,6 +323,11 @@ msgid "Contact Us"
 msgstr "联系我们"
 
 #. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "标志"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
 #: src/components/common/LanguageButton.Web.tsx:28
 msgid "English"
@@ -353,20 +358,15 @@ msgid "中文"
 msgstr "中文"
 
 #. js-lingui-explicit-id
-#: src/components/common/LanguageButton.Web.tsx:62
-msgid "Select Language"
-msgstr "选择语言"
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "标志"
-
-#. js-lingui-explicit-id
 #: src/components/common/Header.Mobile.tsx:59
 #: src/components/common/Header.Web.tsx:63
 msgid "Sign in"
 msgstr "登录"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.Web.tsx:62
+msgid "Select Language"
+msgstr "选择语言"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.tsx:36
@@ -494,6 +494,16 @@ msgid "Try our features across different environments."
 msgstr "在不同环境中试用我们的功能。"
 
 #. js-lingui-explicit-id
+#: src/components/about/Start.tsx:19
+msgid "Get started now"
+msgstr "立即开始"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:26
+msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
+msgstr "您可以在不注册账户的情况下使用 Linkary，但我们建议您注册以解锁更多功能。"
+
+#. js-lingui-explicit-id
 #: src/components/about/Banner.tsx:19
 msgid "Introduction Banner"
 msgstr "介绍横幅"
@@ -509,11 +519,12 @@ msgid "Manage your links with ease and keep them trustworthy."
 msgstr "轻松管理您的链接，保持它们的可信度。"
 
 #. js-lingui-explicit-id
-#: src/components/about/Start.tsx:19
-msgid "Get started now"
-msgstr "立即开始"
+#: src/app/[lang]/not-found.tsx:26
+#: src/app/[lang]/not-found.tsx:32
+msgid "Page not found"
+msgstr "页面未找到"
 
 #. js-lingui-explicit-id
-#: src/components/about/Start.tsx:26
-msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
-msgstr "您可以在不注册账户的情况下使用 Linkary，但我们建议您注册以解锁更多功能。"
+#: src/app/[lang]/not-found.tsx:40
+msgid "Go to home"
+msgstr "返回首页"

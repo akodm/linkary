@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { allMessages } from 'src/appRouterI18n';
 import { LinguiClientProvider } from '@/components/common/LinguiClientProvider';
 import { locales } from 'lingui.config';
+import { Toaster } from 'sonner';
 
 const {
   NEXT_PUBLIC_GA_TAG = '',
@@ -197,6 +198,7 @@ export default async function RootLayout({
         >
           {children}
           {intercept}
+          <Toaster />
           <SpeedInsights />
           {NEXT_PUBLIC_GA_TAG && (
             <Script id="ga-stub" strategy="beforeInteractive">

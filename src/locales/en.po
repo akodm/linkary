@@ -14,14 +14,14 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/app/[lang]/not-found.tsx:19
-msgid "Page not found"
-msgstr "Page not found"
+#: src/components/user/Layout.tsx:36
+msgid "Failed to get user data"
+msgstr "Failed to get user data"
 
 #. js-lingui-explicit-id
-#: src/app/[lang]/not-found.tsx:21
-msgid "Go to home"
-msgstr "Go to home"
+#: src/components/user/Layout.tsx:37
+msgid "Please try reloading the page"
+msgstr "Please try reloading the page"
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:29
@@ -95,6 +95,11 @@ msgid "Not only can you add links, but you can also take advantage of various pr
 msgstr "Not only can you add links, but you can also take advantage of various provided features."
 
 #. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "Recommended"
+
+#. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "Guest User"
@@ -155,9 +160,30 @@ msgid "You can use it without signing up, but logging in lets you try more featu
 msgstr "You can use it without signing up, but logging in lets you try more features for free."
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "Recommended"
+#: src/components/home/Banner.tsx:22
+msgid "Banner"
+msgstr "Banner"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:28
+msgid "Save links and"
+msgstr "Save links and"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:30
+msgid "share them."
+msgstr "share them."
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:38
+msgid "A platform to organize and view your important links at a glance"
+msgstr "A platform to organize and view your important links at a glance"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:49
+#: src/components/home/Banner.tsx:58
+msgid "Get started"
+msgstr "Get started"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -200,32 +226,6 @@ msgstr "Convenient and Secure Link Management"
 #: src/components/home/Description.tsx:62
 msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
 msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:22
-msgid "Banner"
-msgstr "Banner"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:28
-msgid "Save links and"
-msgstr "Save links and"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:30
-msgid "share them."
-msgstr "share them."
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:38
-msgid "A platform to organize and view your important links at a glance"
-msgstr "A platform to organize and view your important links at a glance"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:49
-#: src/components/home/Banner.tsx:58
-msgid "Get started"
-msgstr "Get started"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -323,6 +323,11 @@ msgid "Contact Us"
 msgstr "Contact Us"
 
 #. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "Logo"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
 #: src/components/common/LanguageButton.Web.tsx:28
 msgid "English"
@@ -353,20 +358,15 @@ msgid "中文"
 msgstr "中文"
 
 #. js-lingui-explicit-id
-#: src/components/common/LanguageButton.Web.tsx:62
-msgid "Select Language"
-msgstr "Select Language"
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "Logo"
-
-#. js-lingui-explicit-id
 #: src/components/common/Header.Mobile.tsx:59
 #: src/components/common/Header.Web.tsx:63
 msgid "Sign in"
 msgstr "Sign in"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.Web.tsx:62
+msgid "Select Language"
+msgstr "Select Language"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.tsx:36
@@ -494,6 +494,16 @@ msgid "Try our features across different environments."
 msgstr "Try our features across different environments."
 
 #. js-lingui-explicit-id
+#: src/components/about/Start.tsx:19
+msgid "Get started now"
+msgstr "Get started now"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:26
+msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
+msgstr "You can use Linkary without an account, but we recommend signing up to unlock more features."
+
+#. js-lingui-explicit-id
 #: src/components/about/Banner.tsx:19
 msgid "Introduction Banner"
 msgstr "Introduction Banner"
@@ -509,11 +519,12 @@ msgid "Manage your links with ease and keep them trustworthy."
 msgstr "Manage your links with ease and keep them trustworthy."
 
 #. js-lingui-explicit-id
-#: src/components/about/Start.tsx:19
-msgid "Get started now"
-msgstr "Get started now"
+#: src/app/[lang]/not-found.tsx:26
+#: src/app/[lang]/not-found.tsx:32
+msgid "Page not found"
+msgstr "Page not found"
 
 #. js-lingui-explicit-id
-#: src/components/about/Start.tsx:26
-msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
-msgstr "You can use Linkary without an account, but we recommend signing up to unlock more features."
+#: src/app/[lang]/not-found.tsx:40
+msgid "Go to home"
+msgstr "Go to home"

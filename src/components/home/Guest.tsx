@@ -25,7 +25,7 @@ export default function Guest() {
             checked: false,
           },
         ],
-        onClick: () => push('/user'),
+        onClick: () => push('/user', true),
       },
       {
         title: i18n.t('Member User'),
@@ -54,7 +54,7 @@ export default function Guest() {
             checked: true,
           },
         ],
-        onClick: () => push('/auth'),
+        onClick: () => push('/auth', true),
       },
     ],
     [i18n, push],
