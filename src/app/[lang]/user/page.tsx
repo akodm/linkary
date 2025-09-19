@@ -1,3 +1,5 @@
+import UserLayout from '@/components/user/Layout';
+
 export default function UserPage() {
-  return <div>UserPage</div>;
+  return <UserLayout />;
 }
