@@ -1,5 +1,47 @@
 'use client';
 
+import {
+  TERMS_OF_SERVICE_KO,
+  TERMS_OF_SERVICE_EN,
+  TERMS_OF_SERVICE_JP,
+  TERMS_OF_SERVICE_CN,
+  TERMS_OF_SERVICE_ES,
+} from '@/consts/terms-of-service';
+import { useLingui } from '@lingui/react';
+import { useMemo } from 'react';
+import GeneralAnimator from 'src/components/common/GeneralAnimator';
+import Heading from 'src/components/common/Heading';
+import Section from 'src/components/common/Section';
+
 export default function Content() {
-  return <div>Content</div>;
+  const { i18n } = useLingui();
+
+  const termsOfService = useMemo(() => {
+    switch (i18n.locale) {
+      case 'ko':
+        return TERMS_OF_SERVICE_KO;
+      case 'jp':
+        return TERMS_OF_SERVICE_JP;
+      case 'cn':
+        return TERMS_OF_SERVICE_CN;
+      case 'es':
+        return TERMS_OF_SERVICE_ES;
+      case 'en':
+      default:
+        return TERMS_OF_SERVICE_EN;
+    }
+  }, [i18n.locale]);
+
+  return (
+    <Section>
+      <Heading>
+        <GeneralAnimator as="h1" className="text-2xl md:text-4xl font-bold">
+          {i18n.t('Terms of Service')}
+        </GeneralAnimator>
+      </Heading>
+      <div className="w-full max-w-4xl">
+        <div dangerouslySetInnerHTML={{ __html: termsOfService }} />
+      </div>
+    </Section>
+  );
 }
