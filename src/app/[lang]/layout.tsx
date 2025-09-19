@@ -7,6 +7,7 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { allMessages } from 'src/appRouterI18n';
 import { LinguiClientProvider } from '@/components/common/LinguiClientProvider';
+import { locales } from 'lingui.config';
 
 const {
   NEXT_PUBLIC_GA_TAG = '',
@@ -138,6 +139,10 @@ export const viewport: Viewport = {
   userScalable: true,
   viewportFit: 'cover',
 };
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ lang: locale }));
+}
 
 export default async function RootLayout({
   children,
