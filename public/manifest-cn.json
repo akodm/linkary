@@ -1,5 +1,5 @@
 {
-  "name": "Linkary",
+  "name": "Linkary - 智能链接管理平台",
   "short_name": "Linkary",
   "description": "Linkary 是一个检查链接安全性、通过 AI 提供推荐，并能便捷管理和分享的平台。",
   "lang": "cn",
@@ -10,6 +10,21 @@
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "any",
+  "keywords": [
+    "链接",
+    "书签",
+    "URL",
+    "生产力",
+    "链接管理",
+    "书签管理",
+    "链接整理",
+    "链接分享",
+    "生产力工具",
+    "网页书签",
+    "URL管理",
+    "链接收藏",
+    "书签整理"
+  ],
   "icons": [
     { "src": "/icons/icon-48x48.png", "sizes": "48x48", "type": "image/png" },
     { "src": "/icons/icon-72x72.png", "sizes": "72x72", "type": "image/png" },

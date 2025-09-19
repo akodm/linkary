@@ -1,5 +1,5 @@
 {
-  "name": "Linkary",
+  "name": "Linkary - 스마트한 링크 관리 플랫폼",
   "short_name": "Linkary",
   "description": "Linkary 는 링크의 안전성을 검사하고 AI 를 통해 추천 받으며, 편리한 관리 및 공유할 수 있는 플랫폼입니다.",
   "lang": "ko",
@@ -10,6 +10,21 @@
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "any",
+  "keywords": [
+    "링크",
+    "북마크",
+    "URL",
+    "생산성",
+    "링크 관리",
+    "북마크 관리",
+    "링크 정렬",
+    "링크 공유",
+    "생산성 도구",
+    "웹 북마크",
+    "URL 관리",
+    "링크 컬렉션",
+    "북마크 정렬"
+  ],
   "icons": [
     { "src": "/icons/icon-48x48.png", "sizes": "48x48", "type": "image/png" },
     { "src": "/icons/icon-72x72.png", "sizes": "72x72", "type": "image/png" },

@@ -1,5 +1,5 @@
 {
-  "name": "Linkary",
+  "name": "Linkary - Plataforma Inteligente de Gestión de Enlaces",
   "short_name": "Linkary",
   "description": "Linkary es una plataforma que verifica la seguridad de los enlaces, proporciona recomendaciones con IA y permite una gestión y compartición conveniente.",
   "lang": "es",
@@ -10,6 +10,21 @@
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "any",
+  "keywords": [
+    "enlace",
+    "marcador",
+    "URL",
+    "productividad",
+    "gestión de enlaces",
+    "gestor de marcadores",
+    "organizador de enlaces",
+    "compartir enlaces",
+    "herramienta de productividad",
+    "marcadores web",
+    "gestor de URL",
+    "colección de enlaces",
+    "organizador de marcadores"
+  ],
   "icons": [
     { "src": "/icons/icon-48x48.png", "sizes": "48x48", "type": "image/png" },
     { "src": "/icons/icon-72x72.png", "sizes": "72x72", "type": "image/png" },

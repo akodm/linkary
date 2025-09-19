@@ -6,9 +6,11 @@ const { locales } = linguiConfig;
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}`) || pathname === `/${locale}`,
-  );
+  const pathnameHasLocale = locales.some((locale) => {
+    const localePattern = new RegExp(`^/${locale}(/.*)?$`);
+
+    return localePattern.test(pathname);
+  });
 
   if (pathnameHasLocale) return;
 

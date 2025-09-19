@@ -1,5 +1,5 @@
 {
-  "name": "Linkary",
+  "name": "Linkary - スマートなリンク管理プラットフォーム",
   "short_name": "Linkary",
   "description": "Linkary はリンクの安全性をチェックし、AI による推薦を受け、便利な管理と共有ができるプラットフォームです。",
   "lang": "jp",
@@ -10,6 +10,21 @@
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "any",
+  "keywords": [
+    "リンク",
+    "ブックマーク",
+    "URL",
+    "生産性",
+    "リンク管理",
+    "ブックマーク管理",
+    "リンク整理",
+    "リンク共有",
+    "生産性ツール",
+    "ウェブブックマーク",
+    "URL管理",
+    "リンクコレクション",
+    "ブックマーク整理"
+  ],
   "icons": [
     { "src": "/icons/icon-48x48.png", "sizes": "48x48", "type": "image/png" },
     { "src": "/icons/icon-72x72.png", "sizes": "72x72", "type": "image/png" },
