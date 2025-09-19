@@ -35,8 +35,11 @@ export default function Content() {
   return (
     <Section>
       <Heading>
-        <GeneralAnimator as="h1" className="text-2xl md:text-4xl font-bold">
+        <h1 className="text-2xl md:text-4xl font-bold">
           {i18n.t('Terms of Service')}
+        </h1>
+        <GeneralAnimator as="h2" className="text-base md:text-lg my-0!">
+          {i18n.t('These are the Terms of Service for using the service.')}
         </GeneralAnimator>
       </Heading>
       <div className="w-full max-w-4xl">
