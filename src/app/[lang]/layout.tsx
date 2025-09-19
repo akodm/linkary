@@ -48,6 +48,10 @@ export const generateMetadata = async ({
     description: manifest.description,
     keywords: manifest.keywords,
     creator: 'Linkary',
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       type: 'website',
       locale: lang,
