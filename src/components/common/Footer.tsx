@@ -2,7 +2,7 @@
 
 import { useLingui } from '@lingui/react';
 import { ContactIcon, FileCheckIcon, FileUserIcon } from 'lucide-react';
-import Link from 'next/link';
+import I18nLink from 'src/components/common/I18nLink';
 
 export default function Footer() {
   const { i18n } = useLingui();
@@ -15,19 +15,19 @@ export default function Footer() {
         </span>
         <div className="flex flex-row items-center gap-x-1.5">
           <FileCheckIcon size={14} className="text-white" />
-          <Link href="/terms-of-service">
+          <I18nLink href="/terms-of-service">
             <span className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200">
               {i18n.t('Terms of Service')}
             </span>
-          </Link>
+          </I18nLink>
         </div>
         <div className="flex flex-row items-center gap-x-1.5">
           <FileUserIcon size={14} className="text-white" />
-          <Link href="/privacy">
+          <I18nLink href="/privacy">
             <span className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200">
               {i18n.t('Privacy Policy')}
             </span>
-          </Link>
+          </I18nLink>
         </div>
         <div className="flex flex-row items-center gap-x-1.5">
           <ContactIcon size={14} className="text-white" />
