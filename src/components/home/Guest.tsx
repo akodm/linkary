@@ -1,7 +1,7 @@
 'use client';
 
 import { Trans, useLingui } from '@lingui/react';
-import { useMemo, useTransition } from 'react';
+import { useEffect, useMemo } from 'react';
 import ProvidedFunctionCard from '@/components/home/ProvidedFunctionCard';
 import useI18nRouter from '@/hooks/useI18nRouter';
 import GeneralAnimator from '@/components/common/GeneralAnimator';
@@ -10,9 +10,7 @@ import Heading from 'src/components/common/Heading';
 
 export default function Guest() {
   const { i18n } = useLingui();
-  const { push } = useI18nRouter();
-  const [isGuestPending, startGuestTransition] = useTransition();
-  const [isMemberPending, startMemberTransition] = useTransition();
+  const { push, prefetch } = useI18nRouter();
 
   const functionContents = useMemo(
     () => [
@@ -27,8 +25,7 @@ export default function Guest() {
             checked: false,
           },
         ],
-        isPending: isGuestPending,
-        onClick: () => startGuestTransition(() => push('/user', true)),
+        onClick: () => push('/user', true),
       },
       {
         title: i18n.t('Member User'),
@@ -57,12 +54,15 @@ export default function Guest() {
             checked: true,
           },
         ],
-        isPending: isMemberPending,
-        onClick: () => startMemberTransition(() => push('/auth', true)),
+        onClick: () => push('/auth', true),
       },
     ],
-    [i18n, push, isGuestPending, isMemberPending],
+    [i18n, push],
   );
+
+  useEffect(() => {
+    prefetch('/auth');
+  }, [prefetch]);
 
   return (
     <Section>
@@ -88,13 +88,7 @@ export default function Guest() {
       </Heading>
       <div className="flex flex-col md:flex-row gap-3 md:gap-5 w-full max-w-md md:max-w-5xl">
         {functionContents.map((content) => {
-          return (
-            <ProvidedFunctionCard
-              key={content.title}
-              {...content}
-              isPending={content.isPending}
-            />
-          );
+          return <ProvidedFunctionCard key={content.title} {...content} />;
         })}
       </div>
     </Section>

@@ -2,9 +2,9 @@
 
 import { useLingui } from '@lingui/react';
 import { cva } from 'class-variance-authority';
-import { Check, Crown, Loader2Icon, User } from 'lucide-react';
+import { Check, Crown, User } from 'lucide-react';
 import { Badge } from 'src/components/ui/badge';
-import { Button } from 'src/components/ui/button';
+import LoadingButton from 'src/components/common/LoadingButton';
 
 const containerCva = cva(
   'flex flex-col justify-between items-center w-full min-h-80 p-4 md:p-8 border rounded-lg relative',
@@ -57,7 +57,6 @@ interface ProvidedFunctionCardProps {
   isGuest?: boolean;
   message: string;
   providedContent: ProvidedFunctionCardProvidedContent[];
-  isPending?: boolean;
   onClick?: () => void;
 }
 
@@ -67,7 +66,6 @@ export default function ProvidedFunctionCard({
   isGuest = false,
   message,
   providedContent,
-  isPending = false,
   onClick,
 }: ProvidedFunctionCardProps) {
   const { i18n } = useLingui();
@@ -104,13 +102,12 @@ export default function ProvidedFunctionCard({
           })}
         </div>
       </div>
-      <Button
+      <LoadingButton
         className="w-full mt-4 md:mt-6 cursor-pointer"
         onClick={onClick}
-        disabled={isPending}
       >
-        {isPending ? <Loader2Icon className="mx-auto animate-spin" /> : message}
-      </Button>
+        {message}
+      </LoadingButton>
     </div>
   );
 }
