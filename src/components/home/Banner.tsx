@@ -7,6 +7,7 @@ import { ArrowDownIcon } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from 'src/components/ui/button';
 import { twMerge } from 'tailwind-merge';
+import I18nLink from 'src/components/common/I18nLink';
 
 export default function Banner() {
   const { i18n } = useLingui();
@@ -39,24 +40,28 @@ export default function Banner() {
             'A platform to organize and view your important links at a glance',
           )}
         </h2>
-        <Button
-          size="sm"
-          className={twMerge(
-            'block md:hidden min-w-40 mt-2 md:mt-5 cursor-pointer',
-            colorPresets({ preset: 'primary' }),
-          )}
-        >
-          {i18n.t('Get started')}
-        </Button>
-        <Button
-          size="lg"
-          className={twMerge(
-            'hidden md:block md:min-w-80 mt-2 md:mt-5 cursor-pointer',
-            colorPresets({ preset: 'primary' }),
-          )}
-        >
-          {i18n.t('Get started')}
-        </Button>
+        <I18nLink href="/auth" prefetch>
+          <Button
+            size="sm"
+            className={twMerge(
+              'block md:hidden min-w-40 mt-2 md:mt-5 cursor-pointer',
+              colorPresets({ preset: 'primary' }),
+            )}
+          >
+            {i18n.t('Get started')}
+          </Button>
+        </I18nLink>
+        <I18nLink href="/auth" prefetch>
+          <Button
+            size="lg"
+            className={twMerge(
+              'hidden md:block md:min-w-80 mt-2 md:mt-5 cursor-pointer',
+              colorPresets({ preset: 'primary' }),
+            )}
+          >
+            {i18n.t('Get started')}
+          </Button>
+        </I18nLink>
       </div>
       <ArrowDownIcon
         size={15}

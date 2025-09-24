@@ -10,7 +10,7 @@ import I18nLink from 'src/components/common/I18nLink';
 
 const classes = cva(
   clsx(
-    'flex flex-col gap-y-2 w-full min-w-65 min-h-40 md:min-h-56 p-4 md:p-6 rounded-lg md:rounded-xl',
+    'flex flex-col gap-y-2 w-full min-w-65 min-h-40 md:min-h-56 p-4 md:p-6 rounded-lg md:rounded-xl border border-neutral-200',
     'shadow-md transition-transform duration-300 hover:scale-105 group/preset',
   ),
   {

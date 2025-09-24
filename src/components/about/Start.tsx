@@ -40,7 +40,7 @@ export default function Start() {
             {i18n.t('Use as Guest')}
           </Button>
         </I18nLink>
-        <I18nLink href="/auth">
+        <I18nLink href="/auth" prefetch>
           <Button
             className={clsx(
               'cursor-pointer',

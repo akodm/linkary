@@ -47,7 +47,7 @@ export default function HeaderMobile({
           <NavigatorMobile menus={menus} />
           {isLanguage && <LanguageButton size="sm" />}
           {isSignIn && (
-            <I18nLink href="/auth">
+            <I18nLink href="/auth" prefetch>
               <Button
                 size="sm"
                 variant="secondary"
