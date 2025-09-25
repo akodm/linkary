@@ -38,7 +38,11 @@ export default function Content() {
         <h1 className="text-2xl md:text-4xl font-bold">
           {i18n.t('Terms of Service')}
         </h1>
-        <GeneralAnimator as="h2" className="text-base md:text-lg my-0!">
+        <GeneralAnimator
+          as="h2"
+          className="text-sm md:text-lg font-medium text-gray-500"
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           {i18n.t('These are the Terms of Service for using the service.')}
         </GeneralAnimator>
       </Heading>

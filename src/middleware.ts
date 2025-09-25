@@ -34,6 +34,6 @@ function getLocale(requestHeaders: Headers): string {
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|manifest.*.json|sitemap.*.xml|robots.*.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!_next/static|_next/image|favicon.ico|api|manifest.*.json|sitemap.*.xml|robots.*.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };

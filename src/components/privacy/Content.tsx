@@ -38,7 +38,11 @@ export default function Content() {
         <h1 className="text-2xl md:text-4xl font-bold">
           {i18n.t('Privacy Policy')}
         </h1>
-        <GeneralAnimator as="h2" className="text-base md:text-lg my-0!">
+        <GeneralAnimator
+          as="h2"
+          className="text-sm md:text-lg font-medium text-gray-500"
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           {i18n.t(
             'This is the Privacy Policy regarding the personal information handled by the service.',
           )}

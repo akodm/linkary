@@ -10,6 +10,13 @@ import { useLingui } from '@lingui/react';
 import { Menu } from 'src/components/common/Header';
 import NavigatorMobile from 'src/components/common/Navigator.Mobile';
 import I18nLink from 'src/components/common/I18nLink';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from 'src/components/ui/dropdown-menu';
+import { UserIcon } from 'lucide-react';
 
 export interface HeaderMobileProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
@@ -47,18 +54,32 @@ export default function HeaderMobile({
           <NavigatorMobile menus={menus} />
           {isLanguage && <LanguageButton size="sm" />}
           {isSignIn && (
-            <I18nLink href="/auth" prefetch>
-              <Button
-                size="sm"
-                variant="secondary"
-                className={clsx(
-                  'cursor-pointer',
-                  colorPresets({ preset: 'primary' }),
-                )}
-              >
-                <span>{i18n.t('Sign in')}</span>
-              </Button>
-            </I18nLink>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className={clsx(
+                    'cursor-pointer',
+                    colorPresets({ preset: 'primary' }),
+                  )}
+                >
+                  <UserIcon className="size-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="mr-2">
+                <DropdownMenuItem asChild>
+                  <I18nLink href="/user" prefetch className="cursor-pointer">
+                    {i18n.t('Guest User')}
+                  </I18nLink>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <I18nLink href="/auth" prefetch className="cursor-pointer">
+                    {i18n.t('Sign in')}
+                  </I18nLink>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           )}
         </div>
       </div>

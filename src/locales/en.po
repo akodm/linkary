@@ -14,42 +14,14 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/user/Layout.tsx:36
+#: src/components/user/Layout.tsx:33
 msgid "Failed to get user data"
 msgstr "Failed to get user data"
 
 #. js-lingui-explicit-id
-#: src/components/user/Layout.tsx:37
+#: src/components/user/Layout.tsx:34
 msgid "Please try reloading the page"
 msgstr "Please try reloading the page"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:29
-#: src/components/common/Footer.tsx:20
-#: src/components/common/Header.tsx:48
-#: src/components/terms-of-service/Content.tsx:39
-msgid "Terms of Service"
-msgstr "Terms of Service"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.tsx:49
-#: src/components/terms-of-service/Content.tsx:42
-msgid "These are the Terms of Service for using the service."
-msgstr "These are the Terms of Service for using the service."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:23
-#: src/components/common/Footer.tsx:28
-#: src/components/common/Header.tsx:55
-#: src/components/privacy/Content.tsx:39
-msgid "Privacy Policy"
-msgstr "Privacy Policy"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.tsx:56
-#: src/components/privacy/Content.tsx:42
-msgid "This is the Privacy Policy regarding the personal information handled by the service."
-msgstr "This is the Privacy Policy regarding the personal information handled by the service."
 
 #. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:17
@@ -95,11 +67,41 @@ msgid "Not only can you add links, but you can also take advantage of various pr
 msgstr "Not only can you add links, but you can also take advantage of various provided features."
 
 #. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:29
+#: src/components/common/Footer.tsx:20
+#: src/components/common/Header.tsx:48
+#: src/components/terms-of-service/Content.tsx:39
+msgid "Terms of Service"
+msgstr "Terms of Service"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:49
+#: src/components/terms-of-service/Content.tsx:46
+msgid "These are the Terms of Service for using the service."
+msgstr "These are the Terms of Service for using the service."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:23
+#: src/components/common/Footer.tsx:28
+#: src/components/common/Header.tsx:55
+#: src/components/privacy/Content.tsx:39
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:56
+#: src/components/privacy/Content.tsx:46
+msgid "This is the Privacy Policy regarding the personal information handled by the service."
+msgstr "This is the Privacy Policy regarding the personal information handled by the service."
+
+#. js-lingui-explicit-id
 #: src/components/home/ProvidedFunctionCard.tsx:79
 msgid "Recommended"
 msgstr "Recommended"
 
 #. js-lingui-explicit-id
+#: src/components/common/Header.Mobile.tsx:73
+#: src/components/common/Header.Web.tsx:77
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "Guest User"
@@ -149,41 +151,15 @@ msgid "Threat Link Check"
 msgstr "Threat Link Check"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:67
-#: src/components/home/Guest.tsx:69
+#: src/components/home/Guest.tsx:71
+#: src/components/home/Guest.tsx:73
 msgid "Log in to access more features."
 msgstr "Log in to access <span>more features.</span>"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:80
+#: src/components/home/Guest.tsx:84
 msgid "You can use it without signing up, but logging in lets you try more features for free."
 msgstr "You can use it without signing up, but logging in lets you try more features for free."
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:22
-msgid "Banner"
-msgstr "Banner"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:28
-msgid "Save links and"
-msgstr "Save links and"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:30
-msgid "share them."
-msgstr "share them."
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:38
-msgid "A platform to organize and view your important links at a glance"
-msgstr "A platform to organize and view your important links at a glance"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:49
-#: src/components/home/Banner.tsx:58
-msgid "Get started"
-msgstr "Get started"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -226,6 +202,32 @@ msgstr "Convenient and Secure Link Management"
 #: src/components/home/Description.tsx:62
 msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
 msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "Banner"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "Save links and"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "share them."
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "A platform to organize and view your important links at a glance"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "Get started"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -300,32 +302,75 @@ msgstr "Translations are AI-generated and may contain minor contextual inaccurac
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:17
 #: src/components/common/Header.tsx:64
-#: src/components/faq/Content.tsx:76
+#: src/components/faq/Content.tsx:75
 msgid "FAQ"
 msgstr "FAQ"
 
 #. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:79
+#: src/components/faq/Content.tsx:81
 msgid "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
 msgstr "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:36
-#: src/components/faq/Content.tsx:93
+#: src/components/faq/Content.tsx:95
 msgid "If you have any questions, feel free to contact us."
 msgstr "If you have any questions, feel free to contact us."
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:35
 #: src/components/common/Footer.tsx:38
-#: src/components/faq/Content.tsx:101
+#: src/components/faq/Content.tsx:103
 msgid "Contact Us"
 msgstr "Contact Us"
+
+#. js-lingui-explicit-id
+#: src/components/error/Layout.tsx:26
+msgid "Sign-up or sign-in failed."
+msgstr "Sign-up or sign-in failed."
+
+#. js-lingui-explicit-id
+#: src/app/[lang]/not-found.tsx:26
+#: src/app/[lang]/not-found.tsx:32
+#: src/components/error/Layout.tsx:48
+msgid "Page not found"
+msgstr "Page not found"
+
+#. js-lingui-explicit-id
+#: src/components/error/Layout.tsx:54
+msgid "Error Page"
+msgstr "Error Page"
+
+#. js-lingui-explicit-id
+#: src/components/error/Layout.tsx:57
+msgid "Something went wrong. If the issue persists, please contact us."
+msgstr "Something went wrong. If the issue persists, please contact us."
+
+#. js-lingui-explicit-id
+#: src/app/[lang]/not-found.tsx:40
+#: src/components/error/Layout.tsx:68
+msgid "Go to home"
+msgstr "Go to home"
 
 #. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
 msgid "Logo"
 msgstr "Logo"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:36
+msgid "Introduction"
+msgstr "Introduction"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:39
+msgid "Project Introduction"
+msgstr "Project Introduction"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.tsx:45
+msgid "Terms and Privacy"
+msgstr "Terms and Privacy"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Mobile.tsx:28
@@ -358,30 +403,15 @@ msgid "中文"
 msgstr "中文"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:59
-#: src/components/common/Header.Web.tsx:63
-msgid "Sign in"
-msgstr "Sign in"
-
-#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.Web.tsx:62
 msgid "Select Language"
 msgstr "Select Language"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.tsx:36
-msgid "Introduction"
-msgstr "Introduction"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.tsx:39
-msgid "Project Introduction"
-msgstr "Project Introduction"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.tsx:45
-msgid "Terms and Privacy"
-msgstr "Terms and Privacy"
+#: src/components/common/Header.Mobile.tsx:78
+#: src/components/common/Header.Web.tsx:82
+msgid "Sign in"
+msgstr "Sign in"
 
 #. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:14
@@ -392,6 +422,47 @@ msgstr "© 2025 Linkary. All rights reserved."
 #: src/components/common/Footer.tsx:44
 msgid "Site created by 🤖 akodm"
 msgstr "Site created by 🤖 akodm"
+
+#. js-lingui-explicit-id
+#: src/components/auth/Heading.tsx:12
+msgid "Sign in to your account"
+msgstr "Sign in to your account"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:39
+#: src/components/auth/Heading.tsx:15
+msgid "Sign in to access more features."
+msgstr "Sign in to access more features."
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:34
+msgid "Login"
+msgstr "Login"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:35
+msgid "Login to your account"
+msgstr "Login to your account"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:50
+msgid "Close"
+msgstr "Close"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:19
+msgid "Get started now"
+msgstr "Get started now"
+
+#. js-lingui-explicit-id
+#: src/components/about/Start.tsx:26
+msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
+msgstr "You can use Linkary without an account, but we recommend signing up to unlock more features."
+
+#. js-lingui-explicit-id
+#: src/components/auth/Bottom.tsx:12
+msgid "To continue as a guest, click here."
+msgstr "To continue as a guest, click here."
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
@@ -419,19 +490,19 @@ msgid "Find more details in other sections of the site."
 msgstr "Find more details in other sections of the site."
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:32
-msgid "Login"
-msgstr "Login"
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "Introduction Banner"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:33
-msgid "Login to your account"
-msgstr "Login to your account"
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "What is Linkary"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:40
-msgid "Close"
-msgstr "Close"
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "Manage your links with ease and keep them trustworthy."
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -492,39 +563,3 @@ msgstr "Features available in Linkary"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "Try our features across different environments."
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:19
-msgid "Get started now"
-msgstr "Get started now"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:26
-msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
-msgstr "You can use Linkary without an account, but we recommend signing up to unlock more features."
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "Introduction Banner"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "What is Linkary"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "Manage your links with ease and keep them trustworthy."
-
-#. js-lingui-explicit-id
-#: src/app/[lang]/not-found.tsx:26
-#: src/app/[lang]/not-found.tsx:32
-msgid "Page not found"
-msgstr "Page not found"
-
-#. js-lingui-explicit-id
-#: src/app/[lang]/not-found.tsx:40
-msgid "Go to home"
-msgstr "Go to home"

@@ -8,10 +8,12 @@ import {
   SheetTitle,
   SheetFooter,
 } from 'src/components/ui/sheet';
-import Form from 'src/components/auth/Form';
 import { Button } from 'src/components/ui/button';
 import useI18nRouter from '@/hooks/useI18nRouter';
 import { useLingui } from '@lingui/react';
+import GeneralAnimator from 'src/components/common/GeneralAnimator';
+import GoogleSignInButton from 'src/components/auth/GoogleSignInButton';
+import { signIn } from 'next-auth/react';
 
 export default function AsideForm() {
   const { i18n } = useLingui();
@@ -32,8 +34,13 @@ export default function AsideForm() {
           <SheetTitle>{i18n.t('Login')}</SheetTitle>
           <SheetDescription>{i18n.t('Login to your account')}</SheetDescription>
         </SheetHeader>
-        <div className="flex flex-col gap-4 w-full px-4">
-          <Form />
+        <div className="flex flex-col justify-center items-center gap-4 w-full h-full px-4">
+          <GeneralAnimator className="mt-3 text-sm md:text-lg font-medium text-gray-500">
+            {i18n.t('Sign in to access more features.')}
+          </GeneralAnimator>
+          <form className="mx-auto" action={() => signIn('google')}>
+            <GoogleSignInButton />
+          </form>
         </div>
         <SheetFooter>
           <Button variant="outline" className="cursor-pointer" onClick={onBack}>

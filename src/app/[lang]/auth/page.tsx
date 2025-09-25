@@ -1,3 +1,5 @@
-export default function AuthPage() {
-  return <div>AuthPage</div>;
+import PageForm from '@/components/auth/PageForm';
+
+export default async function AuthPage() {
+  return <PageForm />;
 }
