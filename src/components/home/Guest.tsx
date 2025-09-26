@@ -3,14 +3,14 @@
 import { Trans, useLingui } from '@lingui/react';
 import { useEffect, useMemo } from 'react';
 import ProvidedFunctionCard from '@/components/home/ProvidedFunctionCard';
-import useI18nRouter from '@/hooks/useI18nRouter';
 import GeneralAnimator from '@/components/common/GeneralAnimator';
 import Section from 'src/components/common/Section';
 import Heading from 'src/components/common/Heading';
+import { useRouter } from 'next/navigation';
 
 export default function Guest() {
   const { i18n } = useLingui();
-  const { push, prefetch } = useI18nRouter();
+  const { push, prefetch } = useRouter();
 
   const functionContents = useMemo(
     () => [
@@ -25,7 +25,7 @@ export default function Guest() {
             checked: false,
           },
         ],
-        onClick: () => push('/user', true),
+        onClick: () => push('/user', { scroll: true }),
       },
       {
         title: i18n.t('Member User'),
@@ -54,7 +54,7 @@ export default function Guest() {
             checked: true,
           },
         ],
-        onClick: () => push('/auth', true),
+        onClick: () => push('/auth', { scroll: true }),
       },
     ],
     [i18n, push],

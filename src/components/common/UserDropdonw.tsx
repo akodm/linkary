@@ -10,13 +10,13 @@ import {
 } from 'src/components/ui/dropdown-menu';
 import { Button } from 'src/components/ui/button';
 import { colorPresets } from '@/css/colors';
-import I18nLink from 'src/components/common/I18nLink';
 import { UserIcon } from 'lucide-react';
 import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
 import { Session } from 'next-auth';
 import { useMemo } from 'react';
 import { signOut } from 'next-auth/react';
+import Link from 'next/link';
 
 interface UserDropdownItem {
   href?: string;
@@ -35,11 +35,11 @@ export default function UserDropdown({ session }: UserDropdownProps) {
     () => [
       {
         label: i18n.t('Switch to guest'),
-        onClick: () => signOut({ redirectTo: `/${i18n.locale}/user` }),
+        onClick: () => signOut({ redirectTo: '/user' }),
       },
       {
         label: i18n.t('Logout'),
-        onClick: () => signOut({ redirectTo: `/${i18n.locale}/` }),
+        onClick: () => signOut({ redirectTo: '/' }),
       },
       {
         href: '/user/delete',
@@ -84,9 +84,9 @@ export default function UserDropdown({ session }: UserDropdownProps) {
           if (item.href) {
             return (
               <DropdownMenuItem key={index} asChild>
-                <I18nLink href={item.href} prefetch className="cursor-pointer">
+                <Link href={item.href} prefetch className="cursor-pointer">
                   {item.label}
-                </I18nLink>
+                </Link>
               </DropdownMenuItem>
             );
           }

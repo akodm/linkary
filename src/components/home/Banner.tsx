@@ -7,7 +7,7 @@ import { ArrowDownIcon } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from 'src/components/ui/button';
 import { twMerge } from 'tailwind-merge';
-import I18nLink from 'src/components/common/I18nLink';
+import Link from 'next/link';
 
 export default function Banner() {
   const { i18n } = useLingui();
@@ -40,7 +40,7 @@ export default function Banner() {
             'A platform to organize and view your important links at a glance',
           )}
         </h2>
-        <I18nLink href="/auth" prefetch>
+        <Link href="/auth" prefetch>
           <Button
             size="sm"
             className={twMerge(
@@ -50,8 +50,8 @@ export default function Banner() {
           >
             {i18n.t('Get started')}
           </Button>
-        </I18nLink>
-        <I18nLink href="/auth" prefetch>
+        </Link>
+        <Link href="/auth" prefetch>
           <Button
             size="lg"
             className={twMerge(
@@ -61,7 +61,7 @@ export default function Banner() {
           >
             {i18n.t('Get started')}
           </Button>
-        </I18nLink>
+        </Link>
       </div>
       <ArrowDownIcon
         size={15}

@@ -9,8 +9,8 @@ import { Button } from 'src/components/ui/button';
 import { MenuIcon } from 'lucide-react';
 import { twMerge } from 'tailwind-merge';
 import { colorPresets } from '@/css/colors';
-import I18nLink from 'src/components/common/I18nLink';
 import { HTMLAttributes } from 'react';
+import Link from 'next/link';
 
 interface NavigatorMobileProps extends HTMLAttributes<HTMLDivElement> {
   menus: Menu[];
@@ -41,9 +41,9 @@ export default function NavigatorMobile({
               return menu.children.map((child, childIndex) => {
                 return (
                   <DropdownMenuItem key={childIndex} asChild>
-                    <I18nLink href={child.href}>
+                    <Link href={child.href}>
                       <span className="text-xs md:text-sm">{child.title}</span>
-                    </I18nLink>
+                    </Link>
                   </DropdownMenuItem>
                 );
               });
@@ -51,9 +51,9 @@ export default function NavigatorMobile({
 
             return (
               <DropdownMenuItem key={menuIndex} asChild>
-                <I18nLink href={menu.href}>
+                <Link href={menu.href}>
                   <span className="text-xs md:text-sm">{menu.title}</span>
-                </I18nLink>
+                </Link>
               </DropdownMenuItem>
             );
           })}

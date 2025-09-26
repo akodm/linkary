@@ -7,7 +7,7 @@ import GeneralAnimator from 'src/components/common/GeneralAnimator';
 import { Button } from 'src/components/ui/button';
 import { colorPresets } from '@/css/colors';
 import clsx from 'clsx';
-import I18nLink from 'src/components/common/I18nLink';
+import Link from 'next/link';
 
 export default function Start() {
   const { i18n } = useLingui();
@@ -29,7 +29,7 @@ export default function Start() {
         </GeneralAnimator>
       </Heading>
       <div className="flex flex-row justify-center gap-3 md:gap-5 w-full">
-        <I18nLink href="/user">
+        <Link href="/user">
           <Button
             variant="outline"
             className={clsx(
@@ -39,8 +39,8 @@ export default function Start() {
           >
             {i18n.t('Use as Guest')}
           </Button>
-        </I18nLink>
-        <I18nLink href="/auth" prefetch>
+        </Link>
+        <Link href="/auth" prefetch>
           <Button
             className={clsx(
               'cursor-pointer',
@@ -49,7 +49,7 @@ export default function Start() {
           >
             {i18n.t('Sign Up')}
           </Button>
-        </I18nLink>
+        </Link>
       </div>
     </Section>
   );

@@ -5,7 +5,7 @@ import { colorPresets } from '@/css/colors';
 import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
 import Image from 'next/image';
-import I18nLink from '@/components/common/I18nLink';
+import Link from 'next/link';
 
 export default function NotFoundContent() {
   const { i18n } = useLingui();
@@ -24,7 +24,7 @@ export default function NotFoundContent() {
       </div>
       <h1 className="text-xl md:text-4xl font-bold">{'404'}</h1>
       <p className="text-lg md:text-xl">{i18n.t('Page not found')}</p>
-      <I18nLink href="/">
+      <Link href="/">
         <Button
           className={clsx(
             'mt-3 md:mt-5 cursor-pointer',
@@ -33,7 +33,7 @@ export default function NotFoundContent() {
         >
           {i18n.t('Go to home')}
         </Button>
-      </I18nLink>
+      </Link>
     </div>
   );
 }

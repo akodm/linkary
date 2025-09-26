@@ -9,14 +9,14 @@ import {
   SheetFooter,
 } from 'src/components/ui/sheet';
 import { Button } from 'src/components/ui/button';
-import useI18nRouter from '@/hooks/useI18nRouter';
 import { useLingui } from '@lingui/react';
 import GoogleSignInButton from 'src/components/auth/GoogleSignInButton';
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 export default function AsideForm() {
   const { i18n } = useLingui();
-  const { back } = useI18nRouter();
+  const { back } = useRouter();
 
   const onBack = () => back();
 
@@ -39,9 +39,7 @@ export default function AsideForm() {
           </h4>
           <form
             className="mx-auto"
-            action={() =>
-              signIn('google', { redirectTo: `/${i18n.locale}/auth/success` })
-            }
+            action={() => signIn('google', { redirectTo: '/auth/success' })}
           >
             <GoogleSignInButton />
           </form>

@@ -2,11 +2,11 @@
 
 import { useLingui } from '@lingui/react';
 import Image from 'next/image';
-import useI18nRouter from '@/hooks/useI18nRouter';
+import { useRouter } from 'next/navigation';
 
 export default function Logo() {
   const { i18n } = useLingui();
-  const { push } = useI18nRouter();
+  const { push } = useRouter();
 
   return (
     <button

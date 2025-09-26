@@ -6,10 +6,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from 'src/components/ui/navigation-menu';
-import I18nLink from 'src/components/common/I18nLink';
 import { Menu } from '@/components/common/Header.client';
 import { HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
+import Link from 'next/link';
 
 interface NavigatorWebProps extends HTMLAttributes<HTMLDivElement> {
   menus: Menu[];
@@ -29,7 +29,7 @@ export default function NavigatorWeb({
               <NavigationMenuItem key={menu.title}>
                 {menu.href ? (
                   <NavigationMenuLink asChild>
-                    <I18nLink href={menu.href}>{menu.title}</I18nLink>
+                    <Link href={menu.href}>{menu.title}</Link>
                   </NavigationMenuLink>
                 ) : (
                   <NavigationMenuTrigger className="bg-transparent cursor-pointer">
@@ -43,12 +43,12 @@ export default function NavigatorWeb({
                         {menu.children.map((child) => {
                           return (
                             <NavigationMenuLink asChild key={child.title}>
-                              <I18nLink href={child.href}>
+                              <Link href={child.href}>
                                 <p className="text-sm font-medium">
                                   {child.title}
                                 </p>
                                 <p className="text-xs">{child.description}</p>
-                              </I18nLink>
+                              </Link>
                             </NavigationMenuLink>
                           );
                         })}

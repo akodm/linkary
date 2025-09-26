@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { LucideProps } from 'lucide-react';
 import { ForwardRefExoticComponent, RefAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
-import I18nLink from 'src/components/common/I18nLink';
+import Link from 'next/link';
 
 const classes = cva(
   clsx(
@@ -55,11 +55,11 @@ export default function DescriptionIconCard({
 
   if (href) {
     return (
-      <I18nLink href={href}>
+      <Link href={href}>
         <div className={classes({ href: Boolean(href) })}>
           <CardContents preset={preset} {...props} />
         </div>
-      </I18nLink>
+      </Link>
     );
   }
 
