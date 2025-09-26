@@ -7,11 +7,21 @@ import {
   NavigationMenuTrigger,
 } from 'src/components/ui/navigation-menu';
 import I18nLink from 'src/components/common/I18nLink';
-import { Menu } from 'src/components/common/Header';
+import { Menu } from '@/components/common/Header.client';
+import { HTMLAttributes } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-export default function NavigatorWeb({ menus }: { menus: Menu[] }) {
+interface NavigatorWebProps extends HTMLAttributes<HTMLDivElement> {
+  menus: Menu[];
+}
+
+export default function NavigatorWeb({
+  menus,
+  className,
+  ...props
+}: NavigatorWebProps) {
   return (
-    <div className="hidden xl:block mx-auto">
+    <div className={twMerge('hidden xl:block mx-auto', className)} {...props}>
       <NavigationMenu viewport={false}>
         <NavigationMenuList>
           {menus.map((menu) => {

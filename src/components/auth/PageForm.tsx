@@ -1,12 +1,12 @@
 import MainProvider from '@/components/common/MainProvider';
 import { signInWithGoogle } from '@/lib/actions/auth';
-import Header from 'src/components/common/Header';
+import Header from '@/components/common/Header.server';
 import Footer from 'src/components/common/Footer';
 import GoogleSignInButton from 'src/components/auth/GoogleSignInButton';
 import AuthHeading from 'src/components/auth/Heading';
 import AuthBottom from 'src/components/auth/Bottom';
 
-export default async function PageForm() {
+export default function PageForm() {
   return (
     <div className="flex flex-col items-center w-full h-full relative">
       <Header isLogo isLanguage isSignIn={false} />

@@ -11,7 +11,10 @@ export default function AuthHeading() {
       <h1 className="-mt-30 text-2xl font-bold">
         {i18n.t('Sign in to your account')}
       </h1>
-      <GeneralAnimator className="mt-3 text-sm md:text-lg font-medium text-gray-500">
+      <GeneralAnimator
+        as="h2"
+        className="mt-3 text-sm md:text-lg font-medium text-gray-700"
+      >
         {i18n.t('Sign in to access more features.')}
       </GeneralAnimator>
     </>

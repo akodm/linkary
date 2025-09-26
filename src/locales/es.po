@@ -14,14 +14,53 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/user/Layout.tsx:33
+#: src/components/user/Content.tsx:31
 msgid "Failed to get user data"
 msgstr "Error al obtener los datos del usuario"
 
 #. js-lingui-explicit-id
-#: src/components/user/Layout.tsx:34
+#: src/components/user/Content.tsx:32
 msgid "Please try reloading the page"
 msgstr "Por favor, intenta recargar la página"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:29
+#: src/components/common/Footer.tsx:20
+#: src/components/common/Header.client.tsx:48
+#: src/components/terms-of-service/Content.tsx:39
+msgid "Terms of Service"
+msgstr "Términos de Servicio"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.client.tsx:49
+#: src/components/terms-of-service/Content.tsx:46
+msgid "These are the Terms of Service for using the service."
+msgstr "Estos son los Términos de Servicio para usar el servicio."
+
+#. js-lingui-explicit-id
+#: src/components/not-found/Content.tsx:20
+#: src/components/not-found/Content.tsx:26
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#. js-lingui-explicit-id
+#: src/components/not-found/Content.tsx:34
+msgid "Go to home"
+msgstr "Ir al inicio"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:23
+#: src/components/common/Footer.tsx:28
+#: src/components/common/Header.client.tsx:55
+#: src/components/privacy/Content.tsx:39
+msgid "Privacy Policy"
+msgstr "Política de Privacidad"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.client.tsx:56
+#: src/components/privacy/Content.tsx:46
+msgid "This is the Privacy Policy regarding the personal information handled by the service."
+msgstr "Esta es la Política de Privacidad sobre la información personal manejada por el servicio."
 
 #. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:17
@@ -67,41 +106,38 @@ msgid "Not only can you add links, but you can also take advantage of various pr
 msgstr "No solo puedes añadir enlaces, también aprovechar diversas funciones disponibles."
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:29
-#: src/components/common/Footer.tsx:20
-#: src/components/common/Header.tsx:48
-#: src/components/terms-of-service/Content.tsx:39
-msgid "Terms of Service"
-msgstr "Términos de Servicio"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.tsx:49
-#: src/components/terms-of-service/Content.tsx:46
-msgid "These are the Terms of Service for using the service."
-msgstr "Estos son los Términos de Servicio para usar el servicio."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:23
-#: src/components/common/Footer.tsx:28
-#: src/components/common/Header.tsx:55
-#: src/components/privacy/Content.tsx:39
-msgid "Privacy Policy"
-msgstr "Política de Privacidad"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.tsx:56
-#: src/components/privacy/Content.tsx:46
-msgid "This is the Privacy Policy regarding the personal information handled by the service."
-msgstr "Esta es la Política de Privacidad sobre la información personal manejada por el servicio."
-
-#. js-lingui-explicit-id
 #: src/components/home/ProvidedFunctionCard.tsx:79
 msgid "Recommended"
 msgstr "Recomendado"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:73
-#: src/components/common/Header.Web.tsx:77
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "Banner"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "Guarda enlaces"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "y compártelos"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "Una plataforma para organizar y ver tus enlaces importantes de un vistazo"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "Comenzar"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:55
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "Usuario Invitado"
@@ -204,30 +240,29 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "Visualiza todos tus enlaces guardados de un vistazo. Verifica la seguridad de cada enlace, recibe recomendaciones personalizadas y permite que el sistema complete automáticamente los detalles para facilitar su búsqueda."
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "Banner"
+#: src/components/common/UserDropdonw.tsx:37
+msgid "Switch to guest"
+msgstr "Cambiar a invitado"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "Guarda enlaces"
+#: src/components/common/UserDropdonw.tsx:41
+msgid "Logout"
+msgstr "Cerrar sesión"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "y compártelos"
+#: src/components/common/UserDropdonw.tsx:46
+msgid "Delete account"
+msgstr "Eliminar cuenta"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "Una plataforma para organizar y ver tus enlaces importantes de un vistazo"
+#: src/components/common/UserDropdonw.tsx:59
+msgid "Sign in"
+msgstr "Iniciar sesión"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "Comenzar"
+#: src/components/error/Layout.tsx:18
+msgid "Sign-up or sign-in failed."
+msgstr "Error en el registro o inicio de sesión."
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -301,7 +336,7 @@ msgstr "Las traducciones son generadas por IA y pueden contener inexactitudes co
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:17
-#: src/components/common/Header.tsx:64
+#: src/components/common/Header.client.tsx:64
 #: src/components/faq/Content.tsx:75
 msgid "FAQ"
 msgstr "Preguntas Frecuentes"
@@ -325,32 +360,34 @@ msgid "Contact Us"
 msgstr "Contáctanos"
 
 #. js-lingui-explicit-id
-#: src/components/error/Layout.tsx:26
-msgid "Sign-up or sign-in failed."
-msgstr "Error en el registro o inicio de sesión."
+#: src/components/common/LanguageButton.tsx:28
+msgid "English"
+msgstr "English"
 
 #. js-lingui-explicit-id
-#: src/app/[lang]/not-found.tsx:26
-#: src/app/[lang]/not-found.tsx:32
-#: src/components/error/Layout.tsx:48
-msgid "Page not found"
-msgstr "Página no encontrada"
+#: src/components/common/LanguageButton.tsx:32
+msgid "한국어"
+msgstr "한국어"
 
 #. js-lingui-explicit-id
-#: src/components/error/Layout.tsx:54
-msgid "Error Page"
-msgstr "Página de Error"
+#: src/components/common/LanguageButton.tsx:36
+msgid "日本語"
+msgstr "日本語"
 
 #. js-lingui-explicit-id
-#: src/components/error/Layout.tsx:57
-msgid "Something went wrong. If the issue persists, please contact us."
-msgstr "Algo salió mal. Si el problema persiste, por favor contáctanos."
+#: src/components/common/LanguageButton.tsx:40
+msgid "Español"
+msgstr "Español"
 
 #. js-lingui-explicit-id
-#: src/app/[lang]/not-found.tsx:40
-#: src/components/error/Layout.tsx:68
-msgid "Go to home"
-msgstr "Ir al inicio"
+#: src/components/common/LanguageButton.tsx:44
+msgid "中文"
+msgstr "中文"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:62
+msgid "Select Language"
+msgstr "Seleccionar idioma"
 
 #. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
@@ -358,60 +395,19 @@ msgid "Logo"
 msgstr "Logotipo"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.tsx:36
+#: src/components/common/Header.client.tsx:36
 msgid "Introduction"
 msgstr "Introducción"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.tsx:39
+#: src/components/common/Header.client.tsx:39
 msgid "Project Introduction"
 msgstr "Introducción del Proyecto"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.tsx:45
+#: src/components/common/Header.client.tsx:45
 msgid "Terms and Privacy"
 msgstr "Términos y Privacidad"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.Mobile.tsx:28
-#: src/components/common/LanguageButton.Web.tsx:28
-msgid "English"
-msgstr "English"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.Mobile.tsx:32
-#: src/components/common/LanguageButton.Web.tsx:32
-msgid "한국어"
-msgstr "한국어"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.Mobile.tsx:36
-#: src/components/common/LanguageButton.Web.tsx:36
-msgid "日本語"
-msgstr "日本語"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.Mobile.tsx:40
-#: src/components/common/LanguageButton.Web.tsx:40
-msgid "Español"
-msgstr "Español"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.Mobile.tsx:44
-#: src/components/common/LanguageButton.Web.tsx:44
-msgid "中文"
-msgstr "中文"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.Web.tsx:62
-msgid "Select Language"
-msgstr "Seleccionar idioma"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.Mobile.tsx:78
-#: src/components/common/Header.Web.tsx:82
-msgid "Sign in"
-msgstr "Iniciar sesión"
 
 #. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:14
@@ -429,23 +425,23 @@ msgid "Sign in to your account"
 msgstr "Inicia sesión en tu cuenta"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:39
-#: src/components/auth/Heading.tsx:15
+#: src/components/auth/AsideForm.tsx:38
+#: src/components/auth/Heading.tsx:18
 msgid "Sign in to access more features."
 msgstr "Inicia sesión para acceder a más funciones."
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:34
+#: src/components/auth/AsideForm.tsx:33
 msgid "Login"
 msgstr "Iniciar sesión"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:35
+#: src/components/auth/AsideForm.tsx:34
 msgid "Login to your account"
 msgstr "Inicia sesión en tu cuenta"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:50
+#: src/components/auth/AsideForm.tsx:49
 msgid "Close"
 msgstr "Cerrar"
 
@@ -458,11 +454,6 @@ msgstr "Comenzar ahora"
 #: src/components/about/Start.tsx:26
 msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
 msgstr "Puedes usar Linkary sin una cuenta, pero recomendamos registrarte para desbloquear más funciones."
-
-#. js-lingui-explicit-id
-#: src/components/auth/Bottom.tsx:12
-msgid "To continue as a guest, click here."
-msgstr "Para continuar como invitado, haz clic aquí."
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
@@ -490,19 +481,9 @@ msgid "Find more details in other sections of the site."
 msgstr "Encuentra más detalles en otras secciones del sitio."
 
 #. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "Banner de Introducción"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "Qué es Linkary"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "Gestiona tus enlaces con facilidad y manténlos confiables."
+#: src/components/auth/Bottom.tsx:12
+msgid "To continue as a guest, click here."
+msgstr "Para continuar como invitado, haz clic aquí."
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -563,3 +544,18 @@ msgstr "Funciones disponibles en Linkary"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "Prueba nuestras funciones en diferentes entornos."
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "Banner de Introducción"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "Qué es Linkary"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "Gestiona tus enlaces con facilidad y manténlos confiables."

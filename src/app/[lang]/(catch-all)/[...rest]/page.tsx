@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ErrorLayout from '@/components/error/Layout';
+import NotFoundLayout from '@/components/not-found/Layout';
 
 export const metadata: Metadata = {
   robots: {
@@ -8,6 +8,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AuthExceptionPage() {
-  return <ErrorLayout />;
+export default function CatchAllPage() {
+  return <NotFoundLayout />;
 }

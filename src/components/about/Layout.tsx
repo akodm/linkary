@@ -1,5 +1,5 @@
 import Footer from 'src/components/common/Footer';
-import Header from 'src/components/common/Header';
+import Header from '@/components/common/Header.server';
 import MainProvider from 'src/components/common/MainProvider';
 import Banner from 'src/components/about/Banner';
 import Description from 'src/components/about/Description';

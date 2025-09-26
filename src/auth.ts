@@ -4,6 +4,7 @@ import Google from 'next-auth/providers/google';
 import { db } from 'src/db';
 import { users } from 'src/db/schemas';
 import { sentryCaptureException } from 'src/lib/utils';
+import { ERROR_CODE } from 'src/consts/error-code';
 
 export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
   secret: process.env.AUTH_SECRET,
@@ -14,53 +15,74 @@ export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
   session: {
     strategy: 'jwt',
     maxAge: 30 * 24 * 60 * 60,
+    updateAge: 24 * 60 * 60,
   },
   callbacks: {
     signIn: async (params) => {
       if (!params?.user?.email) {
-        return false;
+        return '/auth/error?loginFailed=true';
       }
 
+      return true;
+    },
+    jwt: async ({ token, user, account }) => {
       try {
-        const [user] = await db
+        if (token.slug && token.role) {
+          return token;
+        }
+
+        if (!token?.email) {
+          token.error = ERROR_CODE.USER_EMAIL_NOT_FOUND;
+          return token;
+        }
+
+        const [dbUser] = await db
           .select()
           .from(users)
-          .where(eq(users.email, params.user.email))
+          .where(eq(users.email, token.email))
           .limit(1);
 
-        if (user?.slug) {
-          return `/user/${user.slug}`;
+        if (dbUser?.slug) {
+          token.slug = dbUser.slug;
+          token.role = dbUser.role;
+
+          return token;
         }
 
         const [newUser] = await db
           .insert(users)
           .values({
             role: 'user',
-            name: params.user.name || '',
-            email: params.user.email || '',
-            provider: 'google',
-            providerId: params.user.id,
+            name: token.name || '',
+            email: token.email || '',
+            provider: account?.provider || 'google',
+            providerId: account?.providerAccountId || '',
           })
           .returning();
 
-        if (newUser?.slug) {
-          return `/user/${newUser.slug}`;
+        if (!newUser?.slug) {
+          throw new Error('Failed to create new user');
         }
 
-        return true;
+        token.slug = newUser.slug;
+        token.role = newUser.role;
+
+        return token;
       } catch (err) {
-        console.error('Failed to sign up or sign in');
+        console.error('Failed to jwt callback');
 
-        sentryCaptureException(err, 'signIn', { params });
+        sentryCaptureException(err, 'jwt', { token, user, account });
 
-        return '/auth/exception?loginFailed=true';
+        token.error = ERROR_CODE.FAILED_TO_CREATE_USER;
+
+        return token;
       }
     },
+    session: async ({ session, token }) => {
+      session.user.slug = token.slug;
+      session.user.role = token.role;
+      session.error = token.error;
 
-    jwt: async ({ token }) => {
-      return token;
-    },
-    session: async ({ session }) => {
       return session;
     },
   },

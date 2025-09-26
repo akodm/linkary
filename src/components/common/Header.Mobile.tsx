@@ -1,27 +1,17 @@
-'use client';
-
 import { HTMLAttributes } from 'react';
 import clsx from 'clsx';
 import Logo from 'src/components/common/Logo';
-import { Button } from 'src/components/ui/button';
-import LanguageButton from '@/components/common/LanguageButton.Mobile';
-import { colorPresets } from '@/css/colors';
-import { useLingui } from '@lingui/react';
-import { Menu } from 'src/components/common/Header';
+import LanguageButton from '@/components/common/LanguageButton';
+import { Menu } from '@/components/common/Header.client';
 import NavigatorMobile from 'src/components/common/Navigator.Mobile';
-import I18nLink from 'src/components/common/I18nLink';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from 'src/components/ui/dropdown-menu';
-import { UserIcon } from 'lucide-react';
+import { Session } from 'next-auth';
+import UserDropdown from 'src/components/common/UserDropdonw';
 
 export interface HeaderMobileProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
   isLanguage?: boolean;
   isSignIn?: boolean;
+  session?: Session | null;
 }
 
 export default function HeaderMobile({
@@ -30,10 +20,9 @@ export default function HeaderMobile({
   isLanguage = true,
   isSignIn = true,
   menus,
+  session,
   ...props
 }: HeaderMobileProps & { menus: Menu[] }) {
-  const { i18n } = useLingui();
-
   return (
     <header
       {...props}
@@ -47,40 +36,15 @@ export default function HeaderMobile({
       )}
     >
       <div className="flex flex-row justify-between items-center w-full min-h-13 max-w-320 p-2">
-        <div className="flex flex-row items-center gap-2 absolute left-2">
-          {isLogo && <Logo />}
-        </div>
+        {isLogo && (
+          <div className="flex flex-row items-center gap-2 absolute left-4">
+            <Logo />
+          </div>
+        )}
         <div className="flex flex-row items-center gap-2 absolute right-2">
           <NavigatorMobile menus={menus} />
-          {isLanguage && <LanguageButton size="sm" />}
-          {isSignIn && (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className={clsx(
-                    'cursor-pointer',
-                    colorPresets({ preset: 'primary' }),
-                  )}
-                >
-                  <UserIcon className="size-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="mr-2">
-                <DropdownMenuItem asChild>
-                  <I18nLink href="/user" prefetch className="cursor-pointer">
-                    {i18n.t('Guest User')}
-                  </I18nLink>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <I18nLink href="/auth" prefetch className="cursor-pointer">
-                    {i18n.t('Sign in')}
-                  </I18nLink>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          )}
+          {isLanguage && <LanguageButton />}
+          {isSignIn && <UserDropdown session={session} />}
         </div>
       </div>
     </header>

@@ -1,28 +1,18 @@
-'use client';
-
 import { HTMLAttributes } from 'react';
 import clsx from 'clsx';
-import { Button } from 'src/components/ui/button';
-import { useLingui } from '@lingui/react';
-import LanguageButton from '@/components/common/LanguageButton.Web';
-import { colorPresets } from '@/css/colors';
+import LanguageButton from '@/components/common/LanguageButton';
 import Logo from 'src/components/common/Logo';
-import { Menu } from 'src/components/common/Header';
+import { Menu } from '@/components/common/Header.client';
 import NavigatorWeb from 'src/components/common/Navigator.Web';
 import NavigatorMobile from 'src/components/common/Navigator.Mobile';
-import I18nLink from 'src/components/common/I18nLink';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from 'src/components/ui/dropdown-menu';
-import { UserIcon } from 'lucide-react';
+import { Session } from 'next-auth';
+import UserDropdown from 'src/components/common/UserDropdonw';
 
 export interface HeaderWebProps extends HTMLAttributes<HTMLHeadElement> {
   isLogo?: boolean;
   isLanguage?: boolean;
   isSignIn?: boolean;
+  session?: Session | null;
 }
 
 export default function HeaderWeb({
@@ -31,10 +21,9 @@ export default function HeaderWeb({
   isLanguage = true,
   isSignIn = true,
   menus,
+  session,
   ...props
 }: HeaderWebProps & { menus: Menu[] }) {
-  const { i18n } = useLingui();
-
   return (
     <header
       {...props}
@@ -56,35 +45,8 @@ export default function HeaderWeb({
         <NavigatorWeb menus={menus} />
         <div className="flex flex-row items-center gap-2 absolute right-4">
           <NavigatorMobile menus={menus} />
-          {isLanguage && <LanguageButton size="lg" />}
-          {isSignIn && (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className={clsx(
-                    'cursor-pointer',
-                    colorPresets({ preset: 'primary' }),
-                  )}
-                >
-                  <UserIcon className="size-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="mr-2">
-                <DropdownMenuItem asChild>
-                  <I18nLink href="/user" prefetch className="cursor-pointer">
-                    {i18n.t('Guest User')}
-                  </I18nLink>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <I18nLink href="/auth" prefetch className="cursor-pointer">
-                    {i18n.t('Sign in')}
-                  </I18nLink>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          )}
+          {isLanguage && <LanguageButton />}
+          {isSignIn && <UserDropdown session={session} />}
         </div>
       </div>
     </header>

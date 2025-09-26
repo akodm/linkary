@@ -6,7 +6,7 @@ import { cache } from 'react';
 import { sentryCaptureException } from 'src/lib/utils';
 import { getSession } from 'src/lib/actions/auth';
 
-export const getUserBySlug = cache(
+export const getUserBySlugWithSession = cache(
   async (slug: string): Promise<SelectUser | null> => {
     try {
       const session = await getSession();
@@ -32,7 +32,7 @@ export const getUserBySlug = cache(
     } catch (err) {
       console.error('Failed to get user by slug');
 
-      sentryCaptureException(err, 'getUserBySlug', { slug });
+      sentryCaptureException(err, 'getUserBySlugWithSession', { slug });
 
       return null;
     }

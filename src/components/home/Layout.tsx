@@ -1,4 +1,4 @@
-import Header from '@/components/common/Header';
+import Header from '@/components/common/Header.server';
 import Footer from '@/components/common/Footer';
 import MainProvider from '@/components/common/MainProvider';
 import Banner from 'src/components/home/Banner';

@@ -1,5 +1,5 @@
 import UserLayout from '@/components/user/Layout';
-import { getUserBySlug } from '@/lib/actions/user';
+import { getUserBySlugWithSession } from '@/lib/actions/user';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -16,7 +16,8 @@ export default async function UserSlugPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const user = await getUserBySlug(slug);
+
+  const user = await getUserBySlugWithSession(slug);
 
   if (!user) {
     notFound();

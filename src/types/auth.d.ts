@@ -1,13 +1,23 @@
 export declare module 'next-auth' {
   interface User {
-    accessToken: string;
+    email: string;
+    slug: string;
+    role: string;
   }
   interface Session {
-    accessToken: string;
+    user: {
+      email: string;
+      slug: string;
+      role: string;
+    };
+    error?: string;
   }
 }
 export declare module '@auth/core/jwt' {
   interface JWT {
-    accessToken: string;
+    email: string;
+    slug: string;
+    role: string;
+    error?: string;
   }
 }

@@ -1,4 +1,4 @@
-import { Menu } from 'src/components/common/Header';
+import { Menu } from '@/components/common/Header.client';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,16 +10,25 @@ import { MenuIcon } from 'lucide-react';
 import { twMerge } from 'tailwind-merge';
 import { colorPresets } from '@/css/colors';
 import I18nLink from 'src/components/common/I18nLink';
+import { HTMLAttributes } from 'react';
 
-export default function NavigatorMobile({ menus }: { menus: Menu[] }) {
+interface NavigatorMobileProps extends HTMLAttributes<HTMLDivElement> {
+  menus: Menu[];
+}
+
+export default function NavigatorMobile({
+  menus,
+  className,
+  ...props
+}: NavigatorMobileProps) {
   return (
-    <div className="block xl:hidden">
+    <div className={twMerge('block xl:hidden', className)} {...props}>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             variant="secondary"
             className={twMerge(
-              'cursor-pointer',
+              'cursor-pointer size-8 md:size-10',
               colorPresets({ preset: 'gray-light' }),
             )}
           >
