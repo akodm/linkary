@@ -62,7 +62,7 @@ export default function UserDropdown({ session }: UserDropdownProps) {
     [i18n],
   );
   const items = useMemo(
-    () => (session ? signedUser : unsignedUser),
+    () => (session?.user ? signedUser : unsignedUser),
     [session, signedUser, unsignedUser],
   );
 
