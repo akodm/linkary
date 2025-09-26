@@ -39,7 +39,9 @@ export default function AsideForm() {
           </h4>
           <form
             className="mx-auto"
-            action={() => signIn('google', { redirectTo: '/auth/success' })}
+            action={() =>
+              signIn('google', { redirectTo: `/${i18n.locale}/auth/success` })
+            }
           >
             <GoogleSignInButton />
           </form>

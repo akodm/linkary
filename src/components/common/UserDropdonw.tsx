@@ -35,11 +35,11 @@ export default function UserDropdown({ session }: UserDropdownProps) {
     () => [
       {
         label: i18n.t('Switch to guest'),
-        onClick: () => signOut({ redirectTo: '/user' }),
+        onClick: () => signOut({ redirectTo: `/${i18n.locale}/user` }),
       },
       {
         label: i18n.t('Logout'),
-        onClick: () => signOut({ redirectTo: '/' }),
+        onClick: () => signOut({ redirectTo: `/${i18n.locale}/` }),
       },
       {
         href: '/user/delete',

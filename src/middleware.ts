@@ -14,15 +14,21 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return NextResponse.next();
 
-  const locale = getLocale(request.headers);
+  const locale = getLocale(request);
 
   request.nextUrl.pathname = `/${locale}${pathname}`;
 
   return NextResponse.redirect(request.nextUrl);
 }
 
-function getLocale(requestHeaders: Headers): string {
-  const langHeader = requestHeaders.get('accept-language') || undefined;
+function getLocale(request: NextRequest): string {
+  const cookieLocale = request.cookies.get('locale')?.value;
+
+  if (cookieLocale && locales.includes(cookieLocale)) {
+    return cookieLocale;
+  }
+
+  const langHeader = request.headers.get('accept-language') || undefined;
   const languages = new Negotiator({
     headers: { 'accept-language': langHeader },
   }).languages(locales.slice());
