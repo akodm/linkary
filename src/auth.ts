@@ -3,7 +3,7 @@ import NextAuth from 'next-auth';
 import Google from 'next-auth/providers/google';
 import { db } from 'src/db';
 import { users } from 'src/db/schemas';
-import { sentryCaptureException } from 'src/lib/utils';
+import { generateName, sentryCaptureException } from 'src/lib/utils';
 import { ERROR_CODE } from 'src/consts/error-code';
 
 export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
@@ -54,7 +54,7 @@ export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
           .values({
             role: 'user',
             name: token.name || '',
-            email: token.email || '',
+            email: token.email || generateName(),
             provider: account?.provider || 'google',
             providerId: account?.providerAccountId || '',
           })
