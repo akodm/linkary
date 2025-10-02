@@ -58,13 +58,6 @@ export default function Content() {
           'We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law.',
         ),
       },
-      {
-        id: 'how-were-the-translations-produced',
-        title: i18n.t('How were the translations produced?'),
-        description: i18n.t(
-          'Translations are AI-generated and may contain minor contextual inaccuracies.',
-        ),
-      },
     ],
     [i18n],
   );
@@ -90,10 +83,15 @@ export default function Content() {
           ))}
         </Accordion>
       </div>
-      <div className="flex flex-col items-center gap-5 w-full max-w-3xl p-3 md:p-6 border border-gray-200 bg-gray-50 rounded-md md:rounded-lg text-center">
+      <div className="flex flex-col items-center gap-3 w-full max-w-3xl p-3 md:p-6 border border-gray-200 bg-gray-50 rounded-md md:rounded-lg text-center">
         <h3 className="text-base md:text-lg font-medium">
           {i18n.t('If you have any questions, feel free to contact us.')}
         </h3>
+        <h4 className="text-xs md:text-sm font-medium text-gray-500">
+          {i18n.t(
+            'Translations are AI-generated and may contain minor contextual inaccuracies.',
+          )}
+        </h4>
         <Button
           className={clsx(
             'cursor-pointer',

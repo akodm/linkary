@@ -25,7 +25,7 @@ export default function GeneralAnimator<E extends ElementType = 'h1'>(
 ) {
   const { as, children, ...rest } = props as PolymorphicProps<ElementType>;
   const Tag = (as || 'h1') as ElementType;
-  const MotionTag = motion(Tag as ElementType) as ElementType;
+  const MotionTag = motion.create(Tag as ElementType) as ElementType;
 
   return (
     <MotionTag
