@@ -13,8 +13,11 @@ import { useLingui } from '@lingui/react';
 import GoogleSignInButton from 'src/components/auth/GoogleSignInButton';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import BackDropLoader from 'src/components/common/BackDropLoader';
 
 export default function AsideForm() {
+  const [loading, setLoading] = useState(false);
   const { i18n } = useLingui();
   const { back } = useRouter();
 
@@ -25,6 +28,17 @@ export default function AsideForm() {
       back();
     }
   };
+
+  const onSignInWithGoogle = () => {
+    setLoading(true);
+    signIn('google', { redirectTo: '/auth/success' });
+  };
+
+  useEffect(() => {
+    return () => {
+      setLoading(false);
+    };
+  }, []);
 
   return (
     <Sheet defaultOpen onOpenChange={onOpenChange}>
@@ -37,11 +51,9 @@ export default function AsideForm() {
           <h4 className="mt-3 text-sm md:text-lg font-medium">
             {i18n.t('Sign in to access more features.')}
           </h4>
-          <form
-            className="mx-auto"
-            action={() => signIn('google', { redirectTo: '/auth/success' })}
-          >
+          <form className="mx-auto" action={onSignInWithGoogle}>
             <GoogleSignInButton />
+            {loading && <BackDropLoader />}
           </form>
         </div>
         <SheetFooter>

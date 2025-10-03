@@ -1,5 +1,5 @@
-import PageForm from '@/components/auth/PageForm';
+import AuthLayout from '@/components/auth/Layout';
 
 export default async function AuthPage() {
-  return <PageForm />;
+  return <AuthLayout />;
 }
