@@ -17,12 +17,34 @@ import { Session } from 'next-auth';
 import { useMemo } from 'react';
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
+import { cva, VariantProps } from 'class-variance-authority';
 
-interface UserDropdownItem {
-  href?: string;
+const classes = cva('cursor-pointer', {
+  variants: {
+    color: {
+      default: 'text-black',
+      primary: 'text-blue-500 hover:text-blue-600!',
+      red: 'text-red-500 hover:text-red-600!',
+    },
+  },
+  defaultVariants: {
+    color: 'default',
+  },
+});
+
+type UserDropdownItem = {
   label: string;
-  onClick?: () => void;
-}
+} & (
+  | {
+      href: string;
+      onClick?: never;
+    }
+  | {
+      href?: never;
+      onClick: () => void;
+    }
+) &
+  VariantProps<typeof classes>;
 
 interface UserDropdownProps {
   session?: Session | null;
@@ -39,11 +61,8 @@ export default function UserDropdown({ session }: UserDropdownProps) {
       },
       {
         label: i18n.t('Logout'),
+        color: 'red',
         onClick: () => signOut({ redirectTo: '/' }),
-      },
-      {
-        href: '/user/delete',
-        label: i18n.t('Delete account'),
       },
     ],
     [i18n],
@@ -56,6 +75,7 @@ export default function UserDropdown({ session }: UserDropdownProps) {
       },
       {
         href: '/auth',
+        color: 'primary',
         label: i18n.t('Sign in'),
       },
     ],
@@ -84,7 +104,11 @@ export default function UserDropdown({ session }: UserDropdownProps) {
           if (item.href) {
             return (
               <DropdownMenuItem key={index} asChild>
-                <Link href={item.href} prefetch className="cursor-pointer">
+                <Link
+                  href={item.href}
+                  prefetch
+                  className={classes({ color: item.color })}
+                >
                   {item.label}
                 </Link>
               </DropdownMenuItem>
@@ -95,7 +119,7 @@ export default function UserDropdown({ session }: UserDropdownProps) {
             <DropdownMenuItem
               key={index}
               onClick={item.onClick}
-              className="cursor-pointer"
+              className={classes({ color: item.color })}
             >
               {item.label}
             </DropdownMenuItem>
