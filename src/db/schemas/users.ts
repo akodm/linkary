@@ -11,8 +11,7 @@ export const users = pgTable('users', {
   id: serial('id').primaryKey(),
   role: text('role').notNull().default('user'), // 사용자 권한 (user, admin)
   name: text('name').notNull().default(''), // 사용자 이름
-  // 사용자 고유 식별자
-  slug: text('slug')
+  slug: text('slug') // 사용자 고유 식별자
     .notNull()
     .unique()
     .default(sql`gen_random_uuid()`),

@@ -1,11 +1,11 @@
-import { SelectUser } from '@/db/schemas/users';
 import Header from '@/components/common/Header.server';
 import MainProvider from 'src/components/common/MainProvider';
 import Footer from 'src/components/common/Footer';
-import UserContent from 'src/components/user/Content';
+import UserLoader from '@/components/user/Loader';
+import { GetUserBySlugWithSessionResponse } from '@/lib/actions/user';
 
 interface UserLayoutProps {
-  user?: SelectUser | null;
+  user?: GetUserBySlugWithSessionResponse;
 }
 
 export default function UserLayout({ user = null }: UserLayoutProps) {
@@ -13,7 +13,7 @@ export default function UserLayout({ user = null }: UserLayoutProps) {
     <div className="flex flex-col items-center w-full h-full relative">
       <Header isLogo isLanguage isSignIn />
       <MainProvider>
-        <UserContent user={user} />
+        <UserLoader user={user} />
       </MainProvider>
       <Footer />
     </div>

@@ -1,19 +1,22 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { SelectUser } from '@/db/schemas/users';
 import { useLingui } from '@lingui/react';
 import { useCallback } from 'react';
 import { LOCAL_USER_KEY } from '@/consts/keys';
 import { toast } from 'sonner';
 import { sentryCaptureException } from '@/lib/utils';
+import UserSideForm from 'src/components/user/SideForm';
+import UserViewer from 'src/components/user/Viewer';
+import { GetUserBySlugWithSessionResponse } from '@/lib/actions/user';
 
-interface UserContentProps {
-  user?: SelectUser | null;
+interface UserLoaderProps {
+  user?: GetUserBySlugWithSessionResponse;
 }
 
-export default function UserContent({ user = null }: UserContentProps) {
-  const [userData, setUserData] = useState<SelectUser | null>(user);
+export default function UserLoader({ user = null }: UserLoaderProps) {
+  const [userData, setUserData] =
+    useState<GetUserBySlugWithSessionResponse>(user);
   const [isLoading, setIsLoading] = useState(Boolean(user));
   const [mounted, setMounted] = useState(false);
   const { i18n } = useLingui();
@@ -52,5 +55,10 @@ export default function UserContent({ user = null }: UserContentProps) {
     }
   }, [userData, isLoading, mounted, handleGetLocalUser]);
 
-  return <div>UserContent</div>;
+  return (
+    <div className="flex flex-row justify-center gap-x-6 w-full h-full">
+      <UserSideForm />
+      <UserViewer />
+    </div>
+  );
 }
