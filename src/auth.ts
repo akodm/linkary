@@ -3,7 +3,7 @@ import NextAuth from 'next-auth';
 import Google from 'next-auth/providers/google';
 import { db } from 'src/db';
 import { users } from 'src/db/schemas';
-import { generateName, sentryCaptureException } from 'src/lib/utils';
+import { generateName, sentryCaptureException } from '@/lib/utils';
 import { ERROR_CODE } from 'src/consts/error-code';
 
 export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({

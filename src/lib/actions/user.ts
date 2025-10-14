@@ -2,7 +2,7 @@ import { db } from '@/db';
 import { linkSafety, users } from '@/db/schemas';
 import { desc, eq } from 'drizzle-orm';
 import { cache } from 'react';
-import { sentryCaptureException } from 'src/lib/utils';
+import { sentryCaptureException } from '@/lib/utils';
 import { getSession } from 'src/lib/actions/auth';
 
 export const getUserBySlugWithSession = cache(async (slug: string) => {
