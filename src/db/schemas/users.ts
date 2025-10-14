@@ -1,5 +1,5 @@
 import { relations, sql } from 'drizzle-orm';
-import { pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';
+import { boolean, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';
 import { userApi } from '@/db/schemas/userApi';
 import { linkFolder } from '@/db/schemas/linkFolder';
 import { link } from '@/db/schemas/link';
@@ -19,6 +19,9 @@ export const users = pgTable('users', {
   provider: text('provider').notNull().default(''), // 사용자 제공자 (google, github 등)
   providerId: text('provider_id').notNull().default(''), // 사용자 제공자 고유 식별자
   locale: text('locale').notNull().default('en'), // 사용자 언어
+  banned: boolean('banned').notNull().default(false), // 사용자 차단 여부
+  bannedReason: text('banned_reason').notNull().default(''), // 사용자 차단 사유
+  bannedAt: timestamp('banned_at', { withTimezone: true }), // 사용자 차단 일시
   createdAt: timestamp('created_at', { withTimezone: true })
     .notNull()
     .defaultNow(),

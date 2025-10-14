@@ -20,6 +20,7 @@ export const link = pgTable('link', {
   description: text('description').notNull().default(''),
   image: text('image').notNull().default(''),
   tags: text('tags').notNull().default('[]'),
+  order: integer('order').notNull().default(0),
   verified: boolean('verified').notNull().default(false), // URL 검증 여부 (시도 여부만 확인)
   view: integer('view').notNull().default(0),
   report: integer('report').notNull().default(0), // 신고 수 (신고 수가 5 이상이면 누적 신고된 URL 로 표시)

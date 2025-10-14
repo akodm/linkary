@@ -11,6 +11,7 @@ export const linkFolder = pgTable('link_folder', {
     .unique()
     .default(sql`gen_random_uuid()`),
   name: text('name').notNull().default(''), // 폴더 이름
+  order: integer('order').notNull().default(0),
   userId: integer('user_id')
     .references(() => users.id, {
       onDelete: 'cascade',
