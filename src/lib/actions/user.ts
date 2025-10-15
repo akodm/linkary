@@ -1,51 +1,96 @@
+'use server';
+
 import { db } from '@/db';
-import { linkSafety, users } from '@/db/schemas';
-import { desc, eq } from 'drizzle-orm';
-import { cache } from 'react';
-import { sentryCaptureException } from '@/lib/utils';
+import { users } from '@/db/schemas';
+import { eq } from 'drizzle-orm';
 import { getSession } from 'src/lib/actions/auth';
 
-export const getUserBySlugWithSession = cache(async (slug: string) => {
-  try {
-    const session = await getSession();
+export const getUserAction = async (slug: string) => {
+  const session = await getSession();
 
-    if (!session?.user?.email) {
-      throw new Error('User session is not found');
-    }
+  if (!session?.user?.email) {
+    throw new Error('User session is not found');
+  }
 
-    const user = await db.query.users.findFirst({
-      where: eq(users.email, session.user.email),
-      with: {
-        links: {
-          with: {
-            linkFolder: true,
-            linkSafety: {
-              orderBy: [desc(linkSafety.createdAt)],
-              limit: 1,
+  const user = await db.query.users.findFirst({
+    where: eq(users.email, session.user.email),
+    columns: {
+      name: true,
+      slug: true,
+      email: true,
+      banned: true,
+      bannedReason: true,
+      bannedAt: true,
+      createdAt: true,
+      updatedAt: true,
+    },
+    with: {
+      userApis: {
+        columns: {
+          usage: true,
+          cumulativeUsage: true,
+        },
+        with: {
+          api: {
+            columns: {
+              name: true,
+              usage: true,
+              limit: true,
+              initialDateType: true,
+              initialDateValue: true,
             },
           },
         },
-        userApis: true,
       },
-    });
+    },
+  });
 
-    if (!user) {
-      throw new Error('User not found');
-    }
-    if (user.slug !== slug) {
-      throw new Error('User is not authorized');
-    }
-
-    return user;
-  } catch (err) {
-    console.error('Failed to get user by slug');
-
-    sentryCaptureException(err, 'getUserBySlugWithSession', { slug });
-
-    return null;
+  if (!user) {
+    throw new Error('User not found');
   }
-});
+  if (user.slug !== slug) {
+    throw new Error('User is not authorized');
+  }
 
-export type GetUserBySlugWithSessionResponse = Awaited<
-  ReturnType<typeof getUserBySlugWithSession>
+  return user;
+};
+
+export type GetUserActionResponse = Awaited<ReturnType<typeof getUserAction>>;
+
+export const editUserAction = async () => {
+  const session = await getSession();
+
+  if (!session?.user?.email) {
+    throw new Error('User session is not found');
+  }
+
+  const user = await db.query.users.findFirst({
+    where: eq(users.email, session.user.email),
+  });
+
+  if (!user) {
+    throw new Error('User not found');
+  }
+};
+
+export type EditUserActionResponse = Awaited<ReturnType<typeof editUserAction>>;
+
+export const deleteUserAction = async () => {
+  const session = await getSession();
+
+  if (!session?.user?.email) {
+    throw new Error('User session is not found');
+  }
+
+  const user = await db.query.users.findFirst({
+    where: eq(users.email, session.user.email),
+  });
+
+  if (!user) {
+    throw new Error('User not found');
+  }
+};
+
+export type DeleteUserActionResponse = Awaited<
+  ReturnType<typeof deleteUserAction>
 >;

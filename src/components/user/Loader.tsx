@@ -8,15 +8,16 @@ import { toast } from 'sonner';
 import { sentryCaptureException } from '@/lib/utils';
 import UserSideForm from 'src/components/user/SideForm';
 import UserViewer from 'src/components/user/Viewer';
-import { GetUserBySlugWithSessionResponse } from '@/lib/actions/user';
+import { GetUserActionResponse } from '@/lib/actions/user';
 
 interface UserLoaderProps {
-  user?: GetUserBySlugWithSessionResponse;
+  user?: GetUserActionResponse | null;
 }
 
 export default function UserLoader({ user = null }: UserLoaderProps) {
-  const [userData, setUserData] =
-    useState<GetUserBySlugWithSessionResponse>(user);
+  const [userData, setUserData] = useState<
+    GetUserActionResponse | null | undefined
+  >(user);
   const [isLoading, setIsLoading] = useState(Boolean(user));
   const [mounted, setMounted] = useState(false);
   const { i18n } = useLingui();

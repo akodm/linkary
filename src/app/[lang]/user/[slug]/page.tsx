@@ -1,5 +1,6 @@
 import UserLayout from '@/components/user/Layout';
-import { getUserBySlugWithSession } from '@/lib/actions/user';
+import { getUserAction } from '@/lib/actions/user';
+import { sentryCaptureException } from '@/lib/utils';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -17,11 +18,19 @@ export default async function UserSlugPage({
 }) {
   const { slug } = await params;
 
-  const user = await getUserBySlugWithSession(slug);
+  try {
+    const user = await getUserAction(slug);
 
-  if (!user) {
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    return <UserLayout user={user} />;
+  } catch (err) {
+    console.error('Failed to get user by slug');
+
+    sentryCaptureException(err, 'getUserBySlugWithSession', { slug });
+
     notFound();
   }
-
-  return <UserLayout user={user} />;
 }

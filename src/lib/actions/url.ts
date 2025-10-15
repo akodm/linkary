@@ -61,3 +61,5 @@ export async function verifyURL(url: string): Promise<string[]> {
 
   return threat?.threatTypes || [];
 }
+
+export type VerifyURLResponse = Awaited<ReturnType<typeof verifyURL>>;
