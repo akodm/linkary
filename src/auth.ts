@@ -42,6 +42,20 @@ export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
           .where(eq(users.email, token.email))
           .limit(1);
 
+        if (dbUser?.deletedAt) {
+          const [updatedUser] = await db
+            .update(users)
+            .set({ deletedAt: null })
+            .where(eq(users.email, token.email))
+            .returning();
+
+          token.slug = updatedUser.slug;
+          token.role = updatedUser.role;
+          token.recovery = true;
+
+          return token;
+        }
+
         if (dbUser?.slug) {
           token.slug = dbUser.slug;
           token.role = dbUser.role;
@@ -81,6 +95,7 @@ export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
     session: async ({ session, token }) => {
       session.user.slug = token.slug;
       session.user.role = token.role;
+      session.recovery = token.recovery;
       session.error = token.error;
 
       return session;

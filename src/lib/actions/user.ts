@@ -2,7 +2,7 @@
 
 import { db } from '@/db';
 import { users } from '@/db/schemas';
-import { eq } from 'drizzle-orm';
+import { eq, isNull } from 'drizzle-orm';
 import { getSession } from 'src/lib/actions/auth';
 
 export const getUserAction = async (slug: string) => {
@@ -13,7 +13,8 @@ export const getUserAction = async (slug: string) => {
   }
 
   const user = await db.query.users.findFirst({
-    where: eq(users.email, session.user.email),
+    where: (u, { eq, and }) =>
+      and(eq(u.email, session.user.email), isNull(u.deletedAt)),
     columns: {
       name: true,
       slug: true,
@@ -51,13 +52,16 @@ export const getUserAction = async (slug: string) => {
   if (user.slug !== slug) {
     throw new Error('User is not authorized');
   }
+  if (user.banned) {
+    throw new Error(`User is banned: ${user.bannedReason}`);
+  }
 
   return user;
 };
 
 export type GetUserActionResponse = Awaited<ReturnType<typeof getUserAction>>;
 
-export const editUserAction = async () => {
+export const editUserAction = async (name: string) => {
   const session = await getSession();
 
   if (!session?.user?.email) {
@@ -65,12 +69,20 @@ export const editUserAction = async () => {
   }
 
   const user = await db.query.users.findFirst({
-    where: eq(users.email, session.user.email),
+    where: (u, { eq, and }) =>
+      and(eq(u.email, session.user.email), isNull(u.deletedAt)),
   });
 
   if (!user) {
     throw new Error('User not found');
   }
+
+  await db
+    .update(users)
+    .set({ name })
+    .where(eq(users.email, session.user.email));
+
+  return true;
 };
 
 export type EditUserActionResponse = Awaited<ReturnType<typeof editUserAction>>;
@@ -83,12 +95,20 @@ export const deleteUserAction = async () => {
   }
 
   const user = await db.query.users.findFirst({
-    where: eq(users.email, session.user.email),
+    where: (u, { eq, and }) =>
+      and(eq(u.email, session.user.email), isNull(u.deletedAt)),
   });
 
   if (!user) {
     throw new Error('User not found');
   }
+
+  await db
+    .update(users)
+    .set({ deletedAt: new Date() })
+    .where(eq(users.email, session.user.email));
+
+  return true;
 };
 
 export type DeleteUserActionResponse = Awaited<

@@ -28,6 +28,7 @@ export const users = pgTable('users', {
   updatedAt: timestamp('updated_at', { withTimezone: true })
     .notNull()
     .defaultNow(),
+  deletedAt: timestamp('deleted_at', { withTimezone: true }), // 사용자 삭제 일시
 });
 
 export const usersRelations = relations(users, ({ many }) => ({
