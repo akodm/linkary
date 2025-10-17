@@ -64,6 +64,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (findApi.usage >= findApi.totalLimit && findApi.totalLimit !== -1) {
+      return NextResponse.json(
+        { data: [], message: 'API total usage limit exceeded' },
+        { status: 403 },
+      );
+    }
+
     const threatTypes = await verifyURL(url);
 
     await db
