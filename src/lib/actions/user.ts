@@ -3,11 +3,10 @@
 import { db } from '@/db';
 import { users } from '@/db/schemas';
 import { eq, isNull } from 'drizzle-orm';
+import { Session } from 'next-auth';
 import { getSession } from 'src/lib/actions/auth';
 
-export const getUserAction = async (slug: string) => {
-  const session = await getSession();
-
+export const getUserAction = async (session: Session, slug: string) => {
   if (!session?.user?.email) {
     throw new Error('User session is not found');
   }
