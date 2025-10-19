@@ -1,6 +1,11 @@
 'use server';
 
 import ogs from 'open-graph-scraper';
+import { tavily } from '@tavily/core';
+
+const { TAVILY_API_KEY = '', GOOGLE_API_KEY = '' } = process.env;
+
+const tvly = tavily({ apiKey: TAVILY_API_KEY });
 
 export async function scrapeURL(url: string) {
   const urlObj = new URL(url);
@@ -48,7 +53,7 @@ export async function verifyURL(url: string): Promise<string[]> {
   params.append('threatTypes', 'MALWARE');
   params.append('threatTypes', 'SOCIAL_ENGINEERING');
   params.append('threatTypes', 'UNWANTED_SOFTWARE');
-  params.append('key', process.env.GOOGLE_API_KEY || '');
+  params.append('key', GOOGLE_API_KEY);
 
   const response = await fetch(
     `https://webrisk.googleapis.com/v1/uris:search?${params.toString()}`,
@@ -63,3 +68,28 @@ export async function verifyURL(url: string): Promise<string[]> {
 }
 
 export type VerifyURLResponse = Awaited<ReturnType<typeof verifyURL>>;
+
+export async function recommendURL(prompt: string[]) {
+  const parsePrompt = prompt.map((text, index) => {
+    return `${index + 1}. ${text}`;
+  });
+
+  const response = await tvly.search(
+    `
+      Find sites that meet the following criteria:
+
+      ${parsePrompt.join('\n')}
+
+      Notes when browsing:
+      - Focus on relevant news, official documentation, and technical blogs
+      - Sites that meet the criteria and have a high level of accuracy
+    `,
+    {
+      topic: 'general',
+      searchDepth: 'advanced',
+      maxResults: 3,
+    },
+  );
+
+  return response;
+}

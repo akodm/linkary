@@ -1,7 +1,7 @@
 import { db } from '@/db';
 import { getSession } from 'src/lib/actions/auth';
 import { eq } from 'drizzle-orm';
-import { link, users } from '@/db/schemas';
+import { link, linkReport, users } from '@/db/schemas';
 import { scrapeURL } from 'src/lib/actions/url';
 import { InsertLink } from '@/db/schemas/link';
 
@@ -149,7 +149,13 @@ export type DeleteLinkActionResponse = Awaited<
   ReturnType<typeof deleteLinkAction>
 >;
 
-export const moveLinkAction = async () => {
+export const moveLinkAction = async ({
+  id,
+  folderId,
+}: {
+  id: number;
+  folderId?: number;
+}) => {
   const session = await getSession();
 
   if (!session?.user?.email) {
@@ -163,11 +169,36 @@ export const moveLinkAction = async () => {
   if (!user) {
     throw new Error('User not found');
   }
+
+  const findLink = await db.query.link.findFirst({
+    where: (l, { eq, and }) => and(eq(l.id, id), eq(l.userId, user.id)),
+  });
+
+  if (!findLink) {
+    throw new Error('Link not found');
+  }
+
+  const [updatedLink] = await db
+    .update(link)
+    .set({
+      order: 0,
+      linkFolderId: folderId ?? null,
+    })
+    .where(eq(link.id, id))
+    .returning();
+
+  return updatedLink;
 };
 
 export type MoveLinkActionResponse = Awaited<ReturnType<typeof moveLinkAction>>;
 
-export const reportLinkAction = async () => {
+export const reportLinkAction = async ({
+  id,
+  reason,
+}: {
+  id: number;
+  reason: string;
+}) => {
   const session = await getSession();
 
   if (!session?.user?.email) {
@@ -181,6 +212,22 @@ export const reportLinkAction = async () => {
   if (!user) {
     throw new Error('User not found');
   }
+
+  const findLink = await db.query.link.findFirst({
+    where: eq(link.id, id),
+  });
+
+  if (!findLink) {
+    throw new Error('Link not found');
+  }
+
+  await db.insert(linkReport).values({
+    userId: user.id,
+    linkId: id,
+    reason,
+  });
+
+  return true;
 };
 
 export type ReportLinkActionResponse = Awaited<

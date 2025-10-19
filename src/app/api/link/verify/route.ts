@@ -26,6 +26,11 @@ export async function POST(request: NextRequest) {
 
     const user = await db.query.users.findFirst({
       where: eq(users.email, session.user.email),
+      with: {
+        userApis: {
+          where: (u, { eq }) => eq(u.apiId, apiId),
+        },
+      },
     });
 
     if (!user) {
@@ -46,9 +51,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const findUserApi = await db.query.userApi.findFirst({
-      where: and(eq(userApi.userId, user.id), eq(userApi.apiId, apiId)),
-    });
+    const findUserApi = user.userApis[0];
 
     if (!findUserApi) {
       return NextResponse.json(
