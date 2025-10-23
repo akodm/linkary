@@ -2,7 +2,7 @@ import { eq } from 'drizzle-orm';
 import NextAuth from 'next-auth';
 import Google from 'next-auth/providers/google';
 import { db } from 'src/db';
-import { users } from 'src/db/schemas';
+import { userApi, users } from 'src/db/schemas';
 import { generateName, sentryCaptureException } from '@/lib/utils';
 import { ERROR_CODE } from 'src/consts/error-code';
 
@@ -63,16 +63,34 @@ export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
           return token;
         }
 
-        const [newUser] = await db
-          .insert(users)
-          .values({
-            role: 'user',
-            name: token.name || '',
-            email: token.email || generateName(),
-            provider: account?.provider || 'google',
-            providerId: account?.providerAccountId || '',
-          })
-          .returning();
+        const newUser = await db.transaction(async (tx) => {
+          const [insertUser] = await tx
+            .insert(users)
+            .values({
+              role: 'user',
+              name: token.name || '',
+              email: token.email || generateName(),
+              provider: account?.provider || 'google',
+              providerId: account?.providerAccountId || '',
+            })
+            .returning();
+
+          await tx.insert(userApi).values({
+            usage: 0,
+            cumulativeUsage: 0,
+            userId: insertUser.id,
+            apiId: parseInt(process.env.GOOGLE_API_ID!),
+          });
+
+          await tx.insert(userApi).values({
+            usage: 0,
+            cumulativeUsage: 0,
+            userId: insertUser.id,
+            apiId: parseInt(process.env.TAVILY_API_ID!),
+          });
+
+          return insertUser;
+        });
 
         if (!newUser?.slug) {
           throw new Error('Failed to create new user');
