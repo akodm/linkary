@@ -18,7 +18,6 @@ src/locales/
 ├── ko.po, ko.js      # 한국어
 ├── jp.po, jp.js      # 일본어
 ├── cn.po, cn.js      # 중국어 (간체)
-└── es.po, es.js      # 스페인어
 ```
 
 ### 번역 규칙

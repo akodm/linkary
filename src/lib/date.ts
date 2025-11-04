@@ -9,7 +9,6 @@ import 'dayjs/locale/ko';
 import 'dayjs/locale/ja';
 import 'dayjs/locale/en';
 import 'dayjs/locale/zh-cn';
-import 'dayjs/locale/es';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -17,14 +16,13 @@ dayjs.extend(localizedFormat);
 dayjs.extend(customParseFormat);
 
 // 지원 언어 타입
-export type Locale = 'ko' | 'ja' | 'en' | 'zh-cn' | 'es';
+export type Locale = 'ko' | 'ja' | 'en' | 'zh-cn';
 // 지원 시간대 타입
 export type Timezone =
   | 'Asia/Seoul'
   | 'Asia/Tokyo'
   | 'America/Los_Angeles'
-  | 'Asia/Shanghai'
-  | 'Europe/Madrid';
+  | 'Asia/Shanghai';
 
 // 언어 타입에 따른 시간대 매핑
 export const LOCALE_TO_TZ: Record<Locale, Timezone> = {
@@ -32,7 +30,6 @@ export const LOCALE_TO_TZ: Record<Locale, Timezone> = {
   ja: 'Asia/Tokyo',
   en: 'America/Los_Angeles',
   'zh-cn': 'Asia/Shanghai',
-  es: 'Europe/Madrid',
 };
 
 // 현재 UTC 시간 반환

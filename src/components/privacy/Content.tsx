@@ -3,7 +3,6 @@
 import {
   PRIVACY_POLICY_CN,
   PRIVACY_POLICY_EN,
-  PRIVACY_POLICY_ES,
   PRIVACY_POLICY_JP,
   PRIVACY_POLICY_KO,
 } from '@/consts/privacy';
@@ -24,8 +23,6 @@ export default function Content() {
         return PRIVACY_POLICY_JP;
       case 'cn':
         return PRIVACY_POLICY_CN;
-      case 'es':
-        return PRIVACY_POLICY_ES;
       case 'en':
       default:
         return PRIVACY_POLICY_EN;

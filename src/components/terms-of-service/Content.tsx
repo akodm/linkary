@@ -5,7 +5,6 @@ import {
   TERMS_OF_SERVICE_EN,
   TERMS_OF_SERVICE_JP,
   TERMS_OF_SERVICE_CN,
-  TERMS_OF_SERVICE_ES,
 } from '@/consts/terms-of-service';
 import { useLingui } from '@lingui/react';
 import { useMemo } from 'react';
@@ -24,8 +23,6 @@ export default function Content() {
         return TERMS_OF_SERVICE_JP;
       case 'cn':
         return TERMS_OF_SERVICE_CN;
-      case 'es':
-        return TERMS_OF_SERVICE_ES;
       case 'en':
       default:
         return TERMS_OF_SERVICE_EN;

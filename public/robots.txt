@@ -6,7 +6,6 @@ Allow: /en/
 Allow: /ko/
 Allow: /cn/
 Allow: /jp/
-Allow: /es/
 
 # Static assets
 Allow: /icons/

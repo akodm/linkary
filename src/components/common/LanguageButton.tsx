@@ -36,10 +36,6 @@ export default function LanguageButton({
         label: i18n.t('日本語'),
       },
       {
-        locale: 'es',
-        label: i18n.t('Español'),
-      },
-      {
         locale: 'cn',
         label: i18n.t('中文'),
       },

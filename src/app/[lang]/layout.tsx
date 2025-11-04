@@ -82,7 +82,6 @@ export const generateMetadata = async ({
         ko: `${baseUrl}/ko`,
         ja: `${baseUrl}/jp`,
         zh: `${baseUrl}/cn`,
-        es: `${baseUrl}/es`,
       },
     },
     verification: {
