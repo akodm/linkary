@@ -1,5 +1,6 @@
 'use server';
 
+import { signOut } from '@/auth';
 import { db } from '@/db';
 import { users } from '@/db/schemas';
 import { eq, isNull } from 'drizzle-orm';
@@ -107,7 +108,7 @@ export const deleteUserAction = async () => {
     .set({ deletedAt: new Date() })
     .where(eq(users.email, session.user.email));
 
-  return true;
+  await signOut({ redirectTo: '/' });
 };
 
 export type DeleteUserActionResponse = Awaited<
