@@ -12,7 +12,7 @@ import { GetUserActionResponse } from '@/lib/actions/user';
 
 interface UserLoaderProps {
   user?: GetUserActionResponse | null;
-  recovery?: boolean;
+  recovery?: { check: boolean; value: boolean };
 }
 
 export default function UserLoader({ user = null, recovery }: UserLoaderProps) {
@@ -58,7 +58,7 @@ export default function UserLoader({ user = null, recovery }: UserLoaderProps) {
   }, [userData, isLoading, mounted, handleGetLocalUser]);
 
   useEffect(() => {
-    if (mounted && recovery) {
+    if (mounted && recovery?.value) {
       toast(i18n.t('Welcome back!'), {
         description: i18n.t(
           'If you restore your account within 30 days, your previous data will remain intact.',

@@ -6,7 +6,7 @@ import { GetUserActionResponse } from '@/lib/actions/user';
 
 interface UserLayoutProps {
   user?: GetUserActionResponse | null;
-  recovery?: boolean;
+  recovery?: { check: boolean; value: boolean };
 }
 
 export default function UserLayout({ user, recovery }: UserLayoutProps) {
