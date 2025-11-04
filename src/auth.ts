@@ -51,7 +51,10 @@ export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
 
           token.slug = updatedUser.slug;
           token.role = updatedUser.role;
-          token.recovery = true;
+          token.recovery = {
+            check: false,
+            value: true,
+          };
 
           return token;
         }
@@ -113,8 +116,19 @@ export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
     session: async ({ session, token }) => {
       session.user.slug = token.slug;
       session.user.role = token.role;
-      session.recovery = token.recovery;
+
+      if (token.recovery?.check) {
+        session.recovery = undefined;
+        token.recovery = undefined;
+      }
+      if (token.recovery) {
+        token.recovery.check = true;
+        session.recovery = token.recovery;
+      }
+
       session.error = token.error;
+
+      console.log(session, token);
 
       return session;
     },
