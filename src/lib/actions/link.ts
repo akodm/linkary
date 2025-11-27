@@ -4,6 +4,7 @@ import { eq } from 'drizzle-orm';
 import { link, linkReport, users } from '@/db/schemas';
 import { scrapeURL } from 'src/lib/actions/url';
 import { InsertLink } from '@/db/schemas/link';
+import { checkBotId } from 'botid/server';
 
 export const addLinkAction = async ({
   url,
@@ -18,6 +19,12 @@ export const addLinkAction = async ({
 
   if (!session?.user?.email) {
     throw new Error('User session is not found');
+  }
+
+  const verification = await checkBotId();
+
+  if (verification.isBot) {
+    throw new Error('Access denied');
   }
 
   const user = await db.query.users.findFirst({

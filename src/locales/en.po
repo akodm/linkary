@@ -387,8 +387,8 @@ msgstr "Introduction"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:39
-msgid "Project Introduction"
-msgstr "Project Introduction"
+msgid "Introduction"
+msgstr "Introduction"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:45

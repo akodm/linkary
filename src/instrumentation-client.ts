@@ -3,6 +3,7 @@
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 import * as Sentry from '@sentry/nextjs';
+import { initBotId } from 'botid/client/core';
 
 Sentry.init({
   dsn: 'https://63fce574c8134c4b334c2200ac9ac27e@o4509829296422912.ingest.us.sentry.io/4509829359796224',
@@ -25,6 +26,23 @@ Sentry.init({
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
+});
+
+initBotId({
+  protect: [
+    {
+      path: '/api/**/*',
+      method: 'POST',
+    },
+    {
+      path: '/api/**/*',
+      method: 'PUT',
+    },
+    {
+      path: '/api/**/*',
+      method: 'DELETE',
+    },
+  ],
 });
 
 export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;

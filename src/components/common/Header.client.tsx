@@ -36,7 +36,7 @@ export default function Header(props: HeaderWebProps | HeaderMobileProps) {
         title: i18n.t('Introduction'),
         children: [
           {
-            title: i18n.t('Project Introduction'),
+            title: i18n.t('Introduction'),
             href: '/about',
           },
         ],

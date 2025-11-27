@@ -5,6 +5,7 @@ import { verifyURL } from '@/lib/actions/url';
 import { sentryCaptureException } from '@/lib/utils';
 import { and, eq, sql } from 'drizzle-orm';
 import { NextRequest, NextResponse } from 'next/server';
+import { checkBotId } from 'botid/server';
 
 /**
  * 사용자가 URL을 검증 요청
@@ -21,6 +22,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { data: [], message: 'Unauthorized' },
         { status: 401 },
+      );
+    }
+
+    const verification = await checkBotId();
+
+    if (verification.isBot) {
+      return NextResponse.json(
+        { data: [], message: 'Access denied' },
+        { status: 403 },
       );
     }
 

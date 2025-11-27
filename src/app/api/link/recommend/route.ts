@@ -5,6 +5,7 @@ import { recommendURL } from '@/lib/actions/url';
 import { sentryCaptureException } from '@/lib/utils';
 import { and, eq, sql } from 'drizzle-orm';
 import { NextRequest, NextResponse } from 'next/server';
+import { checkBotId } from 'botid/server';
 
 const { TAVILY_API_ID = '' } = process.env;
 
@@ -23,6 +24,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { data: [], message: 'Unauthorized' },
         { status: 401 },
+      );
+    }
+
+    const verification = await checkBotId();
+
+    if (verification.isBot) {
+      return NextResponse.json(
+        { data: [], message: 'Access denied' },
+        { status: 403 },
       );
     }
 
