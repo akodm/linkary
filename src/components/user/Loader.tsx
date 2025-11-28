@@ -70,8 +70,8 @@ export default function UserLoader({ user = null, recovery }: UserLoaderProps) {
   }, [mounted, recovery, i18n]);
 
   return (
-    <div className="flex flex-row justify-center gap-x-6 w-full h-full">
-      <UserSideForm />
+    <div className="flex flex-row justify-center gap-x-4 w-full h-full bg-neutral-100 p-0 md:p-4">
+      <UserSideForm user={userData} />
       <UserViewer />
     </div>
   );

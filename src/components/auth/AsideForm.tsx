@@ -11,10 +11,10 @@ import {
 import { Button } from 'src/components/ui/button';
 import { useLingui } from '@lingui/react';
 import GoogleSignInButton from 'src/components/auth/GoogleSignInButton';
-import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import BackDropLoader from 'src/components/common/BackDropLoader';
+import { signInWithGoogle } from '@/lib/actions/auth';
 
 export default function AsideForm() {
   const [loading, setLoading] = useState(false);
@@ -31,7 +31,7 @@ export default function AsideForm() {
 
   const onSignInWithGoogle = () => {
     setLoading(true);
-    signIn('google', { redirectTo: '/auth/success' });
+    signInWithGoogle('/auth/success');
   };
 
   useEffect(() => {

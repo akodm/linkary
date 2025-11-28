@@ -1,3 +1,5 @@
+'use server';
+
 import { db } from '@/db';
 import { getSession } from 'src/lib/actions/auth';
 import { eq } from 'drizzle-orm';

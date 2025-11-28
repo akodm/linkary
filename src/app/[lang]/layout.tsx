@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { allMessages } from 'src/appRouterI18n';
 import { LinguiClientProvider } from '@/components/common/LinguiClientProvider';
 import { Toaster } from 'sonner';
+import QueryProvider from '@/components/common/QueryProvider';
 
 const {
   NEXT_PUBLIC_GA_TAG = '',
@@ -192,7 +193,7 @@ export default async function RootLayout({
           initialLocale={lang}
           initialMessages={allMessages[lang]}
         >
-          {children}
+          <QueryProvider>{children}</QueryProvider>
           {intercept}
           <Toaster />
           <SpeedInsights />

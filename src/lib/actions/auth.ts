@@ -2,16 +2,16 @@
 
 import { auth, signIn, signOut, unstable_update } from '@/auth';
 
-export const signInWithGoogle = async () => {
-  await signIn('google', { redirectTo: '/auth/success' });
+export const signInWithGoogle = async (redirectTo: string) => {
+  await signIn('google', { redirectTo });
 };
 
 export type SignInWithGoogleResponse = Awaited<
   ReturnType<typeof signInWithGoogle>
 >;
 
-export const signOutWithGoogle = async () => {
-  await signOut({ redirectTo: '/' });
+export const signOutWithGoogle = async (redirectTo: string) => {
+  await signOut({ redirectTo });
 };
 
 export type SignOutWithGoogleResponse = Awaited<

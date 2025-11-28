@@ -3,16 +3,16 @@
 import GoogleSignInButton from 'src/components/auth/GoogleSignInButton';
 import AuthHeading from 'src/components/auth/Heading';
 import AuthBottom from 'src/components/auth/Bottom';
-import { signIn } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import BackDropLoader from 'src/components/common/BackDropLoader';
+import { signInWithGoogle } from '@/lib/actions/auth';
 
 export default function PageForm() {
   const [loading, setLoading] = useState(false);
 
   const onSignInWithGoogle = () => {
     setLoading(true);
-    signIn('google', { redirectTo: '/auth/success' });
+    signInWithGoogle('/auth/success');
   };
 
   useEffect(() => {

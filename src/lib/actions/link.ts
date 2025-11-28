@@ -1,10 +1,82 @@
+'use server';
+
 import { db } from '@/db';
 import { getSession } from 'src/lib/actions/auth';
-import { eq } from 'drizzle-orm';
-import { link, linkReport, users } from '@/db/schemas';
+import { and, count, desc, eq, isNull } from 'drizzle-orm';
+import { link, linkFolder, linkReport, users } from '@/db/schemas';
 import { scrapeURL } from 'src/lib/actions/url';
 import { InsertLink } from '@/db/schemas/link';
 import { checkBotId } from 'botid/server';
+
+export const getLinkAndFolder = async () => {
+  const session = await getSession();
+
+  if (!session?.user?.email) {
+    throw new Error('Unauthorized');
+  }
+
+  const user = await db.query.users.findFirst({
+    where: eq(users.email, session.user.email),
+  });
+
+  if (!user) {
+    throw new Error('Logged in user not found');
+  }
+
+  const [links, folders] = await Promise.all([
+    db.query.link.findMany({
+      where: and(eq(link.userId, user.id), isNull(link.linkFolderId)),
+      with: {
+        linkReports: true,
+        linkSafety: true,
+        linkViews: true,
+      },
+    }),
+    db.query.linkFolder.findMany({
+      where: eq(linkFolder.userId, user.id),
+      with: {
+        links: {
+          with: {
+            linkReports: true,
+            linkSafety: true,
+            linkViews: true,
+          },
+        },
+      },
+    }),
+  ]);
+
+  return { links, folders };
+};
+
+export type LinkGetResponse = Awaited<ReturnType<typeof getLinkAndFolder>>;
+
+export const getLinkAndFolderCommunity = async ({
+  page = 1,
+  size = 30,
+}: {
+  page?: number;
+  size?: number;
+}) => {
+  const links = await db
+    .select()
+    .from(link)
+    .where(and(eq(link.banned, false), eq(link.shared, true)))
+    .orderBy(desc(link.createdAt))
+    .offset((Number(page) - 1) * Number(size))
+    .limit(Number(size));
+
+  const [total] = await db
+    .select({ count: count() })
+    .from(link)
+    .where(and(eq(link.banned, false), eq(link.shared, true)));
+
+  return { data: links, total: total.count };
+};
+
+export type LinkAndFolderCommunityResponse = Awaited<
+  ReturnType<typeof getLinkAndFolderCommunity>
+>;
 
 export const addLinkAction = async ({
   url,

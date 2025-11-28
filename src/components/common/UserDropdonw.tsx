@@ -15,7 +15,6 @@ import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
 import { Session } from 'next-auth';
 import { useMemo, useState } from 'react';
-import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { cva, VariantProps } from 'class-variance-authority';
 import {
@@ -28,6 +27,7 @@ import {
   DialogTitle,
 } from 'src/components/ui/dialog';
 import { deleteUserAction } from '@/lib/actions/user';
+import { signOutWithGoogle } from '@/lib/actions/auth';
 
 const classes = cva('cursor-pointer', {
   variants: {
@@ -68,12 +68,12 @@ export default function UserDropdown({ session }: UserDropdownProps) {
     () => [
       {
         label: i18n.t('Switch to guest'),
-        onClick: () => signOut({ redirectTo: '/user' }),
+        onClick: () => signOutWithGoogle('/user'),
       },
       {
         label: i18n.t('Logout'),
         color: 'red',
-        onClick: () => signOut({ redirectTo: '/' }),
+        onClick: () => signOutWithGoogle('/'),
       },
       {
         label: i18n.t('Delete account'),

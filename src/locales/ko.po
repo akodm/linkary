@@ -14,25 +14,66 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:78
-#: src/components/common/UserDropdonw.tsx:149
-msgid "Delete account"
-msgstr "계정 삭제"
+#: src/components/user/SideForm.tsx:49
+msgid "Folder added successfully"
+msgstr "폴더가 성공적으로 추가되었습니다"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:151
-msgid "Are you sure you want to delete your account?"
-msgstr "정말로 계정을 삭제하시겠습니까?"
+#: src/components/user/SideForm.tsx:52
+msgid "Failed to add folder"
+msgstr "폴더 추가에 실패했습니다"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:156
+#: src/components/user/SideForm.tsx:62
+msgid "Link added successfully"
+msgstr "링크가 성공적으로 추가되었습니다"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:65
+msgid "Failed to add link"
+msgstr "링크 추가에 실패했습니다"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:67
+#: src/components/user/SideForm.tsx:79
+msgid "Default Folder"
+msgstr "기본 폴더"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:90
+msgid "New Folder"
+msgstr "새 폴더"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:146
+msgid "Folder"
+msgstr "폴더"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:201
+msgid "Link"
+msgstr "링크"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:245
+msgid "Add Link"
+msgstr "링크 추가"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:246
+msgid "write the URL of the link you want to add"
+msgstr "추가할 링크의 URL을 입력하세요"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:247
+msgid "Add"
+msgstr "추가"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:162
+#: src/components/user/SideForm.tsx:248
 msgid "Cancel"
 msgstr "취소"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:158
-msgid "Delete"
-msgstr "삭제"
 
 #. js-lingui-explicit-id
 #: src/components/user/Loader.tsx:36
@@ -53,6 +94,16 @@ msgstr "돌아오신 것을 환영합니다!"
 #: src/components/user/Loader.tsx:63
 msgid "If you restore your account within 30 days, your previous data will remain intact."
 msgstr "계정을 30일 이내에 복구하신 경우, 기존 데이터는 그대로 보존되어 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:33
+msgid "Empty Link Title"
+msgstr "링크 제목 없음"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:33
+msgid "Empty Folder Name"
+msgstr "이름 없는 폴더"
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:29
@@ -81,6 +132,17 @@ msgstr "개인정보처리방침"
 #: src/components/privacy/Content.tsx:43
 msgid "This is the Privacy Policy regarding the personal information handled by the service."
 msgstr "서비스에서 취급하는 개인정보 처리방침입니다."
+
+#. js-lingui-explicit-id
+#: src/components/not-found/Content.tsx:20
+#: src/components/not-found/Content.tsx:26
+msgid "Page not found"
+msgstr "페이지를 찾을 수 없습니다"
+
+#. js-lingui-explicit-id
+#: src/components/not-found/Content.tsx:34
+msgid "Go to home"
+msgstr "메인으로 이동하기"
 
 #. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:17
@@ -126,18 +188,7 @@ msgid "Not only can you add links, but you can also take advantage of various pr
 msgstr "단순히 링크를 추가하는 것뿐만 아니라, 제공되는 다양한 기능도 활용해보세요."
 
 #. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:20
-#: src/components/not-found/Content.tsx:26
-msgid "Page not found"
-msgstr "페이지를 찾을 수 없습니다"
-
-#. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:34
-msgid "Go to home"
-msgstr "메인으로 이동하기"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:89
+#: src/components/common/UserDropdonw.tsx:90
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "게스트 사용자"
@@ -198,24 +249,113 @@ msgid "You can use it without signing up, but logging in lets you try more featu
 msgstr "회원가입 없이도 사용할 수 있지만, 로그인하면 더 많은 기능을 무료로 이용할 수 있습니다."
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:69
-msgid "Switch to guest"
-msgstr "게스트로 전환"
+#: src/components/forms/AddLink.tsx:61
+msgid "Enter link"
+msgstr "링크 입력"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:73
-msgid "Logout"
-msgstr "로그아웃"
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "스마트한 링크 관리"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:94
-msgid "Sign in"
-msgstr "로그인"
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "링크를 폴더별로 정리하여 한 눈에 볼 수 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "자동 썸네일 및 메타 데이터 생성"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "추가한 링크의 썸네일, 제목, 간략 설명 등을 자동으로 생성해줍니다."
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "링크가 안전한지 Google Web Risk API 를 통해 확인할 수 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "AI 를 통해 나에게 맞춤형 링크를 추천받을 수 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "편리하고 안전한 링크 관리"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "모아둔 링크를 한눈에 확인하세요. 링크의 안전성을 검사하고, 나에게 맞는 맞춤형 링크를 추천받을 수 있습니다. 추가한 링크의 간략한 내용을 자동으로 채워주어 쉽게 찾을 수 있도록 도와줍니다."
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "배너"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "링크를 저장하고"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "공유하세요."
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "중요한 링크를 체계적으로 관리하고 한 눈에 볼 수 있는 플랫폼"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "시작하기"
 
 #. js-lingui-explicit-id
 #: src/components/home/ProvidedFunctionCard.tsx:79
 msgid "Recommended"
 msgstr "추천"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:70
+msgid "Switch to guest"
+msgstr "게스트로 전환"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:74
+msgid "Logout"
+msgstr "로그아웃"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:79
+#: src/components/common/UserDropdonw.tsx:155
+msgid "Delete account"
+msgstr "계정 삭제"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:95
+msgid "Sign in"
+msgstr "로그인"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:157
+msgid "Are you sure you want to delete your account?"
+msgstr "정말로 계정을 삭제하시겠습니까?"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:165
+msgid "Delete"
+msgstr "삭제"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -308,92 +448,9 @@ msgid "Contact Us"
 msgstr "문의하기"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "배너"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "링크를 저장하고"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "공유하세요."
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "중요한 링크를 체계적으로 관리하고 한 눈에 볼 수 있는 플랫폼"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "시작하기"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "스마트한 링크 관리"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "링크를 폴더별로 정리하여 한 눈에 볼 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "자동 썸네일 및 메타 데이터 생성"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "추가한 링크의 썸네일, 제목, 간략 설명 등을 자동으로 생성해줍니다."
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "링크가 안전한지 Google Web Risk API 를 통해 확인할 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "AI 를 통해 나에게 맞춤형 링크를 추천받을 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "편리하고 안전한 링크 관리"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "모아둔 링크를 한눈에 확인하세요. 링크의 안전성을 검사하고, 나에게 맞는 맞춤형 링크를 추천받을 수 있습니다. 추가한 링크의 간략한 내용을 자동으로 채워주어 쉽게 찾을 수 있도록 도와줍니다."
-
-#. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
 msgid "Logo"
 msgstr "로고"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:36
-msgid "Introduction"
-msgstr "소개"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:39
-msgid "Project Introduction"
-msgstr "소개"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:45
-msgid "Terms and Privacy"
-msgstr "약관 및 개인정보"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -431,25 +488,15 @@ msgid "Site created by 🤖 akodm"
 msgstr "🤖 akodm에 의해 제작된 사이트"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:47
-msgid "Login"
-msgstr "로그인"
+#: src/components/common/Header.client.tsx:36
+#: src/components/common/Header.client.tsx:39
+msgid "Introduction"
+msgstr "소개"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:48
-msgid "Login to your account"
-msgstr "내 계정에 로그인"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:52
-#: src/components/auth/Heading.tsx:18
-msgid "Sign in to access more features."
-msgstr "로그인하면 다양한 기능을 사용할 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:61
-msgid "Close"
-msgstr "닫기"
+#: src/components/common/Header.client.tsx:45
+msgid "Terms and Privacy"
+msgstr "약관 및 개인정보"
 
 #. js-lingui-explicit-id
 #: src/components/auth/Heading.tsx:12
@@ -457,9 +504,10 @@ msgid "Sign in to your account"
 msgstr "계정으로 로그인"
 
 #. js-lingui-explicit-id
-#: src/components/auth/Bottom.tsx:12
-msgid "To continue as a guest, click here."
-msgstr "게스트로 계속하려면 여기를 클릭하세요."
+#: src/components/auth/AsideForm.tsx:52
+#: src/components/auth/Heading.tsx:18
+msgid "Sign in to access more features."
+msgstr "로그인하면 다양한 기능을 사용할 수 있습니다."
 
 #. js-lingui-explicit-id
 #: src/components/about/Start.tsx:19
@@ -472,19 +520,49 @@ msgid "You can use Linkary without an account, but we recommend signing up to un
 msgstr "비회원도 이용할 수 있지만, 더 많은 기능을 위해 회원 가입을 추천합니다."
 
 #. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "소개 배너"
+#: src/components/auth/Bottom.tsx:12
+msgid "To continue as a guest, click here."
+msgstr "게스트로 계속하려면 여기를 클릭하세요."
 
 #. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "Linkary 란"
+#: src/components/auth/AsideForm.tsx:47
+msgid "Login"
+msgstr "로그인"
 
 #. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "링크를 편하게 관리하고, 신뢰할 수 있는 상태로 보관하세요."
+#: src/components/auth/AsideForm.tsx:48
+msgid "Login to your account"
+msgstr "내 계정에 로그인"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:61
+msgid "Close"
+msgstr "닫기"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:18
+msgid "Check the Frequently Asked Questions (FAQ)."
+msgstr "자주 묻는 질문(FAQ)을 확인해 보세요."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:24
+msgid "Review our Privacy Policy."
+msgstr "서비스에서 취급하는 개인정보 처리방침을 확인해 보세요."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:30
+msgid "Review Linkary's Terms of Service."
+msgstr "Linkary 의 이용약관을 확인해 보세요."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:52
+msgid "Need more information?"
+msgstr "다른 정보가 필요하신가요?"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:59
+msgid "Find more details in other sections of the site."
+msgstr "사이트 내 다른 메뉴에서 더 자세한 정보를 확인할 수 있습니다."
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -547,26 +625,16 @@ msgid "Try our features across different environments."
 msgstr "제공되는 다양한 기능을 여러 환경에서 사용해 보세요."
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:18
-msgid "Check the Frequently Asked Questions (FAQ)."
-msgstr "자주 묻는 질문(FAQ)을 확인해 보세요."
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "소개 배너"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:24
-msgid "Review our Privacy Policy."
-msgstr "서비스에서 취급하는 개인정보 처리방침을 확인해 보세요."
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "Linkary 란"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:30
-msgid "Review Linkary's Terms of Service."
-msgstr "Linkary 의 이용약관을 확인해 보세요."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:52
-msgid "Need more information?"
-msgstr "다른 정보가 필요하신가요?"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:59
-msgid "Find more details in other sections of the site."
-msgstr "사이트 내 다른 메뉴에서 더 자세한 정보를 확인할 수 있습니다."
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "링크를 편하게 관리하고, 신뢰할 수 있는 상태로 보관하세요."

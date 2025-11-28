@@ -128,8 +128,6 @@ export const { auth, signIn, signOut, unstable_update, handlers } = NextAuth({
 
       session.error = token.error;
 
-      console.log(session, token);
-
       return session;
     },
   },
