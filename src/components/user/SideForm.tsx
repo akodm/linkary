@@ -13,7 +13,13 @@ import { useLingui } from '@lingui/react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { PlusIcon } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  useTransition,
+} from 'react';
 import { toast } from 'sonner';
 import { Skeleton } from 'src/components/ui/skeleton';
 import ListFolder, { ListDefaultFolder } from 'src/components/user/ListFolder';
@@ -23,6 +29,7 @@ import { useAtom } from 'jotai';
 import { selectedFolderAtom, selectedLinkAtom } from '@/lib/atom';
 import clsx from 'clsx';
 import AddLinkForm from 'src/components/forms/AddLink';
+import { Spinner } from 'src/components/ui/spinner';
 
 interface UserSideFormProps {
   user?: GetUserActionResponse | null;
@@ -30,6 +37,7 @@ interface UserSideFormProps {
 
 export default function UserSideForm({ user }: UserSideFormProps) {
   const [open, setOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const [selectedFolder, setSelectedFolder] = useAtom(selectedFolderAtom);
   const [selectedLink, setSelectedLink] = useAtom(selectedLinkAtom);
   const searchParams = useSearchParams();
@@ -92,25 +100,29 @@ export default function UserSideForm({ user }: UserSideFormProps) {
 
   const onAddLink = useCallback(
     (url: string) => {
-      addLink({
-        url,
-        folderId: selectedFolder?.id ? selectedFolder.id : undefined,
-      });
+      startTransition(() => {
+        addLink({
+          url,
+          folderId: selectedFolder?.id ? selectedFolder.id : undefined,
+        });
 
-      setOpen(false);
+        setOpen(false);
+      });
     },
     [addLink, selectedFolder],
   );
 
   useEffect(() => {
     if (Number(folderId)) {
-      const folder = data?.folders.find(
-        (folder) => folder.id === Number(folderId),
-      );
+      startTransition(() => {
+        const folder = data?.folders.find(
+          (folder) => folder.id === Number(folderId),
+        );
 
-      if (folder) {
-        setSelectedFolder(folder);
-      }
+        if (folder) {
+          setSelectedFolder(folder);
+        }
+      });
     } else {
       setSelectedFolder(defaultFolder);
     }
@@ -132,6 +144,16 @@ export default function UserSideForm({ user }: UserSideFormProps) {
 
   return (
     <>
+      {isPending && (
+        <div
+          className={clsx(
+            'flex justify-center items-center w-full h-full fixed top-0 left-0 z-999',
+            'bg-black/40',
+          )}
+        >
+          <Spinner className="size-6 md:size-10 text-blue-500" />
+        </div>
+      )}
       <section
         className={clsx(
           'flex-col w-full md:max-w-xs h-full bg-white md:border md:border-neutral-200 md:rounded-md md:drop-shadow-xs p-4',
