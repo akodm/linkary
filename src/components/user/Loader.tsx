@@ -72,7 +72,7 @@ export default function UserLoader({ user = null, recovery }: UserLoaderProps) {
   return (
     <div className="flex flex-row justify-center gap-x-4 w-full h-full bg-neutral-100 p-0 md:p-4">
       <UserSideForm user={userData} />
-      <UserViewer />
+      <UserViewer user={userData} />
     </div>
   );
 }

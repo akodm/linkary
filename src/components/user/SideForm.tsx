@@ -1,18 +1,11 @@
 'use client';
 
 import useHasScroll from '@/hooks/useHasScroll';
-import { addFolderAction } from '@/lib/actions/folder';
-import {
-  addLinkAction,
-  getLinkAndFolder,
-  LinkGetResponse,
-} from '@/lib/actions/link';
+import { getLinkAndFolder, LinkGetResponse } from '@/lib/actions/link';
 import { GetUserActionResponse } from '@/lib/actions/user';
-import { sentryCaptureException } from '@/lib/utils';
 import { useLingui } from '@lingui/react';
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import { PlusIcon } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
 import {
   useCallback,
   useEffect,
@@ -20,66 +13,52 @@ import {
   useState,
   useTransition,
 } from 'react';
-import { toast } from 'sonner';
 import { Skeleton } from 'src/components/ui/skeleton';
 import ListFolder, { ListDefaultFolder } from 'src/components/user/ListFolder';
 import ListLink from 'src/components/user/ListLink';
-import useSelector from '@/hooks/useSelector';
 import { useAtom } from 'jotai';
-import { selectedFolderAtom, selectedLinkAtom } from '@/lib/atom';
+import { Folder, selectedFolderAtom, selectedLinkAtom } from '@/lib/atom';
 import clsx from 'clsx';
-import AddLinkForm from 'src/components/forms/AddLink';
+import SimpleFieldForm from '@/components/forms/SimpleFieldForm';
 import { Spinner } from 'src/components/ui/spinner';
+import useFolder from '@/hooks/useFolder';
+import useLink from '@/hooks/useLink';
 
 interface UserSideFormProps {
   user?: GetUserActionResponse | null;
 }
 
 export default function UserSideForm({ user }: UserSideFormProps) {
-  const [open, setOpen] = useState(false);
+  const [addLinkOpen, setAddLinkOpen] = useState(false);
+  const [editFolderOpen, setEditFolderOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
+  const [editFolderState, setEditFolderState] = useState<Folder | undefined>();
   const [selectedFolder, setSelectedFolder] = useAtom(selectedFolderAtom);
   const [selectedLink, setSelectedLink] = useAtom(selectedLinkAtom);
-  const searchParams = useSearchParams();
-  const folderId = searchParams.get('folderId');
-  const linkId = searchParams.get('linkId');
   const { i18n } = useLingui();
-  const queryClient = useQueryClient();
   const { data, isLoading } = useQuery<LinkGetResponse>({
     queryKey: ['linkAndFolder'],
     queryFn: getLinkAndFolder,
+    refetchOnWindowFocus: false,
   });
-  const { mutate: addFolder } = useMutation({
-    mutationFn: addFolderAction,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['linkAndFolder'] });
 
-      toast.success(i18n.t('Folder added successfully'));
-    },
-    onError: (err) => {
-      toast.error(i18n.t('Failed to add folder'));
-
-      sentryCaptureException(err, 'onAddFolder', { user });
-    },
+  const {
+    addFolderMutation: { mutate: addFolder },
+    editFolderMutation: { mutate: editFolder },
+    deleteFolderMutation: { mutate: deleteFolder },
+  } = useFolder({
+    sentryErrorGeneralCaptureObj: { user },
   });
-  const { mutate: addLink } = useMutation({
-    mutationFn: addLinkAction,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['linkAndFolder'] });
-
-      toast.success(i18n.t('Link added successfully'));
-    },
-    onError: (err) => {
-      toast.error(i18n.t('Failed to add link'));
-
-      sentryCaptureException(err, 'onAddLink', { user });
-    },
+  const {
+    addLinkMutation: { mutate: addLink },
+    deleteLinkMutation: { mutate: deleteLink },
+  } = useLink({
+    sentryErrorGeneralCaptureObj: { user },
   });
 
   const { isTop: isTopFolder, containerRef: containerRefFolder } =
     useHasScroll();
   const { isTop: isTopLink, containerRef: containerRefLink } = useHasScroll();
-  const { onSelectFolder, onSelectLink } = useSelector();
 
   const defaultFolder = useMemo(() => {
     return {
@@ -94,9 +73,29 @@ export default function UserSideForm({ user }: UserSideFormProps) {
     };
   }, [data, i18n]);
 
+  const onSelectEditFolder = useCallback(
+    (folder: Folder) => {
+      setEditFolderState(folder);
+      setEditFolderOpen(true);
+    },
+    [setEditFolderState, setEditFolderOpen],
+  );
+
   const onAddFolder = useCallback(() => {
     addFolder({ name: i18n.t('New Folder') });
   }, [addFolder, i18n]);
+
+  const onEditFolder = useCallback(
+    (name: string) => {
+      startTransition(() => {
+        editFolder({ slug: editFolderState?.slug ?? '', name });
+
+        setEditFolderOpen(false);
+        setEditFolderState(undefined);
+      });
+    },
+    [editFolder, editFolderState],
+  );
 
   const onAddLink = useCallback(
     (url: string) => {
@@ -106,41 +105,16 @@ export default function UserSideForm({ user }: UserSideFormProps) {
           folderId: selectedFolder?.id ? selectedFolder.id : undefined,
         });
 
-        setOpen(false);
+        setAddLinkOpen(false);
       });
     },
     [addLink, selectedFolder],
   );
 
   useEffect(() => {
-    if (Number(folderId)) {
-      startTransition(() => {
-        const folder = data?.folders.find(
-          (folder) => folder.id === Number(folderId),
-        );
-
-        if (folder) {
-          setSelectedFolder(folder);
-        }
-      });
-    } else {
-      setSelectedFolder(defaultFolder);
-    }
-  }, [data, folderId, i18n, defaultFolder, setSelectedFolder]);
-
-  useEffect(() => {
-    if (linkId) {
-      const folderLink = data?.folders.flatMap((folder) => folder.links);
-      const allLinks = [...(folderLink ?? []), ...(data?.links ?? [])];
-      const link = allLinks.find((link) => link.id === Number(linkId));
-
-      if (link) {
-        setSelectedLink(link);
-      }
-    } else {
-      setSelectedLink(undefined);
-    }
-  }, [data, linkId, setSelectedLink]);
+    setSelectedFolder(defaultFolder);
+    setSelectedLink(undefined);
+  }, [defaultFolder, setSelectedFolder, setSelectedLink]);
 
   return (
     <>
@@ -190,20 +164,18 @@ export default function UserSideForm({ user }: UserSideFormProps) {
               <>
                 <ListDefaultFolder
                   folder={defaultFolder}
-                  selectedFolder={selectedFolder?.id === defaultFolder.id}
-                  onSelectFolder={() =>
-                    onSelectFolder(`/user/${user?.slug}`, defaultFolder)
-                  }
+                  selected={selectedFolder?.id === defaultFolder.id}
+                  onClick={() => setSelectedFolder(defaultFolder)}
                 />
                 {data?.folders.map((folder) => {
                   return (
                     <ListFolder
                       key={folder.id}
                       folder={folder}
-                      selectedFolder={selectedFolder?.id === folder.id}
-                      onSelectFolder={() =>
-                        onSelectFolder(`/user/${user?.slug}`, folder)
-                      }
+                      selected={selectedFolder?.id === folder.id}
+                      onClick={() => setSelectedFolder(folder)}
+                      onRename={() => onSelectEditFolder(folder)}
+                      onDelete={() => deleteFolder({ slug: folder.slug })}
                     />
                   );
                 })}
@@ -224,7 +196,7 @@ export default function UserSideForm({ user }: UserSideFormProps) {
             <button
               className="flex justify-center items-center w-7 h-7 rounded-sm hover:bg-neutral-100"
               disabled={isLoading}
-              onClick={() => setOpen(true)}
+              onClick={() => setAddLinkOpen(true)}
             >
               <PlusIcon className="size-4" />
             </button>
@@ -248,10 +220,9 @@ export default function UserSideForm({ user }: UserSideFormProps) {
                     <ListLink
                       key={link.id}
                       link={link}
-                      selectedLink={selectedLink?.id === link.id}
-                      onSelectLink={() =>
-                        onSelectLink(`/user/${user?.slug}`, link)
-                      }
+                      selected={selectedLink?.id === link.id}
+                      onClick={() => setSelectedLink(link)}
+                      onDelete={() => deleteLink({ id: link.id })}
                     />
                   );
                 })}
@@ -263,14 +234,27 @@ export default function UserSideForm({ user }: UserSideFormProps) {
           )}
         </article>
       </section>
-      <AddLinkForm
+      <SimpleFieldForm
+        field="url"
         title={i18n.t('Add Link')}
         description={i18n.t('write the URL of the link you want to add')}
         submitText={i18n.t('Add')}
         cancelText={i18n.t('Cancel')}
-        open={open}
-        setOpen={setOpen}
+        placeholder={i18n.t('Enter link')}
+        open={addLinkOpen}
+        setOpen={setAddLinkOpen}
         onSubmit={(data) => onAddLink(data.url)}
+      />
+      <SimpleFieldForm
+        field="name"
+        title={i18n.t('Edit Folder')}
+        description={i18n.t('write the name of the folder you want to edit')}
+        submitText={i18n.t('Edit')}
+        cancelText={i18n.t('Cancel')}
+        placeholder={i18n.t('Enter folder name')}
+        open={editFolderOpen}
+        setOpen={setEditFolderOpen}
+        onSubmit={(data) => onEditFolder(data.name)}
       />
     </>
   );

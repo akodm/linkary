@@ -9,36 +9,34 @@ import {
 } from 'src/components/ui/dialog';
 import { Button } from 'src/components/ui/button';
 import { colorPresets } from '@/css/colors';
-import { FieldValues, useForm } from 'react-hook-form';
+import { FieldPath, FieldValues, useForm } from 'react-hook-form';
 import { Input } from 'src/components/ui/input';
-import { useLingui } from '@lingui/react';
 import { useEffect } from 'react';
 
-interface AddLinkFormProps {
+interface SimpleFieldFormProps {
+  field: FieldPath<FieldValues>;
   title: string;
   description: string;
   submitText?: string;
   cancelText?: string;
+  placeholder?: string;
   open: boolean;
   setOpen: (open: boolean) => void;
   onSubmit: (data: FieldValues) => void;
 }
 
-export default function AddLinkForm({
+export default function SimpleFieldForm({
+  field,
   title,
   description,
   submitText,
   cancelText,
+  placeholder,
   open,
   setOpen,
   onSubmit,
-}: AddLinkFormProps) {
-  const { i18n } = useLingui();
-  const form = useForm({
-    defaultValues: {
-      url: '',
-    },
-  });
+}: SimpleFieldFormProps) {
+  const form = useForm();
 
   useEffect(() => {
     if (open) {
@@ -55,10 +53,10 @@ export default function AddLinkForm({
         </DialogHeader>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <Input
-            {...form.register('url', {
+            {...form.register(field, {
               required: true,
             })}
-            placeholder={i18n.t('Enter link')}
+            placeholder={placeholder}
           />
         </form>
         <DialogFooter>
