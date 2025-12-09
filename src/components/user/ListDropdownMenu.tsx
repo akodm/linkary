@@ -28,7 +28,7 @@ export default function ListDropdownMenu({
           <EllipsisIcon className="size-4 text-neutral-500" />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent className="mr-2 md:mr-0">
         {onRename && (
           <DropdownMenuItem asChild>
             <button

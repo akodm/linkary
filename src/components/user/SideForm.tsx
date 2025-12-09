@@ -82,7 +82,7 @@ export default function UserSideForm({ user }: UserSideFormProps) {
   );
 
   const onAddFolder = useCallback(() => {
-    addFolder({ name: i18n.t('New Folder') });
+    startTransition(() => addFolder({ name: i18n.t('New Folder') }));
   }, [addFolder, i18n]);
 
   const onEditFolder = useCallback(
