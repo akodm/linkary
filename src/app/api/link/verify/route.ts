@@ -7,13 +7,15 @@ import { and, eq, sql } from 'drizzle-orm';
 import { NextRequest, NextResponse } from 'next/server';
 import { checkBotId } from 'botid/server';
 
+const { GOOGLE_API_ID = '1' } = process.env;
+
 /**
  * 사용자가 URL을 검증 요청
  */
 export async function POST(request: NextRequest) {
   const body = await request.json();
 
-  const { url, apiId } = body;
+  const { url } = body;
 
   const session = await getSession();
 
@@ -38,7 +40,7 @@ export async function POST(request: NextRequest) {
       where: eq(users.email, session.user.email),
       with: {
         userApis: {
-          where: (u, { eq }) => eq(u.apiId, apiId),
+          where: (u, { eq }) => eq(u.apiId, parseInt(GOOGLE_API_ID)),
         },
       },
     });
@@ -51,7 +53,7 @@ export async function POST(request: NextRequest) {
     }
 
     const findApi = await db.query.api.findFirst({
-      where: eq(api.id, apiId),
+      where: eq(api.id, parseInt(GOOGLE_API_ID)),
     });
 
     if (!findApi) {
@@ -92,13 +94,18 @@ export async function POST(request: NextRequest) {
         usage: sql`${userApi.usage} + 1`,
         cumulativeUsage: sql`${userApi.cumulativeUsage} + 1`,
       })
-      .where(and(eq(userApi.userId, user.id), eq(userApi.apiId, apiId)));
+      .where(
+        and(
+          eq(userApi.userId, user.id),
+          eq(userApi.apiId, parseInt(GOOGLE_API_ID)),
+        ),
+      );
 
     return NextResponse.json({ data: threatTypes }, { status: 200 });
   } catch (err) {
     console.error(err);
 
-    sentryCaptureException(err, 'linkVerify', { session, url, apiId });
+    sentryCaptureException(err, 'linkVerify', { session, url });
 
     return NextResponse.json(
       { data: [], message: 'Internal Server Error' },

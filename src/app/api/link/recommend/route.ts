@@ -7,7 +7,7 @@ import { and, eq, sql } from 'drizzle-orm';
 import { NextRequest, NextResponse } from 'next/server';
 import { checkBotId } from 'botid/server';
 
-const { TAVILY_API_ID = '' } = process.env;
+const { TAVILY_API_ID = '2' } = process.env;
 
 /**
  * 사용자가 URL을 추천 요청
