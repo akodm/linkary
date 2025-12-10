@@ -2,6 +2,7 @@
 
 import ogs from 'open-graph-scraper';
 import { tavily } from '@tavily/core';
+import { uploadImageToVercelBlob } from 'src/lib/utils';
 
 const { TAVILY_API_KEY = '', GOOGLE_API_KEY = '' } = process.env;
 
@@ -38,10 +39,16 @@ export async function scrapeURL(url: string) {
     throw new Error('Failed to scrape URL');
   }
 
+  let image = ogImage?.[0]?.url || '';
+
+  if (image) {
+    image = await uploadImageToVercelBlob(image);
+  }
+
   return {
     title: ogTitle || urlObj.hostname,
     description: ogDescription || '',
-    image: ogImage?.[0]?.url || '',
+    image,
   };
 }
 

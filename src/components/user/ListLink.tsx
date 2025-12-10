@@ -36,7 +36,7 @@ export default function ListLink({
         onClick={onClick}
       >
         <LinkIcon className="size-4" />
-        <h5 className="text-sm font-medium">
+        <h5 className="text-sm text-left font-medium">
           {link.title || i18n.t('Empty Link Title')}
         </h5>
       </button>

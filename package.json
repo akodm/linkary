@@ -6,7 +6,7 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "PORT=3001 next dev",
+    "dev": "lingui compile && PORT=3001 next dev",
     "build": "lingui compile && next build",
     "start": "PORT=3001 next start",
     "lint": "next lint --fix",
@@ -16,7 +16,8 @@
     "db:generate": "dotenv -e .env.development -- drizzle-kit generate",
     "db:studio": "dotenv -e .env.development -- drizzle-kit studio",
     "db:migrate:prod": "dotenv -e .env.production -- drizzle-kit migrate",
-    "db:studio:prod": "dotenv -e .env.production -- drizzle-kit studio"
+    "db:studio:prod": "dotenv -e .env.production -- drizzle-kit studio",
+    "prepare": "husky"
   },
   "dependencies": {
     "@lingui/core": "^5.6.1",
@@ -40,6 +41,7 @@
     "@tanstack/react-query": "^5.90.11",
     "@tavily/core": "^0.5.12",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/blob": "^2.0.0",
     "@vercel/speed-insights": "^1.2.0",
     "botid": "^1.5.10",
     "class-variance-authority": "^0.7.1",
@@ -49,9 +51,11 @@
     "dotenv-cli": "^10.0.0",
     "drizzle-orm": "^0.44.6",
     "haikunator": "^2.1.2",
+    "husky": "^9.1.7",
     "jotai": "^2.15.1",
     "lucide-react": "^0.539.0",
     "motion": "^12.23.12",
+    "nanoid": "^5.1.6",
     "negotiator": "^1.0.0",
     "next": "^16.0.8",
     "next-auth": "^5.0.0-beta.29",

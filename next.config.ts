@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
   experimental: {
     swcPlugins: [['@lingui/swc-plugin', {}]],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ekcitjuk6ve7tyou.public.blob.vercel-storage.com',
+      },
+    ],
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.po$/,

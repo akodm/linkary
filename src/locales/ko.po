@@ -14,9 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:243
-msgid "Enter folder name"
-msgstr "폴더명 입력"
+#: src/components/user/Viewer.tsx:40
+msgid "Copied to clipboard"
+msgstr "클립보드 복사"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:42
+msgid "Failed to copy to clipboard"
+msgstr "클립보드 복사에 실패했습니다"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:58
+msgid "Home"
+msgstr "홈"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:26
@@ -49,107 +59,6 @@ msgid "Failed to delete link"
 msgstr "링크 삭제에 실패했습니다"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:87
-#: src/components/user/SideForm.tsx:66
-msgid "Default Folder"
-msgstr "기본 폴더"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:77
-msgid "New Folder"
-msgstr "새 폴더"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:133
-msgid "Folder"
-msgstr "폴더"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:186
-msgid "Link"
-msgstr "링크"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:229
-msgid "Add Link"
-msgstr "링크 추가"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:230
-msgid "write the URL of the link you want to add"
-msgstr "추가할 링크의 URL을 입력해주세요"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:231
-msgid "Add"
-msgstr "추가"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:162
-#: src/components/user/SideForm.tsx:232
-#: src/components/user/SideForm.tsx:242
-msgid "Cancel"
-msgstr "취소"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:233
-msgid "Enter link"
-msgstr "링크 입력"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:239
-msgid "Edit Folder"
-msgstr "폴더 수정"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:240
-msgid "write the name of the folder you want to edit"
-msgstr "변경할 폴더명을 입력해주세요"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:241
-msgid "Edit"
-msgstr "수정"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "이름 없는 폴더"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:49
-#: src/components/user/ListLink.tsx:44
-msgid "Rename"
-msgstr "이름 변경"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:165
-#: src/components/user/ListFolder.tsx:50
-#: src/components/user/ListLink.tsx:45
-msgid "Delete"
-msgstr "삭제"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Failed to get user data"
-msgstr "사용자 데이터를 가져오는데 실패했습니다"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:37
-msgid "Please try reloading the page"
-msgstr "페이지를 새로고침 해주세요"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:62
-msgid "Welcome back!"
-msgstr "돌아오신 것을 환영합니다!"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:63
-msgid "If you restore your account within 30 days, your previous data will remain intact."
-msgstr "계정을 30일 이내에 복구하신 경우, 기존 데이터는 그대로 보존되어 있습니다."
-
-#. js-lingui-explicit-id
 #: src/hooks/useFolder.ts:26
 msgid "Folder added successfully"
 msgstr "폴더가 성공적으로 추가되었습니다"
@@ -180,6 +89,129 @@ msgid "Failed to delete folder"
 msgstr "폴더 삭제에 실패했습니다"
 
 #. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:216
+#: src/components/user/Viewer.tsx:76
+msgid "Link"
+msgstr "링크"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:36
+msgid "Failed to get user data"
+msgstr "사용자 데이터를 가져오는데 실패했습니다"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:37
+msgid "Please try reloading the page"
+msgstr "페이지를 새로고침 해주세요"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:62
+msgid "Welcome back!"
+msgstr "돌아오신 것을 환영합니다!"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:63
+msgid "If you restore your account within 30 days, your previous data will remain intact."
+msgstr "계정을 30일 이내에 복구하신 경우, 기존 데이터는 그대로 보존되어 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:87
+#: src/components/user/SideForm.tsx:68
+msgid "Default Folder"
+msgstr "기본 폴더"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:87
+msgid "New Folder"
+msgstr "새 폴더"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:163
+msgid "Folder"
+msgstr "폴더"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:260
+msgid "Add Link"
+msgstr "링크 추가"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:261
+msgid "write the URL of the link you want to add"
+msgstr "추가할 링크의 URL을 입력해주세요"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:262
+msgid "Add"
+msgstr "추가"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:162
+#: src/components/user/SideForm.tsx:263
+#: src/components/user/SideForm.tsx:274
+msgid "Cancel"
+msgstr "취소"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:264
+msgid "Enter link"
+msgstr "링크 입력"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:271
+msgid "Edit Folder"
+msgstr "폴더 수정"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:272
+msgid "write the name of the folder you want to edit"
+msgstr "변경할 폴더명을 입력해주세요"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:273
+msgid "Edit"
+msgstr "수정"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:275
+msgid "Enter folder name"
+msgstr "폴더명 입력"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "링크 제목 없음"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:49
+#: src/components/user/ListLink.tsx:44
+msgid "Rename"
+msgstr "이름 변경"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:165
+#: src/components/user/ListFolder.tsx:50
+#: src/components/user/ListLink.tsx:45
+msgid "Delete"
+msgstr "삭제"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "이름 없는 폴더"
+
+#. js-lingui-explicit-id
+#: src/components/not-found/Content.tsx:20
+#: src/components/not-found/Content.tsx:26
+msgid "Page not found"
+msgstr "페이지를 찾을 수 없습니다"
+
+#. js-lingui-explicit-id
+#: src/components/not-found/Content.tsx:34
+msgid "Go to home"
+msgstr "메인으로 이동하기"
+
+#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:23
 #: src/components/common/Footer.tsx:28
 #: src/components/common/Header.client.tsx:55
@@ -194,20 +226,18 @@ msgid "This is the Privacy Policy regarding the personal information handled by 
 msgstr "서비스에서 취급하는 개인정보 처리방침입니다."
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "링크 제목 없음"
+#: src/components/about/Infomation.tsx:29
+#: src/components/common/Footer.tsx:20
+#: src/components/common/Header.client.tsx:48
+#: src/components/terms-of-service/Content.tsx:36
+msgid "Terms of Service"
+msgstr "이용약관"
 
 #. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:20
-#: src/components/not-found/Content.tsx:26
-msgid "Page not found"
-msgstr "페이지를 찾을 수 없습니다"
-
-#. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:34
-msgid "Go to home"
-msgstr "메인으로 이동하기"
+#: src/components/common/Header.client.tsx:49
+#: src/components/terms-of-service/Content.tsx:43
+msgid "These are the Terms of Service for using the service."
+msgstr "서비스 이용약관입니다."
 
 #. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:17
@@ -251,6 +281,11 @@ msgstr "간편한 사용을 위한 추가 기능"
 #: src/components/home/Tutorial.tsx:50
 msgid "Not only can you add links, but you can also take advantage of various provided features."
 msgstr "단순히 링크를 추가하는 것뿐만 아니라, 제공되는 다양한 기능도 활용해보세요."
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "추천"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -301,55 +336,36 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "모아둔 링크를 한눈에 확인하세요. 링크의 안전성을 검사하고, 나에게 맞는 맞춤형 링크를 추천받을 수 있습니다. 추가한 링크의 간략한 내용을 자동으로 채워주어 쉽게 찾을 수 있도록 도와줍니다."
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "추천"
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "배너"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:29
-#: src/components/common/Footer.tsx:20
-#: src/components/common/Header.client.tsx:48
-#: src/components/terms-of-service/Content.tsx:36
-msgid "Terms of Service"
-msgstr "이용약관"
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "링크를 저장하고"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:49
-#: src/components/terms-of-service/Content.tsx:43
-msgid "These are the Terms of Service for using the service."
-msgstr "서비스 이용약관입니다."
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "공유하세요."
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:70
-msgid "Switch to guest"
-msgstr "게스트로 전환"
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "중요한 링크를 체계적으로 관리하고 한 눈에 볼 수 있는 플랫폼"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:74
-msgid "Logout"
-msgstr "로그아웃"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:79
-#: src/components/common/UserDropdonw.tsx:155
-msgid "Delete account"
-msgstr "계정 삭제"
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "시작하기"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:90
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "게스트 사용자"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:95
-msgid "Sign in"
-msgstr "로그인"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:157
-msgid "Are you sure you want to delete your account?"
-msgstr "정말로 계정을 삭제하시겠습니까?"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:19
@@ -401,35 +417,30 @@ msgid "You can use it without signing up, but logging in lets you try more featu
 msgstr "회원가입 없이도 사용할 수 있지만, 로그인하면 더 많은 기능을 무료로 이용할 수 있습니다."
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "배너"
+#: src/components/common/UserDropdonw.tsx:70
+msgid "Switch to guest"
+msgstr "게스트로 전환"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "링크를 저장하고"
+#: src/components/common/UserDropdonw.tsx:74
+msgid "Logout"
+msgstr "로그아웃"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "공유하세요."
+#: src/components/common/UserDropdonw.tsx:79
+#: src/components/common/UserDropdonw.tsx:155
+msgid "Delete account"
+msgstr "계정 삭제"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "중요한 링크를 체계적으로 관리하고 한 눈에 볼 수 있는 플랫폼"
+#: src/components/common/UserDropdonw.tsx:95
+msgid "Sign in"
+msgstr "로그인"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "시작하기"
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "로고"
+#: src/components/common/UserDropdonw.tsx:157
+msgid "Are you sure you want to delete your account?"
+msgstr "정말로 계정을 삭제하시겠습니까?"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -547,21 +558,6 @@ msgid "Select Language"
 msgstr "언어 선택"
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:14
-msgid "© 2025 Linkary. All rights reserved."
-msgstr "© 2025 Linkary. All rights reserved."
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:44
-msgid "Site created by 🤖 akodm"
-msgstr "🤖 akodm에 의해 제작된 사이트"
-
-#. js-lingui-explicit-id
-#: src/components/auth/Bottom.tsx:12
-msgid "To continue as a guest, click here."
-msgstr "게스트로 계속하려면 여기를 클릭하세요."
-
-#. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:36
 #: src/components/common/Header.client.tsx:39
 msgid "Introduction"
@@ -573,14 +569,24 @@ msgid "Terms and Privacy"
 msgstr "약관 및 개인정보"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:47
-msgid "Login"
-msgstr "로그인"
+#: src/components/common/Footer.tsx:14
+msgid "© 2025 Linkary. All rights reserved."
+msgstr "© 2025 Linkary. All rights reserved."
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:48
-msgid "Login to your account"
-msgstr "내 계정에 로그인"
+#: src/components/common/Footer.tsx:44
+msgid "Site created by 🤖 akodm"
+msgstr "🤖 akodm에 의해 제작된 사이트"
+
+#. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "로고"
+
+#. js-lingui-explicit-id
+#: src/components/auth/Heading.tsx:12
+msgid "Sign in to your account"
+msgstr "계정으로 로그인"
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:52
@@ -589,39 +595,9 @@ msgid "Sign in to access more features."
 msgstr "로그인하면 다양한 기능을 사용할 수 있습니다."
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:61
-msgid "Close"
-msgstr "닫기"
-
-#. js-lingui-explicit-id
-#: src/components/auth/Heading.tsx:12
-msgid "Sign in to your account"
-msgstr "계정으로 로그인"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:18
-msgid "Check the Frequently Asked Questions (FAQ)."
-msgstr "자주 묻는 질문(FAQ)을 확인해 보세요."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:24
-msgid "Review our Privacy Policy."
-msgstr "서비스에서 취급하는 개인정보 처리방침을 확인해 보세요."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:30
-msgid "Review Linkary's Terms of Service."
-msgstr "Linkary 의 이용약관을 확인해 보세요."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:52
-msgid "Need more information?"
-msgstr "다른 정보가 필요하신가요?"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:59
-msgid "Find more details in other sections of the site."
-msgstr "사이트 내 다른 메뉴에서 더 자세한 정보를 확인할 수 있습니다."
+#: src/components/auth/Bottom.tsx:12
+msgid "To continue as a guest, click here."
+msgstr "게스트로 계속하려면 여기를 클릭하세요."
 
 #. js-lingui-explicit-id
 #: src/components/about/Start.tsx:19
@@ -692,6 +668,46 @@ msgstr "Linkary 에서 사용할 기능"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "제공되는 다양한 기능을 여러 환경에서 사용해 보세요."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:18
+msgid "Check the Frequently Asked Questions (FAQ)."
+msgstr "자주 묻는 질문(FAQ)을 확인해 보세요."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:24
+msgid "Review our Privacy Policy."
+msgstr "서비스에서 취급하는 개인정보 처리방침을 확인해 보세요."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:30
+msgid "Review Linkary's Terms of Service."
+msgstr "Linkary 의 이용약관을 확인해 보세요."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:52
+msgid "Need more information?"
+msgstr "다른 정보가 필요하신가요?"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:59
+msgid "Find more details in other sections of the site."
+msgstr "사이트 내 다른 메뉴에서 더 자세한 정보를 확인할 수 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:47
+msgid "Login"
+msgstr "로그인"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:48
+msgid "Login to your account"
+msgstr "내 계정에 로그인"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:61
+msgid "Close"
+msgstr "닫기"
 
 #. js-lingui-explicit-id
 #: src/components/about/Banner.tsx:19

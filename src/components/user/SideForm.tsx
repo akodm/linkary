@@ -10,6 +10,7 @@ import {
   useCallback,
   useEffect,
   useMemo,
+  useRef,
   useState,
   useTransition,
 } from 'react';
@@ -35,6 +36,7 @@ export default function UserSideForm({ user }: UserSideFormProps) {
   const [editFolderState, setEditFolderState] = useState<Folder | undefined>();
   const [selectedFolder, setSelectedFolder] = useAtom(selectedFolderAtom);
   const [selectedLink, setSelectedLink] = useAtom(selectedLinkAtom);
+  const refetchRef = useRef(false);
   const { i18n } = useLingui();
   const { data, isLoading } = useQuery<LinkGetResponse>({
     queryKey: ['linkAndFolder'],
@@ -112,9 +114,28 @@ export default function UserSideForm({ user }: UserSideFormProps) {
   );
 
   useEffect(() => {
+    if (refetchRef.current) return;
+
     setSelectedFolder(defaultFolder);
     setSelectedLink(undefined);
+
+    refetchRef.current = true;
   }, [defaultFolder, setSelectedFolder, setSelectedLink]);
+
+  useEffect(() => {
+    setSelectedFolder((prev) => {
+      const folder = data?.folders.find((folder) => folder.id === prev?.id);
+
+      return folder ?? defaultFolder;
+    });
+    setSelectedLink((prev) => {
+      const allLinks = data?.folders.flatMap((folder) => folder.links);
+
+      return [...(allLinks ?? []), ...(data?.links ?? [])].find(
+        (link) => link.id === prev?.id,
+      );
+    });
+  }, [data, defaultFolder, setSelectedFolder, setSelectedLink]);
 
   return (
     <>

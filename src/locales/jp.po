@@ -14,9 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:243
-msgid "Enter folder name"
-msgstr "フォルダ名を入力"
+#: src/components/user/Viewer.tsx:40
+msgid "Copied to clipboard"
+msgstr "クリップボードにコピーしました"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:42
+msgid "Failed to copy to clipboard"
+msgstr "クリップボードへのコピーに失敗しました"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:58
+msgid "Home"
+msgstr "ホーム"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:26
@@ -49,107 +59,6 @@ msgid "Failed to delete link"
 msgstr "リンクの削除に失敗しました"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:87
-#: src/components/user/SideForm.tsx:66
-msgid "Default Folder"
-msgstr "デフォルトフォルダ"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:77
-msgid "New Folder"
-msgstr "新しいフォルダ"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:133
-msgid "Folder"
-msgstr "フォルダ"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:186
-msgid "Link"
-msgstr "リンク"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:229
-msgid "Add Link"
-msgstr "リンクを追加"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:230
-msgid "write the URL of the link you want to add"
-msgstr "追加したいリンクのURLを入力してください"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:231
-msgid "Add"
-msgstr "追加"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:162
-#: src/components/user/SideForm.tsx:232
-#: src/components/user/SideForm.tsx:242
-msgid "Cancel"
-msgstr "キャンセル"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:233
-msgid "Enter link"
-msgstr "リンクを入力"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:239
-msgid "Edit Folder"
-msgstr "フォルダを編集"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:240
-msgid "write the name of the folder you want to edit"
-msgstr "編集するフォルダ名を入力してください"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:241
-msgid "Edit"
-msgstr "編集"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "フォルダ名なし"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:49
-#: src/components/user/ListLink.tsx:44
-msgid "Rename"
-msgstr "名前を変更"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:165
-#: src/components/user/ListFolder.tsx:50
-#: src/components/user/ListLink.tsx:45
-msgid "Delete"
-msgstr "削除"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Failed to get user data"
-msgstr "ユーザーデータの取得に失敗しました"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:37
-msgid "Please try reloading the page"
-msgstr "ページを再読み込みしてください"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:62
-msgid "Welcome back!"
-msgstr "おかえりなさい！"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:63
-msgid "If you restore your account within 30 days, your previous data will remain intact."
-msgstr "30日以内にアカウントを復元すると、以前のデータはそのまま保持されます。"
-
-#. js-lingui-explicit-id
 #: src/hooks/useFolder.ts:26
 msgid "Folder added successfully"
 msgstr "フォルダが正常に追加されました"
@@ -180,6 +89,129 @@ msgid "Failed to delete folder"
 msgstr "フォルダの削除に失敗しました"
 
 #. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:216
+#: src/components/user/Viewer.tsx:76
+msgid "Link"
+msgstr "リンク"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:36
+msgid "Failed to get user data"
+msgstr "ユーザーデータの取得に失敗しました"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:37
+msgid "Please try reloading the page"
+msgstr "ページを再読み込みしてください"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:62
+msgid "Welcome back!"
+msgstr "おかえりなさい！"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:63
+msgid "If you restore your account within 30 days, your previous data will remain intact."
+msgstr "30日以内にアカウントを復元すると、以前のデータはそのまま保持されます。"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:87
+#: src/components/user/SideForm.tsx:68
+msgid "Default Folder"
+msgstr "デフォルトフォルダ"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:87
+msgid "New Folder"
+msgstr "新しいフォルダ"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:163
+msgid "Folder"
+msgstr "フォルダ"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:260
+msgid "Add Link"
+msgstr "リンクを追加"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:261
+msgid "write the URL of the link you want to add"
+msgstr "追加したいリンクのURLを入力してください"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:262
+msgid "Add"
+msgstr "追加"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:162
+#: src/components/user/SideForm.tsx:263
+#: src/components/user/SideForm.tsx:274
+msgid "Cancel"
+msgstr "キャンセル"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:264
+msgid "Enter link"
+msgstr "リンクを入力"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:271
+msgid "Edit Folder"
+msgstr "フォルダを編集"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:272
+msgid "write the name of the folder you want to edit"
+msgstr "編集するフォルダ名を入力してください"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:273
+msgid "Edit"
+msgstr "編集"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:275
+msgid "Enter folder name"
+msgstr "フォルダ名を入力"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "リンクタイトルなし"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:49
+#: src/components/user/ListLink.tsx:44
+msgid "Rename"
+msgstr "名前を変更"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:165
+#: src/components/user/ListFolder.tsx:50
+#: src/components/user/ListLink.tsx:45
+msgid "Delete"
+msgstr "削除"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "フォルダ名なし"
+
+#. js-lingui-explicit-id
+#: src/components/not-found/Content.tsx:20
+#: src/components/not-found/Content.tsx:26
+msgid "Page not found"
+msgstr "ページが見つかりません"
+
+#. js-lingui-explicit-id
+#: src/components/not-found/Content.tsx:34
+msgid "Go to home"
+msgstr "ホームに戻る"
+
+#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:23
 #: src/components/common/Footer.tsx:28
 #: src/components/common/Header.client.tsx:55
@@ -194,20 +226,18 @@ msgid "This is the Privacy Policy regarding the personal information handled by 
 msgstr "これはサービスが取り扱う個人情報に関するプライバシーポリシーです。"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "リンクタイトルなし"
+#: src/components/about/Infomation.tsx:29
+#: src/components/common/Footer.tsx:20
+#: src/components/common/Header.client.tsx:48
+#: src/components/terms-of-service/Content.tsx:36
+msgid "Terms of Service"
+msgstr "利用規約"
 
 #. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:20
-#: src/components/not-found/Content.tsx:26
-msgid "Page not found"
-msgstr "ページが見つかりません"
-
-#. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:34
-msgid "Go to home"
-msgstr "ホームに戻る"
+#: src/components/common/Header.client.tsx:49
+#: src/components/terms-of-service/Content.tsx:43
+msgid "These are the Terms of Service for using the service."
+msgstr "これらはサービスを使用するための利用規約です。"
 
 #. js-lingui-explicit-id
 #: src/components/home/Tutorial.tsx:17
@@ -251,6 +281,11 @@ msgstr "便利に使うための追加機能"
 #: src/components/home/Tutorial.tsx:50
 msgid "Not only can you add links, but you can also take advantage of various provided features."
 msgstr "リンクの追加だけでなく、提供されているさまざまな機能も活用できます。"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "おすすめ"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -301,55 +336,36 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "保存したリンクを一目で確認できます。リンクの安全性をチェックし、パーソナライズされたリンク推薦を受け取り、システムが自動で簡単な詳細を入力して簡単に検索できるようにします。"
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "おすすめ"
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "バナー"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:29
-#: src/components/common/Footer.tsx:20
-#: src/components/common/Header.client.tsx:48
-#: src/components/terms-of-service/Content.tsx:36
-msgid "Terms of Service"
-msgstr "利用規約"
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "リンクを保存して"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:49
-#: src/components/terms-of-service/Content.tsx:43
-msgid "These are the Terms of Service for using the service."
-msgstr "これらはサービスを使用するための利用規約です。"
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "共有しましょう。"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:70
-msgid "Switch to guest"
-msgstr "ゲストに切り替え"
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "重要なリンクを体系的に管理し、一目で確認できるプラットフォーム"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:74
-msgid "Logout"
-msgstr "ログアウト"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:79
-#: src/components/common/UserDropdonw.tsx:155
-msgid "Delete account"
-msgstr "アカウント削除"
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "はじめる"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:90
 #: src/components/home/Guest.tsx:18
 msgid "Guest User"
 msgstr "ゲストユーザー"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:95
-msgid "Sign in"
-msgstr "ログイン"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:157
-msgid "Are you sure you want to delete your account?"
-msgstr "本当にアカウントを削除しますか？"
 
 #. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:19
@@ -401,35 +417,30 @@ msgid "You can use it without signing up, but logging in lets you try more featu
 msgstr "登録なしでも使用できますが、ログインするとより多くの機能を無料で体験できます。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "バナー"
+#: src/components/common/UserDropdonw.tsx:70
+msgid "Switch to guest"
+msgstr "ゲストに切り替え"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "リンクを保存して"
+#: src/components/common/UserDropdonw.tsx:74
+msgid "Logout"
+msgstr "ログアウト"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "共有しましょう。"
+#: src/components/common/UserDropdonw.tsx:79
+#: src/components/common/UserDropdonw.tsx:155
+msgid "Delete account"
+msgstr "アカウント削除"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "重要なリンクを体系的に管理し、一目で確認できるプラットフォーム"
+#: src/components/common/UserDropdonw.tsx:95
+msgid "Sign in"
+msgstr "ログイン"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "はじめる"
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "ロゴ"
+#: src/components/common/UserDropdonw.tsx:157
+msgid "Are you sure you want to delete your account?"
+msgstr "本当にアカウントを削除しますか？"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -547,21 +558,6 @@ msgid "Select Language"
 msgstr "言語を選択"
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:14
-msgid "© 2025 Linkary. All rights reserved."
-msgstr "© 2025 Linkary. 全ての権利を保有。"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:44
-msgid "Site created by 🤖 akodm"
-msgstr "🤖 akodm によって作成されたサイト"
-
-#. js-lingui-explicit-id
-#: src/components/auth/Bottom.tsx:12
-msgid "To continue as a guest, click here."
-msgstr "ゲストとして続行するにはここをクリックしてください。"
-
-#. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:36
 #: src/components/common/Header.client.tsx:39
 msgid "Introduction"
@@ -573,14 +569,24 @@ msgid "Terms and Privacy"
 msgstr "利用規約とプライバシー"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:47
-msgid "Login"
-msgstr "ログイン"
+#: src/components/common/Footer.tsx:14
+msgid "© 2025 Linkary. All rights reserved."
+msgstr "© 2025 Linkary. 全ての権利を保有。"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:48
-msgid "Login to your account"
-msgstr "アカウントにログイン"
+#: src/components/common/Footer.tsx:44
+msgid "Site created by 🤖 akodm"
+msgstr "🤖 akodm によって作成されたサイト"
+
+#. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "ロゴ"
+
+#. js-lingui-explicit-id
+#: src/components/auth/Heading.tsx:12
+msgid "Sign in to your account"
+msgstr "アカウントにサインイン"
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:52
@@ -589,39 +595,9 @@ msgid "Sign in to access more features."
 msgstr "サインインしてより多くの機能をご利用ください。"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:61
-msgid "Close"
-msgstr "閉じる"
-
-#. js-lingui-explicit-id
-#: src/components/auth/Heading.tsx:12
-msgid "Sign in to your account"
-msgstr "アカウントにサインイン"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:18
-msgid "Check the Frequently Asked Questions (FAQ)."
-msgstr "よくある質問（FAQ）を確認してください。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:24
-msgid "Review our Privacy Policy."
-msgstr "プライバシーポリシーを確認してください。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:30
-msgid "Review Linkary's Terms of Service."
-msgstr "Linkary の利用規約を確認してください。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:52
-msgid "Need more information?"
-msgstr "さらなる情報が必要ですか？"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:59
-msgid "Find more details in other sections of the site."
-msgstr "サイトの他のセクションで詳細をご確認ください。"
+#: src/components/auth/Bottom.tsx:12
+msgid "To continue as a guest, click here."
+msgstr "ゲストとして続行するにはここをクリックしてください。"
 
 #. js-lingui-explicit-id
 #: src/components/about/Start.tsx:19
@@ -692,6 +668,46 @@ msgstr "Linkary で利用可能な機能"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "異なる環境で機能をお試しください。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:18
+msgid "Check the Frequently Asked Questions (FAQ)."
+msgstr "よくある質問（FAQ）を確認してください。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:24
+msgid "Review our Privacy Policy."
+msgstr "プライバシーポリシーを確認してください。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:30
+msgid "Review Linkary's Terms of Service."
+msgstr "Linkary の利用規約を確認してください。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:52
+msgid "Need more information?"
+msgstr "さらなる情報が必要ですか？"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:59
+msgid "Find more details in other sections of the site."
+msgstr "サイトの他のセクションで詳細をご確認ください。"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:47
+msgid "Login"
+msgstr "ログイン"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:48
+msgid "Login to your account"
+msgstr "アカウントにログイン"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:61
+msgid "Close"
+msgstr "閉じる"
 
 #. js-lingui-explicit-id
 #: src/components/about/Banner.tsx:19
