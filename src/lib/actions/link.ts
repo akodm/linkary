@@ -2,10 +2,20 @@
 
 import { db } from '@/db';
 import { getSession } from 'src/lib/actions/auth';
-import { and, count, desc, eq, isNull } from 'drizzle-orm';
-import { link, linkFolder, linkReport, users } from '@/db/schemas';
-import { scrapeURL } from 'src/lib/actions/url';
+import { and, count, desc, eq, isNull, sql } from 'drizzle-orm';
+import {
+  api,
+  link,
+  linkFolder,
+  linkReport,
+  linkSafety,
+  userApi,
+  users,
+} from '@/db/schemas';
+import { recommendURL, scrapeURL, verifyURL } from 'src/lib/actions/url';
 import { InsertLink } from '@/db/schemas/link';
+
+const { GOOGLE_API_ID = '1' } = process.env;
 
 export const getLinkAndFolder = async () => {
   const session = await getSession();
@@ -304,4 +314,114 @@ export const reportLinkAction = async ({
 
 export type ReportLinkActionResponse = Awaited<
   ReturnType<typeof reportLinkAction>
+>;
+
+export const verifyLinkAction = async ({ linkId }: { linkId?: number }) => {
+  const session = await getSession();
+
+  if (!session?.user?.email) {
+    throw new Error('User session is not found');
+  }
+
+  if (!linkId) {
+    throw new Error('Link ID is required');
+  }
+
+  const user = await db.query.users.findFirst({
+    where: eq(users.email, session.user.email),
+    with: {
+      userApis: {
+        where: (u, { eq }) => eq(u.apiId, parseInt(GOOGLE_API_ID)),
+      },
+    },
+  });
+
+  if (!user) {
+    throw new Error('User not found');
+  }
+
+  const findApi = await db.query.api.findFirst({
+    where: eq(api.id, parseInt(GOOGLE_API_ID)),
+  });
+
+  if (!findApi) {
+    throw new Error('API not found');
+  }
+
+  const findUserApi = user.userApis[0];
+
+  if (!findUserApi) {
+    throw new Error('User API not found');
+  }
+
+  if (findUserApi.usage >= findApi.limit && findApi.limit !== -1) {
+    throw new Error('API usage limit exceeded');
+  }
+
+  if (findApi.usage >= findApi.totalLimit && findApi.totalLimit !== -1) {
+    throw new Error('API total usage limit exceeded');
+  }
+
+  const findLink = await db.query.link.findFirst({
+    where: eq(link.id, linkId),
+  });
+
+  if (!findLink) {
+    throw new Error('Link not found');
+  }
+
+  const threatTypes = await verifyURL(findLink.url);
+  let isSafe = true;
+
+  if (threatTypes.length > 0) {
+    isSafe = false;
+  }
+
+  await db.transaction(async (tx) => {
+    await Promise.all([
+      tx
+        .update(userApi)
+        .set({
+          usage: sql`${userApi.usage} + 1`,
+          cumulativeUsage: sql`${userApi.cumulativeUsage} + 1`,
+        })
+        .where(
+          and(
+            eq(userApi.userId, user.id),
+            eq(userApi.apiId, parseInt(GOOGLE_API_ID)),
+          ),
+        ),
+      tx
+        .update(api)
+        .set({
+          usage: sql`${api.usage} + 1`,
+        })
+        .where(eq(api.id, parseInt(GOOGLE_API_ID))),
+      tx.insert(linkSafety).values({
+        userId: user.id,
+        linkId,
+        safe: isSafe,
+        reason: threatTypes.join(', ') || '',
+      }),
+      tx.update(link).set({
+        verified: true,
+      }),
+    ]);
+  });
+
+  return threatTypes.length > 0;
+};
+
+export type VerifyLinkActionResponse = Awaited<
+  ReturnType<typeof verifyLinkAction>
+>;
+
+export const recommendLinkAction = async ({ prompt }: { prompt: string[] }) => {
+  const recommend = await recommendURL(prompt);
+
+  return recommend;
+};
+
+export type RecommendLinkActionResponse = Awaited<
+  ReturnType<typeof recommendLinkAction>
 >;

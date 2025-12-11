@@ -1,6 +1,8 @@
 import { atom } from 'jotai';
 import { LinkGetResponse } from 'src/lib/actions/link';
 
+export const isPendingAtom = atom<boolean>(false);
+
 export type Folder = LinkGetResponse['folders'][number];
 
 export type Link = LinkGetResponse['links'][number];
