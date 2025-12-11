@@ -16,39 +16,39 @@ msgstr ""
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:66
 msgid "Link is not safe"
-msgstr ""
+msgstr "リンクが安全ではありません"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:68
 msgid "Completed verification"
-msgstr ""
+msgstr "検証が完了しました"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:75
 msgid "Failed to verify link"
-msgstr ""
+msgstr "リンクの検証に失敗しました"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:144
 msgid "Verify Link"
-msgstr ""
+msgstr "リンクを検証"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:157
 msgid "Copy Link to clipboard"
-msgstr ""
+msgstr "リンクをクリップボードにコピー"
 
 #. js-lingui-explicit-id
 #: src/components/user/Thumbnail.tsx:28
 #: src/components/user/Thumbnail.tsx:62
 msgid "Default Image"
-msgstr ""
+msgstr "デフォルト画像"
 
 #. js-lingui-explicit-id
 #: src/components/user/Thumbnail.tsx:43
 #: src/components/user/Thumbnail.tsx:80
 msgid "Verified Link"
-msgstr ""
+msgstr "検証済みリンク"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:26

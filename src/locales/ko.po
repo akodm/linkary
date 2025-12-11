@@ -16,39 +16,39 @@ msgstr ""
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:66
 msgid "Link is not safe"
-msgstr ""
+msgstr "링크가 안전하지 않습니다"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:68
 msgid "Completed verification"
-msgstr ""
+msgstr "검사가 완료되었습니다"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:75
 msgid "Failed to verify link"
-msgstr ""
+msgstr "링크 검사에 실패했습니다"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:144
 msgid "Verify Link"
-msgstr ""
+msgstr "링크 검사"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:157
 msgid "Copy Link to clipboard"
-msgstr ""
+msgstr "링크를 클립보드에 복사"
 
 #. js-lingui-explicit-id
 #: src/components/user/Thumbnail.tsx:28
 #: src/components/user/Thumbnail.tsx:62
 msgid "Default Image"
-msgstr ""
+msgstr "기본 이미지"
 
 #. js-lingui-explicit-id
 #: src/components/user/Thumbnail.tsx:43
 #: src/components/user/Thumbnail.tsx:80
 msgid "Verified Link"
-msgstr ""
+msgstr "검사된 링크"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:26

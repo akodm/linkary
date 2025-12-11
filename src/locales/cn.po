@@ -16,39 +16,39 @@ msgstr ""
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:66
 msgid "Link is not safe"
-msgstr ""
+msgstr "链接不安全"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:68
 msgid "Completed verification"
-msgstr ""
+msgstr "验证完成"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:75
 msgid "Failed to verify link"
-msgstr ""
+msgstr "链接验证失败"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:144
 msgid "Verify Link"
-msgstr ""
+msgstr "验证链接"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:157
 msgid "Copy Link to clipboard"
-msgstr ""
+msgstr "复制链接到剪贴板"
 
 #. js-lingui-explicit-id
 #: src/components/user/Thumbnail.tsx:28
 #: src/components/user/Thumbnail.tsx:62
 msgid "Default Image"
-msgstr ""
+msgstr "默认图片"
 
 #. js-lingui-explicit-id
 #: src/components/user/Thumbnail.tsx:43
 #: src/components/user/Thumbnail.tsx:80
 msgid "Verified Link"
-msgstr ""
+msgstr "已验证链接"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:26
