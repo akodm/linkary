@@ -242,7 +242,10 @@ export default function UserSideForm({ user }: UserSideFormProps) {
                       key={link.id}
                       link={link}
                       selected={selectedLink?.id === link.id}
-                      onClick={() => setSelectedLink(link)}
+                      onClick={() => {
+                        setSelectedLink(link);
+                        window.scrollTo({ top: 0, behavior: 'instant' });
+                      }}
                       onDelete={() => deleteLink({ id: link.id })}
                     />
                   );

@@ -1,17 +1,12 @@
 'use client';
 
 import { LinkGetResponse } from '@/lib/actions/link';
-import { LinkIcon, VerifiedIcon, XIcon } from 'lucide-react';
+import { LinkIcon, OctagonAlertIcon, VerifiedIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from 'src/components/ui/tooltip';
-import { Badge } from 'src/components/ui/badge';
-import dayjs from 'dayjs';
 import { useLingui } from '@lingui/react';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import useLinkSafety, { SafetyIcon } from '@/hooks/useLinkSafety';
+import LinkVerifedBadge from 'src/components/user/LinkVerifedBadge';
 
 interface ThumbnailProps {
   link: LinkGetResponse['links'][number];
@@ -21,6 +16,30 @@ export default function Thumbnail({ link }: ThumbnailProps) {
   const { i18n } = useLingui();
   const [error, setError] = useState(false);
 
+  const { getSafetyStatus } = useLinkSafety({ link });
+
+  const safetyStatus = useMemo(() => {
+    const status = getSafetyStatus();
+
+    const element: Record<SafetyIcon, React.ReactNode> = {
+      default: <></>,
+      unsafe: <XIcon className="text-destructive size-4!" />,
+      warn: <OctagonAlertIcon className="text-yellow-500 size-4!" />,
+      verified: <VerifiedIcon className="text-blue-500 size-4!" />,
+    };
+    const tooltip: Record<SafetyIcon, string> = {
+      default: '',
+      unsafe: i18n.t('Unsafe Link'),
+      warn: i18n.t('Warning link (over 1 year old)'),
+      verified: i18n.t('Verified Link'),
+    };
+
+    return {
+      element: element[status],
+      tooltip: tooltip[status],
+    };
+  }, [getSafetyStatus, i18n]);
+
   if (!link?.image) {
     return (
       <div className="w-full max-w-150 aspect-square mx-auto bg-black/30 rounded-sm mt-2.5 md:mt-8 relative">
@@ -28,24 +47,14 @@ export default function Thumbnail({ link }: ThumbnailProps) {
           fill
           src="/default.webp"
           alt={link?.title || i18n.t('Default Image')}
-          className="object-contain object-center"
+          className="object-contain object-center border border-neutral-200 rounded-sm"
         />
         {link?.verified && (
-          <div className="flex justify-center items-center right-1 top-1 absolute">
-            <Badge className="bg-white space-x-1">
-              {link?.linkSafety?.[0]?.createdAt && (
-                <span className="text-xs text-neutral-500">
-                  {dayjs(link.linkSafety[0].createdAt).format('YYYY-MM-DD')}
-                </span>
-              )}
-              <Tooltip>
-                <TooltipTrigger>
-                  <VerifiedIcon className="text-blue-500 size-4!" />
-                </TooltipTrigger>
-                <TooltipContent>{i18n.t('Verified Link')}</TooltipContent>
-              </Tooltip>
-            </Badge>
-          </div>
+          <LinkVerifedBadge
+            createdAt={link?.linkSafety?.[0]?.createdAt}
+            trigger={safetyStatus.element}
+            tooltip={safetyStatus.tooltip}
+          />
         )}
       </div>
     );
@@ -69,29 +78,11 @@ export default function Thumbnail({ link }: ThumbnailProps) {
         <LinkIcon className="size-4 md:size-6" />
       </div>
       {link?.verified && (
-        <div className="flex justify-center items-center right-1 top-1 absolute">
-          <Badge className="bg-white space-x-1">
-            {link?.linkSafety?.[0]?.createdAt && (
-              <span className="text-xs text-neutral-500">
-                {dayjs(link.linkSafety[0].createdAt).format('YYYY-MM-DD')}
-              </span>
-            )}
-            <Tooltip>
-              <TooltipTrigger>
-                {link.linkSafety?.[0]?.safe ? (
-                  <VerifiedIcon className="text-blue-500 size-4!" />
-                ) : (
-                  <XIcon className="text-destructive size-4!" />
-                )}
-              </TooltipTrigger>
-              <TooltipContent>
-                {link.linkSafety?.[0]?.safe
-                  ? i18n.t('Verified Link')
-                  : i18n.t('Unsafe Link')}
-              </TooltipContent>
-            </Tooltip>
-          </Badge>
-        </div>
+        <LinkVerifedBadge
+          createdAt={link?.linkSafety?.[0]?.createdAt}
+          trigger={safetyStatus.element}
+          tooltip={safetyStatus.tooltip}
+        />
       )}
     </a>
   );

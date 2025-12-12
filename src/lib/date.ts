@@ -68,3 +68,22 @@ export function utcToLocal(
 
   return d.format(format);
 }
+
+// 비교 단위 타입
+export type TimeUnit = 'year' | 'month' | 'day' | 'hour' | 'minute' | 'second';
+
+// 두 날짜 간의 시간 차이를 계산하는 함수
+export function getTimeDifference(
+  fromDate: Date,
+  toDate: Date,
+  unit: TimeUnit,
+): number {
+  const from = dayjs(fromDate);
+  const to = dayjs(toDate);
+
+  if (!from.isValid() || !to.isValid()) {
+    throw new Error('Invalid date provided');
+  }
+
+  return to.diff(from, unit);
+}

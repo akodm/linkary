@@ -37,7 +37,9 @@ export const getLinkAndFolder = async () => {
       where: and(eq(link.userId, user.id), isNull(link.linkFolderId)),
       with: {
         linkReports: true,
-        linkSafety: true,
+        linkSafety: {
+          orderBy: desc(linkSafety.createdAt),
+        },
         linkViews: true,
       },
     }),
@@ -47,7 +49,9 @@ export const getLinkAndFolder = async () => {
         links: {
           with: {
             linkReports: true,
-            linkSafety: true,
+            linkSafety: {
+              orderBy: desc(linkSafety.createdAt),
+            },
             linkViews: true,
           },
         },

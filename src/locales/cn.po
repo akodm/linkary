@@ -14,41 +14,9 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:66
-msgid "Link is not safe"
-msgstr "链接不安全"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:68
-msgid "Completed verification"
-msgstr "验证完成"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:75
-msgid "Failed to verify link"
-msgstr "链接验证失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:144
-msgid "Verify Link"
-msgstr "验证链接"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:157
-msgid "Copy Link to clipboard"
-msgstr "复制链接到剪贴板"
-
-#. js-lingui-explicit-id
-#: src/components/user/Thumbnail.tsx:28
-#: src/components/user/Thumbnail.tsx:62
-msgid "Default Image"
-msgstr "默认图片"
-
-#. js-lingui-explicit-id
-#: src/components/user/Thumbnail.tsx:43
-#: src/components/user/Thumbnail.tsx:80
-msgid "Verified Link"
-msgstr "已验证链接"
+#: src/components/user/Thumbnail.tsx:33
+msgid "Warning link (over 1 year old)"
+msgstr "警告链接（超过1年）"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:26
@@ -111,6 +79,62 @@ msgid "Failed to delete folder"
 msgstr "文件夹删除失败"
 
 #. js-lingui-explicit-id
+#: src/components/user/Thumbnail.tsx:32
+msgid "Unsafe Link"
+msgstr "不安全的链接"
+
+#. js-lingui-explicit-id
+#: src/components/user/Thumbnail.tsx:34
+msgid "Verified Link"
+msgstr "已验证链接"
+
+#. js-lingui-explicit-id
+#: src/components/user/Thumbnail.tsx:49
+#: src/components/user/Thumbnail.tsx:73
+msgid "Default Image"
+msgstr "默认图片"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:45
+msgid "Copied to clipboard"
+msgstr "已复制到剪贴板"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:47
+msgid "Failed to copy to clipboard"
+msgstr "复制到剪贴板失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:59
+msgid "Link is not safe"
+msgstr "链接不安全"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:61
+msgid "Completed verification"
+msgstr "验证完成"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:68
+msgid "Failed to verify link"
+msgstr "链接验证失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:99
+msgid "Home"
+msgstr "首页"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:137
+msgid "Verify Link"
+msgstr "验证链接"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:150
+msgid "Copy Link to clipboard"
+msgstr "复制链接到剪贴板"
+
+#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
 #: src/components/user/SideForm.tsx:68
 msgid "Default Folder"
@@ -132,84 +156,51 @@ msgid "Link"
 msgstr "链接"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:260
+#: src/components/user/SideForm.tsx:263
 msgid "Add Link"
 msgstr "添加链接"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:261
+#: src/components/user/SideForm.tsx:264
 msgid "write the URL of the link you want to add"
 msgstr "请输入要添加的链接URL"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:262
+#: src/components/user/SideForm.tsx:265
 msgid "Add"
 msgstr "添加"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:162
-#: src/components/user/SideForm.tsx:263
-#: src/components/user/SideForm.tsx:274
+#: src/components/user/SideForm.tsx:266
+#: src/components/user/SideForm.tsx:277
 msgid "Cancel"
 msgstr "取消"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:264
+#: src/components/user/SideForm.tsx:267
 msgid "Enter link"
 msgstr "输入链接"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:271
+#: src/components/user/SideForm.tsx:274
 msgid "Edit Folder"
 msgstr "编辑文件夹"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:272
+#: src/components/user/SideForm.tsx:275
 msgid "write the name of the folder you want to edit"
 msgstr "输入要编辑的文件夹名称"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:273
+#: src/components/user/SideForm.tsx:276
 msgid "Edit"
 msgstr "编辑"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:275
+#: src/components/user/SideForm.tsx:278
 msgid "Enter folder name"
 msgstr "输入文件夹名称"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:52
-msgid "Copied to clipboard"
-msgstr "已复制到剪贴板"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:54
-msgid "Failed to copy to clipboard"
-msgstr "复制到剪贴板失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:106
-msgid "Home"
-msgstr "首页"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "链接标题为空"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:49
-#: src/components/user/ListLink.tsx:44
-msgid "Rename"
-msgstr "重命名"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:165
-#: src/components/user/ListFolder.tsx:50
-#: src/components/user/ListLink.tsx:45
-msgid "Delete"
-msgstr "删除"
 
 #. js-lingui-explicit-id
 #: src/components/user/Loader.tsx:36
@@ -232,6 +223,24 @@ msgid "If you restore your account within 30 days, your previous data will remai
 msgstr "如果您在30天内恢复帐户，您之前的数据将保持不变。"
 
 #. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "链接标题为空"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:49
+#: src/components/user/ListLink.tsx:44
+msgid "Rename"
+msgstr "重命名"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:165
+#: src/components/user/ListFolder.tsx:50
+#: src/components/user/ListLink.tsx:45
+msgid "Delete"
+msgstr "删除"
+
+#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:42
 msgid "Empty Folder Name"
 msgstr "文件夹名称为空"
@@ -251,60 +260,6 @@ msgid "These are the Terms of Service for using the service."
 msgstr "这些是使用服务的服务条款。"
 
 #. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:20
-#: src/components/not-found/Content.tsx:26
-msgid "Page not found"
-msgstr "页面未找到"
-
-#. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:34
-msgid "Go to home"
-msgstr "返回首页"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:17
-msgid "Install App Shortcut"
-msgstr "安装应用快捷方式"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:18
-msgid "Create a shortcut on your home screen to use it just like an app."
-msgstr "在主屏幕创建快捷方式，像应用一样使用。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:43
-#: src/components/home/Guest.tsx:49
-#: src/components/home/Tutorial.tsx:24
-msgid "AI Link Recommendations"
-msgstr "AI 链接推荐"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:25
-msgid "Send the content of the links you’d like to receive, and get personalized link suggestions."
-msgstr "发送你想接收的链接内容，获取个性化链接推荐。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:53
-#: src/components/home/Tutorial.tsx:31
-msgid "Share Links with the Community"
-msgstr "与社区分享链接"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:32
-msgid "Share your links with other users."
-msgstr "与其他用户分享你的链接。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:43
-msgid "Additional Features for Easy Use"
-msgstr "便捷使用的附加功能"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:50
-msgid "Not only can you add links, but you can also take advantage of various provided features."
-msgstr "不仅可以添加链接，还可以利用提供的多种功能。"
-
-#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:23
 #: src/components/common/Footer.tsx:28
 #: src/components/common/Header.client.tsx:55
@@ -319,52 +274,15 @@ msgid "This is the Privacy Policy regarding the personal information handled by 
 msgstr "这是关于服务处理个人信息的隐私政策。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "智能链接管理"
+#: src/components/not-found/Content.tsx:20
+#: src/components/not-found/Content.tsx:26
+msgid "Page not found"
+msgstr "页面未找到"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "按文件夹整理链接，一目了然地查看。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "自动缩略图和元数据生成"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "自动为您添加的链接生成缩略图、标题和简短描述。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-#: src/components/home/Guest.tsx:45
-msgid "Threat Link Check"
-msgstr "威胁链接检查"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "使用 Google Web Risk API 验证链接是否安全。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "通过 AI 获取个性化的链接建议。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "便捷安全的链接管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
+#: src/components/not-found/Content.tsx:34
+msgid "Go to home"
+msgstr "返回首页"
 
 #. js-lingui-explicit-id
 #: src/components/home/ProvidedFunctionCard.tsx:79
@@ -416,6 +334,25 @@ msgid "Database Storage"
 msgstr "数据库存储"
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:36
+#: src/components/home/Guest.tsx:45
+msgid "Threat Link Check"
+msgstr "威胁链接检查"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:43
+#: src/components/home/Guest.tsx:49
+#: src/components/home/Tutorial.tsx:24
+msgid "AI Link Recommendations"
+msgstr "AI 链接推荐"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:53
+#: src/components/home/Tutorial.tsx:31
+msgid "Share Links with the Community"
+msgstr "与社区分享链接"
+
+#. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:71
 #: src/components/home/Guest.tsx:73
 msgid "Log in to access more features."
@@ -425,6 +362,36 @@ msgstr "登录以使用<span>更多功能</span>。"
 #: src/components/home/Guest.tsx:84
 msgid "You can use it without signing up, but logging in lets you try more features for free."
 msgstr "无需注册即可使用，但登录后可以免费体验更多功能。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:17
+msgid "Install App Shortcut"
+msgstr "安装应用快捷方式"
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:18
+msgid "Create a shortcut on your home screen to use it just like an app."
+msgstr "在主屏幕创建快捷方式，像应用一样使用。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:25
+msgid "Send the content of the links you’d like to receive, and get personalized link suggestions."
+msgstr "发送你想接收的链接内容，获取个性化链接推荐。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:32
+msgid "Share your links with other users."
+msgstr "与其他用户分享你的链接。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:43
+msgid "Additional Features for Easy Use"
+msgstr "便捷使用的附加功能"
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:50
+msgid "Not only can you add links, but you can also take advantage of various provided features."
+msgstr "不仅可以添加链接，还可以利用提供的多种功能。"
 
 #. js-lingui-explicit-id
 #: src/components/home/Banner.tsx:23
@@ -453,6 +420,48 @@ msgid "Get started"
 msgstr "开始使用"
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "智能链接管理"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "按文件夹整理链接，一目了然地查看。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "自动缩略图和元数据生成"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "自动为您添加的链接生成缩略图、标题和简短描述。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "使用 Google Web Risk API 验证链接是否安全。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "通过 AI 获取个性化的链接建议。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "便捷安全的链接管理"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
+
+#. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
 msgid "Switch to guest"
 msgstr "切换到访客模式"
@@ -477,11 +486,6 @@ msgstr "登录"
 #: src/components/common/UserDropdonw.tsx:157
 msgid "Are you sure you want to delete your account?"
 msgstr "您确定要删除您的账户吗？"
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "标志"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -574,6 +578,11 @@ msgid "Contact Us"
 msgstr "联系我们"
 
 #. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "标志"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
 msgid "English"
 msgstr "English"
@@ -661,6 +670,31 @@ msgid "Close"
 msgstr "关闭"
 
 #. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:18
+msgid "Check the Frequently Asked Questions (FAQ)."
+msgstr "查看常见问题（FAQ）。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:24
+msgid "Review our Privacy Policy."
+msgstr "查看我们的隐私政策。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:30
+msgid "Review Linkary's Terms of Service."
+msgstr "查看 Linkary 的服务条款。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:52
+msgid "Need more information?"
+msgstr "需要更多信息？"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:59
+msgid "Find more details in other sections of the site."
+msgstr "在网站的其他部分查找更多详情。"
+
+#. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
 msgid "Install as a browser app"
 msgstr "安装为浏览器应用"
@@ -734,28 +768,3 @@ msgstr "Linkary 是什么"
 #: src/components/about/Banner.tsx:33
 msgid "Manage your links with ease and keep them trustworthy."
 msgstr "轻松管理您的链接，保持它们的可信度。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:18
-msgid "Check the Frequently Asked Questions (FAQ)."
-msgstr "查看常见问题（FAQ）。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:24
-msgid "Review our Privacy Policy."
-msgstr "查看我们的隐私政策。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:30
-msgid "Review Linkary's Terms of Service."
-msgstr "查看 Linkary 的服务条款。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:52
-msgid "Need more information?"
-msgstr "需要更多信息？"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:59
-msgid "Find more details in other sections of the site."
-msgstr "在网站的其他部分查找更多详情。"

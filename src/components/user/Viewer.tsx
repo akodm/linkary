@@ -1,6 +1,5 @@
 'use client';
 
-import useLink from '@/hooks/useLink';
 import { verifyLinkAction } from '@/lib/actions/link';
 import { GetUserActionResponse } from '@/lib/actions/user';
 import { selectedFolderAtom, selectedLinkAtom } from '@/lib/atom';
@@ -8,7 +7,7 @@ import { copyToClipboard, sentryCaptureException } from '@/lib/utils';
 import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
 import { useAtom, useAtomValue } from 'jotai';
-import { ShieldIcon, SquaresExclude, TrashIcon } from 'lucide-react';
+import { LinkIcon, ShieldIcon, SquaresExclude } from 'lucide-react';
 import { toast } from 'sonner';
 import {
   Breadcrumb,
@@ -39,12 +38,6 @@ export default function UserViewer({ user }: UserViewerProps) {
   const [selectedLink, setSelectedLink] = useAtom(selectedLinkAtom);
   const queryClient = useQueryClient();
 
-  const {
-    deleteLinkMutation: { mutate: deleteLink },
-  } = useLink({
-    sentryErrorGeneralCaptureObj: { user },
-  });
-
   const onCopyToClipboard = async () => {
     const success = await copyToClipboard(selectedLink?.url ?? '');
 
@@ -53,12 +46,6 @@ export default function UserViewer({ user }: UserViewerProps) {
     } else {
       toast.error(i18n.t('Failed to copy to clipboard'));
     }
-  };
-
-  const onDeleteLink = async () => {
-    startTransition(async () => {
-      deleteLink({ id: selectedLink?.id ?? -1 });
-    });
   };
 
   const onVerifyLink = async () => {
@@ -106,7 +93,7 @@ export default function UserViewer({ user }: UserViewerProps) {
           selectedLink?.id ? 'flex' : 'hidden md:flex',
         )}
       >
-        <Breadcrumb className="block md:hidden w-full h-fit pb-2 md:pb-0">
+        <Breadcrumb className="block md:hidden w-full h-fit pb-6 md:pb-0">
           <BreadcrumbList className="flex-nowrap whitespace-nowrap">
             <BreadcrumbItem>
               <BreadcrumbLink href="/">{i18n.t('Home')}</BreadcrumbLink>
@@ -163,19 +150,21 @@ export default function UserViewer({ user }: UserViewerProps) {
                   {i18n.t('Copy Link to clipboard')}
                 </TooltipContent>
               </Tooltip>
-              <button
-                type="button"
-                className="flex justify-center items-center hover:bg-neutral-100 rounded-sm p-2"
-                onClick={onDeleteLink}
-              >
-                <TrashIcon className="text-destructive" />
-              </button>
             </div>
             <Thumbnail link={selectedLink} />
-            <div className="flex flex-row justify-between items-center w-full mt-2.5 md:mt-4">
+            <div className="flex flex-row justify-between gap-x-2 w-full mt-2.5 md:mt-4">
               <h3 className="text-base md:text-lg font-medium">
                 {selectedLink?.title}
               </h3>
+              {selectedLink?.url && (
+                <a
+                  href={selectedLink?.url ?? ''}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkIcon className="mt-1.25 size-4 text-neutral-500 hover:text-neutral-700 transition-colors duration-200" />
+                </a>
+              )}
             </div>
             <p className="text-sm text-left text-neutral-500 mt-1 md:mt-2">
               {selectedLink?.description}

@@ -14,41 +14,9 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:66
-msgid "Link is not safe"
-msgstr "Link is not safe"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:68
-msgid "Completed verification"
-msgstr "Completed verification"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:75
-msgid "Failed to verify link"
-msgstr "Failed to verify link"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:144
-msgid "Verify Link"
-msgstr "Verify Link"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:157
-msgid "Copy Link to clipboard"
-msgstr "Copy Link to clipboard"
-
-#. js-lingui-explicit-id
-#: src/components/user/Thumbnail.tsx:28
-#: src/components/user/Thumbnail.tsx:62
-msgid "Default Image"
-msgstr "Default Image"
-
-#. js-lingui-explicit-id
-#: src/components/user/Thumbnail.tsx:43
-#: src/components/user/Thumbnail.tsx:80
-msgid "Verified Link"
-msgstr "Verified Link"
+#: src/components/user/Thumbnail.tsx:33
+msgid "Warning link (over 1 year old)"
+msgstr "Warning link (over 1 year old)"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:26
@@ -111,6 +79,62 @@ msgid "Failed to delete folder"
 msgstr "Failed to delete folder"
 
 #. js-lingui-explicit-id
+#: src/components/user/Thumbnail.tsx:32
+msgid "Unsafe Link"
+msgstr "Unsafe Link"
+
+#. js-lingui-explicit-id
+#: src/components/user/Thumbnail.tsx:34
+msgid "Verified Link"
+msgstr "Verified Link"
+
+#. js-lingui-explicit-id
+#: src/components/user/Thumbnail.tsx:49
+#: src/components/user/Thumbnail.tsx:73
+msgid "Default Image"
+msgstr "Default Image"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:45
+msgid "Copied to clipboard"
+msgstr "Copied to clipboard"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:47
+msgid "Failed to copy to clipboard"
+msgstr "Failed to copy to clipboard"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:59
+msgid "Link is not safe"
+msgstr "Link is not safe"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:61
+msgid "Completed verification"
+msgstr "Completed verification"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:68
+msgid "Failed to verify link"
+msgstr "Failed to verify link"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:99
+msgid "Home"
+msgstr "Home"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:137
+msgid "Verify Link"
+msgstr "Verify Link"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:150
+msgid "Copy Link to clipboard"
+msgstr "Copy Link to clipboard"
+
+#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
 #: src/components/user/SideForm.tsx:68
 msgid "Default Folder"
@@ -132,84 +156,51 @@ msgid "Link"
 msgstr "Link"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:260
+#: src/components/user/SideForm.tsx:263
 msgid "Add Link"
 msgstr "Add Link"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:261
+#: src/components/user/SideForm.tsx:264
 msgid "write the URL of the link you want to add"
 msgstr "write the URL of the link you want to add"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:262
+#: src/components/user/SideForm.tsx:265
 msgid "Add"
 msgstr "Add"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:162
-#: src/components/user/SideForm.tsx:263
-#: src/components/user/SideForm.tsx:274
+#: src/components/user/SideForm.tsx:266
+#: src/components/user/SideForm.tsx:277
 msgid "Cancel"
 msgstr "Cancel"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:264
+#: src/components/user/SideForm.tsx:267
 msgid "Enter link"
 msgstr "Enter link"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:271
+#: src/components/user/SideForm.tsx:274
 msgid "Edit Folder"
 msgstr "Edit Folder"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:272
+#: src/components/user/SideForm.tsx:275
 msgid "write the name of the folder you want to edit"
 msgstr "write the name of the folder you want to edit"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:273
+#: src/components/user/SideForm.tsx:276
 msgid "Edit"
 msgstr "Edit"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:275
+#: src/components/user/SideForm.tsx:278
 msgid "Enter folder name"
 msgstr "Enter folder name"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:52
-msgid "Copied to clipboard"
-msgstr "Copied to clipboard"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:54
-msgid "Failed to copy to clipboard"
-msgstr "Failed to copy to clipboard"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:106
-msgid "Home"
-msgstr "Home"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "Empty Link Title"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:49
-#: src/components/user/ListLink.tsx:44
-msgid "Rename"
-msgstr "Rename"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:165
-#: src/components/user/ListFolder.tsx:50
-#: src/components/user/ListLink.tsx:45
-msgid "Delete"
-msgstr "Delete"
 
 #. js-lingui-explicit-id
 #: src/components/user/Loader.tsx:36
@@ -232,6 +223,24 @@ msgid "If you restore your account within 30 days, your previous data will remai
 msgstr "If you restore your account within 30 days, your previous data will remain intact."
 
 #. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "Empty Link Title"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:49
+#: src/components/user/ListLink.tsx:44
+msgid "Rename"
+msgstr "Rename"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:165
+#: src/components/user/ListFolder.tsx:50
+#: src/components/user/ListLink.tsx:45
+msgid "Delete"
+msgstr "Delete"
+
+#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:42
 msgid "Empty Folder Name"
 msgstr "Empty Folder Name"
@@ -251,60 +260,6 @@ msgid "These are the Terms of Service for using the service."
 msgstr "These are the Terms of Service for using the service."
 
 #. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:20
-#: src/components/not-found/Content.tsx:26
-msgid "Page not found"
-msgstr "Page not found"
-
-#. js-lingui-explicit-id
-#: src/components/not-found/Content.tsx:34
-msgid "Go to home"
-msgstr "Go to home"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:17
-msgid "Install App Shortcut"
-msgstr "Install App Shortcut"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:18
-msgid "Create a shortcut on your home screen to use it just like an app."
-msgstr "Create a shortcut on your home screen to use it just like an app."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:43
-#: src/components/home/Guest.tsx:49
-#: src/components/home/Tutorial.tsx:24
-msgid "AI Link Recommendations"
-msgstr "AI Link Recommendations"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:25
-msgid "Send the content of the links you’d like to receive, and get personalized link suggestions."
-msgstr "Send the content of the links you’d like to receive, and get personalized link suggestions."
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:53
-#: src/components/home/Tutorial.tsx:31
-msgid "Share Links with the Community"
-msgstr "Share Links with the Community"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:32
-msgid "Share your links with other users."
-msgstr "Share your links with other users."
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:43
-msgid "Additional Features for Easy Use"
-msgstr "Additional Features for Easy Use"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:50
-msgid "Not only can you add links, but you can also take advantage of various provided features."
-msgstr "Not only can you add links, but you can also take advantage of various provided features."
-
-#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:23
 #: src/components/common/Footer.tsx:28
 #: src/components/common/Header.client.tsx:55
@@ -319,52 +274,15 @@ msgid "This is the Privacy Policy regarding the personal information handled by 
 msgstr "This is the Privacy Policy regarding the personal information handled by the service."
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "Smart Link Management"
+#: src/components/not-found/Content.tsx:20
+#: src/components/not-found/Content.tsx:26
+msgid "Page not found"
+msgstr "Page not found"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "Organize your links by folders and view them at a glance."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "Automatic Thumbnail & Metadata Generation"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "Automatically generates thumbnails, titles, and short descriptions for your added links."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-#: src/components/home/Guest.tsx:45
-msgid "Threat Link Check"
-msgstr "Threat Link Check"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "Verify whether a link is safe using the Google Web Risk API."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "Get personalized link suggestions powered by AI."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "Convenient and Secure Link Management"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+#: src/components/not-found/Content.tsx:34
+msgid "Go to home"
+msgstr "Go to home"
 
 #. js-lingui-explicit-id
 #: src/components/home/ProvidedFunctionCard.tsx:79
@@ -416,6 +334,25 @@ msgid "Database Storage"
 msgstr "Database Storage"
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:36
+#: src/components/home/Guest.tsx:45
+msgid "Threat Link Check"
+msgstr "Threat Link Check"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:43
+#: src/components/home/Guest.tsx:49
+#: src/components/home/Tutorial.tsx:24
+msgid "AI Link Recommendations"
+msgstr "AI Link Recommendations"
+
+#. js-lingui-explicit-id
+#: src/components/home/Guest.tsx:53
+#: src/components/home/Tutorial.tsx:31
+msgid "Share Links with the Community"
+msgstr "Share Links with the Community"
+
+#. js-lingui-explicit-id
 #: src/components/home/Guest.tsx:71
 #: src/components/home/Guest.tsx:73
 msgid "Log in to access more features."
@@ -425,6 +362,36 @@ msgstr "Log in to access <span>more features.</span>"
 #: src/components/home/Guest.tsx:84
 msgid "You can use it without signing up, but logging in lets you try more features for free."
 msgstr "You can use it without signing up, but logging in lets you try more features for free."
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:17
+msgid "Install App Shortcut"
+msgstr "Install App Shortcut"
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:18
+msgid "Create a shortcut on your home screen to use it just like an app."
+msgstr "Create a shortcut on your home screen to use it just like an app."
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:25
+msgid "Send the content of the links you’d like to receive, and get personalized link suggestions."
+msgstr "Send the content of the links you’d like to receive, and get personalized link suggestions."
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:32
+msgid "Share your links with other users."
+msgstr "Share your links with other users."
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:43
+msgid "Additional Features for Easy Use"
+msgstr "Additional Features for Easy Use"
+
+#. js-lingui-explicit-id
+#: src/components/home/Tutorial.tsx:50
+msgid "Not only can you add links, but you can also take advantage of various provided features."
+msgstr "Not only can you add links, but you can also take advantage of various provided features."
 
 #. js-lingui-explicit-id
 #: src/components/home/Banner.tsx:23
@@ -453,6 +420,48 @@ msgid "Get started"
 msgstr "Get started"
 
 #. js-lingui-explicit-id
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "Smart Link Management"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "Organize your links by folders and view them at a glance."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "Automatic Thumbnail & Metadata Generation"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "Automatically generates thumbnails, titles, and short descriptions for your added links."
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "Verify whether a link is safe using the Google Web Risk API."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "Get personalized link suggestions powered by AI."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "Convenient and Secure Link Management"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+
+#. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
 msgid "Switch to guest"
 msgstr "Switch to guest"
@@ -477,11 +486,6 @@ msgstr "Sign in"
 #: src/components/common/UserDropdonw.tsx:157
 msgid "Are you sure you want to delete your account?"
 msgstr "Are you sure you want to delete your account?"
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "Logo"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -574,6 +578,11 @@ msgid "Contact Us"
 msgstr "Contact Us"
 
 #. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "Logo"
+
+#. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
 msgid "English"
 msgstr "English"
@@ -661,6 +670,31 @@ msgid "Close"
 msgstr "Close"
 
 #. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:18
+msgid "Check the Frequently Asked Questions (FAQ)."
+msgstr "Check the Frequently Asked Questions (FAQ)."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:24
+msgid "Review our Privacy Policy."
+msgstr "Review our Privacy Policy."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:30
+msgid "Review Linkary's Terms of Service."
+msgstr "Review Linkary's Terms of Service."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:52
+msgid "Need more information?"
+msgstr "Need more information?"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:59
+msgid "Find more details in other sections of the site."
+msgstr "Find more details in other sections of the site."
+
+#. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
 msgid "Install as a browser app"
 msgstr "Install as a browser app"
@@ -734,28 +768,3 @@ msgstr "What is Linkary"
 #: src/components/about/Banner.tsx:33
 msgid "Manage your links with ease and keep them trustworthy."
 msgstr "Manage your links with ease and keep them trustworthy."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:18
-msgid "Check the Frequently Asked Questions (FAQ)."
-msgstr "Check the Frequently Asked Questions (FAQ)."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:24
-msgid "Review our Privacy Policy."
-msgstr "Review our Privacy Policy."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:30
-msgid "Review Linkary's Terms of Service."
-msgstr "Review Linkary's Terms of Service."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:52
-msgid "Need more information?"
-msgstr "Need more information?"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:59
-msgid "Find more details in other sections of the site."
-msgstr "Find more details in other sections of the site."
