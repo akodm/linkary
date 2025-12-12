@@ -62,6 +62,7 @@ export default function UserViewer({ user }: UserViewerProps) {
         }
 
         queryClient.invalidateQueries({ queryKey: ['linkAndFolder'] });
+        queryClient.invalidateQueries({ queryKey: ['apiLimit'] });
       } catch (err) {
         console.error(err);
 

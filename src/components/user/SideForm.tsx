@@ -1,11 +1,11 @@
 'use client';
 
 import useHasScroll from '@/hooks/useHasScroll';
-import { getLinkAndFolder, LinkGetResponse } from '@/lib/actions/link';
+import { getLinkAndFolder } from '@/lib/actions/link';
 import { GetUserActionResponse } from '@/lib/actions/user';
 import { useLingui } from '@lingui/react';
 import { useQuery } from '@tanstack/react-query';
-import { PlusIcon } from 'lucide-react';
+import { HelpCircleIcon, PlusIcon } from 'lucide-react';
 import {
   useCallback,
   useEffect,
@@ -24,12 +24,21 @@ import SimpleFieldForm from '@/components/forms/SimpleFieldForm';
 import { Spinner } from 'src/components/ui/spinner';
 import useFolder from '@/hooks/useFolder';
 import useLink from '@/hooks/useLink';
+import { getApiLimitAction } from '@/lib/actions/api';
+import {
+  Dialog,
+  DialogDescription,
+  DialogTitle,
+  DialogHeader,
+  DialogContent,
+} from 'src/components/ui/dialog';
 
 interface UserSideFormProps {
   user?: GetUserActionResponse | null;
 }
 
 export default function UserSideForm({ user }: UserSideFormProps) {
+  const [alertOpen, setAlertOpen] = useState(false);
   const [addLinkOpen, setAddLinkOpen] = useState(false);
   const [editFolderOpen, setEditFolderOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
@@ -38,9 +47,14 @@ export default function UserSideForm({ user }: UserSideFormProps) {
   const [selectedLink, setSelectedLink] = useAtom(selectedLinkAtom);
   const refetchRef = useRef(false);
   const { i18n } = useLingui();
-  const { data, isLoading } = useQuery<LinkGetResponse>({
+  const { data, isLoading } = useQuery({
     queryKey: ['linkAndFolder'],
     queryFn: getLinkAndFolder,
+    refetchOnWindowFocus: false,
+  });
+  const { data: apiLimitData, isLoading: apiLimitLoading } = useQuery({
+    queryKey: ['apiLimit'],
+    queryFn: getApiLimitAction,
     refetchOnWindowFocus: false,
   });
 
@@ -155,6 +169,32 @@ export default function UserSideForm({ user }: UserSideFormProps) {
           selectedLink?.id ? 'hidden md:flex' : 'flex',
         )}
       >
+        <article className="flex flex-col gap-y-2 w-full">
+          <div className="flex flex-row items-center gap-x-1">
+            <h4 className="text-sm font-medium">{i18n.t('Quota')}</h4>
+            <button type="button" onClick={() => setAlertOpen(true)}>
+              <HelpCircleIcon className="size-4 text-neutral-500" />
+            </button>
+          </div>
+          {apiLimitLoading ? (
+            <>
+              <Skeleton className="h-4 w-full" />
+              <Skeleton className="h-4 w-full" />
+            </>
+          ) : (
+            <>
+              <div className="flex flex-row justify-between items-center w-full text-xs text-neutral-800">
+                <span>{i18n.t('Link Inspection')}</span>
+                <span className="text-[10px]/1.5">{`${apiLimitData?.googleApi.usage}/${apiLimitData?.googleApi.limit}`}</span>
+              </div>
+              <div className="flex flex-row justify-between items-center w-full text-xs text-neutral-800">
+                <span>{i18n.t('AI Link Recommendations')}</span>
+                <span className="text-[10px]/1.5">{`${apiLimitData?.tavilyApi.usage}/${apiLimitData?.tavilyApi.limit}`}</span>
+              </div>
+            </>
+          )}
+        </article>
+        <hr className="my-4 border-neutral-200" />
         <article
           ref={containerRefFolder}
           className="flex flex-col h-86 overflow-y-auto scrollbar-hide relative"
@@ -258,6 +298,16 @@ export default function UserSideForm({ user }: UserSideFormProps) {
           )}
         </article>
       </section>
+      <Dialog open={alertOpen} onOpenChange={setAlertOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle></DialogTitle>
+          </DialogHeader>
+          <DialogDescription>
+            <span>{i18n.t('The quota resets on the 1st of every month.')}</span>
+          </DialogDescription>
+        </DialogContent>
+      </Dialog>
       <SimpleFieldForm
         field="url"
         title={i18n.t('Add Link')}

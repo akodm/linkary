@@ -5,6 +5,7 @@ import * as Sentry from '@sentry/nextjs';
 import { utcNow } from 'src/lib/date';
 import { put } from '@vercel/blob';
 import { nanoid } from 'nanoid';
+import { imageSize } from 'image-size';
 
 const h = new Haikunator();
 const defaultOptions: Config = { delimiter: '-', tokenLength: 4 };
@@ -140,10 +141,20 @@ export async function uploadImageToVercelBlob(imageUrl: string) {
   const extension = getImageExtension(urlPath, contentType);
   const filename = `${nanoid()}.${extension}`;
 
+  const imageBuffer = Buffer.from(await imageBlob.arrayBuffer());
+  const dimensions = imageSize(imageBuffer);
+
   const blob = await put(filename, imageBlob, {
     access: 'public',
     contentType: imageBlob.type || contentType || `image/${extension}`,
   });
 
-  return blob.url;
+  return {
+    url: blob.url,
+    width: dimensions?.width ?? 0,
+    height: dimensions?.height ?? 0,
+    aspectRatio: dimensions?.width
+      ? parseFloat((dimensions.width / dimensions.height).toFixed(2))
+      : 0,
+  };
 }

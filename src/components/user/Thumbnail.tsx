@@ -47,7 +47,7 @@ export default function Thumbnail({ link }: ThumbnailProps) {
           fill
           src="/default.webp"
           alt={link?.title || i18n.t('Default Image')}
-          className="object-contain object-center border border-neutral-200 rounded-sm"
+          className="object-contain object-center"
         />
         {link?.verified && (
           <LinkVerifedBadge
@@ -62,10 +62,11 @@ export default function Thumbnail({ link }: ThumbnailProps) {
 
   return (
     <a
-      className="w-full max-w-150 aspect-square mx-auto bg-black/30 rounded-sm mt-2.5 md:mt-8 group relative disabled:cursor-default!"
+      className="w-full max-w-150 mx-auto bg-black/30 rounded-sm mt-2.5 md:mt-8 group relative disabled:cursor-default!"
       href={link?.image ?? ''}
       target="_blank"
       rel="noopener noreferrer"
+      style={{ aspectRatio: link?.imageAspectRatio || '1/1' }}
     >
       <Image
         fill

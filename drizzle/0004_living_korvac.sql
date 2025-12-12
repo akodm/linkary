@@ -1,0 +1,1 @@
+ALTER TABLE "link" ALTER COLUMN "image_aspect_ratio" SET DATA TYPE real;

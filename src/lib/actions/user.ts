@@ -25,25 +25,6 @@ export const getUserAction = async (session: Session, slug: string) => {
       createdAt: true,
       updatedAt: true,
     },
-    with: {
-      userApis: {
-        columns: {
-          usage: true,
-          cumulativeUsage: true,
-        },
-        with: {
-          api: {
-            columns: {
-              name: true,
-              usage: true,
-              limit: true,
-              initialDateType: true,
-              initialDateValue: true,
-            },
-          },
-        },
-      },
-    },
   });
 
   if (!user) {

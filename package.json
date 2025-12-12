@@ -52,6 +52,7 @@
     "drizzle-orm": "^0.44.6",
     "haikunator": "^2.1.2",
     "husky": "^9.1.7",
+    "image-size": "^2.0.2",
     "jotai": "^2.15.1",
     "lucide-react": "^0.539.0",
     "motion": "^12.23.12",

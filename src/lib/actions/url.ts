@@ -39,10 +39,15 @@ export async function scrapeURL(url: string) {
     throw new Error('Failed to scrape URL');
   }
 
-  let image = ogImage?.[0]?.url || '';
+  let image = {
+    url: ogImage?.[0]?.url || '',
+    width: 0,
+    height: 0,
+    aspectRatio: 0,
+  };
 
-  if (image) {
-    image = await uploadImageToVercelBlob(image);
+  if (image.url) {
+    image = await uploadImageToVercelBlob(image.url);
   }
 
   return {
