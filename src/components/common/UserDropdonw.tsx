@@ -67,12 +67,7 @@ export default function UserDropdown({ session }: UserDropdownProps) {
   const signedUser: UserDropdownItem[] = useMemo(
     () => [
       {
-        label: i18n.t('Switch to guest'),
-        onClick: () => signOutWithGoogle('/user'),
-      },
-      {
         label: i18n.t('Logout'),
-        color: 'red',
         onClick: () => signOutWithGoogle('/'),
       },
       {
@@ -85,10 +80,6 @@ export default function UserDropdown({ session }: UserDropdownProps) {
   );
   const unsignedUser: UserDropdownItem[] = useMemo(
     () => [
-      {
-        href: '/user',
-        label: i18n.t('Guest User'),
-      },
       {
         href: '/auth',
         color: 'primary',

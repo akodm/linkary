@@ -23,7 +23,7 @@ import {
   TooltipTrigger,
 } from 'src/components/ui/tooltip';
 import Thumbnail from 'src/components/user/Thumbnail';
-import { useTransition } from 'react';
+import { useMemo, useTransition } from 'react';
 import { Spinner } from 'src/components/ui/spinner';
 import { Switch } from 'src/components/ui/switch';
 import { Label } from 'src/components/ui/label';
@@ -38,6 +38,10 @@ export default function UserViewer({ user }: UserViewerProps) {
   const [isPending, startTransition] = useTransition();
   const selectedFolder = useAtomValue(selectedFolderAtom);
   const [selectedLink, setSelectedLink] = useAtom(selectedLinkAtom);
+  const isPossibleToggleShareLink = useMemo(
+    () => selectedLink?.linkSafety[0]?.safe,
+    [selectedLink?.linkSafety],
+  );
   const {
     queryClient,
     editSharedLinkMutation: { mutate: editSharedLink },
@@ -145,6 +149,7 @@ export default function UserViewer({ user }: UserViewerProps) {
                     <Switch
                       id="share-link"
                       checked={selectedLink?.shared}
+                      disabled={!isPossibleToggleShareLink}
                       onCheckedChange={(checked) => onEditSharedLink(checked)}
                     />
                     <Label htmlFor="share-link" className="text-xs">

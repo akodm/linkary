@@ -39,9 +39,11 @@ export const getLinkAndFolder = async () => {
         linkReports: true,
         linkSafety: {
           orderBy: desc(linkSafety.createdAt),
+          limit: 1,
         },
         linkViews: true,
       },
+      orderBy: desc(link.createdAt),
     }),
     db.query.linkFolder.findMany({
       where: eq(linkFolder.userId, user.id),
@@ -51,9 +53,11 @@ export const getLinkAndFolder = async () => {
             linkReports: true,
             linkSafety: {
               orderBy: desc(linkSafety.createdAt),
+              limit: 1,
             },
             linkViews: true,
           },
+          orderBy: desc(link.createdAt),
         },
       },
     }),
@@ -232,10 +236,19 @@ export const editSharedLinkAction = async ({
 
   const findLink = await db.query.link.findFirst({
     where: (l, { eq, and }) => and(eq(l.id, id), eq(l.userId, user.id)),
+    with: {
+      linkSafety: {
+        orderBy: desc(linkSafety.createdAt),
+        limit: 1,
+      },
+    },
   });
 
   if (!findLink) {
     throw new Error('Link not found');
+  }
+  if (!findLink.linkSafety[0]?.safe) {
+    throw new Error('Link is not safe');
   }
 
   await db.update(link).set({ shared }).where(eq(link.id, id));

@@ -27,7 +27,7 @@ export default function Content() {
         id: 'do-you-offer-a-paid-plan',
         title: i18n.t('Do you offer a paid plan?'),
         description: i18n.t(
-          'No. There is no paid plan. Each user has a daily usage quota, which resets at 00:00 KST (Korea Standard Time).',
+          `There is no separate paid plan, and each user's usage quota resets at 00:00 on the 1st of every month.`,
         ),
       },
       {
@@ -35,13 +35,6 @@ export default function Content() {
         title: i18n.t('Are links marked "safe" guaranteed to be safe?'),
         description: i18n.t(
           'We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview',
-        ),
-      },
-      {
-        id: 'can-i-use-linkary-without-signing-up',
-        title: i18n.t('Can I use Linkary without signing up?'),
-        description: i18n.t(
-          "Yes. In that case, data is stored only on your device (e.g., browser local storage) and not on Linkary's servers.",
         ),
       },
       {

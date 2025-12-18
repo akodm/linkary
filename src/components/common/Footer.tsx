@@ -1,8 +1,7 @@
 'use client';
 
 import { useLingui } from '@lingui/react';
-import { ContactIcon, FileCheckIcon, FileUserIcon } from 'lucide-react';
-import Link from 'next/link';
+import { ContactIcon } from 'lucide-react';
 
 export default function Footer() {
   const { i18n } = useLingui();
@@ -13,22 +12,7 @@ export default function Footer() {
         <span className="mx-auto md:mx-0 text-xs md:text-sm text-gray-300">
           {i18n.t('© 2025 Linkary. All rights reserved.')}
         </span>
-        <div className="flex flex-row items-center gap-x-1.5">
-          <FileCheckIcon size={14} className="text-white" />
-          <Link href="/terms-of-service">
-            <span className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200">
-              {i18n.t('Terms of Service')}
-            </span>
-          </Link>
-        </div>
-        <div className="flex flex-row items-center gap-x-1.5">
-          <FileUserIcon size={14} className="text-white" />
-          <Link href="/privacy">
-            <span className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200">
-              {i18n.t('Privacy Policy')}
-            </span>
-          </Link>
-        </div>
+
         <div className="flex flex-row items-center gap-x-1.5">
           <ContactIcon size={14} className="text-white" />
           <a

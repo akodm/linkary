@@ -22,18 +22,21 @@ export async function GET(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { data: true, message: 'Cron job completed successfully' },
+      {
+        data: true,
+        message: 'User API amount cron job completed successfully',
+      },
       { status: 200 },
     );
   } catch (error) {
     console.error(error);
 
     sentryCaptureException(error, 'cron', {
-      message: 'Cron job failed',
+      message: 'User API amount cron job failed',
     });
 
     return NextResponse.json(
-      { data: false, message: 'Cron job failed' },
+      { data: false, message: 'User API amount cron job failed' },
       { status: 500 },
     );
   }

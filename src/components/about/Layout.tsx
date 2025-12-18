@@ -3,7 +3,6 @@ import Header from '@/components/common/Header.server';
 import MainProvider from 'src/components/common/MainProvider';
 import Banner from 'src/components/about/Banner';
 import Description from 'src/components/about/Description';
-import Content from '@/components/about/Start';
 import Infomation from 'src/components/about/Infomation';
 
 export default function AboutLayout() {
@@ -13,7 +12,6 @@ export default function AboutLayout() {
       <MainProvider>
         <Banner />
         <Description />
-        <Content />
         <Infomation />
       </MainProvider>
       <Footer />

@@ -34,31 +34,7 @@ export default function Header(props: HeaderWebProps | HeaderMobileProps) {
     () => [
       {
         title: i18n.t('Introduction'),
-        children: [
-          {
-            title: i18n.t('Introduction'),
-            href: '/about',
-          },
-        ],
-      },
-      {
-        title: i18n.t('Terms and Privacy'),
-        children: [
-          {
-            title: i18n.t('Terms of Service'),
-            description: i18n.t(
-              'These are the Terms of Service for using the service.',
-            ),
-            href: '/terms-of-service',
-          },
-          {
-            title: i18n.t('Privacy Policy'),
-            description: i18n.t(
-              'This is the Privacy Policy regarding the personal information handled by the service.',
-            ),
-            href: '/privacy',
-          },
-        ],
+        href: '/about',
       },
       {
         title: i18n.t('FAQ'),

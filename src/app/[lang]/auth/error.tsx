@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { colorPresets } from '@/css/colors';
 import * as Sentry from '@sentry/nextjs';
 import clsx from 'clsx';
-import { ContactIcon, FileCheckIcon, FileUserIcon } from 'lucide-react';
+import { ContactIcon } from 'lucide-react';
 import { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Image from 'next/image';
@@ -144,22 +144,6 @@ const Footer = () => {
         <span className="mx-auto md:mx-0 text-xs md:text-sm text-gray-300">
           {'© 2025 Linkary. All rights reserved.'}
         </span>
-        <div className="flex flex-row items-center gap-x-1.5">
-          <FileCheckIcon size={14} className="text-white" />
-          <Link href="/terms-of-service">
-            <span className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200">
-              {'Terms of Service'}
-            </span>
-          </Link>
-        </div>
-        <div className="flex flex-row items-center gap-x-1.5">
-          <FileUserIcon size={14} className="text-white" />
-          <Link href="/privacy">
-            <span className="underline text-sm md:text-base text-white hover:text-gray-200 transition-colors duration-200">
-              {'Privacy Policy'}
-            </span>
-          </Link>
-        </div>
         <div className="flex flex-row items-center gap-x-1.5">
           <ContactIcon size={14} className="text-white" />
           <a

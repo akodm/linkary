@@ -14,24 +14,9 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:59
-msgid "Link shared successfully"
-msgstr "链接分享成功"
-
-#. js-lingui-explicit-id
-#: src/hooks/useLink.ts:62
-msgid "Failed to share link"
-msgstr "链接分享失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:151
-msgid "Share Link"
-msgstr "分享链接"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:156
-msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
-msgstr "决定是否与其他用户分享此链接。（只有已验证为安全的链接才能分享。）"
+#: src/components/faq/Content.tsx:29
+msgid "There is no separate paid plan, and each user's usage quota resets at 00:00 on the 1st of every month."
+msgstr "没有单独的付费计划，每个用户的使用配额在每月1日00:00重置。"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
@@ -52,6 +37,16 @@ msgstr "链接更新成功"
 #: src/hooks/useLink.ts:46
 msgid "Failed to update link"
 msgstr "链接更新失败"
+
+#. js-lingui-explicit-id
+#: src/hooks/useLink.ts:59
+msgid "Link shared successfully"
+msgstr "链接分享成功"
+
+#. js-lingui-explicit-id
+#: src/hooks/useLink.ts:62
+msgid "Failed to share link"
+msgstr "链接分享失败"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:75
@@ -115,46 +110,6 @@ msgid "Default Image"
 msgstr "默认图片"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:50
-msgid "Copied to clipboard"
-msgstr "已复制到剪贴板"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:52
-msgid "Failed to copy to clipboard"
-msgstr "复制到剪贴板失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:64
-msgid "Link is not safe"
-msgstr "链接不安全"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:66
-msgid "Completed verification"
-msgstr "验证完成"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:74
-msgid "Failed to verify link"
-msgstr "链接验证失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:114
-msgid "Home"
-msgstr "首页"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:171
-msgid "Verify Link"
-msgstr "验证链接"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:184
-msgid "Copy Link to clipboard"
-msgstr "复制链接到剪贴板"
-
-#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
 #: src/components/user/SideForm.tsx:82
 msgid "Default Folder"
@@ -177,8 +132,6 @@ msgstr "链接检查"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:43
-#: src/components/home/Guest.tsx:49
-#: src/components/home/Tutorial.tsx:24
 #: src/components/user/SideForm.tsx:191
 msgid "AI Link Recommendations"
 msgstr "AI 链接推荐"
@@ -219,7 +172,7 @@ msgid "Add"
 msgstr "添加"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:162
+#: src/components/common/UserDropdonw.tsx:153
 #: src/components/user/SideForm.tsx:320
 #: src/components/user/SideForm.tsx:331
 msgid "Cancel"
@@ -251,24 +204,6 @@ msgid "Enter folder name"
 msgstr "输入文件夹名称"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "文件夹名称为空"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:49
-#: src/components/user/ListLink.tsx:44
-msgid "Rename"
-msgstr "重命名"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:165
-#: src/components/user/ListFolder.tsx:50
-#: src/components/user/ListLink.tsx:45
-msgid "Delete"
-msgstr "删除"
-
-#. js-lingui-explicit-id
 #: src/components/user/Loader.tsx:36
 msgid "Failed to get user data"
 msgstr "获取用户数据失败"
@@ -289,23 +224,77 @@ msgid "If you restore your account within 30 days, your previous data will remai
 msgstr "如果您在30天内恢复帐户，您之前的数据将保持不变。"
 
 #. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:54
+msgid "Copied to clipboard"
+msgstr "已复制到剪贴板"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:56
+msgid "Failed to copy to clipboard"
+msgstr "复制到剪贴板失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:68
+msgid "Link is not safe"
+msgstr "链接不安全"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:70
+msgid "Completed verification"
+msgstr "验证完成"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:78
+msgid "Failed to verify link"
+msgstr "链接验证失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:118
+msgid "Home"
+msgstr "首页"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:156
+msgid "Share Link"
+msgstr "分享链接"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:161
+msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
+msgstr "决定是否与其他用户分享此链接。（只有已验证为安全的链接才能分享。）"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:176
+msgid "Verify Link"
+msgstr "验证链接"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:189
+msgid "Copy Link to clipboard"
+msgstr "复制链接到剪贴板"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "文件夹名称为空"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:49
+#: src/components/user/ListLink.tsx:44
+msgid "Rename"
+msgstr "重命名"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:156
+#: src/components/user/ListFolder.tsx:50
+#: src/components/user/ListLink.tsx:45
+msgid "Delete"
+msgstr "删除"
+
+#. js-lingui-explicit-id
 #: src/components/user/ListLink.tsx:40
 msgid "Empty Link Title"
 msgstr "链接标题为空"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:23
-#: src/components/common/Footer.tsx:28
-#: src/components/common/Header.client.tsx:55
-#: src/components/privacy/Content.tsx:36
-msgid "Privacy Policy"
-msgstr "隐私政策"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:56
-#: src/components/privacy/Content.tsx:43
-msgid "This is the Privacy Policy regarding the personal information handled by the service."
-msgstr "这是关于服务处理个人信息的隐私政策。"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -319,115 +308,126 @@ msgid "Go to home"
 msgstr "返回首页"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:29
-#: src/components/common/Footer.tsx:20
-#: src/components/common/Header.client.tsx:48
-#: src/components/terms-of-service/Content.tsx:36
-msgid "Terms of Service"
-msgstr "服务条款"
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "智能链接管理"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:49
-#: src/components/terms-of-service/Content.tsx:43
-msgid "These are the Terms of Service for using the service."
-msgstr "这些是使用服务的服务条款。"
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "按文件夹整理链接，一目了然地查看。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:17
-msgid "Install App Shortcut"
-msgstr "安装应用快捷方式"
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "自动缩略图和元数据生成"
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:18
-msgid "Create a shortcut on your home screen to use it just like an app."
-msgstr "在主屏幕创建快捷方式，像应用一样使用。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:25
-msgid "Send the content of the links you’d like to receive, and get personalized link suggestions."
-msgstr "发送你想接收的链接内容，获取个性化链接推荐。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:53
-#: src/components/home/Tutorial.tsx:31
-msgid "Share Links with the Community"
-msgstr "与社区分享链接"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:32
-msgid "Share your links with other users."
-msgstr "与其他用户分享你的链接。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:43
-msgid "Additional Features for Easy Use"
-msgstr "便捷使用的附加功能"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:50
-msgid "Not only can you add links, but you can also take advantage of various provided features."
-msgstr "不仅可以添加链接，还可以利用提供的多种功能。"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:90
-#: src/components/home/Guest.tsx:18
-msgid "Guest User"
-msgstr "访客用户"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:19
-msgid "Start right away without signing up"
-msgstr "无需注册即可开始使用"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:40
-#: src/components/home/Guest.tsx:21
-msgid "Use as Guest"
-msgstr "作为访客使用"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:24
-#: src/components/home/Guest.tsx:37
-msgid "Unlimited Link Saving"
-msgstr "链接保存 (无限制)"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:31
-msgid "Member User"
-msgstr "会员用户"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:32
-msgid "Access to all features"
-msgstr "可使用所有功能"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:50
-#: src/components/home/Guest.tsx:34
-msgid "Sign Up"
-msgstr "注册会员"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:41
-msgid "Database Storage"
-msgstr "数据库存储"
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "自动为您添加的链接生成缩略图、标题和简短描述。"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:36
-#: src/components/home/Guest.tsx:45
 msgid "Threat Link Check"
 msgstr "威胁链接检查"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:71
-#: src/components/home/Guest.tsx:73
-msgid "Log in to access more features."
-msgstr "登录以使用<span>更多功能</span>。"
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "使用 Google Web Risk API 验证链接是否安全。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:84
-msgid "You can use it without signing up, but logging in lets you try more features for free."
-msgstr "无需注册即可使用，但登录后可以免费体验更多功能。"
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "通过 AI 获取个性化的链接建议。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "便捷安全的链接管理"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:21
+msgid "What is Linkary?"
+msgstr "Linkary 是什么？"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:22
+msgid "Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations."
+msgstr "Linkary 是一个可靠保存和管理链接的网络服务，如果您愿意，还可以与社区分享。它检查潜在有害链接，并提供 AI 驱动的个性化推荐。"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:28
+msgid "Do you offer a paid plan?"
+msgstr "您提供付费计划吗？"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:35
+msgid "Are links marked \"safe\" guaranteed to be safe?"
+msgstr "标记为\"安全\"的链接保证安全吗？"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:36
+msgid "We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview"
+msgstr "我们通过 Google Web Risk API 评估风险，但可能会出现未检测到的威胁或错误，因此无法保证绝对安全。详情：<a>https://cloud.google.com/web-risk/docs/overview</a>"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:42
+msgid "Can I save links without sharing them?"
+msgstr "我可以保存链接而不分享它们吗？"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:43
+msgid "Yes. Sharing is optional, and the default is private (not shared)."
+msgstr "可以。分享是可选的，默认为私有（不分享）。"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:49
+msgid "How is my personal data used?"
+msgstr "我的个人数据如何使用？"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:50
+msgid "We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law."
+msgstr "我们只收集注册所需的最少数据（Google OAuth 标识符和电子邮件），仅用于登录/账户管理。删除时，除法律要求保留的情况外，数据会被及时清除。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:17
+#: src/components/common/Header.client.tsx:40
+#: src/components/faq/Content.tsx:61
+msgid "FAQ"
+msgstr "常见问题"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:67
+msgid "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
+msgstr "查看我们的常见问题。如果您找不到所需信息或答案无法解决您的问题，请随时联系我们。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:24
+#: src/components/faq/Content.tsx:81
+msgid "If you have any questions, feel free to contact us."
+msgstr "如果您有任何问题，请随时联系我们。"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:84
+msgid "Translations are AI-generated and may contain minor contextual inaccuracies."
+msgstr "翻译由 AI 生成，可能包含轻微的语境不准确性。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:23
+#: src/components/common/Footer.tsx:22
+#: src/components/faq/Content.tsx:94
+msgid "Contact Us"
+msgstr "联系我们"
 
 #. js-lingui-explicit-id
 #: src/components/home/Banner.tsx:23
@@ -456,172 +456,35 @@ msgid "Get started"
 msgstr "开始使用"
 
 #. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:70
+msgid "Logout"
+msgstr "退出登录"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:74
+#: src/components/common/UserDropdonw.tsx:146
+msgid "Delete account"
+msgstr "删除账户"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:86
+msgid "Sign in"
+msgstr "登录"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:148
+msgid "Are you sure you want to delete your account?"
+msgstr "您确定要删除您的账户吗？"
+
+#. js-lingui-explicit-id
 #: src/components/home/ProvidedFunctionCard.tsx:79
 msgid "Recommended"
 msgstr "推荐"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:70
-msgid "Switch to guest"
-msgstr "切换到访客模式"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:74
-msgid "Logout"
-msgstr "退出登录"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:79
-#: src/components/common/UserDropdonw.tsx:155
-msgid "Delete account"
-msgstr "删除账户"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:95
-msgid "Sign in"
-msgstr "登录"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:157
-msgid "Are you sure you want to delete your account?"
-msgstr "您确定要删除您的账户吗？"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:21
-msgid "What is Linkary?"
-msgstr "Linkary 是什么？"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:22
-msgid "Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations."
-msgstr "Linkary 是一个可靠保存和管理链接的网络服务，如果您愿意，还可以与社区分享。它检查潜在有害链接，并提供 AI 驱动的个性化推荐。"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:28
-msgid "Do you offer a paid plan?"
-msgstr "您提供付费计划吗？"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:29
-msgid "No. There is no paid plan. Each user has a daily usage quota, which resets at 00:00 KST (Korea Standard Time)."
-msgstr "不提供。没有付费计划。每个用户都有每日使用配额，在韩国标准时间（KST）00:00 重置。"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:35
-msgid "Are links marked \"safe\" guaranteed to be safe?"
-msgstr "标记为\"安全\"的链接保证安全吗？"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:36
-msgid "We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview"
-msgstr "我们通过 Google Web Risk API 评估风险，但可能会出现未检测到的威胁或错误，因此无法保证绝对安全。详情：<a>https://cloud.google.com/web-risk/docs/overview</a>"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:42
-msgid "Can I use Linkary without signing up?"
-msgstr "我可以在不注册的情况下使用 Linkary 吗？"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:43
-msgid "Yes. In that case, data is stored only on your device (e.g., browser local storage) and not on Linkary's servers."
-msgstr "可以。在这种情况下，数据只存储在您的设备上（例如浏览器本地存储），而不存储在 Linkary 的服务器上。"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:49
-msgid "Can I save links without sharing them?"
-msgstr "我可以保存链接而不分享它们吗？"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:50
-msgid "Yes. Sharing is optional, and the default is private (not shared)."
-msgstr "可以。分享是可选的，默认为私有（不分享）。"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:56
-msgid "How is my personal data used?"
-msgstr "我的个人数据如何使用？"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:57
-msgid "We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law."
-msgstr "我们只收集注册所需的最少数据（Google OAuth 标识符和电子邮件），仅用于登录/账户管理。删除时，除法律要求保留的情况外，数据会被及时清除。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:17
-#: src/components/common/Header.client.tsx:64
-#: src/components/faq/Content.tsx:68
-msgid "FAQ"
-msgstr "常见问题"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:74
-msgid "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
-msgstr "查看我们的常见问题。如果您找不到所需信息或答案无法解决您的问题，请随时联系我们。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:36
-#: src/components/faq/Content.tsx:88
-msgid "If you have any questions, feel free to contact us."
-msgstr "如果您有任何问题，请随时联系我们。"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:91
-msgid "Translations are AI-generated and may contain minor contextual inaccuracies."
-msgstr "翻译由 AI 生成，可能包含轻微的语境不准确性。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:35
-#: src/components/common/Footer.tsx:38
-#: src/components/faq/Content.tsx:101
-msgid "Contact Us"
-msgstr "联系我们"
-
-#. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
 msgid "Logo"
 msgstr "标志"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "智能链接管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "按文件夹整理链接，一目了然地查看。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "自动缩略图和元数据生成"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "自动为您添加的链接生成缩略图、标题和简短描述。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "使用 Google Web Risk API 验证链接是否安全。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "通过 AI 获取个性化的链接建议。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "便捷安全的链接管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -650,22 +513,16 @@ msgstr "选择语言"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:36
-#: src/components/common/Header.client.tsx:39
 msgid "Introduction"
 msgstr "介绍"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:45
-msgid "Terms and Privacy"
-msgstr "条款和隐私"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:14
+#: src/components/common/Footer.tsx:13
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. 保留所有权利。"
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:44
+#: src/components/common/Footer.tsx:28
 msgid "Site created by 🤖 akodm"
 msgstr "网站由 🤖 akodm 制作"
 
@@ -701,37 +558,17 @@ msgid "Close"
 msgstr "关闭"
 
 #. js-lingui-explicit-id
-#: src/components/about/Start.tsx:19
-msgid "Get started now"
-msgstr "立即开始"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:26
-msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
-msgstr "您可以在不注册账户的情况下使用 Linkary，但我们建议您注册以解锁更多功能。"
-
-#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
 msgid "Check the Frequently Asked Questions (FAQ)."
 msgstr "查看常见问题（FAQ）。"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:24
-msgid "Review our Privacy Policy."
-msgstr "查看我们的隐私政策。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:30
-msgid "Review Linkary's Terms of Service."
-msgstr "查看 Linkary 的服务条款。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:52
+#: src/components/about/Infomation.tsx:42
 msgid "Need more information?"
 msgstr "需要更多信息？"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:59
+#: src/components/about/Infomation.tsx:49
 msgid "Find more details in other sections of the site."
 msgstr "在网站的其他部分查找更多详情。"
 

@@ -3,8 +3,6 @@ import Footer from '@/components/common/Footer';
 import MainProvider from '@/components/common/MainProvider';
 import Banner from 'src/components/home/Banner';
 import Description from 'src/components/home/Description';
-import Guest from 'src/components/home/Guest';
-import Tutorial from 'src/components/home/Tutorial';
 
 export default function HomeLayout() {
   return (
@@ -13,8 +11,6 @@ export default function HomeLayout() {
       <MainProvider>
         <Banner />
         <Description />
-        <Guest />
-        <Tutorial />
       </MainProvider>
       <Footer />
     </div>

@@ -55,7 +55,7 @@ export default function DescriptionIconCard({
 
   if (href) {
     return (
-      <Link href={href}>
+      <Link href={href} className="w-full max-w-120">
         <div className={classes({ href: Boolean(href) })}>
           <CardContents preset={preset} {...props} />
         </div>

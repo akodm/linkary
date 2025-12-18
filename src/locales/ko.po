@@ -14,24 +14,9 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:59
-msgid "Link shared successfully"
-msgstr "링크가 성공적으로 공유되었습니다"
-
-#. js-lingui-explicit-id
-#: src/hooks/useLink.ts:62
-msgid "Failed to share link"
-msgstr "링크 공유에 실패했습니다"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:151
-msgid "Share Link"
-msgstr "링크 공유"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:156
-msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
-msgstr "이 링크를 다른 사용자와 공유할지 결정하세요. (안전하다고 검증된 링크만 공유할 수 있습니다.)"
+#: src/components/faq/Content.tsx:29
+msgid "There is no separate paid plan, and each user's usage quota resets at 00:00 on the 1st of every month."
+msgstr "별도의 유료 플랜은 없으며, 각 사용자의 사용 할당량은 매월 1일 00:00에 초기화됩니다."
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
@@ -52,6 +37,16 @@ msgstr "링크가 성공적으로 수정되었습니다"
 #: src/hooks/useLink.ts:46
 msgid "Failed to update link"
 msgstr "링크 수정에 실패했습니다"
+
+#. js-lingui-explicit-id
+#: src/hooks/useLink.ts:59
+msgid "Link shared successfully"
+msgstr "링크가 성공적으로 공유되었습니다"
+
+#. js-lingui-explicit-id
+#: src/hooks/useLink.ts:62
+msgid "Failed to share link"
+msgstr "링크 공유에 실패했습니다"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:75
@@ -115,46 +110,6 @@ msgid "Default Image"
 msgstr "기본 이미지"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:50
-msgid "Copied to clipboard"
-msgstr "클립보드 복사"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:52
-msgid "Failed to copy to clipboard"
-msgstr "클립보드 복사에 실패했습니다"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:64
-msgid "Link is not safe"
-msgstr "링크가 안전하지 않습니다"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:66
-msgid "Completed verification"
-msgstr "검사가 완료되었습니다"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:74
-msgid "Failed to verify link"
-msgstr "링크 검사에 실패했습니다"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:114
-msgid "Home"
-msgstr "홈"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:171
-msgid "Verify Link"
-msgstr "링크 검사"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:184
-msgid "Copy Link to clipboard"
-msgstr "링크를 클립보드에 복사"
-
-#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
 #: src/components/user/SideForm.tsx:82
 msgid "Default Folder"
@@ -177,8 +132,6 @@ msgstr "링크 검사"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:43
-#: src/components/home/Guest.tsx:49
-#: src/components/home/Tutorial.tsx:24
 #: src/components/user/SideForm.tsx:191
 msgid "AI Link Recommendations"
 msgstr "AI 링크 추천"
@@ -219,7 +172,7 @@ msgid "Add"
 msgstr "추가"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:162
+#: src/components/common/UserDropdonw.tsx:153
 #: src/components/user/SideForm.tsx:320
 #: src/components/user/SideForm.tsx:331
 msgid "Cancel"
@@ -251,24 +204,6 @@ msgid "Enter folder name"
 msgstr "폴더명 입력"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "이름 없는 폴더"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:49
-#: src/components/user/ListLink.tsx:44
-msgid "Rename"
-msgstr "이름 변경"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:165
-#: src/components/user/ListFolder.tsx:50
-#: src/components/user/ListLink.tsx:45
-msgid "Delete"
-msgstr "삭제"
-
-#. js-lingui-explicit-id
 #: src/components/user/Loader.tsx:36
 msgid "Failed to get user data"
 msgstr "사용자 데이터를 가져오는데 실패했습니다"
@@ -289,23 +224,77 @@ msgid "If you restore your account within 30 days, your previous data will remai
 msgstr "계정을 30일 이내에 복구하신 경우, 기존 데이터는 그대로 보존되어 있습니다."
 
 #. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:54
+msgid "Copied to clipboard"
+msgstr "클립보드 복사"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:56
+msgid "Failed to copy to clipboard"
+msgstr "클립보드 복사에 실패했습니다"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:68
+msgid "Link is not safe"
+msgstr "링크가 안전하지 않습니다"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:70
+msgid "Completed verification"
+msgstr "검사가 완료되었습니다"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:78
+msgid "Failed to verify link"
+msgstr "링크 검사에 실패했습니다"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:118
+msgid "Home"
+msgstr "홈"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:156
+msgid "Share Link"
+msgstr "링크 공유"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:161
+msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
+msgstr "이 링크를 다른 사용자와 공유할지 결정하세요. (안전하다고 검증된 링크만 공유할 수 있습니다.)"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:176
+msgid "Verify Link"
+msgstr "링크 검사"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:189
+msgid "Copy Link to clipboard"
+msgstr "링크를 클립보드에 복사"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "이름 없는 폴더"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:49
+#: src/components/user/ListLink.tsx:44
+msgid "Rename"
+msgstr "이름 변경"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:156
+#: src/components/user/ListFolder.tsx:50
+#: src/components/user/ListLink.tsx:45
+msgid "Delete"
+msgstr "삭제"
+
+#. js-lingui-explicit-id
 #: src/components/user/ListLink.tsx:40
 msgid "Empty Link Title"
 msgstr "링크 제목 없음"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:23
-#: src/components/common/Footer.tsx:28
-#: src/components/common/Header.client.tsx:55
-#: src/components/privacy/Content.tsx:36
-msgid "Privacy Policy"
-msgstr "개인정보처리방침"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:56
-#: src/components/privacy/Content.tsx:43
-msgid "This is the Privacy Policy regarding the personal information handled by the service."
-msgstr "서비스에서 취급하는 개인정보 처리방침입니다."
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -319,115 +308,126 @@ msgid "Go to home"
 msgstr "메인으로 이동하기"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:29
-#: src/components/common/Footer.tsx:20
-#: src/components/common/Header.client.tsx:48
-#: src/components/terms-of-service/Content.tsx:36
-msgid "Terms of Service"
-msgstr "이용약관"
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "스마트한 링크 관리"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:49
-#: src/components/terms-of-service/Content.tsx:43
-msgid "These are the Terms of Service for using the service."
-msgstr "서비스 이용약관입니다."
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "링크를 폴더별로 정리하여 한 눈에 볼 수 있습니다."
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:17
-msgid "Install App Shortcut"
-msgstr "앱 바로가기 설치"
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "자동 썸네일 및 메타 데이터 생성"
 
 #. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:18
-msgid "Create a shortcut on your home screen to use it just like an app."
-msgstr "홈 화면에 바로가기를 만들면 앱처럼 사용할 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:25
-msgid "Send the content of the links you’d like to receive, and get personalized link suggestions."
-msgstr "추천받고 싶은 링크의 내용을 보내면, 나에게 맞는 링크를 추천받을 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:53
-#: src/components/home/Tutorial.tsx:31
-msgid "Share Links with the Community"
-msgstr "커뮤니티에 링크 공유"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:32
-msgid "Share your links with other users."
-msgstr "다른 사용자와 링크를 공유해보세요."
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:43
-msgid "Additional Features for Easy Use"
-msgstr "간편한 사용을 위한 추가 기능"
-
-#. js-lingui-explicit-id
-#: src/components/home/Tutorial.tsx:50
-msgid "Not only can you add links, but you can also take advantage of various provided features."
-msgstr "단순히 링크를 추가하는 것뿐만 아니라, 제공되는 다양한 기능도 활용해보세요."
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:90
-#: src/components/home/Guest.tsx:18
-msgid "Guest User"
-msgstr "게스트 사용자"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:19
-msgid "Start right away without signing up"
-msgstr "회원가입 없이 바로 시작하기"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:40
-#: src/components/home/Guest.tsx:21
-msgid "Use as Guest"
-msgstr "게스트로 사용하기"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:24
-#: src/components/home/Guest.tsx:37
-msgid "Unlimited Link Saving"
-msgstr "링크 저장 (무제한)"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:31
-msgid "Member User"
-msgstr "회원 사용자"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:32
-msgid "Access to all features"
-msgstr "모든 기능 이용 가능"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:50
-#: src/components/home/Guest.tsx:34
-msgid "Sign Up"
-msgstr "회원가입하기"
-
-#. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:41
-msgid "Database Storage"
-msgstr "데이터베이스 저장"
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "추가한 링크의 썸네일, 제목, 간략 설명 등을 자동으로 생성해줍니다."
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:36
-#: src/components/home/Guest.tsx:45
 msgid "Threat Link Check"
 msgstr "위협 링크 확인"
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:71
-#: src/components/home/Guest.tsx:73
-msgid "Log in to access more features."
-msgstr "로그인하여 <span>더 많은 기능</span>을 이용하세요."
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "링크가 안전한지 Google Web Risk API 를 통해 확인할 수 있습니다."
 
 #. js-lingui-explicit-id
-#: src/components/home/Guest.tsx:84
-msgid "You can use it without signing up, but logging in lets you try more features for free."
-msgstr "회원가입 없이도 사용할 수 있지만, 로그인하면 더 많은 기능을 무료로 이용할 수 있습니다."
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "AI 를 통해 나에게 맞춤형 링크를 추천받을 수 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "편리하고 안전한 링크 관리"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "모아둔 링크를 한눈에 확인하세요. 링크의 안전성을 검사하고, 나에게 맞는 맞춤형 링크를 추천받을 수 있습니다. 추가한 링크의 간략한 내용을 자동으로 채워주어 쉽게 찾을 수 있도록 도와줍니다."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:21
+msgid "What is Linkary?"
+msgstr "Linkary는 어떤 서비스인가요?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:22
+msgid "Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations."
+msgstr "Linkary는 링크를 신뢰할 수 있게 저장·관리하고, 필요하면 커뮤니티와 공유할 수 있는 웹 서비스입니다. 위협 링크를 검사하고, AI가 나에게 맞춘 링크를 추천합니다."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:28
+msgid "Do you offer a paid plan?"
+msgstr "유료 플랜이 있나요?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:35
+msgid "Are links marked \"safe\" guaranteed to be safe?"
+msgstr "안전성 검사된 링크는 완전히 안전한가요?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:36
+msgid "We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview"
+msgstr "위협 링크 검사는 Google Web Risk API를 통해 위험 여부를 확인하지만, 간혹 식별되지 않거나 오류가 있을 수 있어 완전한 안전을 보장하지는 않습니다. 자세한 내용: <a>https://cloud.google.com/web-risk/docs/overview</a>"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:42
+msgid "Can I save links without sharing them?"
+msgstr "링크를 저장만 하고 공유하지 않을 수 있나요?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:43
+msgid "Yes. Sharing is optional, and the default is private (not shared)."
+msgstr "네. 공유는 선택 사항이며 기본값은 비공개(미공유) 입니다."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:49
+msgid "How is my personal data used?"
+msgstr "개인정보는 어떻게 활용되나요?"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:50
+msgid "We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law."
+msgstr "회원가입을 위해 Google OAuth 식별자(ID)와 이메일 등 최소한의 정보만 수집하며, 로그인·계정 관리에만 사용합니다. 탈퇴 시 관련 법령상 보관 의무가 있는 경우를 제외하고 지체 없이 파기합니다."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:17
+#: src/components/common/Header.client.tsx:40
+#: src/components/faq/Content.tsx:61
+msgid "FAQ"
+msgstr "자주 묻는 질문"
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:67
+msgid "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
+msgstr "자주 묻는 질문(FAQ)을 확인해 보세요. 원하는 내용이 없거나 답변으로 해결되지 않으면 언제든지 문의해 주세요."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:24
+#: src/components/faq/Content.tsx:81
+msgid "If you have any questions, feel free to contact us."
+msgstr "궁금한 사항은 언제든지 문의해 주세요."
+
+#. js-lingui-explicit-id
+#: src/components/faq/Content.tsx:84
+msgid "Translations are AI-generated and may contain minor contextual inaccuracies."
+msgstr "번역은 AI를 활용해 제공되며, 일부 문맥상 부자연스러운 표현이 있을 수 있습니다."
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:23
+#: src/components/common/Footer.tsx:22
+#: src/components/faq/Content.tsx:94
+msgid "Contact Us"
+msgstr "문의하기"
 
 #. js-lingui-explicit-id
 #: src/components/home/Banner.tsx:23
@@ -456,172 +456,35 @@ msgid "Get started"
 msgstr "시작하기"
 
 #. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:70
+msgid "Logout"
+msgstr "로그아웃"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:74
+#: src/components/common/UserDropdonw.tsx:146
+msgid "Delete account"
+msgstr "계정 삭제"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:86
+msgid "Sign in"
+msgstr "로그인"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:148
+msgid "Are you sure you want to delete your account?"
+msgstr "정말로 계정을 삭제하시겠습니까?"
+
+#. js-lingui-explicit-id
 #: src/components/home/ProvidedFunctionCard.tsx:79
 msgid "Recommended"
 msgstr "추천"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:70
-msgid "Switch to guest"
-msgstr "게스트로 전환"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:74
-msgid "Logout"
-msgstr "로그아웃"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:79
-#: src/components/common/UserDropdonw.tsx:155
-msgid "Delete account"
-msgstr "계정 삭제"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:95
-msgid "Sign in"
-msgstr "로그인"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:157
-msgid "Are you sure you want to delete your account?"
-msgstr "정말로 계정을 삭제하시겠습니까?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:21
-msgid "What is Linkary?"
-msgstr "Linkary는 어떤 서비스인가요?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:22
-msgid "Linkary is a web service to reliably save and manage links and, if you want, share them with the community. It checks potentially harmful links and provides AI-powered personalized recommendations."
-msgstr "Linkary는 링크를 신뢰할 수 있게 저장·관리하고, 필요하면 커뮤니티와 공유할 수 있는 웹 서비스입니다. 위협 링크를 검사하고, AI가 나에게 맞춘 링크를 추천합니다."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:28
-msgid "Do you offer a paid plan?"
-msgstr "유료 플랜이 있나요?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:29
-msgid "No. There is no paid plan. Each user has a daily usage quota, which resets at 00:00 KST (Korea Standard Time)."
-msgstr "별도의 유료 플랜은 없습니다. 사용자별 일일 사용 한도가 있으며, 한국 표준시(KST) 기준 매일 00:00에 초기화됩니다."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:35
-msgid "Are links marked \"safe\" guaranteed to be safe?"
-msgstr "안전성 검사된 링크는 완전히 안전한가요?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:36
-msgid "We assess risk via the Google Web Risk API, but undetected threats or errors may occur, so absolute safety cannot be guaranteed. Details: https://cloud.google.com/web-risk/docs/overview"
-msgstr "위협 링크 검사는 Google Web Risk API를 통해 위험 여부를 확인하지만, 간혹 식별되지 않거나 오류가 있을 수 있어 완전한 안전을 보장하지는 않습니다. 자세한 내용: <a>https://cloud.google.com/web-risk/docs/overview</a>"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:42
-msgid "Can I use Linkary without signing up?"
-msgstr "회원가입 없이 사용할 수 있나요?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:43
-msgid "Yes. In that case, data is stored only on your device (e.g., browser local storage) and not on Linkary's servers."
-msgstr "가능합니다. 이 경우 데이터는 서버에 저장되지 않고 브라우저 로컬 저장소 등 사용자 기기에만 저장됩니다."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:49
-msgid "Can I save links without sharing them?"
-msgstr "링크를 저장만 하고 공유하지 않을 수 있나요?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:50
-msgid "Yes. Sharing is optional, and the default is private (not shared)."
-msgstr "네. 공유는 선택 사항이며 기본값은 비공개(미공유) 입니다."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:56
-msgid "How is my personal data used?"
-msgstr "개인정보는 어떻게 활용되나요?"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:57
-msgid "We collect only minimal data (Google OAuth identifier and email) for sign-up and use it solely for login/account management. Upon deletion, data is erased without undue delay, except where retention is required by law."
-msgstr "회원가입을 위해 Google OAuth 식별자(ID)와 이메일 등 최소한의 정보만 수집하며, 로그인·계정 관리에만 사용합니다. 탈퇴 시 관련 법령상 보관 의무가 있는 경우를 제외하고 지체 없이 파기합니다."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:17
-#: src/components/common/Header.client.tsx:64
-#: src/components/faq/Content.tsx:68
-msgid "FAQ"
-msgstr "자주 묻는 질문"
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:74
-msgid "Check our FAQ. If you can't find what you need or the answer doesn't solve your issue, feel free to contact us anytime."
-msgstr "자주 묻는 질문(FAQ)을 확인해 보세요. 원하는 내용이 없거나 답변으로 해결되지 않으면 언제든지 문의해 주세요."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:36
-#: src/components/faq/Content.tsx:88
-msgid "If you have any questions, feel free to contact us."
-msgstr "궁금한 사항은 언제든지 문의해 주세요."
-
-#. js-lingui-explicit-id
-#: src/components/faq/Content.tsx:91
-msgid "Translations are AI-generated and may contain minor contextual inaccuracies."
-msgstr "번역은 AI를 활용해 제공되며, 일부 문맥상 부자연스러운 표현이 있을 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:35
-#: src/components/common/Footer.tsx:38
-#: src/components/faq/Content.tsx:101
-msgid "Contact Us"
-msgstr "문의하기"
-
-#. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
 msgid "Logo"
 msgstr "로고"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "스마트한 링크 관리"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "링크를 폴더별로 정리하여 한 눈에 볼 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "자동 썸네일 및 메타 데이터 생성"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "추가한 링크의 썸네일, 제목, 간략 설명 등을 자동으로 생성해줍니다."
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "링크가 안전한지 Google Web Risk API 를 통해 확인할 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "AI 를 통해 나에게 맞춤형 링크를 추천받을 수 있습니다."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "편리하고 안전한 링크 관리"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "모아둔 링크를 한눈에 확인하세요. 링크의 안전성을 검사하고, 나에게 맞는 맞춤형 링크를 추천받을 수 있습니다. 추가한 링크의 간략한 내용을 자동으로 채워주어 쉽게 찾을 수 있도록 도와줍니다."
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -650,22 +513,16 @@ msgstr "언어 선택"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:36
-#: src/components/common/Header.client.tsx:39
 msgid "Introduction"
 msgstr "소개"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:45
-msgid "Terms and Privacy"
-msgstr "약관 및 개인정보"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:14
+#: src/components/common/Footer.tsx:13
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. All rights reserved."
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:44
+#: src/components/common/Footer.tsx:28
 msgid "Site created by 🤖 akodm"
 msgstr "🤖 akodm에 의해 제작된 사이트"
 
@@ -701,37 +558,17 @@ msgid "Close"
 msgstr "닫기"
 
 #. js-lingui-explicit-id
-#: src/components/about/Start.tsx:19
-msgid "Get started now"
-msgstr "지금 바로 시작하세요"
-
-#. js-lingui-explicit-id
-#: src/components/about/Start.tsx:26
-msgid "You can use Linkary without an account, but we recommend signing up to unlock more features."
-msgstr "비회원도 이용할 수 있지만, 더 많은 기능을 위해 회원 가입을 추천합니다."
-
-#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
 msgid "Check the Frequently Asked Questions (FAQ)."
 msgstr "자주 묻는 질문(FAQ)을 확인해 보세요."
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:24
-msgid "Review our Privacy Policy."
-msgstr "서비스에서 취급하는 개인정보 처리방침을 확인해 보세요."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:30
-msgid "Review Linkary's Terms of Service."
-msgstr "Linkary 의 이용약관을 확인해 보세요."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:52
+#: src/components/about/Infomation.tsx:42
 msgid "Need more information?"
 msgstr "다른 정보가 필요하신가요?"
 
 #. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:59
+#: src/components/about/Infomation.tsx:49
 msgid "Find more details in other sections of the site."
 msgstr "사이트 내 다른 메뉴에서 더 자세한 정보를 확인할 수 있습니다."
 
