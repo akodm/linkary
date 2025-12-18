@@ -301,10 +301,14 @@ export default function UserSideForm({ user }: UserSideFormProps) {
       <Dialog open={alertOpen} onOpenChange={setAlertOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle></DialogTitle>
+            <DialogTitle>{i18n.t('About quotas')}</DialogTitle>
           </DialogHeader>
           <DialogDescription>
-            <span>{i18n.t('The quota resets on the 1st of every month.')}</span>
+            <span>
+              {i18n.t(
+                'Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month.',
+              )}
+            </span>
           </DialogDescription>
         </DialogContent>
       </Dialog>

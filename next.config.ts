@@ -4,9 +4,6 @@ import { withBotId } from 'botid/next/config';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  experimental: {
-    swcPlugins: [['@lingui/swc-plugin', {}]],
-  },
   images: {
     remotePatterns: [
       {
@@ -15,15 +12,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.po$/,
-      use: {
-        loader: '@lingui/loader',
+  turbopack: {
+    rules: {
+      '*.po': {
+        loaders: ['@lingui/loader'],
+        as: '*.js',
       },
-    });
-
-    return config;
+    },
   },
 };
 

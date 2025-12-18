@@ -144,6 +144,7 @@ export const editLinkAction = async ({
   image,
   tags,
   order,
+  shared,
   folderId,
 }: {
   id: number;
@@ -152,6 +153,7 @@ export const editLinkAction = async ({
   image: string;
   tags?: string;
   order?: number;
+  shared?: boolean;
   folderId?: number;
 }) => {
   const session = await getSession();
@@ -182,6 +184,7 @@ export const editLinkAction = async ({
     description,
     image,
     order,
+    shared,
     linkFolderId: folderId ?? null,
   };
 
@@ -205,6 +208,44 @@ export const editLinkAction = async ({
 };
 
 export type EditLinkActionResponse = Awaited<ReturnType<typeof editLinkAction>>;
+
+export const editSharedLinkAction = async ({
+  id,
+  shared,
+}: {
+  id: number;
+  shared: boolean;
+}) => {
+  const session = await getSession();
+
+  if (!session?.user?.email) {
+    throw new Error('User session is not found');
+  }
+
+  const user = await db.query.users.findFirst({
+    where: eq(users.email, session.user.email),
+  });
+
+  if (!user) {
+    throw new Error('User not found');
+  }
+
+  const findLink = await db.query.link.findFirst({
+    where: (l, { eq, and }) => and(eq(l.id, id), eq(l.userId, user.id)),
+  });
+
+  if (!findLink) {
+    throw new Error('Link not found');
+  }
+
+  await db.update(link).set({ shared }).where(eq(link.id, id));
+
+  return true;
+};
+
+export type EditSharedLinkActionResponse = Awaited<
+  ReturnType<typeof editSharedLinkAction>
+>;
 
 export const deleteLinkAction = async ({ id }: { id: number }) => {
   const session = await getSession();

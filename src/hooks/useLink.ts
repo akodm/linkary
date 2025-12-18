@@ -2,6 +2,7 @@ import {
   addLinkAction,
   deleteLinkAction,
   editLinkAction,
+  editSharedLinkAction,
 } from '@/lib/actions/link';
 import { sentryCaptureException } from '@/lib/utils';
 import { useLingui } from '@lingui/react';
@@ -50,6 +51,22 @@ export default function useLink({
     },
   });
 
+  const { ...editSharedLinkMutation } = useMutation({
+    mutationFn: editSharedLinkAction,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['linkAndFolder'] });
+
+      toast.success(i18n.t('Link shared successfully'));
+    },
+    onError: (err) => {
+      toast.error(i18n.t('Failed to share link'));
+
+      sentryCaptureException(err, 'onEditSharedLink', {
+        ...sentryErrorGeneralCaptureObj,
+      });
+    },
+  });
+
   const { ...deleteLinkMutation } = useMutation({
     mutationFn: deleteLinkAction,
     onSuccess: () => {
@@ -67,8 +84,10 @@ export default function useLink({
   });
 
   return {
+    queryClient,
     addLinkMutation,
     editLinkMutation,
+    editSharedLinkMutation,
     deleteLinkMutation,
   };
 }

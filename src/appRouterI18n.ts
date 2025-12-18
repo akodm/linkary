@@ -10,6 +10,13 @@ type SupportedLocales = string;
 async function loadCatalog(
   locale: SupportedLocales,
 ): Promise<Record<string, Messages>> {
+  if (process.env.NODE_ENV === 'development') {
+    const { messages } = await import(`./locales/${locale}.po`);
+    return {
+      [locale]: messages,
+    };
+  }
+
   const { messages } = await import(`./locales/${locale}.js`);
   return {
     [locale]: messages,

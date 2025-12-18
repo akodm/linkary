@@ -22,10 +22,12 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from 'src/components/ui/tooltip';
-import { useQueryClient } from '@tanstack/react-query';
 import Thumbnail from 'src/components/user/Thumbnail';
 import { useTransition } from 'react';
 import { Spinner } from 'src/components/ui/spinner';
+import { Switch } from 'src/components/ui/switch';
+import { Label } from 'src/components/ui/label';
+import useLink from '@/hooks/useLink';
 
 interface UserViewerProps {
   user?: GetUserActionResponse | null;
@@ -36,7 +38,10 @@ export default function UserViewer({ user }: UserViewerProps) {
   const [isPending, startTransition] = useTransition();
   const selectedFolder = useAtomValue(selectedFolderAtom);
   const [selectedLink, setSelectedLink] = useAtom(selectedLinkAtom);
-  const queryClient = useQueryClient();
+  const {
+    queryClient,
+    editSharedLinkMutation: { mutate: editSharedLink },
+  } = useLink({ sentryErrorGeneralCaptureObj: { user, selectedLink } });
 
   const onCopyToClipboard = async () => {
     const success = await copyToClipboard(selectedLink?.url ?? '');
@@ -73,6 +78,15 @@ export default function UserViewer({ user }: UserViewerProps) {
           selectedLink,
         });
       }
+    });
+  };
+
+  const onEditSharedLink = async (toggle: boolean) => {
+    if (!selectedLink?.id) return;
+
+    editSharedLink({
+      id: selectedLink.id,
+      shared: toggle,
     });
   };
 
@@ -121,15 +135,34 @@ export default function UserViewer({ user }: UserViewerProps) {
         </Breadcrumb>
         {selectedLink?.id && (
           <article className="flex flex-col w-full h-full overflow-y-auto scrollbar-hide">
-            <div className="flex flex-row items-center gap-x-1 w-full **:size-8">
+            <div className="flex flex-row items-center gap-x-1 w-full">
               <div className="flex items-center min-w-fit text-xs text-left text-neutral-500">
                 {new Date(selectedLink?.updatedAt).toLocaleString()}
               </div>
               <Tooltip>
                 <TooltipTrigger asChild>
+                  <div className="flex flex-row items-center gap-x-2 ml-auto">
+                    <Switch
+                      id="share-link"
+                      checked={selectedLink?.shared}
+                      onCheckedChange={(checked) => onEditSharedLink(checked)}
+                    />
+                    <Label htmlFor="share-link" className="text-xs">
+                      {i18n.t('Share Link')}
+                    </Label>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-40">
+                  {i18n.t(
+                    'Decide whether to share this link with other users. (Only links verified as safe can be shared.)',
+                  )}
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
                   <button
                     type="button"
-                    className="flex justify-center items-center ml-auto hover:bg-neutral-100 rounded-sm p-2"
+                    className="flex justify-center items-center hover:bg-neutral-100 rounded-sm p-2 size-8"
                     onClick={onVerifyLink}
                   >
                     <ShieldIcon className="text-blue-500" />
@@ -141,7 +174,7 @@ export default function UserViewer({ user }: UserViewerProps) {
                 <TooltipTrigger asChild>
                   <button
                     type="button"
-                    className="flex justify-center items-center hover:bg-neutral-100 rounded-sm p-2"
+                    className="flex justify-center items-center hover:bg-neutral-100 rounded-sm p-2 size-8"
                     onClick={onCopyToClipboard}
                   >
                     <SquaresExclude />
