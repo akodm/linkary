@@ -1,9 +1,66 @@
 import { db } from '@/db';
-import { link, users } from '@/db/schemas';
+import { link, linkSafety, users } from '@/db/schemas';
 import { getSession } from '@/lib/actions/auth';
 import { sentryCaptureException } from '@/lib/utils';
-import { eq, sql } from 'drizzle-orm';
+import { and, count, desc, eq, sql } from 'drizzle-orm';
 import { NextRequest, NextResponse } from 'next/server';
+
+/**
+ * 커뮤니티 링크 조회
+ */
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url);
+  const page = searchParams.get('page');
+  const size = searchParams.get('size');
+
+  if (!page || !size) {
+    return NextResponse.json(
+      { data: null, message: 'Bad Request' },
+      { status: 400 },
+    );
+  }
+
+  if (isNaN(Number(page)) || isNaN(Number(size))) {
+    return NextResponse.json(
+      { data: null, message: 'Bad Request' },
+      { status: 400 },
+    );
+  }
+
+  try {
+    const links = await db.query.link.findMany({
+      where: and(eq(link.banned, false), eq(link.shared, true)),
+      with: {
+        linkSafety: {
+          orderBy: desc(linkSafety.createdAt),
+          limit: 1,
+        },
+      },
+      orderBy: desc(link.createdAt),
+      offset: (Number(page) - 1) * Number(size),
+      limit: Number(size),
+    });
+
+    const [total] = await db
+      .select({ count: count() })
+      .from(link)
+      .where(and(eq(link.banned, false), eq(link.shared, true)));
+
+    return NextResponse.json(
+      { data: links, total: total.count },
+      { status: 200 },
+    );
+  } catch (err) {
+    console.error(err);
+
+    sentryCaptureException(err, 'linkGetCommunity', { page, size });
+
+    return NextResponse.json(
+      { data: null, message: 'Internal Server Error' },
+      { status: 500 },
+    );
+  }
+}
 
 /**
  * 조회 수 증가

@@ -1,11 +1,7 @@
 import CommunityLayout from '@/components/community/Layout';
-import { getLinksCommunity } from '@/lib/actions/link';
 import { notFound } from 'next/navigation';
 
-// SSG + ISR: 빌드 타임에 정적 생성, 1시간마다 재검증
-export const revalidate = 3600; // 1시간 (3600초)
-
-export default async function CommunityPage({
+export default async function CommunityPageByPage({
   params,
 }: {
   params: Promise<{ page: string }>;
@@ -17,10 +13,17 @@ export default async function CommunityPage({
     notFound();
   }
 
-  const { data, total } = await getLinksCommunity({
-    page: currentPage,
-    size: 30,
-  });
+  const response = await fetch(
+    `${process.env.API_URL}/api/link?page=${currentPage}&size=30`,
+    {
+      cache: 'force-cache',
+      next: {
+        revalidate: 3600,
+        tags: ['community-page'],
+      },
+    },
+  );
+  const { data, total } = await response.json();
 
-  return <CommunityLayout links={data} total={total} />;
+  return <CommunityLayout links={data ?? []} total={total ?? 0} />;
 }
