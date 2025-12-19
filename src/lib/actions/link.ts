@@ -258,7 +258,7 @@ export const editSharedLinkAction = async ({
 
   await db.update(link).set({ shared }).where(eq(link.id, id));
 
-  return true;
+  return shared;
 };
 
 export type EditSharedLinkActionResponse = Awaited<

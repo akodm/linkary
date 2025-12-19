@@ -14,9 +14,9 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/community/Content.tsx:32
-msgid "There are no shared links yet."
-msgstr "아직 공유된 링크가 없습니다."
+#: src/components/community/Banner.tsx:28
+msgid "The list posted in the community is refreshed every hour."
+msgstr "커뮤니티에 게시된 목록은 매시간 새로고침됩니다."
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
@@ -39,51 +39,59 @@ msgid "Failed to update link"
 msgstr "링크 수정에 실패했습니다"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:59
+#: src/hooks/useLink.ts:60
 msgid "Link shared successfully"
 msgstr "링크가 성공적으로 공유되었습니다"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:62
+#: src/hooks/useLink.ts:64
+msgid "Link unshared successfully"
+msgstr "링크 공유가 성공적으로 해제되었습니다."
+
+#. js-lingui-explicit-id
+#: src/hooks/useLink.ts:68
 msgid "Failed to share link"
 msgstr "링크 공유에 실패했습니다"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:75
+#: src/hooks/useLink.ts:81
 msgid "Link deleted successfully"
 msgstr "링크가 성공적으로 삭제되었습니다"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:78
+#: src/hooks/useLink.ts:84
 msgid "Failed to delete link"
 msgstr "링크 삭제에 실패했습니다"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:31
-#: src/components/user/Thumbnail.tsx:32
-msgid "Unsafe Link"
-msgstr "안전하지 않은 링크"
+#: src/hooks/useFolder.ts:26
+msgid "Folder added successfully"
+msgstr "폴더가 성공적으로 추가되었습니다"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:32
-#: src/components/user/Thumbnail.tsx:33
-msgid "Warning link (over 1 year old)"
-msgstr "경고 링크 (1년 이상 경과)"
+#: src/hooks/useFolder.ts:29
+msgid "Failed to add folder"
+msgstr "폴더 추가에 실패했습니다"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:33
-#: src/components/user/Thumbnail.tsx:34
-msgid "Verified Link"
-msgstr "검사된 링크"
+#: src/hooks/useFolder.ts:42
+msgid "Folder updated successfully"
+msgstr "폴더가 성공적으로 수정되었습니다"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:55
-#: src/components/community/LinkCard.tsx:59
-#: src/components/user/Thumbnail.tsx:50
-#: src/components/user/Thumbnail.tsx:54
-#: src/components/user/Thumbnail.tsx:82
-msgid "Default Image"
-msgstr "기본 이미지"
+#: src/hooks/useFolder.ts:45
+msgid "Failed to update folder"
+msgstr "폴더 수정에 실패했습니다"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:58
+msgid "Folder deleted successfully"
+msgstr "폴더가 성공적으로 삭제되었습니다"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:61
+msgid "Failed to delete folder"
+msgstr "폴더 삭제에 실패했습니다"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:54
@@ -111,27 +119,27 @@ msgid "Failed to verify link"
 msgstr "링크 검사에 실패했습니다"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:118
+#: src/components/user/Viewer.tsx:120
 msgid "Home"
 msgstr "홈"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:156
+#: src/components/user/Viewer.tsx:158
 msgid "Share Link"
 msgstr "링크 공유"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:161
+#: src/components/user/Viewer.tsx:163
 msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
 msgstr "이 링크를 다른 사용자와 공유할지 결정하세요. (안전하다고 검증된 링크만 공유할 수 있습니다.)"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:176
+#: src/components/user/Viewer.tsx:178
 msgid "Verify Link"
 msgstr "링크 검사"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:189
+#: src/components/user/Viewer.tsx:191
 msgid "Copy Link to clipboard"
 msgstr "링크를 클립보드에 복사"
 
@@ -250,9 +258,36 @@ msgid "Enter folder name"
 msgstr "폴더명 입력"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "이름 없는 폴더"
+#: src/components/community/LinkCard.tsx:31
+#: src/components/user/Thumbnail.tsx:32
+msgid "Unsafe Link"
+msgstr "안전하지 않은 링크"
+
+#. js-lingui-explicit-id
+#: src/components/community/LinkCard.tsx:32
+#: src/components/user/Thumbnail.tsx:33
+msgid "Warning link (over 1 year old)"
+msgstr "경고 링크 (1년 이상 경과)"
+
+#. js-lingui-explicit-id
+#: src/components/community/LinkCard.tsx:33
+#: src/components/user/Thumbnail.tsx:34
+msgid "Verified Link"
+msgstr "검사된 링크"
+
+#. js-lingui-explicit-id
+#: src/components/community/LinkCard.tsx:55
+#: src/components/community/LinkCard.tsx:59
+#: src/components/user/Thumbnail.tsx:50
+#: src/components/user/Thumbnail.tsx:54
+#: src/components/user/Thumbnail.tsx:82
+msgid "Default Image"
+msgstr "기본 이미지"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "링크 제목 없음"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:49
@@ -268,9 +303,9 @@ msgid "Delete"
 msgstr "삭제"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "링크 제목 없음"
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "이름 없는 폴더"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -282,36 +317,6 @@ msgstr "페이지를 찾을 수 없습니다"
 #: src/components/not-found/Content.tsx:34
 msgid "Go to home"
 msgstr "메인으로 이동하기"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:26
-msgid "Folder added successfully"
-msgstr "폴더가 성공적으로 추가되었습니다"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:29
-msgid "Failed to add folder"
-msgstr "폴더 추가에 실패했습니다"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:42
-msgid "Folder updated successfully"
-msgstr "폴더가 성공적으로 수정되었습니다"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:45
-msgid "Failed to update folder"
-msgstr "폴더 수정에 실패했습니다"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:58
-msgid "Folder deleted successfully"
-msgstr "폴더가 성공적으로 삭제되었습니다"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:61
-msgid "Failed to delete folder"
-msgstr "폴더 삭제에 실패했습니다"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -361,11 +366,6 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "모아둔 링크를 한눈에 확인하세요. 링크의 안전성을 검사하고, 나에게 맞는 맞춤형 링크를 추천받을 수 있습니다. 추가한 링크의 간략한 내용을 자동으로 채워주어 쉽게 찾을 수 있도록 도와줍니다."
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "추천"
-
-#. js-lingui-explicit-id
 #: src/components/home/Banner.tsx:23
 msgid "Banner"
 msgstr "배너"
@@ -390,11 +390,6 @@ msgstr "중요한 링크를 체계적으로 관리하고 한 눈에 볼 수 있�
 #: src/components/home/Banner.tsx:62
 msgid "Get started"
 msgstr "시작하기"
-
-#. js-lingui-explicit-id
-#: src/components/community/Content.tsx:20
-msgid "Total"
-msgstr "전체"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -477,17 +472,6 @@ msgid "Contact Us"
 msgstr "문의하기"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:44
-#: src/components/community/Banner.tsx:15
-msgid "Community"
-msgstr "커뮤니티"
-
-#. js-lingui-explicit-id
-#: src/components/community/Banner.tsx:23
-msgid "Explore a variety of verified links."
-msgstr "다양한 검증된 링크를 탐색하세요."
-
-#. js-lingui-explicit-id
 #: src/components/community/Pagination.tsx:141
 #: src/components/community/Pagination.tsx:150
 msgid "Previous"
@@ -498,6 +482,22 @@ msgstr "이전"
 #: src/components/community/Pagination.tsx:216
 msgid "Next"
 msgstr "다음"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "추천"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.client.tsx:44
+#: src/components/community/Banner.tsx:16
+msgid "Community"
+msgstr "커뮤니티"
+
+#. js-lingui-explicit-id
+#: src/components/community/Banner.tsx:25
+msgid "Explore a variety of verified links."
+msgstr "다양한 검증된 링크를 탐색하세요."
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
@@ -519,6 +519,16 @@ msgstr "로그인"
 #: src/components/common/UserDropdonw.tsx:148
 msgid "Are you sure you want to delete your account?"
 msgstr "정말로 계정을 삭제하시겠습니까?"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:20
+msgid "Total"
+msgstr "전체"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:32
+msgid "There are no shared links yet."
+msgstr "아직 공유된 링크가 없습니다."
 
 #. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
@@ -571,17 +581,6 @@ msgid "To continue as a guest, click here."
 msgstr "게스트로 계속하려면 여기를 클릭하세요."
 
 #. js-lingui-explicit-id
-#: src/components/auth/Heading.tsx:12
-msgid "Sign in to your account"
-msgstr "계정으로 로그인"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:52
-#: src/components/auth/Heading.tsx:18
-msgid "Sign in to access more features."
-msgstr "로그인하면 다양한 기능을 사용할 수 있습니다."
-
-#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
 msgid "Check the Frequently Asked Questions (FAQ)."
 msgstr "자주 묻는 질문(FAQ)을 확인해 보세요."
@@ -597,34 +596,15 @@ msgid "Find more details in other sections of the site."
 msgstr "사이트 내 다른 메뉴에서 더 자세한 정보를 확인할 수 있습니다."
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:47
-msgid "Login"
-msgstr "로그인"
+#: src/components/auth/Heading.tsx:12
+msgid "Sign in to your account"
+msgstr "계정으로 로그인"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:48
-msgid "Login to your account"
-msgstr "내 계정에 로그인"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:61
-msgid "Close"
-msgstr "닫기"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "소개 배너"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "Linkary 란"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "링크를 편하게 관리하고, 신뢰할 수 있는 상태로 보관하세요."
+#: src/components/auth/AsideForm.tsx:52
+#: src/components/auth/Heading.tsx:18
+msgid "Sign in to access more features."
+msgstr "로그인하면 다양한 기능을 사용할 수 있습니다."
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -685,3 +665,33 @@ msgstr "Linkary 에서 사용할 기능"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "제공되는 다양한 기능을 여러 환경에서 사용해 보세요."
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:47
+msgid "Login"
+msgstr "로그인"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:48
+msgid "Login to your account"
+msgstr "내 계정에 로그인"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:61
+msgid "Close"
+msgstr "닫기"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "소개 배너"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "Linkary 란"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "링크를 편하게 관리하고, 신뢰할 수 있는 상태로 보관하세요."

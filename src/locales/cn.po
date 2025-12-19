@@ -14,9 +14,9 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/community/Content.tsx:32
-msgid "There are no shared links yet."
-msgstr "还没有共享的链接。"
+#: src/components/community/Banner.tsx:28
+msgid "The list posted in the community is refreshed every hour."
+msgstr "社区中发布的列表每小时刷新一次。"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
@@ -39,51 +39,59 @@ msgid "Failed to update link"
 msgstr "链接更新失败"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:59
+#: src/hooks/useLink.ts:60
 msgid "Link shared successfully"
 msgstr "链接分享成功"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:62
+#: src/hooks/useLink.ts:64
+msgid "Link unshared successfully"
+msgstr "链接分享已成功取消。"
+
+#. js-lingui-explicit-id
+#: src/hooks/useLink.ts:68
 msgid "Failed to share link"
 msgstr "链接分享失败"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:75
+#: src/hooks/useLink.ts:81
 msgid "Link deleted successfully"
 msgstr "链接删除成功"
 
 #. js-lingui-explicit-id
-#: src/hooks/useLink.ts:78
+#: src/hooks/useLink.ts:84
 msgid "Failed to delete link"
 msgstr "链接删除失败"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:31
-#: src/components/user/Thumbnail.tsx:32
-msgid "Unsafe Link"
-msgstr "不安全的链接"
+#: src/hooks/useFolder.ts:26
+msgid "Folder added successfully"
+msgstr "文件夹添加成功"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:32
-#: src/components/user/Thumbnail.tsx:33
-msgid "Warning link (over 1 year old)"
-msgstr "警告链接（超过1年）"
+#: src/hooks/useFolder.ts:29
+msgid "Failed to add folder"
+msgstr "添加文件夹失败"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:33
-#: src/components/user/Thumbnail.tsx:34
-msgid "Verified Link"
-msgstr "已验证链接"
+#: src/hooks/useFolder.ts:42
+msgid "Folder updated successfully"
+msgstr "文件夹更新成功"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:55
-#: src/components/community/LinkCard.tsx:59
-#: src/components/user/Thumbnail.tsx:50
-#: src/components/user/Thumbnail.tsx:54
-#: src/components/user/Thumbnail.tsx:82
-msgid "Default Image"
-msgstr "默认图片"
+#: src/hooks/useFolder.ts:45
+msgid "Failed to update folder"
+msgstr "文件夹更新失败"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:58
+msgid "Folder deleted successfully"
+msgstr "文件夹删除成功"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:61
+msgid "Failed to delete folder"
+msgstr "文件夹删除失败"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:54
@@ -111,27 +119,27 @@ msgid "Failed to verify link"
 msgstr "链接验证失败"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:118
+#: src/components/user/Viewer.tsx:120
 msgid "Home"
 msgstr "首页"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:156
+#: src/components/user/Viewer.tsx:158
 msgid "Share Link"
 msgstr "分享链接"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:161
+#: src/components/user/Viewer.tsx:163
 msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
 msgstr "决定是否与其他用户分享此链接。（只有已验证为安全的链接才能分享。）"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:176
+#: src/components/user/Viewer.tsx:178
 msgid "Verify Link"
 msgstr "验证链接"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:189
+#: src/components/user/Viewer.tsx:191
 msgid "Copy Link to clipboard"
 msgstr "复制链接到剪贴板"
 
@@ -250,9 +258,36 @@ msgid "Enter folder name"
 msgstr "输入文件夹名称"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "文件夹名称为空"
+#: src/components/community/LinkCard.tsx:31
+#: src/components/user/Thumbnail.tsx:32
+msgid "Unsafe Link"
+msgstr "不安全的链接"
+
+#. js-lingui-explicit-id
+#: src/components/community/LinkCard.tsx:32
+#: src/components/user/Thumbnail.tsx:33
+msgid "Warning link (over 1 year old)"
+msgstr "警告链接（超过1年）"
+
+#. js-lingui-explicit-id
+#: src/components/community/LinkCard.tsx:33
+#: src/components/user/Thumbnail.tsx:34
+msgid "Verified Link"
+msgstr "已验证链接"
+
+#. js-lingui-explicit-id
+#: src/components/community/LinkCard.tsx:55
+#: src/components/community/LinkCard.tsx:59
+#: src/components/user/Thumbnail.tsx:50
+#: src/components/user/Thumbnail.tsx:54
+#: src/components/user/Thumbnail.tsx:82
+msgid "Default Image"
+msgstr "默认图片"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "链接标题为空"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:49
@@ -268,9 +303,9 @@ msgid "Delete"
 msgstr "删除"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "链接标题为空"
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "文件夹名称为空"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -282,36 +317,6 @@ msgstr "页面未找到"
 #: src/components/not-found/Content.tsx:34
 msgid "Go to home"
 msgstr "返回首页"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:26
-msgid "Folder added successfully"
-msgstr "文件夹添加成功"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:29
-msgid "Failed to add folder"
-msgstr "添加文件夹失败"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:42
-msgid "Folder updated successfully"
-msgstr "文件夹更新成功"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:45
-msgid "Failed to update folder"
-msgstr "文件夹更新失败"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:58
-msgid "Folder deleted successfully"
-msgstr "文件夹删除成功"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:61
-msgid "Failed to delete folder"
-msgstr "文件夹删除失败"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -361,11 +366,6 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "推荐"
-
-#. js-lingui-explicit-id
 #: src/components/home/Banner.tsx:23
 msgid "Banner"
 msgstr "横幅"
@@ -390,11 +390,6 @@ msgstr "一个能系统管理并一目了然查看重要链接的平台"
 #: src/components/home/Banner.tsx:62
 msgid "Get started"
 msgstr "开始使用"
-
-#. js-lingui-explicit-id
-#: src/components/community/Content.tsx:20
-msgid "Total"
-msgstr "总计"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -477,17 +472,6 @@ msgid "Contact Us"
 msgstr "联系我们"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:44
-#: src/components/community/Banner.tsx:15
-msgid "Community"
-msgstr "社区"
-
-#. js-lingui-explicit-id
-#: src/components/community/Banner.tsx:23
-msgid "Explore a variety of verified links."
-msgstr "探索各种已验证的链接。"
-
-#. js-lingui-explicit-id
 #: src/components/community/Pagination.tsx:141
 #: src/components/community/Pagination.tsx:150
 msgid "Previous"
@@ -498,6 +482,22 @@ msgstr "上一页"
 #: src/components/community/Pagination.tsx:216
 msgid "Next"
 msgstr "下一页"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "推荐"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.client.tsx:44
+#: src/components/community/Banner.tsx:16
+msgid "Community"
+msgstr "社区"
+
+#. js-lingui-explicit-id
+#: src/components/community/Banner.tsx:25
+msgid "Explore a variety of verified links."
+msgstr "探索各种已验证的链接。"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
@@ -519,6 +519,16 @@ msgstr "登录"
 #: src/components/common/UserDropdonw.tsx:148
 msgid "Are you sure you want to delete your account?"
 msgstr "您确定要删除您的账户吗？"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:20
+msgid "Total"
+msgstr "总计"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:32
+msgid "There are no shared links yet."
+msgstr "还没有共享的链接。"
 
 #. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
@@ -571,17 +581,6 @@ msgid "To continue as a guest, click here."
 msgstr "点击此处以访客身份继续。"
 
 #. js-lingui-explicit-id
-#: src/components/auth/Heading.tsx:12
-msgid "Sign in to your account"
-msgstr "登录您的账户"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:52
-#: src/components/auth/Heading.tsx:18
-msgid "Sign in to access more features."
-msgstr "登录以使用更多功能。"
-
-#. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
 msgid "Check the Frequently Asked Questions (FAQ)."
 msgstr "查看常见问题（FAQ）。"
@@ -597,34 +596,15 @@ msgid "Find more details in other sections of the site."
 msgstr "在网站的其他部分查找更多详情。"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:47
-msgid "Login"
-msgstr "登录"
+#: src/components/auth/Heading.tsx:12
+msgid "Sign in to your account"
+msgstr "登录您的账户"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:48
-msgid "Login to your account"
-msgstr "登录到您的账户"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:61
-msgid "Close"
-msgstr "关闭"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "介绍横幅"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "Linkary 是什么"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "轻松管理您的链接，保持它们的可信度。"
+#: src/components/auth/AsideForm.tsx:52
+#: src/components/auth/Heading.tsx:18
+msgid "Sign in to access more features."
+msgstr "登录以使用更多功能。"
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -685,3 +665,33 @@ msgstr "Linkary 中可用的功能"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "在不同环境中试用我们的功能。"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:47
+msgid "Login"
+msgstr "登录"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:48
+msgid "Login to your account"
+msgstr "登录到您的账户"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:61
+msgid "Close"
+msgstr "关闭"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "介绍横幅"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "Linkary 是什么"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "轻松管理您的链接，保持它们的可信度。"

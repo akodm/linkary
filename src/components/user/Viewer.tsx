@@ -88,9 +88,11 @@ export default function UserViewer({ user }: UserViewerProps) {
   const onEditSharedLink = async (toggle: boolean) => {
     if (!selectedLink?.id) return;
 
-    editSharedLink({
-      id: selectedLink.id,
-      shared: toggle,
+    startTransition(async () => {
+      editSharedLink({
+        id: selectedLink.id,
+        shared: toggle,
+      });
     });
   };
 

@@ -53,10 +53,16 @@ export default function useLink({
 
   const { ...editSharedLinkMutation } = useMutation({
     mutationFn: editSharedLinkAction,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['linkAndFolder'] });
+    onSuccess: (shared) => {
+      if (shared) {
+        queryClient.invalidateQueries({ queryKey: ['linkAndFolder'] });
 
-      toast.success(i18n.t('Link shared successfully'));
+        toast.success(i18n.t('Link shared successfully'));
+      } else {
+        queryClient.invalidateQueries({ queryKey: ['linkAndFolder'] });
+
+        toast.success(i18n.t('Link unshared successfully'));
+      }
     },
     onError: (err) => {
       toast.error(i18n.t('Failed to share link'));

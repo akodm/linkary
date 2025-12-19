@@ -3,6 +3,7 @@
 import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
 import { ArrowDownIcon } from 'lucide-react';
+import GeneralAnimator from 'src/components/common/GeneralAnimator';
 
 export default function Banner() {
   const { i18n } = useLingui();
@@ -14,14 +15,18 @@ export default function Banner() {
         <h1 className="text-2xl md:text-6xl font-bold">
           {i18n.t('Community')}
         </h1>
-        <h2
+        <GeneralAnimator
+          as="h2"
           className={clsx(
             'text-sm md:text-xl font-medium text-gray-500',
             i18n.locale === 'ko' ? 'break-keep' : 'break-words',
           )}
         >
           {i18n.t('Explore a variety of verified links.')}
-        </h2>
+        </GeneralAnimator>
+        <GeneralAnimator as="h4" className="text-xs text-gray-500">
+          {i18n.t('The list posted in the community is refreshed every hour.')}
+        </GeneralAnimator>
       </div>
       <ArrowDownIcon
         size={15}
