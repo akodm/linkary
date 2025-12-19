@@ -13,7 +13,7 @@ interface CommunityLayoutProps {
 
 export default function CommunityLayout(props: CommunityLayoutProps) {
   return (
-    <div className="flex flex-col items-center w-full relative">
+    <div className="flex flex-col items-center w-full h-full relative">
       <Header isLogo isLanguage isSignIn />
       <MainProvider>
         <Banner />

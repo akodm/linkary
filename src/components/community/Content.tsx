@@ -20,11 +20,19 @@ export default function Content({ links, total }: ContentProps) {
           {i18n.t('Total')}: {total}
         </Badge>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 w-full max-w-320 mx-auto px-4 pt-4 pb-10">
-        {links.map((link) => {
-          return <LinkCard key={link.id} link={link} />;
-        })}
-      </div>
+      {links.length ? (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 w-full max-w-320 mx-auto px-4 pt-4 pb-10">
+          {links.map((link) => {
+            return <LinkCard key={link.id} link={link} />;
+          })}
+        </div>
+      ) : (
+        <div className="flex justify-center items-center w-full h-full">
+          <p className="text-sm text-neutral-500">
+            {i18n.t('There are no shared links yet.')}
+          </p>
+        </div>
+      )}
     </section>
   );
 }
