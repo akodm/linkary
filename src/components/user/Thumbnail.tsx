@@ -46,8 +46,16 @@ export default function Thumbnail({ link }: ThumbnailProps) {
         <Image
           fill
           src="/default.webp"
+          sizes="100vw"
           alt={link?.title || i18n.t('Default Image')}
           className="object-contain object-center"
+          onError={(event) => {
+            event.currentTarget.src = '/default.webp';
+            event.currentTarget.alt = i18n.t('Default Image');
+            event.currentTarget.sizes = '';
+            event.currentTarget.srcset = '';
+            event.currentTarget.onerror = null;
+          }}
         />
         {link?.verified && (
           <LinkVerifedBadge

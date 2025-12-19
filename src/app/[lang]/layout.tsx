@@ -144,8 +144,6 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
-export const dynamicParams = false;
-
 export default async function RootLayout({
   children,
   intercept,

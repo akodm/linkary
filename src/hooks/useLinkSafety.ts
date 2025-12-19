@@ -1,11 +1,16 @@
-import { LinkGetResponse } from '@/lib/actions/link';
+import {
+  LinkAndFolderCommunityResponse,
+  LinkGetResponse,
+} from '@/lib/actions/link';
 import { getTimeDifference } from '@/lib/date';
 import { useCallback, useMemo } from 'react';
 
 export type SafetyIcon = 'default' | 'unsafe' | 'warn' | 'verified';
 
 interface UseLinkSafetyProps {
-  link: LinkGetResponse['links'][number];
+  link:
+    | LinkGetResponse['links'][number]
+    | LinkAndFolderCommunityResponse['data'][number];
 }
 
 export default function useLinkSafety({ link }: UseLinkSafetyProps) {

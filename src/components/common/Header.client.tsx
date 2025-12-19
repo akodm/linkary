@@ -40,6 +40,10 @@ export default function Header(props: HeaderWebProps | HeaderMobileProps) {
         title: i18n.t('FAQ'),
         href: '/faq',
       },
+      {
+        title: i18n.t('Community'),
+        href: '/community',
+      },
     ],
     [i18n],
   );

@@ -68,20 +68,25 @@ export const getLinkAndFolder = async () => {
 
 export type LinkGetResponse = Awaited<ReturnType<typeof getLinkAndFolder>>;
 
-export const getLinkAndFolderCommunity = async ({
+export const getLinksCommunity = async ({
   page = 1,
   size = 30,
 }: {
   page?: number;
   size?: number;
 }) => {
-  const links = await db
-    .select()
-    .from(link)
-    .where(and(eq(link.banned, false), eq(link.shared, true)))
-    .orderBy(desc(link.createdAt))
-    .offset((Number(page) - 1) * Number(size))
-    .limit(Number(size));
+  const links = await db.query.link.findMany({
+    where: and(eq(link.banned, false), eq(link.shared, true)),
+    with: {
+      linkSafety: {
+        orderBy: desc(linkSafety.createdAt),
+        limit: 1,
+      },
+    },
+    orderBy: desc(link.createdAt),
+    offset: (Number(page) - 1) * Number(size),
+    limit: Number(size),
+  });
 
   const [total] = await db
     .select({ count: count() })
@@ -92,7 +97,7 @@ export const getLinkAndFolderCommunity = async ({
 };
 
 export type LinkAndFolderCommunityResponse = Awaited<
-  ReturnType<typeof getLinkAndFolderCommunity>
+  ReturnType<typeof getLinksCommunity>
 >;
 
 export const addLinkAction = async ({
