@@ -15,7 +15,7 @@ import {
 import { recommendURL, scrapeURL, verifyURL } from 'src/lib/actions/url';
 import { InsertLink } from '@/db/schemas/link';
 
-const { GOOGLE_API_ID = '1' } = process.env;
+const { GOOGLE_API_ID = '1', TAVILY_API_ID = '2' } = process.env;
 
 export const getLinkAndFolder = async () => {
   const session = await getSession();
@@ -483,9 +483,77 @@ export type VerifyLinkActionResponse = Awaited<
 >;
 
 export const recommendLinkAction = async ({ prompt }: { prompt: string[] }) => {
+  const session = await getSession();
+
+  if (!session?.user?.email) {
+    throw new Error('User session is not found');
+  }
+
+  if (!prompt?.length) {
+    throw new Error('Prompt is required');
+  }
+
+  const user = await db.query.users.findFirst({
+    where: eq(users.email, session.user.email),
+    with: {
+      userApis: {
+        where: (u, { eq }) => eq(u.apiId, parseInt(TAVILY_API_ID)),
+      },
+    },
+  });
+
+  if (!user) {
+    throw new Error('User not found');
+  }
+
+  const findApi = await db.query.api.findFirst({
+    where: eq(api.id, parseInt(TAVILY_API_ID)),
+  });
+
+  if (!findApi) {
+    throw new Error('API not found');
+  }
+
+  const findUserApi = user.userApis[0];
+
+  if (!findUserApi) {
+    throw new Error('User API not found');
+  }
+
+  if (findUserApi.usage >= findApi.limit && findApi.limit !== -1) {
+    throw new Error('API usage limit exceeded');
+  }
+
+  if (findApi.usage >= findApi.totalLimit && findApi.totalLimit !== -1) {
+    throw new Error('API total usage limit exceeded');
+  }
+
   const recommend = await recommendURL(prompt);
 
-  return recommend;
+  await db.transaction(async (tx) => {
+    await Promise.all([
+      tx
+        .update(userApi)
+        .set({
+          usage: sql`${userApi.usage} + 1`,
+          cumulativeUsage: sql`${userApi.cumulativeUsage} + 1`,
+        })
+        .where(
+          and(
+            eq(userApi.userId, user.id),
+            eq(userApi.apiId, parseInt(TAVILY_API_ID)),
+          ),
+        ),
+      tx
+        .update(api)
+        .set({
+          usage: sql`${api.usage} + 1`,
+        })
+        .where(eq(api.id, parseInt(TAVILY_API_ID))),
+    ]);
+  });
+
+  return recommend.results;
 };
 
 export type RecommendLinkActionResponse = Awaited<

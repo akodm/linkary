@@ -28,10 +28,10 @@ export async function GET(request: NextRequest) {
       },
       { status: 200 },
     );
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error(err);
 
-    sentryCaptureException(error, 'cron', {
+    sentryCaptureException(err, 'cron', {
       message: 'User API amount cron job failed',
     });
 

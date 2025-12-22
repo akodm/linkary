@@ -1,11 +1,11 @@
 'use client';
 
 import useHasScroll from '@/hooks/useHasScroll';
-import { getLinkAndFolder } from '@/lib/actions/link';
+import { getLinkAndFolder, recommendLinkAction } from '@/lib/actions/link';
 import { GetUserActionResponse } from '@/lib/actions/user';
 import { useLingui } from '@lingui/react';
-import { useQuery } from '@tanstack/react-query';
-import { HelpCircleIcon, PlusIcon } from 'lucide-react';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { CirclePlayIcon, HelpCircleIcon, PlusIcon } from 'lucide-react';
 import {
   useCallback,
   useEffect,
@@ -32,15 +32,24 @@ import {
   DialogHeader,
   DialogContent,
 } from 'src/components/ui/dialog';
+import AIRecommendedForm from 'src/components/forms/AIRecommendedForm';
+import { toast } from 'sonner';
+import { sentryCaptureException } from '@/lib/utils';
+import { TavilySearchResponse } from '@tavily/core';
 
 interface UserSideFormProps {
   user?: GetUserActionResponse | null;
 }
 
 export default function UserSideForm({ user }: UserSideFormProps) {
+  const queryClient = useQueryClient();
   const [alertOpen, setAlertOpen] = useState(false);
   const [addLinkOpen, setAddLinkOpen] = useState(false);
   const [editFolderOpen, setEditFolderOpen] = useState(false);
+  const [aiRecommendedOpen, setAiRecommendedOpen] = useState(false);
+  const [aiRecommendedResults, setAiRecommendedResults] = useState<
+    TavilySearchResponse['results'] | undefined
+  >();
   const [isPending, startTransition] = useTransition();
   const [editFolderState, setEditFolderState] = useState<Folder | undefined>();
   const [selectedFolder, setSelectedFolder] = useAtom(selectedFolderAtom);
@@ -127,6 +136,42 @@ export default function UserSideForm({ user }: UserSideFormProps) {
     [addLink, selectedFolder],
   );
 
+  const onAiRecommended = useCallback(
+    (description: string) => {
+      startTransition(async () => {
+        try {
+          const recommend = await recommendLinkAction({
+            prompt: [description],
+          });
+
+          if (!recommend.length) {
+            toast.error(
+              i18n.t(
+                'No recommendations found. Writing in English improves accuracy.',
+              ),
+            );
+          } else {
+            setAiRecommendedResults(recommend);
+
+            toast.success(i18n.t('These are the recommended result links.'));
+          }
+
+          queryClient.invalidateQueries({ queryKey: ['apiLimit'] });
+        } catch (err) {
+          console.error(err);
+
+          toast.error(i18n.t('Failed to get recommendations'));
+
+          sentryCaptureException(err, 'onAiRecommended', {
+            user,
+            description,
+          });
+        }
+      });
+    },
+    [user, i18n, queryClient],
+  );
+
   useEffect(() => {
     if (refetchRef.current) return;
 
@@ -150,6 +195,12 @@ export default function UserSideForm({ user }: UserSideFormProps) {
       );
     });
   }, [data, defaultFolder, setSelectedFolder, setSelectedLink]);
+
+  useEffect(() => {
+    if (!aiRecommendedOpen) {
+      setAiRecommendedResults(undefined);
+    }
+  }, [aiRecommendedOpen]);
 
   return (
     <>
@@ -189,7 +240,16 @@ export default function UserSideForm({ user }: UserSideFormProps) {
               </div>
               <div className="flex flex-row justify-between items-center w-full text-xs text-neutral-800">
                 <span>{i18n.t('AI Link Recommendations')}</span>
-                <span className="text-[10px]/1.5">{`${apiLimitData?.tavilyApi.usage}/${apiLimitData?.tavilyApi.limit}`}</span>
+                <div className="flex flex-row items-center gap-x-1">
+                  <span className="text-[10px]/1.5">{`${apiLimitData?.tavilyApi.usage}/${apiLimitData?.tavilyApi.limit}`}</span>
+                  <button
+                    type="button"
+                    className="p-1.5 hover:bg-neutral-100 rounded-sm text-xs text-blue-500 hover:text-blue-600"
+                    onClick={() => setAiRecommendedOpen(true)}
+                  >
+                    <CirclePlayIcon className="size-4" />
+                  </button>
+                </div>
               </div>
             </>
           )}
@@ -333,6 +393,13 @@ export default function UserSideForm({ user }: UserSideFormProps) {
         open={editFolderOpen}
         setOpen={setEditFolderOpen}
         onSubmit={(data) => onEditFolder(data.name)}
+      />
+      <AIRecommendedForm
+        results={aiRecommendedResults}
+        open={aiRecommendedOpen}
+        setOpen={setAiRecommendedOpen}
+        onSubmit={(data) => onAiRecommended(data.description)}
+        onAddLink={onAddLink}
       />
     </>
   );
