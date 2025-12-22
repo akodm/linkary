@@ -75,7 +75,7 @@ export default function AIRecommendedForm({
               <span className="text-xs text-neutral-500">{` (${results.length})`}</span>
             </h4>
             <div className="flex flex-row gap-x-4 w-full overflow-x-auto scrollbar-hide">
-              {!results.length ? (
+              {results.length ? (
                 results.map((result) => {
                   return (
                     <RecommendedResult
