@@ -2,7 +2,6 @@
 
 import GoogleSignInButton from 'src/components/auth/GoogleSignInButton';
 import AuthHeading from 'src/components/auth/Heading';
-import AuthBottom from 'src/components/auth/Bottom';
 import { useEffect, useState } from 'react';
 import BackDropLoader from 'src/components/common/BackDropLoader';
 import { signInWithGoogle } from '@/lib/actions/auth';
@@ -32,7 +31,6 @@ export default function PageForm() {
         <GoogleSignInButton />
         {loading && <BackDropLoader />}
       </form>
-      <AuthBottom />
     </section>
   );
 }
