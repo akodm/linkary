@@ -14,9 +14,9 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/community/Banner.tsx:28
-msgid "The list posted in the community is refreshed every hour."
-msgstr "The list posted in the community is refreshed every hour."
+#: src/components/forms/AIRecommendedForm.tsx:57
+msgid "Please describe what you'd like to get recommendations for."
+msgstr "Please describe what you'd like to get recommendations for."
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
@@ -144,116 +144,116 @@ msgid "Copy Link to clipboard"
 msgstr "Copy Link to clipboard"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Failed to get user data"
-msgstr "Failed to get user data"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:37
-msgid "Please try reloading the page"
-msgstr "Please try reloading the page"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:62
-msgid "Welcome back!"
-msgstr "Welcome back!"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:63
-msgid "If you restore your account within 30 days, your previous data will remain intact."
-msgstr "If you restore your account within 30 days, your previous data will remain intact."
-
-#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
-#: src/components/user/SideForm.tsx:82
+#: src/components/user/SideForm.tsx:91
 msgid "Default Folder"
 msgstr "Default Folder"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:101
+#: src/components/user/SideForm.tsx:110
 msgid "New Folder"
 msgstr "New Folder"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:174
+#: src/components/forms/AIRecommendedForm.tsx:91
+#: src/components/user/SideForm.tsx:149
+msgid "No recommendations found. Writing in English improves accuracy."
+msgstr "No recommendations found. Writing in English improves accuracy."
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:74
+#: src/components/user/SideForm.tsx:156
+msgid "These are the recommended result links."
+msgstr "These are the recommended result links."
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:163
+msgid "Failed to get recommendations"
+msgstr "Failed to get recommendations"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:225
 msgid "Quota"
 msgstr "Quota"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:187
+#: src/components/user/SideForm.tsx:238
 msgid "Link Inspection"
 msgstr "Link Inspection"
 
 #. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:55
 #: src/components/home/Description.tsx:43
-#: src/components/user/SideForm.tsx:191
+#: src/components/user/SideForm.tsx:242
 msgid "AI Link Recommendations"
 msgstr "AI Link Recommendations"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:203
+#: src/components/user/SideForm.tsx:263
 msgid "Folder"
 msgstr "Folder"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:256
+#: src/components/user/SideForm.tsx:316
 msgid "Link"
 msgstr "Link"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:304
+#: src/components/user/SideForm.tsx:364
 msgid "About quotas"
 msgstr "About quotas"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:308
+#: src/components/user/SideForm.tsx:368
 msgid "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
 msgstr "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:317
+#: src/components/user/SideForm.tsx:377
 msgid "Add Link"
 msgstr "Add Link"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:318
+#: src/components/user/SideForm.tsx:378
 msgid "write the URL of the link you want to add"
 msgstr "write the URL of the link you want to add"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:319
+#: src/components/forms/AIRecommendedForm.tsx:171
+#: src/components/user/SideForm.tsx:379
 msgid "Add"
 msgstr "Add"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:153
-#: src/components/user/SideForm.tsx:320
-#: src/components/user/SideForm.tsx:331
+#: src/components/forms/AIRecommendedForm.tsx:102
+#: src/components/user/SideForm.tsx:380
+#: src/components/user/SideForm.tsx:391
 msgid "Cancel"
 msgstr "Cancel"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:321
+#: src/components/user/SideForm.tsx:381
 msgid "Enter link"
 msgstr "Enter link"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:328
+#: src/components/user/SideForm.tsx:388
 msgid "Edit Folder"
 msgstr "Edit Folder"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:329
+#: src/components/user/SideForm.tsx:389
 msgid "write the name of the folder you want to edit"
 msgstr "write the name of the folder you want to edit"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:330
+#: src/components/user/SideForm.tsx:390
 msgid "Edit"
 msgstr "Edit"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:332
+#: src/components/user/SideForm.tsx:392
 msgid "Enter folder name"
 msgstr "Enter folder name"
 
@@ -285,9 +285,29 @@ msgid "Default Image"
 msgstr "Default Image"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "Empty Link Title"
+#: src/components/user/Loader.tsx:36
+msgid "Failed to get user data"
+msgstr "Failed to get user data"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:37
+msgid "Please try reloading the page"
+msgstr "Please try reloading the page"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:62
+msgid "Welcome back!"
+msgstr "Welcome back!"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:63
+msgid "If you restore your account within 30 days, your previous data will remain intact."
+msgstr "If you restore your account within 30 days, your previous data will remain intact."
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "Empty Folder Name"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:49
@@ -303,9 +323,9 @@ msgid "Delete"
 msgstr "Delete"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "Empty Folder Name"
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "Empty Link Title"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -317,6 +337,52 @@ msgstr "Page not found"
 #: src/components/not-found/Content.tsx:34
 msgid "Go to home"
 msgstr "Go to home"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "Recommended"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "Banner"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "Save links and"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "share them."
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "A platform to organize and view your important links at a glance"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "Get started"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:67
+msgid "Writing in English improves accuracy."
+msgstr "Writing in English improves accuracy."
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:111
+msgid "Submit"
+msgstr "Submit"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:149
+msgid "The score is the confidence score of the result."
+msgstr "The score is the confidence score of the result."
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -364,32 +430,6 @@ msgstr "Convenient and Secure Link Management"
 #: src/components/home/Description.tsx:62
 msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
 msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "Banner"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "Save links and"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "share them."
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "A platform to organize and view your important links at a glance"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "Get started"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -484,11 +524,6 @@ msgid "Next"
 msgstr "Next"
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "Recommended"
-
-#. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:44
 #: src/components/community/Banner.tsx:16
 msgid "Community"
@@ -498,6 +533,26 @@ msgstr "Community"
 #: src/components/community/Banner.tsx:25
 msgid "Explore a variety of verified links."
 msgstr "Explore a variety of verified links."
+
+#. js-lingui-explicit-id
+#: src/components/community/Banner.tsx:28
+msgid "The list posted in the community is refreshed every hour."
+msgstr "The list posted in the community is refreshed every hour."
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:20
+msgid "Total"
+msgstr "Total"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:32
+msgid "There are no shared links yet."
+msgstr "There are no shared links yet."
+
+#. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "Logo"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
@@ -521,19 +576,9 @@ msgid "Are you sure you want to delete your account?"
 msgstr "Are you sure you want to delete your account?"
 
 #. js-lingui-explicit-id
-#: src/components/community/Content.tsx:20
-msgid "Total"
-msgstr "Total"
-
-#. js-lingui-explicit-id
-#: src/components/community/Content.tsx:32
-msgid "There are no shared links yet."
-msgstr "There are no shared links yet."
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "Logo"
+#: src/components/common/Header.client.tsx:36
+msgid "Introduction"
+msgstr "Introduction"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -561,11 +606,6 @@ msgid "Select Language"
 msgstr "Select Language"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:36
-msgid "Introduction"
-msgstr "Introduction"
-
-#. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:13
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. All rights reserved."
@@ -579,6 +619,32 @@ msgstr "Site created by 🤖 akodm"
 #: src/components/auth/Bottom.tsx:12
 msgid "To continue as a guest, click here."
 msgstr "To continue as a guest, click here."
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:47
+msgid "Login"
+msgstr "Login"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:48
+msgid "Login to your account"
+msgstr "Login to your account"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:52
+#: src/components/auth/Heading.tsx:18
+msgid "Sign in to access more features."
+msgstr "Sign in to access more features."
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:61
+msgid "Close"
+msgstr "Close"
+
+#. js-lingui-explicit-id
+#: src/components/auth/Heading.tsx:12
+msgid "Sign in to your account"
+msgstr "Sign in to your account"
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
@@ -596,15 +662,19 @@ msgid "Find more details in other sections of the site."
 msgstr "Find more details in other sections of the site."
 
 #. js-lingui-explicit-id
-#: src/components/auth/Heading.tsx:12
-msgid "Sign in to your account"
-msgstr "Sign in to your account"
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "Introduction Banner"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:52
-#: src/components/auth/Heading.tsx:18
-msgid "Sign in to access more features."
-msgstr "Sign in to access more features."
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "What is Linkary"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "Manage your links with ease and keep them trustworthy."
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -665,33 +735,3 @@ msgstr "Features available in Linkary"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "Try our features across different environments."
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:47
-msgid "Login"
-msgstr "Login"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:48
-msgid "Login to your account"
-msgstr "Login to your account"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:61
-msgid "Close"
-msgstr "Close"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "Introduction Banner"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "What is Linkary"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "Manage your links with ease and keep them trustworthy."

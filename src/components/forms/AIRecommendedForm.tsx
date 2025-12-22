@@ -55,7 +55,7 @@ export default function AIRecommendedForm({
           <DialogTitle>{i18n.t('AI Link Recommendations')}</DialogTitle>
           <DialogDescription>
             {i18n.t(
-              'Please describe what you’d like to get recommendations for.',
+              `Please describe what you'd like to get recommendations for.`,
             )}
           </DialogDescription>
         </DialogHeader>
@@ -75,7 +75,7 @@ export default function AIRecommendedForm({
               <span className="text-xs text-neutral-500">{` (${results.length})`}</span>
             </h4>
             <div className="flex flex-row gap-x-4 w-full overflow-x-auto scrollbar-hide">
-              {results.length ? (
+              {!results.length ? (
                 results.map((result) => {
                   return (
                     <RecommendedResult
@@ -86,12 +86,17 @@ export default function AIRecommendedForm({
                   );
                 })
               ) : (
-                <></>
+                <div className="flex justify-center items-center w-full min-h-20">
+                  <h4 className="text-sm text-neutral-500 text-center">
+                    {i18n.t(
+                      'No recommendations found. Writing in English improves accuracy.',
+                    )}
+                  </h4>
+                </div>
               )}
             </div>
           </>
         )}
-
         <DialogFooter>
           <DialogClose asChild>
             <Button variant="outline">{i18n.t('Cancel')}</Button>

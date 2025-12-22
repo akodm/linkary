@@ -14,11 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/community/Banner.tsx:28
-msgid "The list posted in the community is refreshed every hour."
-msgstr "社区中发布的列表每小时刷新一次。"
-
-#. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
 msgid "Link added successfully"
 msgstr "链接添加成功"
@@ -144,116 +139,116 @@ msgid "Copy Link to clipboard"
 msgstr "复制链接到剪贴板"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Failed to get user data"
-msgstr "获取用户数据失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:37
-msgid "Please try reloading the page"
-msgstr "请尝试刷新页面"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:62
-msgid "Welcome back!"
-msgstr "欢迎回来！"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:63
-msgid "If you restore your account within 30 days, your previous data will remain intact."
-msgstr "如果您在30天内恢复帐户，您之前的数据将保持不变。"
-
-#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
-#: src/components/user/SideForm.tsx:82
+#: src/components/user/SideForm.tsx:91
 msgid "Default Folder"
 msgstr "默认文件夹"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:101
+#: src/components/user/SideForm.tsx:110
 msgid "New Folder"
 msgstr "新建文件夹"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:174
+#: src/components/forms/AIRecommendedForm.tsx:91
+#: src/components/user/SideForm.tsx:149
+msgid "No recommendations found. Writing in English improves accuracy."
+msgstr "未找到推荐结果。使用英语编写可提高准确性。"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:74
+#: src/components/user/SideForm.tsx:156
+msgid "These are the recommended result links."
+msgstr "这些是推荐的结果链接。"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:163
+msgid "Failed to get recommendations"
+msgstr "获取推荐失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:225
 msgid "Quota"
 msgstr "配额"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:187
+#: src/components/user/SideForm.tsx:238
 msgid "Link Inspection"
 msgstr "链接检查"
 
 #. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:55
 #: src/components/home/Description.tsx:43
-#: src/components/user/SideForm.tsx:191
+#: src/components/user/SideForm.tsx:242
 msgid "AI Link Recommendations"
 msgstr "AI 链接推荐"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:203
+#: src/components/user/SideForm.tsx:263
 msgid "Folder"
 msgstr "文件夹"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:256
+#: src/components/user/SideForm.tsx:316
 msgid "Link"
 msgstr "链接"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:304
+#: src/components/user/SideForm.tsx:364
 msgid "About quotas"
 msgstr "关于配额"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:308
+#: src/components/user/SideForm.tsx:368
 msgid "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
 msgstr "每个配额（链接检查、AI 链接推荐）每月可使用至其分配量，并在每月1日重置。"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:317
+#: src/components/user/SideForm.tsx:377
 msgid "Add Link"
 msgstr "添加链接"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:318
+#: src/components/user/SideForm.tsx:378
 msgid "write the URL of the link you want to add"
 msgstr "请输入要添加的链接URL"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:319
+#: src/components/forms/AIRecommendedForm.tsx:171
+#: src/components/user/SideForm.tsx:379
 msgid "Add"
 msgstr "添加"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:153
-#: src/components/user/SideForm.tsx:320
-#: src/components/user/SideForm.tsx:331
+#: src/components/forms/AIRecommendedForm.tsx:102
+#: src/components/user/SideForm.tsx:380
+#: src/components/user/SideForm.tsx:391
 msgid "Cancel"
 msgstr "取消"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:321
+#: src/components/user/SideForm.tsx:381
 msgid "Enter link"
 msgstr "输入链接"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:328
+#: src/components/user/SideForm.tsx:388
 msgid "Edit Folder"
 msgstr "编辑文件夹"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:329
+#: src/components/user/SideForm.tsx:389
 msgid "write the name of the folder you want to edit"
 msgstr "输入要编辑的文件夹名称"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:330
+#: src/components/user/SideForm.tsx:390
 msgid "Edit"
 msgstr "编辑"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:332
+#: src/components/user/SideForm.tsx:392
 msgid "Enter folder name"
 msgstr "输入文件夹名称"
 
@@ -285,9 +280,29 @@ msgid "Default Image"
 msgstr "默认图片"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "链接标题为空"
+#: src/components/user/Loader.tsx:36
+msgid "Failed to get user data"
+msgstr "获取用户数据失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:37
+msgid "Please try reloading the page"
+msgstr "请尝试刷新页面"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:62
+msgid "Welcome back!"
+msgstr "欢迎回来！"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:63
+msgid "If you restore your account within 30 days, your previous data will remain intact."
+msgstr "如果您在30天内恢复帐户，您之前的数据将保持不变。"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "文件夹名称为空"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:49
@@ -303,9 +318,9 @@ msgid "Delete"
 msgstr "删除"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "文件夹名称为空"
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "链接标题为空"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -317,6 +332,57 @@ msgstr "页面未找到"
 #: src/components/not-found/Content.tsx:34
 msgid "Go to home"
 msgstr "返回首页"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "推荐"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "横幅"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "保存链接"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "并分享。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "一个能系统管理并一目了然查看重要链接的平台"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "开始使用"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:57
+msgid "Please describe what you'd like to get recommendations for."
+msgstr "请描述您希望获得推荐的内容。"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:67
+msgid "Writing in English improves accuracy."
+msgstr "使用英语编写可提高准确性。"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:111
+msgid "Submit"
+msgstr "提交"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:149
+msgid "The score is the confidence score of the result."
+msgstr "分数是结果的置信度分数。"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -364,32 +430,6 @@ msgstr "便捷安全的链接管理"
 #: src/components/home/Description.tsx:62
 msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
 msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "横幅"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "保存链接"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "并分享。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "一个能系统管理并一目了然查看重要链接的平台"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "开始使用"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -484,11 +524,6 @@ msgid "Next"
 msgstr "下一页"
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "推荐"
-
-#. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:44
 #: src/components/community/Banner.tsx:16
 msgid "Community"
@@ -498,6 +533,26 @@ msgstr "社区"
 #: src/components/community/Banner.tsx:25
 msgid "Explore a variety of verified links."
 msgstr "探索各种已验证的链接。"
+
+#. js-lingui-explicit-id
+#: src/components/community/Banner.tsx:28
+msgid "The list posted in the community is refreshed every hour."
+msgstr "社区中发布的列表每小时刷新一次。"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:20
+msgid "Total"
+msgstr "总计"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:32
+msgid "There are no shared links yet."
+msgstr "还没有共享的链接。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "标志"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
@@ -521,19 +576,9 @@ msgid "Are you sure you want to delete your account?"
 msgstr "您确定要删除您的账户吗？"
 
 #. js-lingui-explicit-id
-#: src/components/community/Content.tsx:20
-msgid "Total"
-msgstr "总计"
-
-#. js-lingui-explicit-id
-#: src/components/community/Content.tsx:32
-msgid "There are no shared links yet."
-msgstr "还没有共享的链接。"
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "标志"
+#: src/components/common/Header.client.tsx:36
+msgid "Introduction"
+msgstr "介绍"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -561,11 +606,6 @@ msgid "Select Language"
 msgstr "选择语言"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:36
-msgid "Introduction"
-msgstr "介绍"
-
-#. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:13
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. 保留所有权利。"
@@ -579,6 +619,32 @@ msgstr "网站由 🤖 akodm 制作"
 #: src/components/auth/Bottom.tsx:12
 msgid "To continue as a guest, click here."
 msgstr "点击此处以访客身份继续。"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:47
+msgid "Login"
+msgstr "登录"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:48
+msgid "Login to your account"
+msgstr "登录到您的账户"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:52
+#: src/components/auth/Heading.tsx:18
+msgid "Sign in to access more features."
+msgstr "登录以使用更多功能。"
+
+#. js-lingui-explicit-id
+#: src/components/auth/AsideForm.tsx:61
+msgid "Close"
+msgstr "关闭"
+
+#. js-lingui-explicit-id
+#: src/components/auth/Heading.tsx:12
+msgid "Sign in to your account"
+msgstr "登录您的账户"
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:18
@@ -596,15 +662,19 @@ msgid "Find more details in other sections of the site."
 msgstr "在网站的其他部分查找更多详情。"
 
 #. js-lingui-explicit-id
-#: src/components/auth/Heading.tsx:12
-msgid "Sign in to your account"
-msgstr "登录您的账户"
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "介绍横幅"
 
 #. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:52
-#: src/components/auth/Heading.tsx:18
-msgid "Sign in to access more features."
-msgstr "登录以使用更多功能。"
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "Linkary 是什么"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "轻松管理您的链接，保持它们的可信度。"
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -665,33 +735,3 @@ msgstr "Linkary 中可用的功能"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "在不同环境中试用我们的功能。"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:47
-msgid "Login"
-msgstr "登录"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:48
-msgid "Login to your account"
-msgstr "登录到您的账户"
-
-#. js-lingui-explicit-id
-#: src/components/auth/AsideForm.tsx:61
-msgid "Close"
-msgstr "关闭"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "介绍横幅"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "Linkary 是什么"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "轻松管理您的链接，保持它们的可信度。"
