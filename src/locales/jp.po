@@ -14,36 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:26
-msgid "Folder added successfully"
-msgstr "フォルダが正常に追加されました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:29
-msgid "Failed to add folder"
-msgstr "フォルダの追加に失敗しました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:42
-msgid "Folder updated successfully"
-msgstr "フォルダが正常に更新されました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:45
-msgid "Failed to update folder"
-msgstr "フォルダの更新に失敗しました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:58
-msgid "Folder deleted successfully"
-msgstr "フォルダが正常に削除されました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:61
-msgid "Failed to delete folder"
-msgstr "フォルダの削除に失敗しました"
-
-#. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
 msgid "Link added successfully"
 msgstr "リンクが正常に追加されました"
@@ -89,74 +59,34 @@ msgid "Failed to delete link"
 msgstr "リンクの削除に失敗しました"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Failed to get user data"
-msgstr "ユーザーデータの取得に失敗しました"
+#: src/hooks/useFolder.ts:26
+msgid "Folder added successfully"
+msgstr "フォルダが正常に追加されました"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:37
-msgid "Please try reloading the page"
-msgstr "ページを再読み込みしてください"
+#: src/hooks/useFolder.ts:29
+msgid "Failed to add folder"
+msgstr "フォルダの追加に失敗しました"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:62
-msgid "Welcome back!"
-msgstr "おかえりなさい！"
+#: src/hooks/useFolder.ts:42
+msgid "Folder updated successfully"
+msgstr "フォルダが正常に更新されました"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:63
-msgid "If you restore your account within 30 days, your previous data will remain intact."
-msgstr "30日以内にアカウントを復元すると、以前のデータはそのまま保持されます。"
+#: src/hooks/useFolder.ts:45
+msgid "Failed to update folder"
+msgstr "フォルダの更新に失敗しました"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:54
-msgid "Copied to clipboard"
-msgstr "クリップボードにコピーしました"
+#: src/hooks/useFolder.ts:58
+msgid "Folder deleted successfully"
+msgstr "フォルダが正常に削除されました"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:56
-msgid "Failed to copy to clipboard"
-msgstr "クリップボードへのコピーに失敗しました"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:68
-msgid "Link is not safe"
-msgstr "リンクが安全ではありません"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:70
-msgid "Completed verification"
-msgstr "検証が完了しました"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:78
-msgid "Failed to verify link"
-msgstr "リンクの検証に失敗しました"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:120
-msgid "Home"
-msgstr "ホーム"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:158
-msgid "Share Link"
-msgstr "リンクを共有"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:163
-msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
-msgstr "このリンクを他のユーザーと共有するかどうかを決定してください。（安全であると確認されたリンクのみ共有できます。）"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:178
-msgid "Verify Link"
-msgstr "リンクを検証"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:191
-msgid "Copy Link to clipboard"
-msgstr "リンクをクリップボードにコピー"
+#: src/hooks/useFolder.ts:61
+msgid "Failed to delete folder"
+msgstr "フォルダの削除に失敗しました"
 
 #. js-lingui-explicit-id
 #: src/components/community/LinkCard.tsx:31
@@ -184,24 +114,6 @@ msgstr "検証済みリンク"
 #: src/components/user/Thumbnail.tsx:82
 msgid "Default Image"
 msgstr "デフォルト画像"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "リンクタイトルなし"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:49
-#: src/components/user/ListLink.tsx:44
-msgid "Rename"
-msgstr "名前を変更"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:156
-#: src/components/user/ListFolder.tsx:50
-#: src/components/user/ListLink.tsx:45
-msgid "Delete"
-msgstr "削除"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
@@ -318,9 +230,87 @@ msgid "Enter folder name"
 msgstr "フォルダ名を入力"
 
 #. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:54
+msgid "Copied to clipboard"
+msgstr "クリップボードにコピーしました"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:56
+msgid "Failed to copy to clipboard"
+msgstr "クリップボードへのコピーに失敗しました"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:68
+msgid "Link is not safe"
+msgstr "リンクが安全ではありません"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:70
+msgid "Completed verification"
+msgstr "検証が完了しました"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:78
+msgid "Failed to verify link"
+msgstr "リンクの検証に失敗しました"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:120
+msgid "Home"
+msgstr "ホーム"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:158
+msgid "Share Link"
+msgstr "リンクを共有"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:163
+msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
+msgstr "このリンクを他のユーザーと共有するかどうかを決定してください。（安全であると確認されたリンクのみ共有できます。）"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:178
+msgid "Verify Link"
+msgstr "リンクを検証"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:191
+msgid "Copy Link to clipboard"
+msgstr "リンクをクリップボードにコピー"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:35
+msgid "Failed to get user data"
+msgstr "ユーザーデータの取得に失敗しました"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:36
+msgid "Please try reloading the page"
+msgstr "ページを再読み込みしてください"
+
+#. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:42
 msgid "Empty Folder Name"
 msgstr "フォルダ名なし"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:49
+#: src/components/user/ListLink.tsx:44
+msgid "Rename"
+msgstr "名前を変更"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:156
+#: src/components/user/ListFolder.tsx:50
+#: src/components/user/ListLink.tsx:45
+msgid "Delete"
+msgstr "削除"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "リンクタイトルなし"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -379,57 +369,6 @@ msgstr "便利で安全なリンク管理"
 #: src/components/home/Description.tsx:62
 msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
 msgstr "保存したリンクを一目で確認できます。リンクの安全性をチェックし、パーソナライズされたリンク推薦を受け取り、システムが自動で簡単な詳細を入力して簡単に検索できるようにします。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "バナー"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "リンクを保存して"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "共有しましょう。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "重要なリンクを体系的に管理し、一目で確認できるプラットフォーム"
-
-#. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "はじめる"
-
-#. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "おすすめ"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:57
-msgid "Please describe what you'd like to get recommendations for."
-msgstr "推奨を受けたい内容を説明してください。"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:67
-msgid "Writing in English improves accuracy."
-msgstr "英語で記述すると精度が向上します。"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:111
-msgid "Submit"
-msgstr "送信"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:149
-msgid "The score is the confidence score of the result."
-msgstr "スコアは結果の信頼度スコアです。"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -512,6 +451,37 @@ msgid "Contact Us"
 msgstr "お問い合わせ"
 
 #. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "おすすめ"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "バナー"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "リンクを保存して"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "共有しましょう。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "重要なリンクを体系的に管理し、一目で確認できるプラットフォーム"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "はじめる"
+
+#. js-lingui-explicit-id
 #: src/components/community/Pagination.tsx:141
 #: src/components/community/Pagination.tsx:150
 msgid "Previous"
@@ -524,6 +494,26 @@ msgid "Next"
 msgstr "次へ"
 
 #. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:57
+msgid "Please describe what you'd like to get recommendations for."
+msgstr "推奨を受けたい内容を説明してください。"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:67
+msgid "Writing in English improves accuracy."
+msgstr "英語で記述すると精度が向上します。"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:111
+msgid "Submit"
+msgstr "送信"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:149
+msgid "The score is the confidence score of the result."
+msgstr "スコアは結果の信頼度スコアです。"
+
+#. js-lingui-explicit-id
 #: src/components/community/Content.tsx:20
 msgid "Total"
 msgstr "合計"
@@ -532,6 +522,22 @@ msgstr "合計"
 #: src/components/community/Content.tsx:32
 msgid "There are no shared links yet."
 msgstr "まだ共有されたリンクがありません。"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.client.tsx:44
+#: src/components/community/Banner.tsx:16
+msgid "Community"
+msgstr "コミュニティ"
+
+#. js-lingui-explicit-id
+#: src/components/community/Banner.tsx:25
+msgid "Explore a variety of verified links."
+msgstr "様々な検証済みリンクを探索してください。"
+
+#. js-lingui-explicit-id
+#: src/components/community/Banner.tsx:28
+msgid "The list posted in the community is refreshed every hour."
+msgstr "コミュニティに投稿されたリストは1時間ごとに更新されます。"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
@@ -555,22 +561,6 @@ msgid "Are you sure you want to delete your account?"
 msgstr "本当にアカウントを削除しますか？"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:44
-#: src/components/community/Banner.tsx:16
-msgid "Community"
-msgstr "コミュニティ"
-
-#. js-lingui-explicit-id
-#: src/components/community/Banner.tsx:25
-msgid "Explore a variety of verified links."
-msgstr "様々な検証済みリンクを探索してください。"
-
-#. js-lingui-explicit-id
-#: src/components/community/Banner.tsx:28
-msgid "The list posted in the community is refreshed every hour."
-msgstr "コミュニティに投稿されたリストは1時間ごとに更新されます。"
-
-#. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
 msgid "Logo"
 msgstr "ロゴ"
@@ -581,29 +571,14 @@ msgid "Introduction"
 msgstr "紹介"
 
 #. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:28
-msgid "English"
-msgstr "English"
+#: src/components/common/Footer.tsx:13
+msgid "© 2025 Linkary. All rights reserved."
+msgstr "© 2025 Linkary. 全ての権利を保有。"
 
 #. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:32
-msgid "한국어"
-msgstr "한국어"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:36
-msgid "日本語"
-msgstr "日本語"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:40
-msgid "中文"
-msgstr "中文"
-
-#. js-lingui-explicit-id
-#: src/components/common/LanguageButton.tsx:58
-msgid "Select Language"
-msgstr "言語を選択"
+#: src/components/common/Footer.tsx:28
+msgid "Site created by 🤖 akodm"
+msgstr "🤖 akodm によって作成されたサイト"
 
 #. js-lingui-explicit-id
 #: src/components/auth/Heading.tsx:12
@@ -615,16 +590,6 @@ msgstr "アカウントにサインイン"
 #: src/components/auth/Heading.tsx:18
 msgid "Sign in to access more features."
 msgstr "サインインしてより多くの機能をご利用ください。"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:13
-msgid "© 2025 Linkary. All rights reserved."
-msgstr "© 2025 Linkary. 全ての権利を保有。"
-
-#. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:28
-msgid "Site created by 🤖 akodm"
-msgstr "🤖 akodm によって作成されたサイト"
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:47
@@ -640,21 +605,6 @@ msgstr "アカウントにログイン"
 #: src/components/auth/AsideForm.tsx:61
 msgid "Close"
 msgstr "閉じる"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:18
-msgid "Check the Frequently Asked Questions (FAQ)."
-msgstr "よくある質問（FAQ）を確認してください。"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:42
-msgid "Need more information?"
-msgstr "さらなる情報が必要ですか？"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:49
-msgid "Find more details in other sections of the site."
-msgstr "サイトの他のセクションで詳細をご確認ください。"
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -715,6 +665,46 @@ msgstr "Linkary で利用可能な機能"
 #: src/components/about/Description.tsx:95
 msgid "Try our features across different environments."
 msgstr "異なる環境で機能をお試しください。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:18
+msgid "Check the Frequently Asked Questions (FAQ)."
+msgstr "よくある質問（FAQ）を確認してください。"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:42
+msgid "Need more information?"
+msgstr "さらなる情報が必要ですか？"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:49
+msgid "Find more details in other sections of the site."
+msgstr "サイトの他のセクションで詳細をご確認ください。"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:28
+msgid "English"
+msgstr "English"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:32
+msgid "한국어"
+msgstr "한국어"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:36
+msgid "日本語"
+msgstr "日本語"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:40
+msgid "中文"
+msgstr "中文"
+
+#. js-lingui-explicit-id
+#: src/components/common/LanguageButton.tsx:58
+msgid "Select Language"
+msgstr "言語を選択"
 
 #. js-lingui-explicit-id
 #: src/components/about/Banner.tsx:19

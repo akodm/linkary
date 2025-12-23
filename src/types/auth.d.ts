@@ -11,7 +11,6 @@ export declare module 'next-auth' {
       role: string;
     };
     error?: string;
-    recovery?: { check: boolean; value: boolean };
   }
 }
 export declare module '@auth/core/jwt' {
@@ -20,6 +19,5 @@ export declare module '@auth/core/jwt' {
     slug: string;
     role: string;
     error?: string;
-    recovery?: { check: boolean; value: boolean };
   }
 }

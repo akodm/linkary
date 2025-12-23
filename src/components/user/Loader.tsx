@@ -12,10 +12,9 @@ import { GetUserActionResponse } from '@/lib/actions/user';
 
 interface UserLoaderProps {
   user?: GetUserActionResponse | null;
-  recovery?: { check: boolean; value: boolean };
 }
 
-export default function UserLoader({ user = null, recovery }: UserLoaderProps) {
+export default function UserLoader({ user = null }: UserLoaderProps) {
   const [userData, setUserData] = useState<
     GetUserActionResponse | null | undefined
   >(user);
@@ -56,18 +55,6 @@ export default function UserLoader({ user = null, recovery }: UserLoaderProps) {
       handleGetLocalUser();
     }
   }, [userData, isLoading, mounted, handleGetLocalUser]);
-
-  useEffect(() => {
-    if (mounted && recovery?.value) {
-      toast(i18n.t('Welcome back!'), {
-        description: i18n.t(
-          'If you restore your account within 30 days, your previous data will remain intact.',
-        ),
-        closeButton: true,
-        position: 'top-center',
-      });
-    }
-  }, [mounted, recovery, i18n]);
 
   return (
     <div className="flex flex-row justify-center gap-x-4 w-full h-full bg-neutral-100 p-0 md:p-4">

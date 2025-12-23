@@ -6,15 +6,14 @@ import { GetUserActionResponse } from '@/lib/actions/user';
 
 interface UserLayoutProps {
   user?: GetUserActionResponse | null;
-  recovery?: { check: boolean; value: boolean };
 }
 
-export default function UserLayout({ user, recovery }: UserLayoutProps) {
+export default function UserLayout({ user }: UserLayoutProps) {
   return (
     <div className="flex flex-col items-center w-full h-full relative">
       <Header isLogo isLanguage isSignIn />
       <MainProvider>
-        <UserLoader user={user} recovery={recovery} />
+        <UserLoader user={user} />
       </MainProvider>
       <Footer />
     </div>

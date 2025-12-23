@@ -32,7 +32,7 @@ export default async function UserSlugPage({
       throw new Error('User not found');
     }
 
-    return <UserLayout user={user} recovery={session.recovery} />;
+    return <UserLayout user={user} />;
   } catch (err) {
     console.error('Failed to get user by slug');
 
