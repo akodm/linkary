@@ -14,6 +14,7 @@ import {
 } from '@/db/schemas';
 import { recommendURL, scrapeURL, verifyURL } from 'src/lib/actions/url';
 import { InsertLink } from '@/db/schemas/link';
+import { del } from '@vercel/blob';
 
 const { GOOGLE_API_ID = '1', TAVILY_API_ID = '2' } = process.env;
 
@@ -289,6 +290,7 @@ export const deleteLinkAction = async ({ id }: { id: number }) => {
   }
 
   await db.delete(link).where(eq(link.id, id));
+  await del(findLink.image);
 
   return true;
 };
