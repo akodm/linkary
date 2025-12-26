@@ -141,56 +141,58 @@ export default function UserViewer({ user }: UserViewerProps) {
         </Breadcrumb>
         {selectedLink?.id && (
           <article className="flex flex-col w-full h-full overflow-y-auto scrollbar-hide">
-            <div className="flex flex-row items-center gap-x-1 w-full">
+            <div className="flex flex-row flex-wrap items-center gap-4 w-full">
               <div className="flex items-center min-w-fit text-xs text-left text-neutral-500">
-                {new Date(selectedLink?.updatedAt).toLocaleString()}
+                {`${i18n.t('Updated at')} ${new Date(selectedLink?.updatedAt).toLocaleString()}`}
               </div>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <div className="flex flex-row items-center gap-x-2 ml-auto">
-                    <Switch
-                      id="share-link"
-                      checked={selectedLink?.shared}
-                      disabled={!isPossibleToggleShareLink}
-                      onCheckedChange={(checked) => onEditSharedLink(checked)}
-                    />
-                    <Label htmlFor="share-link" className="text-xs">
-                      {i18n.t('Share Link')}
-                    </Label>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-40">
-                  {i18n.t(
-                    'Decide whether to share this link with other users. (Only links verified as safe can be shared.)',
-                  )}
-                </TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button
-                    type="button"
-                    className="flex justify-center items-center hover:bg-neutral-100 rounded-sm p-2 size-8"
-                    onClick={onVerifyLink}
-                  >
-                    <ShieldIcon className="text-blue-500" />
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent>{i18n.t('Verify Link')}</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button
-                    type="button"
-                    className="flex justify-center items-center hover:bg-neutral-100 rounded-sm p-2 size-8"
-                    onClick={onCopyToClipboard}
-                  >
-                    <SquaresExclude />
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  {i18n.t('Copy Link to clipboard')}
-                </TooltipContent>
-              </Tooltip>
+              <div className="flex flex-row items-center gap-x-1 ml-auto">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="flex flex-row items-center gap-x-2 ml-auto">
+                      <Switch
+                        id="share-link"
+                        checked={selectedLink?.shared}
+                        disabled={!isPossibleToggleShareLink}
+                        onCheckedChange={(checked) => onEditSharedLink(checked)}
+                      />
+                      <Label htmlFor="share-link" className="text-xs">
+                        {i18n.t('Share Link')}
+                      </Label>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-40">
+                    {i18n.t(
+                      'Decide whether to share this link with other users. (Only links verified as safe can be shared.)',
+                    )}
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      type="button"
+                      className="flex justify-center items-center hover:bg-neutral-100 rounded-sm p-2 size-8"
+                      onClick={onVerifyLink}
+                    >
+                      <ShieldIcon className="text-blue-500" />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>{i18n.t('Verify Link')}</TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      type="button"
+                      className="flex justify-center items-center hover:bg-neutral-100 rounded-sm p-2 size-8"
+                      onClick={onCopyToClipboard}
+                    >
+                      <SquaresExclude />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    {i18n.t('Copy Link to clipboard')}
+                  </TooltipContent>
+                </Tooltip>
+              </div>
             </div>
             <Thumbnail link={selectedLink} />
             <div className="flex flex-row justify-between gap-x-2 w-full mt-2.5 md:mt-4">
@@ -203,11 +205,11 @@ export default function UserViewer({ user }: UserViewerProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LinkIcon className="mt-1.25 size-4 text-neutral-500 hover:text-neutral-700 transition-colors duration-200" />
+                  <LinkIcon className="mt-1 size-3 md:size-4 text-neutral-500 hover:text-neutral-700 transition-colors duration-200" />
                 </a>
               )}
             </div>
-            <p className="text-sm text-left text-neutral-500 mt-1 md:mt-2">
+            <p className="text-sm text-left text-neutral-500 mt-4 md:mt-2">
               {selectedLink?.description}
             </p>
           </article>
