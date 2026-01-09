@@ -290,7 +290,10 @@ export const deleteLinkAction = async ({ id }: { id: number }) => {
   }
 
   await db.delete(link).where(eq(link.id, id));
-  await del(findLink.image);
+
+  if (findLink.image) {
+    await del(findLink.image);
+  }
 
   return true;
 };
