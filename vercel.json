@@ -1,12 +1,12 @@
 {
   "crons": [
     {
-      "path": "/api/cron/user-api-amount",
+      "path": "/api/cron/monthly-job",
       "schedule": "0 0 1 * *"
     },
     {
-      "path": "/api/cron/user-deleted",
-      "schedule": "0 0 * * *"
+      "path": "/api/cron/weekly-job",
+      "schedule": "0 0 * * 1"
     }
   ]
 }

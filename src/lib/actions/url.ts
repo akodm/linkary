@@ -3,6 +3,7 @@
 import ogs from 'open-graph-scraper';
 import { tavily } from '@tavily/core';
 import { uploadImageToVercelBlob } from 'src/lib/utils';
+import dayjs from 'dayjs';
 
 const { TAVILY_API_KEY = '', GOOGLE_API_KEY = '' } = process.env;
 
@@ -100,6 +101,23 @@ export async function recommendURL(prompt: string[]) {
       topic: 'general',
       searchDepth: 'advanced',
       maxResults: 3,
+    },
+  );
+
+  return response;
+}
+
+export async function autoSearchURL() {
+  const response = await tvly.search(
+    `
+      Please recommend links related to self-improvement, interesting services, culture, or philosophy
+    `,
+    {
+      topic: 'general',
+      searchDepth: 'advanced',
+      maxResults: 1,
+      startDate: dayjs().subtract(1, 'week').format('YYYY-MM-DD'),
+      endDate: dayjs().format('YYYY-MM-DD'),
     },
   );
 

@@ -14,9 +14,39 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:146
-msgid "Updated at"
-msgstr "Updated on"
+#: src/components/community/BotBadge.tsx:22
+msgid "This link is added by the bot"
+msgstr "This link is added by the bot"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:26
+msgid "Folder added successfully"
+msgstr "Folder added successfully"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:29
+msgid "Failed to add folder"
+msgstr "Failed to add folder"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:42
+msgid "Folder updated successfully"
+msgstr "Folder updated successfully"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:45
+msgid "Failed to update folder"
+msgstr "Failed to update folder"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:58
+msgid "Folder deleted successfully"
+msgstr "Folder deleted successfully"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:61
+msgid "Failed to delete folder"
+msgstr "Failed to delete folder"
 
 #. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
@@ -64,111 +94,64 @@ msgid "Failed to delete link"
 msgstr "Failed to delete link"
 
 #. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:26
-msgid "Folder added successfully"
-msgstr "Folder added successfully"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:29
-msgid "Failed to add folder"
-msgstr "Failed to add folder"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:42
-msgid "Folder updated successfully"
-msgstr "Folder updated successfully"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:45
-msgid "Failed to update folder"
-msgstr "Failed to update folder"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:58
-msgid "Folder deleted successfully"
-msgstr "Folder deleted successfully"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:61
-msgid "Failed to delete folder"
-msgstr "Failed to delete folder"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:54
-msgid "Copied to clipboard"
-msgstr "Copied to clipboard"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:56
-msgid "Failed to copy to clipboard"
-msgstr "Failed to copy to clipboard"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:68
-msgid "Link is not safe"
-msgstr "Link is not safe"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:70
-msgid "Completed verification"
-msgstr "Completed verification"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:78
-msgid "Failed to verify link"
-msgstr "Failed to verify link"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:120
-msgid "Home"
-msgstr "Home"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:159
-msgid "Share Link"
-msgstr "Share Link"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:164
-msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
-msgstr "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:179
-msgid "Verify Link"
-msgstr "Verify Link"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:192
-msgid "Copy Link to clipboard"
-msgstr "Copy Link to clipboard"
-
-#. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:31
+#: src/components/community/LinkCard.tsx:32
 #: src/components/user/Thumbnail.tsx:32
 msgid "Unsafe Link"
 msgstr "Unsafe Link"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:32
+#: src/components/community/LinkCard.tsx:33
 #: src/components/user/Thumbnail.tsx:33
 msgid "Warning link (over 1 year old)"
 msgstr "Warning link (over 1 year old)"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:33
+#: src/components/community/LinkCard.tsx:34
 #: src/components/user/Thumbnail.tsx:34
 msgid "Verified Link"
 msgstr "Verified Link"
 
 #. js-lingui-explicit-id
-#: src/components/community/LinkCard.tsx:55
-#: src/components/community/LinkCard.tsx:59
+#: src/components/community/LinkCard.tsx:56
+#: src/components/community/LinkCard.tsx:60
 #: src/components/user/Thumbnail.tsx:50
 #: src/components/user/Thumbnail.tsx:54
-#: src/components/user/Thumbnail.tsx:82
+#: src/components/user/Thumbnail.tsx:84
 msgid "Default Image"
 msgstr "Default Image"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "Empty Link Title"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:49
+#: src/components/user/ListLink.tsx:44
+msgid "Rename"
+msgstr "Rename"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:156
+#: src/components/user/ListFolder.tsx:50
+#: src/components/user/ListLink.tsx:45
+msgid "Delete"
+msgstr "Delete"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:35
+msgid "Failed to get user data"
+msgstr "Failed to get user data"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:36
+msgid "Please try reloading the page"
+msgstr "Please try reloading the page"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "Empty Folder Name"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
@@ -285,37 +268,59 @@ msgid "Enter folder name"
 msgstr "Enter folder name"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:35
-msgid "Failed to get user data"
-msgstr "Failed to get user data"
+#: src/components/user/Viewer.tsx:54
+msgid "Copied to clipboard"
+msgstr "Copied to clipboard"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Please try reloading the page"
-msgstr "Please try reloading the page"
+#: src/components/user/Viewer.tsx:56
+msgid "Failed to copy to clipboard"
+msgstr "Failed to copy to clipboard"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "Empty Link Title"
+#: src/components/user/Viewer.tsx:68
+msgid "Link is not safe"
+msgstr "Link is not safe"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:49
-#: src/components/user/ListLink.tsx:44
-msgid "Rename"
-msgstr "Rename"
+#: src/components/user/Viewer.tsx:70
+msgid "Completed verification"
+msgstr "Completed verification"
 
 #. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:156
-#: src/components/user/ListFolder.tsx:50
-#: src/components/user/ListLink.tsx:45
-msgid "Delete"
-msgstr "Delete"
+#: src/components/user/Viewer.tsx:78
+msgid "Failed to verify link"
+msgstr "Failed to verify link"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "Empty Folder Name"
+#: src/components/user/Viewer.tsx:120
+msgid "Home"
+msgstr "Home"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:146
+msgid "Updated at"
+msgstr "Updated on"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:159
+msgid "Share Link"
+msgstr "Share Link"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:164
+msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
+msgstr "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:179
+msgid "Verify Link"
+msgstr "Verify Link"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:192
+msgid "Copy Link to clipboard"
+msgstr "Copy Link to clipboard"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -327,31 +332,6 @@ msgstr "Page not found"
 #: src/components/not-found/Content.tsx:34
 msgid "Go to home"
 msgstr "Go to home"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:57
-msgid "Please describe what you'd like to get recommendations for."
-msgstr "Please describe what you'd like to get recommendations for."
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:67
-msgid "Writing in English improves accuracy."
-msgstr "Writing in English improves accuracy."
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:111
-msgid "Submit"
-msgstr "Submit"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:149
-msgid "The score is the confidence score of the result."
-msgstr "The score is the confidence score of the result."
-
-#. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "Recommended"
 
 #. js-lingui-explicit-id
 #: src/components/home/Description.tsx:22
@@ -401,42 +381,29 @@ msgid "View all your saved links at a glance. Check the safety of each link, rec
 msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "Banner"
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "Recommended"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "Save links and"
+#: src/components/forms/AIRecommendedForm.tsx:57
+msgid "Please describe what you'd like to get recommendations for."
+msgstr "Please describe what you'd like to get recommendations for."
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "share them."
+#: src/components/forms/AIRecommendedForm.tsx:67
+msgid "Writing in English improves accuracy."
+msgstr "Writing in English improves accuracy."
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "A platform to organize and view your important links at a glance"
+#: src/components/forms/AIRecommendedForm.tsx:111
+msgid "Submit"
+msgstr "Submit"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "Get started"
-
-#. js-lingui-explicit-id
-#: src/components/community/Pagination.tsx:141
-#: src/components/community/Pagination.tsx:150
-msgid "Previous"
-msgstr "Previous"
-
-#. js-lingui-explicit-id
-#: src/components/community/Pagination.tsx:207
-#: src/components/community/Pagination.tsx:216
-msgid "Next"
-msgstr "Next"
+#: src/components/forms/AIRecommendedForm.tsx:149
+msgid "The score is the confidence score of the result."
+msgstr "The score is the confidence score of the result."
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -519,6 +486,54 @@ msgid "Contact Us"
 msgstr "Contact Us"
 
 #. js-lingui-explicit-id
+#: src/components/community/Pagination.tsx:141
+#: src/components/community/Pagination.tsx:150
+msgid "Previous"
+msgstr "Previous"
+
+#. js-lingui-explicit-id
+#: src/components/community/Pagination.tsx:207
+#: src/components/community/Pagination.tsx:216
+msgid "Next"
+msgstr "Next"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "Banner"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "Save links and"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "share them."
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "A platform to organize and view your important links at a glance"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "Get started"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:20
+msgid "Total"
+msgstr "Total"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:32
+msgid "There are no shared links yet."
+msgstr "There are no shared links yet."
+
+#. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:44
 #: src/components/community/Banner.tsx:16
 msgid "Community"
@@ -556,24 +571,9 @@ msgid "Are you sure you want to delete your account?"
 msgstr "Are you sure you want to delete your account?"
 
 #. js-lingui-explicit-id
-#: src/components/community/Content.tsx:20
-msgid "Total"
-msgstr "Total"
-
-#. js-lingui-explicit-id
-#: src/components/community/Content.tsx:32
-msgid "There are no shared links yet."
-msgstr "There are no shared links yet."
-
-#. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
 msgid "Logo"
 msgstr "Logo"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:36
-msgid "Introduction"
-msgstr "Introduction"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -601,6 +601,21 @@ msgid "Select Language"
 msgstr "Select Language"
 
 #. js-lingui-explicit-id
+#: src/components/common/Header.client.tsx:36
+msgid "Introduction"
+msgstr "Introduction"
+
+#. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:13
+msgid "© 2025 Linkary. All rights reserved."
+msgstr "© 2025 Linkary. All rights reserved."
+
+#. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:28
+msgid "Site created by 🤖 akodm"
+msgstr "Site created by 🤖 akodm"
+
+#. js-lingui-explicit-id
 #: src/components/auth/Heading.tsx:12
 msgid "Sign in to your account"
 msgstr "Sign in to your account"
@@ -610,21 +625,6 @@ msgstr "Sign in to your account"
 #: src/components/auth/Heading.tsx:18
 msgid "Sign in to access more features."
 msgstr "Sign in to access more features."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:18
-msgid "Check the Frequently Asked Questions (FAQ)."
-msgstr "Check the Frequently Asked Questions (FAQ)."
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:42
-msgid "Need more information?"
-msgstr "Need more information?"
-
-#. js-lingui-explicit-id
-#: src/components/about/Infomation.tsx:49
-msgid "Find more details in other sections of the site."
-msgstr "Find more details in other sections of the site."
 
 #. js-lingui-explicit-id
 #: src/components/auth/AsideForm.tsx:47
@@ -640,21 +640,6 @@ msgstr "Login to your account"
 #: src/components/auth/AsideForm.tsx:61
 msgid "Close"
 msgstr "Close"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:19
-msgid "Introduction Banner"
-msgstr "Introduction Banner"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:25
-msgid "What is Linkary"
-msgstr "What is Linkary"
-
-#. js-lingui-explicit-id
-#: src/components/about/Banner.tsx:33
-msgid "Manage your links with ease and keep them trustworthy."
-msgstr "Manage your links with ease and keep them trustworthy."
 
 #. js-lingui-explicit-id
 #: src/components/about/Description.tsx:35
@@ -717,11 +702,31 @@ msgid "Try our features across different environments."
 msgstr "Try our features across different environments."
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:13
-msgid "© 2025 Linkary. All rights reserved."
-msgstr "© 2025 Linkary. All rights reserved."
+#: src/components/about/Infomation.tsx:18
+msgid "Check the Frequently Asked Questions (FAQ)."
+msgstr "Check the Frequently Asked Questions (FAQ)."
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:28
-msgid "Site created by 🤖 akodm"
-msgstr "Site created by 🤖 akodm"
+#: src/components/about/Infomation.tsx:42
+msgid "Need more information?"
+msgstr "Need more information?"
+
+#. js-lingui-explicit-id
+#: src/components/about/Infomation.tsx:49
+msgid "Find more details in other sections of the site."
+msgstr "Find more details in other sections of the site."
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:19
+msgid "Introduction Banner"
+msgstr "Introduction Banner"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:25
+msgid "What is Linkary"
+msgstr "What is Linkary"
+
+#. js-lingui-explicit-id
+#: src/components/about/Banner.tsx:33
+msgid "Manage your links with ease and keep them trustworthy."
+msgstr "Manage your links with ease and keep them trustworthy."

@@ -79,6 +79,11 @@ export const getLinksCommunity = async ({
   const links = await db.query.link.findMany({
     where: and(eq(link.banned, false), eq(link.shared, true)),
     with: {
+      user: {
+        columns: {
+          role: true,
+        },
+      },
       linkSafety: {
         orderBy: desc(linkSafety.createdAt),
         limit: 1,

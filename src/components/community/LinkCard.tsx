@@ -8,6 +8,7 @@ import { useMemo } from 'react';
 import useLinkSafety, { SafetyIcon } from '@/hooks/useLinkSafety';
 import { OctagonAlertIcon, VerifiedIcon, XIcon } from 'lucide-react';
 import Link from 'next/link';
+import BotBadge from 'src/components/community/BotBadge';
 
 interface LinkCardProps {
   link: LinkAndFolderCommunityResponse['data'][number];
@@ -62,13 +63,16 @@ export default function LinkCard({ link }: LinkCardProps) {
             event.currentTarget.onerror = null;
           }}
         />
-        {link?.verified && (
-          <LinkVerifedBadge
-            createdAt={link?.linkSafety?.[0]?.createdAt}
-            trigger={safetyStatus.element}
-            tooltip={safetyStatus.tooltip}
-          />
-        )}
+        <div className="flex justify-center items-center gap-x-1 right-1 top-1 absolute">
+          {link?.verified && (
+            <LinkVerifedBadge
+              createdAt={link?.linkSafety?.[0]?.createdAt}
+              trigger={safetyStatus.element}
+              tooltip={safetyStatus.tooltip}
+            />
+          )}
+          {link?.user?.role === 'bot' && <BotBadge />}
+        </div>
       </div>
       <div className="flex flex-col gap-y-2 min-h-30 p-2">
         <h4 className="text-sm font-medium line-clamp-2">{link.title}</h4>

@@ -1,10 +1,15 @@
 import { db } from '@/db';
 import { users } from '@/db/schemas/users';
+import { setBotURL } from '@/lib/actions/bot';
 import { sentryCaptureException } from '@/lib/utils';
 import { and, isNotNull, lte } from 'drizzle-orm';
 import { NextRequest, NextResponse } from 'next/server';
 
+type Step = 'processing' | 'user-deleted' | 'auto-search' | 'complete';
+
 export async function GET(request: NextRequest) {
+  let step: Step = 'processing';
+
   try {
     if (
       request.headers.get('Authorization') !==
@@ -16,6 +21,8 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    step = 'user-deleted';
+
     const threeMonthsAgo = new Date();
     threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
 
@@ -26,17 +33,26 @@ export async function GET(request: NextRequest) {
       )
       .returning({ deletedId: users.id });
 
-    if (deletedResult.length === 0) {
-      return NextResponse.json(
-        { data: null, message: 'No deleted users to clean up' },
-        { status: 200 },
-      );
+    if (deletedResult.length !== 0) {
+      console.log(`Deleted ${deletedResult.length} users`);
     }
+
+    step = 'auto-search';
+
+    const botURL = await setBotURL();
+
+    if (botURL.data) {
+      console.log(`Added bot URL: ${botURL.data.url}`);
+    } else {
+      console.log(`Failed to add bot URL: ${botURL.reason}`);
+    }
+
+    step = 'complete';
 
     return NextResponse.json(
       {
-        data: deletedResult.map((user) => user.deletedId),
-        message: 'User deleted cron job completed successfully',
+        data: true,
+        message: `Weekly job completed successfully at step: ${step}`,
       },
       { status: 200 },
     );
@@ -44,11 +60,11 @@ export async function GET(request: NextRequest) {
     console.error(err);
 
     sentryCaptureException(err, 'cron', {
-      message: 'User deleted cron job failed',
+      message: `Weekly job failed at step: ${step}`,
     });
 
     return NextResponse.json(
-      { data: false, message: 'User deleted cron job failed' },
+      { data: step, message: `Weekly job failed at step: ${step}` },
       { status: 500 },
     );
   }

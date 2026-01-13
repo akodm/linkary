@@ -18,18 +18,16 @@ export default function LinkVerifedBadge({
   tooltip,
 }: LinkVerifedBadgeProps) {
   return (
-    <div className="flex justify-center items-center right-1 top-1 absolute">
-      <Badge className="bg-white space-x-1">
-        {createdAt && (
-          <span className="text-xs text-neutral-500">
-            {dayjs(createdAt).format('YYYY-MM-DD')}
-          </span>
-        )}
-        <Tooltip>
-          <TooltipTrigger>{trigger}</TooltipTrigger>
-          <TooltipContent>{tooltip}</TooltipContent>
-        </Tooltip>
-      </Badge>
-    </div>
+    <Badge className="bg-white space-x-1">
+      {createdAt && (
+        <span className="text-xs text-neutral-500">
+          {dayjs(createdAt).format('YYYY-MM-DD')}
+        </span>
+      )}
+      <Tooltip>
+        <TooltipTrigger>{trigger}</TooltipTrigger>
+        <TooltipContent>{tooltip}</TooltipContent>
+      </Tooltip>
+    </Badge>
   );
 }

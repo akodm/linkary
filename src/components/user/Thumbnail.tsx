@@ -58,11 +58,13 @@ export default function Thumbnail({ link }: ThumbnailProps) {
           }}
         />
         {link?.verified && (
-          <LinkVerifedBadge
-            createdAt={link?.linkSafety?.[0]?.createdAt}
-            trigger={safetyStatus.element}
-            tooltip={safetyStatus.tooltip}
-          />
+          <div className="flex justify-center items-center right-1 top-1 absolute">
+            <LinkVerifedBadge
+              createdAt={link?.linkSafety?.[0]?.createdAt}
+              trigger={safetyStatus.element}
+              tooltip={safetyStatus.tooltip}
+            />
+          </div>
         )}
       </div>
     );
@@ -87,11 +89,13 @@ export default function Thumbnail({ link }: ThumbnailProps) {
         <LinkIcon className="size-4 md:size-6" />
       </div>
       {link?.verified && (
-        <LinkVerifedBadge
-          createdAt={link?.linkSafety?.[0]?.createdAt}
-          trigger={safetyStatus.element}
-          tooltip={safetyStatus.tooltip}
-        />
+        <div className="flex justify-center items-center right-1 top-1 absolute">
+          <LinkVerifedBadge
+            createdAt={link?.linkSafety?.[0]?.createdAt}
+            trigger={safetyStatus.element}
+            tooltip={safetyStatus.tooltip}
+          />
+        </div>
       )}
     </a>
   );
