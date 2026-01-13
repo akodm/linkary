@@ -257,7 +257,7 @@ export default function UserSideForm({ user }: UserSideFormProps) {
         <hr className="my-4 border-neutral-200" />
         <article
           ref={containerRefFolder}
-          className="flex flex-col h-86 overflow-y-auto scrollbar-hide relative"
+          className="flex flex-col h-56 overflow-y-auto scrollbar-hide relative"
         >
           <div className="flex flex-row justify-between items-center w-full pb-2 sticky top-0 bg-white">
             <h4 className="text-base font-medium">{i18n.t('Folder')}</h4>
