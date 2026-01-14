@@ -14,11 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/components/community/BotBadge.tsx:22
-msgid "This link is added by the bot"
-msgstr "此链接由机器人添加"
-
-#. js-lingui-explicit-id
 #: src/hooks/useFolder.ts:26
 msgid "Folder added successfully"
 msgstr "文件夹添加成功"
@@ -94,6 +89,16 @@ msgid "Failed to delete link"
 msgstr "链接删除失败"
 
 #. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:35
+msgid "Failed to get user data"
+msgstr "获取用户数据失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/Loader.tsx:36
+msgid "Please try reloading the page"
+msgstr "请尝试刷新页面"
+
+#. js-lingui-explicit-id
 #: src/components/community/LinkCard.tsx:32
 #: src/components/user/Thumbnail.tsx:32
 msgid "Unsafe Link"
@@ -121,6 +126,61 @@ msgid "Default Image"
 msgstr "默认图片"
 
 #. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:54
+msgid "Copied to clipboard"
+msgstr "已复制到剪贴板"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:56
+msgid "Failed to copy to clipboard"
+msgstr "复制到剪贴板失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:68
+msgid "Link is not safe"
+msgstr "链接不安全"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:70
+msgid "Completed verification"
+msgstr "验证完成"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:78
+msgid "Failed to verify link"
+msgstr "链接验证失败"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:120
+msgid "Home"
+msgstr "首页"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:146
+msgid "Updated at"
+msgstr "更新日期"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:159
+msgid "Share Link"
+msgstr "分享链接"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:164
+msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
+msgstr "决定是否与其他用户分享此链接。（只有已验证为安全的链接才能分享。）"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:179
+msgid "Verify Link"
+msgstr "验证链接"
+
+#. js-lingui-explicit-id
+#: src/components/user/Viewer.tsx:192
+msgid "Copy Link to clipboard"
+msgstr "复制链接到剪贴板"
+
+#. js-lingui-explicit-id
 #: src/components/user/ListLink.tsx:40
 msgid "Empty Link Title"
 msgstr "链接标题为空"
@@ -137,21 +197,6 @@ msgstr "重命名"
 #: src/components/user/ListLink.tsx:45
 msgid "Delete"
 msgstr "删除"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:35
-msgid "Failed to get user data"
-msgstr "获取用户数据失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Please try reloading the page"
-msgstr "请尝试刷新页面"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "文件夹名称为空"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:87
@@ -268,59 +313,9 @@ msgid "Enter folder name"
 msgstr "输入文件夹名称"
 
 #. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:54
-msgid "Copied to clipboard"
-msgstr "已复制到剪贴板"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:56
-msgid "Failed to copy to clipboard"
-msgstr "复制到剪贴板失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:68
-msgid "Link is not safe"
-msgstr "链接不安全"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:70
-msgid "Completed verification"
-msgstr "验证完成"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:78
-msgid "Failed to verify link"
-msgstr "链接验证失败"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:120
-msgid "Home"
-msgstr "首页"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:146
-msgid "Updated at"
-msgstr "更新日期"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:159
-msgid "Share Link"
-msgstr "分享链接"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:164
-msgid "Decide whether to share this link with other users. (Only links verified as safe can be shared.)"
-msgstr "决定是否与其他用户分享此链接。（只有已验证为安全的链接才能分享。）"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:179
-msgid "Verify Link"
-msgstr "验证链接"
-
-#. js-lingui-explicit-id
-#: src/components/user/Viewer.tsx:192
-msgid "Copy Link to clipboard"
-msgstr "复制链接到剪贴板"
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "文件夹名称为空"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -332,53 +327,6 @@ msgstr "页面未找到"
 #: src/components/not-found/Content.tsx:34
 msgid "Go to home"
 msgstr "返回首页"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "智能链接管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "按文件夹整理链接，一目了然地查看。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "自动缩略图和元数据生成"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "自动为您添加的链接生成缩略图、标题和简短描述。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-msgid "Threat Link Check"
-msgstr "威胁链接检查"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "使用 Google Web Risk API 验证链接是否安全。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "通过 AI 获取个性化的链接建议。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "便捷安全的链接管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
 
 #. js-lingui-explicit-id
 #: src/components/home/ProvidedFunctionCard.tsx:79
@@ -404,6 +352,44 @@ msgstr "提交"
 #: src/components/forms/AIRecommendedForm.tsx:149
 msgid "The score is the confidence score of the result."
 msgstr "分数是结果的置信度分数。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:23
+msgid "Banner"
+msgstr "横幅"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:29
+msgid "Save links and"
+msgstr "保存链接"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:31
+msgid "share them."
+msgstr "并分享。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:39
+msgid "A platform to organize and view your important links at a glance"
+msgstr "一个能系统管理并一目了然查看重要链接的平台"
+
+#. js-lingui-explicit-id
+#: src/components/home/Banner.tsx:51
+#: src/components/home/Banner.tsx:62
+msgid "Get started"
+msgstr "开始使用"
+
+#. js-lingui-explicit-id
+#: src/components/community/Pagination.tsx:141
+#: src/components/community/Pagination.tsx:150
+msgid "Previous"
+msgstr "上一页"
+
+#. js-lingui-explicit-id
+#: src/components/community/Pagination.tsx:207
+#: src/components/community/Pagination.tsx:216
+msgid "Next"
+msgstr "下一页"
 
 #. js-lingui-explicit-id
 #: src/components/faq/Content.tsx:21
@@ -480,74 +466,57 @@ msgstr "翻译由 AI 生成，可能包含轻微的语境不准确性。"
 
 #. js-lingui-explicit-id
 #: src/components/about/Infomation.tsx:23
-#: src/components/common/Footer.tsx:22
+#: src/components/common/Footer.tsx:21
 #: src/components/faq/Content.tsx:94
 msgid "Contact Us"
 msgstr "联系我们"
 
 #. js-lingui-explicit-id
-#: src/components/community/Pagination.tsx:141
-#: src/components/community/Pagination.tsx:150
-msgid "Previous"
-msgstr "上一页"
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "智能链接管理"
 
 #. js-lingui-explicit-id
-#: src/components/community/Pagination.tsx:207
-#: src/components/community/Pagination.tsx:216
-msgid "Next"
-msgstr "下一页"
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "按文件夹整理链接，一目了然地查看。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:23
-msgid "Banner"
-msgstr "横幅"
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "自动缩略图和元数据生成"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:29
-msgid "Save links and"
-msgstr "保存链接"
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "自动为您添加的链接生成缩略图、标题和简短描述。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:31
-msgid "share them."
-msgstr "并分享。"
+#: src/components/home/Description.tsx:36
+msgid "Threat Link Check"
+msgstr "威胁链接检查"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:39
-msgid "A platform to organize and view your important links at a glance"
-msgstr "一个能系统管理并一目了然查看重要链接的平台"
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "使用 Google Web Risk API 验证链接是否安全。"
 
 #. js-lingui-explicit-id
-#: src/components/home/Banner.tsx:51
-#: src/components/home/Banner.tsx:62
-msgid "Get started"
-msgstr "开始使用"
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "通过 AI 获取个性化的链接建议。"
 
 #. js-lingui-explicit-id
-#: src/components/community/Content.tsx:20
-msgid "Total"
-msgstr "总计"
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "便捷安全的链接管理"
 
 #. js-lingui-explicit-id
-#: src/components/community/Content.tsx:32
-msgid "There are no shared links yet."
-msgstr "还没有共享的链接。"
-
-#. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:44
-#: src/components/community/Banner.tsx:16
-msgid "Community"
-msgstr "社区"
-
-#. js-lingui-explicit-id
-#: src/components/community/Banner.tsx:25
-msgid "Explore a variety of verified links."
-msgstr "探索各种已验证的链接。"
-
-#. js-lingui-explicit-id
-#: src/components/community/Banner.tsx:28
-msgid "The list posted in the community is refreshed every hour."
-msgstr "社区中发布的列表每小时刷新一次。"
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "一目了然地查看您保存的所有链接。检查每个链接的安全性，获取个性化链接推荐，让系统自动填充简要信息，方便您查找。"
 
 #. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
@@ -571,9 +540,40 @@ msgid "Are you sure you want to delete your account?"
 msgstr "您确定要删除您的账户吗？"
 
 #. js-lingui-explicit-id
+#: src/components/community/BotBadge.tsx:22
+msgid "This link is added by the bot"
+msgstr "此链接由机器人添加"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:20
+msgid "Total"
+msgstr "总计"
+
+#. js-lingui-explicit-id
+#: src/components/community/Content.tsx:32
+msgid "There are no shared links yet."
+msgstr "还没有共享的链接。"
+
+#. js-lingui-explicit-id
 #: src/components/common/Logo.tsx:21
 msgid "Logo"
 msgstr "标志"
+
+#. js-lingui-explicit-id
+#: src/components/common/Header.client.tsx:44
+#: src/components/community/Banner.tsx:16
+msgid "Community"
+msgstr "社区"
+
+#. js-lingui-explicit-id
+#: src/components/community/Banner.tsx:25
+msgid "Explore a variety of verified links."
+msgstr "探索各种已验证的链接。"
+
+#. js-lingui-explicit-id
+#: src/components/community/Banner.tsx:28
+msgid "The list posted in the community is refreshed every hour."
+msgstr "社区中发布的列表每小时刷新一次。"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -601,19 +601,14 @@ msgid "Select Language"
 msgstr "选择语言"
 
 #. js-lingui-explicit-id
-#: src/components/common/Header.client.tsx:36
-msgid "Introduction"
-msgstr "介绍"
-
-#. js-lingui-explicit-id
 #: src/components/common/Footer.tsx:13
 msgid "© 2025 Linkary. All rights reserved."
 msgstr "© 2025 Linkary. 保留所有权利。"
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:28
-msgid "Site created by 🤖 akodm"
-msgstr "网站由 🤖 akodm 制作"
+#: src/components/common/Header.client.tsx:36
+msgid "Introduction"
+msgstr "介绍"
 
 #. js-lingui-explicit-id
 #: src/components/auth/Heading.tsx:12
