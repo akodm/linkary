@@ -110,7 +110,9 @@ export async function recommendURL(prompt: string[]) {
 export async function autoSearchURL() {
   const response = await tvly.search(
     `
-      Please recommend links related to self-improvement, interesting services, culture, or philosophy
+      This is not a promotion, marketing, or news story, 
+      but rather a link to the latest self-development, IT, 
+      or technology-related content featured on blogs or personal sites.
     `,
     {
       topic: 'general',

@@ -64,7 +64,9 @@ export default function AIRecommendedForm({
             {...form.register('description', {
               required: true,
             })}
-            placeholder={i18n.t('Writing in English improves accuracy.')}
+            placeholder={i18n.t(
+              'Writing in English improves accuracy. (max 100 characters)',
+            )}
             className="resize-none"
           />
         </form>

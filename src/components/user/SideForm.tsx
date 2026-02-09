@@ -124,6 +124,11 @@ export default function UserSideForm({ user }: UserSideFormProps) {
 
   const onAddLink = useCallback(
     (url: string) => {
+      if (!url.startsWith('http')) {
+        toast.error(i18n.t('Please enter a valid URL starting with http'));
+        return;
+      }
+
       startTransition(() => {
         addLink({
           url,
@@ -133,13 +138,22 @@ export default function UserSideForm({ user }: UserSideFormProps) {
         setAddLinkOpen(false);
       });
     },
-    [addLink, selectedFolder],
+    [addLink, i18n, selectedFolder],
   );
 
   const onAiRecommended = useCallback(
     (description: string) => {
       startTransition(async () => {
         try {
+          if (description.length > 100) {
+            toast.error(
+              i18n.t(
+                'Please enter a description with less than 100 characters',
+              ),
+            );
+            return;
+          }
+
           const recommend = await recommendLinkAction({
             prompt: [description],
           });
@@ -378,7 +392,7 @@ export default function UserSideForm({ user }: UserSideFormProps) {
         description={i18n.t('write the URL of the link you want to add')}
         submitText={i18n.t('Add')}
         cancelText={i18n.t('Cancel')}
-        placeholder={i18n.t('Enter link')}
+        placeholder={i18n.t('Enter link (http or https starting with)')}
         open={addLinkOpen}
         setOpen={setAddLinkOpen}
         onSubmit={(data) => onAddLink(data.url)}

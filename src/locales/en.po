@@ -14,36 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:26
-msgid "Folder added successfully"
-msgstr "Folder added successfully"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:29
-msgid "Failed to add folder"
-msgstr "Failed to add folder"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:42
-msgid "Folder updated successfully"
-msgstr "Folder updated successfully"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:45
-msgid "Failed to update folder"
-msgstr "Failed to update folder"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:58
-msgid "Folder deleted successfully"
-msgstr "Folder deleted successfully"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:61
-msgid "Failed to delete folder"
-msgstr "Failed to delete folder"
-
-#. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
 msgid "Link added successfully"
 msgstr "Link added successfully"
@@ -89,14 +59,34 @@ msgid "Failed to delete link"
 msgstr "Failed to delete link"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:35
-msgid "Failed to get user data"
-msgstr "Failed to get user data"
+#: src/hooks/useFolder.ts:26
+msgid "Folder added successfully"
+msgstr "Folder added successfully"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Please try reloading the page"
-msgstr "Please try reloading the page"
+#: src/hooks/useFolder.ts:29
+msgid "Failed to add folder"
+msgstr "Failed to add folder"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:42
+msgid "Folder updated successfully"
+msgstr "Folder updated successfully"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:45
+msgid "Failed to update folder"
+msgstr "Failed to update folder"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:58
+msgid "Folder deleted successfully"
+msgstr "Folder deleted successfully"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:61
+msgid "Failed to delete folder"
+msgstr "Failed to delete folder"
 
 #. js-lingui-explicit-id
 #: src/components/community/LinkCard.tsx:32
@@ -124,6 +114,130 @@ msgstr "Verified Link"
 #: src/components/user/Thumbnail.tsx:84
 msgid "Default Image"
 msgstr "Default Image"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:87
+#: src/components/user/SideForm.tsx:91
+msgid "Default Folder"
+msgstr "Default Folder"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:110
+msgid "New Folder"
+msgstr "New Folder"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:128
+msgid "Please enter a valid URL starting with http"
+msgstr "Please enter a valid URL starting with http"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:150
+msgid "Please enter a description with less than 100 characters"
+msgstr "Please enter a description with less than 100 characters"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:93
+#: src/components/user/SideForm.tsx:163
+msgid "No recommendations found. Writing in English improves accuracy."
+msgstr "No recommendations found. Writing in English improves accuracy."
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:76
+#: src/components/user/SideForm.tsx:170
+msgid "These are the recommended result links."
+msgstr "These are the recommended result links."
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:177
+msgid "Failed to get recommendations"
+msgstr "Failed to get recommendations"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:239
+msgid "Quota"
+msgstr "Quota"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:252
+msgid "Link Inspection"
+msgstr "Link Inspection"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:55
+#: src/components/home/Description.tsx:43
+#: src/components/user/SideForm.tsx:256
+msgid "AI Link Recommendations"
+msgstr "AI Link Recommendations"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:277
+msgid "Folder"
+msgstr "Folder"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:330
+msgid "Link"
+msgstr "Link"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:378
+msgid "About quotas"
+msgstr "About quotas"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:382
+msgid "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
+msgstr "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:391
+msgid "Add Link"
+msgstr "Add Link"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:392
+msgid "write the URL of the link you want to add"
+msgstr "write the URL of the link you want to add"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:173
+#: src/components/user/SideForm.tsx:393
+msgid "Add"
+msgstr "Add"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:153
+#: src/components/forms/AIRecommendedForm.tsx:104
+#: src/components/user/SideForm.tsx:394
+#: src/components/user/SideForm.tsx:405
+msgid "Cancel"
+msgstr "Cancel"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:395
+msgid "Enter link (http or https starting with)"
+msgstr "Enter link (http or https starting with)"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:402
+msgid "Edit Folder"
+msgstr "Edit Folder"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:403
+msgid "write the name of the folder you want to edit"
+msgstr "write the name of the folder you want to edit"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:404
+msgid "Edit"
+msgstr "Edit"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:406
+msgid "Enter folder name"
+msgstr "Enter folder name"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:54
@@ -181,9 +295,9 @@ msgid "Copy Link to clipboard"
 msgstr "Copy Link to clipboard"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "Empty Link Title"
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "Empty Folder Name"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:49
@@ -199,123 +313,19 @@ msgid "Delete"
 msgstr "Delete"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:87
-#: src/components/user/SideForm.tsx:91
-msgid "Default Folder"
-msgstr "Default Folder"
+#: src/components/user/Loader.tsx:35
+msgid "Failed to get user data"
+msgstr "Failed to get user data"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:110
-msgid "New Folder"
-msgstr "New Folder"
+#: src/components/user/Loader.tsx:36
+msgid "Please try reloading the page"
+msgstr "Please try reloading the page"
 
 #. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:91
-#: src/components/user/SideForm.tsx:149
-msgid "No recommendations found. Writing in English improves accuracy."
-msgstr "No recommendations found. Writing in English improves accuracy."
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:74
-#: src/components/user/SideForm.tsx:156
-msgid "These are the recommended result links."
-msgstr "These are the recommended result links."
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:163
-msgid "Failed to get recommendations"
-msgstr "Failed to get recommendations"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:225
-msgid "Quota"
-msgstr "Quota"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:238
-msgid "Link Inspection"
-msgstr "Link Inspection"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:55
-#: src/components/home/Description.tsx:43
-#: src/components/user/SideForm.tsx:242
-msgid "AI Link Recommendations"
-msgstr "AI Link Recommendations"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:263
-msgid "Folder"
-msgstr "Folder"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:316
-msgid "Link"
-msgstr "Link"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:364
-msgid "About quotas"
-msgstr "About quotas"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:368
-msgid "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
-msgstr "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:377
-msgid "Add Link"
-msgstr "Add Link"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:378
-msgid "write the URL of the link you want to add"
-msgstr "write the URL of the link you want to add"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:171
-#: src/components/user/SideForm.tsx:379
-msgid "Add"
-msgstr "Add"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:153
-#: src/components/forms/AIRecommendedForm.tsx:102
-#: src/components/user/SideForm.tsx:380
-#: src/components/user/SideForm.tsx:391
-msgid "Cancel"
-msgstr "Cancel"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:381
-msgid "Enter link"
-msgstr "Enter link"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:388
-msgid "Edit Folder"
-msgstr "Edit Folder"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:389
-msgid "write the name of the folder you want to edit"
-msgstr "write the name of the folder you want to edit"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:390
-msgid "Edit"
-msgstr "Edit"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:392
-msgid "Enter folder name"
-msgstr "Enter folder name"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "Empty Folder Name"
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "Empty Link Title"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -329,29 +339,76 @@ msgid "Go to home"
 msgstr "Go to home"
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "Recommended"
-
-#. js-lingui-explicit-id
 #: src/components/forms/AIRecommendedForm.tsx:57
 msgid "Please describe what you'd like to get recommendations for."
 msgstr "Please describe what you'd like to get recommendations for."
 
 #. js-lingui-explicit-id
 #: src/components/forms/AIRecommendedForm.tsx:67
-msgid "Writing in English improves accuracy."
-msgstr "Writing in English improves accuracy."
+msgid "Writing in English improves accuracy. (max 100 characters)"
+msgstr "Writing in English improves accuracy. (max 100 characters)"
 
 #. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:111
+#: src/components/forms/AIRecommendedForm.tsx:113
 msgid "Submit"
 msgstr "Submit"
 
 #. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:149
+#: src/components/forms/AIRecommendedForm.tsx:151
 msgid "The score is the confidence score of the result."
 msgstr "The score is the confidence score of the result."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "Smart Link Management"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "Organize your links by folders and view them at a glance."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "Automatic Thumbnail & Metadata Generation"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "Automatically generates thumbnails, titles, and short descriptions for your added links."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:36
+msgid "Threat Link Check"
+msgstr "Threat Link Check"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "Verify whether a link is safe using the Google Web Risk API."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "Get personalized link suggestions powered by AI."
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "Convenient and Secure Link Management"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "Recommended"
 
 #. js-lingui-explicit-id
 #: src/components/home/Banner.tsx:23
@@ -472,53 +529,6 @@ msgid "Contact Us"
 msgstr "Contact Us"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "Smart Link Management"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "Organize your links by folders and view them at a glance."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "Automatic Thumbnail & Metadata Generation"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "Automatically generates thumbnails, titles, and short descriptions for your added links."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-msgid "Threat Link Check"
-msgstr "Threat Link Check"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "Verify whether a link is safe using the Google Web Risk API."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "Get personalized link suggestions powered by AI."
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "Convenient and Secure Link Management"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-
-#. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
 msgid "Logout"
 msgstr "Logout"
@@ -540,11 +550,6 @@ msgid "Are you sure you want to delete your account?"
 msgstr "Are you sure you want to delete your account?"
 
 #. js-lingui-explicit-id
-#: src/components/community/BotBadge.tsx:22
-msgid "This link is added by the bot"
-msgstr "This link is added by the bot"
-
-#. js-lingui-explicit-id
 #: src/components/community/Content.tsx:20
 msgid "Total"
 msgstr "Total"
@@ -553,11 +558,6 @@ msgstr "Total"
 #: src/components/community/Content.tsx:32
 msgid "There are no shared links yet."
 msgstr "There are no shared links yet."
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "Logo"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:44
@@ -574,6 +574,16 @@ msgstr "Explore a variety of verified links."
 #: src/components/community/Banner.tsx:28
 msgid "The list posted in the community is refreshed every hour."
 msgstr "The list posted in the community is refreshed every hour."
+
+#. js-lingui-explicit-id
+#: src/components/community/BotBadge.tsx:22
+msgid "This link is added by the bot"
+msgstr "This link is added by the bot"
+
+#. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "Logo"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -601,14 +611,14 @@ msgid "Select Language"
 msgstr "Select Language"
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:13
-msgid "© 2025 Linkary. All rights reserved."
-msgstr "© 2025 Linkary. All rights reserved."
-
-#. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:36
 msgid "Introduction"
 msgstr "Introduction"
+
+#. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:13
+msgid "© 2025 Linkary. All rights reserved."
+msgstr "© 2025 Linkary. All rights reserved."
 
 #. js-lingui-explicit-id
 #: src/components/auth/Heading.tsx:12

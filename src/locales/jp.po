@@ -14,36 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:26
-msgid "Folder added successfully"
-msgstr "フォルダが正常に追加されました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:29
-msgid "Failed to add folder"
-msgstr "フォルダの追加に失敗しました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:42
-msgid "Folder updated successfully"
-msgstr "フォルダが正常に更新されました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:45
-msgid "Failed to update folder"
-msgstr "フォルダの更新に失敗しました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:58
-msgid "Folder deleted successfully"
-msgstr "フォルダが正常に削除されました"
-
-#. js-lingui-explicit-id
-#: src/hooks/useFolder.ts:61
-msgid "Failed to delete folder"
-msgstr "フォルダの削除に失敗しました"
-
-#. js-lingui-explicit-id
 #: src/hooks/useLink.ts:27
 msgid "Link added successfully"
 msgstr "リンクが正常に追加されました"
@@ -89,14 +59,34 @@ msgid "Failed to delete link"
 msgstr "リンクの削除に失敗しました"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:35
-msgid "Failed to get user data"
-msgstr "ユーザーデータの取得に失敗しました"
+#: src/hooks/useFolder.ts:26
+msgid "Folder added successfully"
+msgstr "フォルダが正常に追加されました"
 
 #. js-lingui-explicit-id
-#: src/components/user/Loader.tsx:36
-msgid "Please try reloading the page"
-msgstr "ページを再読み込みしてください"
+#: src/hooks/useFolder.ts:29
+msgid "Failed to add folder"
+msgstr "フォルダの追加に失敗しました"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:42
+msgid "Folder updated successfully"
+msgstr "フォルダが正常に更新されました"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:45
+msgid "Failed to update folder"
+msgstr "フォルダの更新に失敗しました"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:58
+msgid "Folder deleted successfully"
+msgstr "フォルダが正常に削除されました"
+
+#. js-lingui-explicit-id
+#: src/hooks/useFolder.ts:61
+msgid "Failed to delete folder"
+msgstr "フォルダの削除に失敗しました"
 
 #. js-lingui-explicit-id
 #: src/components/community/LinkCard.tsx:32
@@ -124,6 +114,130 @@ msgstr "検証済みリンク"
 #: src/components/user/Thumbnail.tsx:84
 msgid "Default Image"
 msgstr "デフォルト画像"
+
+#. js-lingui-explicit-id
+#: src/components/user/ListFolder.tsx:87
+#: src/components/user/SideForm.tsx:91
+msgid "Default Folder"
+msgstr "デフォルトフォルダ"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:110
+msgid "New Folder"
+msgstr "新しいフォルダ"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:128
+msgid "Please enter a valid URL starting with http"
+msgstr "httpで始まる有効なURLを入力してください"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:150
+msgid "Please enter a description with less than 100 characters"
+msgstr "100文字以内で説明を入力してください"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:93
+#: src/components/user/SideForm.tsx:163
+msgid "No recommendations found. Writing in English improves accuracy."
+msgstr "推奨結果が見つかりませんでした。英語で記述すると精度が向上します。"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:76
+#: src/components/user/SideForm.tsx:170
+msgid "These are the recommended result links."
+msgstr "これらは推奨された結果リンクです。"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:177
+msgid "Failed to get recommendations"
+msgstr "推奨の取得に失敗しました"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:239
+msgid "Quota"
+msgstr "クォータ"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:252
+msgid "Link Inspection"
+msgstr "リンク検査"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:55
+#: src/components/home/Description.tsx:43
+#: src/components/user/SideForm.tsx:256
+msgid "AI Link Recommendations"
+msgstr "AI リンク推薦"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:277
+msgid "Folder"
+msgstr "フォルダ"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:330
+msgid "Link"
+msgstr "リンク"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:378
+msgid "About quotas"
+msgstr "クォータについて"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:382
+msgid "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
+msgstr "各クォータ（リンクチェック、AI リンク推薦）は、月ごとに割り当てられた量まで使用でき、毎月1日にリセットされます。"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:391
+msgid "Add Link"
+msgstr "リンクを追加"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:392
+msgid "write the URL of the link you want to add"
+msgstr "追加したいリンクのURLを入力してください"
+
+#. js-lingui-explicit-id
+#: src/components/forms/AIRecommendedForm.tsx:173
+#: src/components/user/SideForm.tsx:393
+msgid "Add"
+msgstr "追加"
+
+#. js-lingui-explicit-id
+#: src/components/common/UserDropdonw.tsx:153
+#: src/components/forms/AIRecommendedForm.tsx:104
+#: src/components/user/SideForm.tsx:394
+#: src/components/user/SideForm.tsx:405
+msgid "Cancel"
+msgstr "キャンセル"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:395
+msgid "Enter link (http or https starting with)"
+msgstr "リンクを入力（httpまたはhttpsで始める必要があります）"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:402
+msgid "Edit Folder"
+msgstr "フォルダを編集"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:403
+msgid "write the name of the folder you want to edit"
+msgstr "編集するフォルダ名を入力してください"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:404
+msgid "Edit"
+msgstr "編集"
+
+#. js-lingui-explicit-id
+#: src/components/user/SideForm.tsx:406
+msgid "Enter folder name"
+msgstr "フォルダ名を入力"
 
 #. js-lingui-explicit-id
 #: src/components/user/Viewer.tsx:54
@@ -181,9 +295,9 @@ msgid "Copy Link to clipboard"
 msgstr "リンクをクリップボードにコピー"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListLink.tsx:40
-msgid "Empty Link Title"
-msgstr "リンクタイトルなし"
+#: src/components/user/ListFolder.tsx:42
+msgid "Empty Folder Name"
+msgstr "フォルダ名なし"
 
 #. js-lingui-explicit-id
 #: src/components/user/ListFolder.tsx:49
@@ -199,123 +313,19 @@ msgid "Delete"
 msgstr "削除"
 
 #. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:87
-#: src/components/user/SideForm.tsx:91
-msgid "Default Folder"
-msgstr "デフォルトフォルダ"
+#: src/components/user/Loader.tsx:35
+msgid "Failed to get user data"
+msgstr "ユーザーデータの取得に失敗しました"
 
 #. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:110
-msgid "New Folder"
-msgstr "新しいフォルダ"
+#: src/components/user/Loader.tsx:36
+msgid "Please try reloading the page"
+msgstr "ページを再読み込みしてください"
 
 #. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:91
-#: src/components/user/SideForm.tsx:149
-msgid "No recommendations found. Writing in English improves accuracy."
-msgstr "推奨結果が見つかりませんでした。英語で記述すると精度が向上します。"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:74
-#: src/components/user/SideForm.tsx:156
-msgid "These are the recommended result links."
-msgstr "これらは推奨された結果リンクです。"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:163
-msgid "Failed to get recommendations"
-msgstr "推奨の取得に失敗しました"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:225
-msgid "Quota"
-msgstr "クォータ"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:238
-msgid "Link Inspection"
-msgstr "リンク検査"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:55
-#: src/components/home/Description.tsx:43
-#: src/components/user/SideForm.tsx:242
-msgid "AI Link Recommendations"
-msgstr "AI リンク推薦"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:263
-msgid "Folder"
-msgstr "フォルダ"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:316
-msgid "Link"
-msgstr "リンク"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:364
-msgid "About quotas"
-msgstr "クォータについて"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:368
-msgid "Each quota (Link Check, AI Link Recommendations) can be used up to its allotted amount per month and resets on the 1st of every month."
-msgstr "各クォータ（リンクチェック、AI リンク推薦）は、月ごとに割り当てられた量まで使用でき、毎月1日にリセットされます。"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:377
-msgid "Add Link"
-msgstr "リンクを追加"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:378
-msgid "write the URL of the link you want to add"
-msgstr "追加したいリンクのURLを入力してください"
-
-#. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:171
-#: src/components/user/SideForm.tsx:379
-msgid "Add"
-msgstr "追加"
-
-#. js-lingui-explicit-id
-#: src/components/common/UserDropdonw.tsx:153
-#: src/components/forms/AIRecommendedForm.tsx:102
-#: src/components/user/SideForm.tsx:380
-#: src/components/user/SideForm.tsx:391
-msgid "Cancel"
-msgstr "キャンセル"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:381
-msgid "Enter link"
-msgstr "リンクを入力"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:388
-msgid "Edit Folder"
-msgstr "フォルダを編集"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:389
-msgid "write the name of the folder you want to edit"
-msgstr "編集するフォルダ名を入力してください"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:390
-msgid "Edit"
-msgstr "編集"
-
-#. js-lingui-explicit-id
-#: src/components/user/SideForm.tsx:392
-msgid "Enter folder name"
-msgstr "フォルダ名を入力"
-
-#. js-lingui-explicit-id
-#: src/components/user/ListFolder.tsx:42
-msgid "Empty Folder Name"
-msgstr "フォルダ名なし"
+#: src/components/user/ListLink.tsx:40
+msgid "Empty Link Title"
+msgstr "リンクタイトルなし"
 
 #. js-lingui-explicit-id
 #: src/components/not-found/Content.tsx:20
@@ -329,29 +339,76 @@ msgid "Go to home"
 msgstr "ホームに戻る"
 
 #. js-lingui-explicit-id
-#: src/components/home/ProvidedFunctionCard.tsx:79
-msgid "Recommended"
-msgstr "おすすめ"
-
-#. js-lingui-explicit-id
 #: src/components/forms/AIRecommendedForm.tsx:57
 msgid "Please describe what you'd like to get recommendations for."
 msgstr "推奨を受けたい内容を説明してください。"
 
 #. js-lingui-explicit-id
 #: src/components/forms/AIRecommendedForm.tsx:67
-msgid "Writing in English improves accuracy."
-msgstr "英語で記述すると精度が向上します。"
+msgid "Writing in English improves accuracy. (max 100 characters)"
+msgstr "英語で記述すると精度が向上します。（100文字以内）"
 
 #. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:111
+#: src/components/forms/AIRecommendedForm.tsx:113
 msgid "Submit"
 msgstr "送信"
 
 #. js-lingui-explicit-id
-#: src/components/forms/AIRecommendedForm.tsx:149
+#: src/components/forms/AIRecommendedForm.tsx:151
 msgid "The score is the confidence score of the result."
 msgstr "スコアは結果の信頼度スコアです。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:22
+msgid "Smart Link Management"
+msgstr "スマートなリンク管理"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:23
+msgid "Organize your links by folders and view them at a glance."
+msgstr "リンクをフォルダごとに整理して、一目で確認できます。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:29
+msgid "Automatic Thumbnail & Metadata Generation"
+msgstr "自動サムネイルとメタデータ生成"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:44
+#: src/components/home/Description.tsx:30
+msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
+msgstr "追加したリンクのサムネイル、タイトル、簡単な説明を自動生成します。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:36
+msgid "Threat Link Check"
+msgstr "危険リンクの確認"
+
+#. js-lingui-explicit-id
+#: src/components/about/Description.tsx:52
+#: src/components/home/Description.tsx:37
+msgid "Verify whether a link is safe using the Google Web Risk API."
+msgstr "Google Web Risk API を通じてリンクが安全かどうか確認できます。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:44
+msgid "Get personalized link suggestions powered by AI."
+msgstr "AI によって自分に合ったリンクをおすすめしてもらえます。"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:55
+msgid "Convenient and Secure Link Management"
+msgstr "便利で安全なリンク管理"
+
+#. js-lingui-explicit-id
+#: src/components/home/Description.tsx:62
+msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
+msgstr "保存したリンクを一目で確認できます。リンクの安全性をチェックし、パーソナライズされたリンク推薦を受け取り、システムが自動で簡単な詳細を入力して簡単に検索できるようにします。"
+
+#. js-lingui-explicit-id
+#: src/components/home/ProvidedFunctionCard.tsx:79
+msgid "Recommended"
+msgstr "おすすめ"
 
 #. js-lingui-explicit-id
 #: src/components/home/Banner.tsx:23
@@ -472,53 +529,6 @@ msgid "Contact Us"
 msgstr "お問い合わせ"
 
 #. js-lingui-explicit-id
-#: src/components/home/Description.tsx:22
-msgid "Smart Link Management"
-msgstr "スマートなリンク管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:23
-msgid "Organize your links by folders and view them at a glance."
-msgstr "リンクをフォルダごとに整理して、一目で確認できます。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:29
-msgid "Automatic Thumbnail & Metadata Generation"
-msgstr "自動サムネイルとメタデータ生成"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:44
-#: src/components/home/Description.tsx:30
-msgid "Automatically generates thumbnails, titles, and short descriptions for your added links."
-msgstr "追加したリンクのサムネイル、タイトル、簡単な説明を自動生成します。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:36
-msgid "Threat Link Check"
-msgstr "危険リンクの確認"
-
-#. js-lingui-explicit-id
-#: src/components/about/Description.tsx:52
-#: src/components/home/Description.tsx:37
-msgid "Verify whether a link is safe using the Google Web Risk API."
-msgstr "Google Web Risk API を通じてリンクが安全かどうか確認できます。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:44
-msgid "Get personalized link suggestions powered by AI."
-msgstr "AI によって自分に合ったリンクをおすすめしてもらえます。"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:55
-msgid "Convenient and Secure Link Management"
-msgstr "便利で安全なリンク管理"
-
-#. js-lingui-explicit-id
-#: src/components/home/Description.tsx:62
-msgid "View all your saved links at a glance. Check the safety of each link, receive personalized link recommendations, and let the system automatically fill in brief details to make them easier to find."
-msgstr "保存したリンクを一目で確認できます。リンクの安全性をチェックし、パーソナライズされたリンク推薦を受け取り、システムが自動で簡単な詳細を入力して簡単に検索できるようにします。"
-
-#. js-lingui-explicit-id
 #: src/components/common/UserDropdonw.tsx:70
 msgid "Logout"
 msgstr "ログアウト"
@@ -540,11 +550,6 @@ msgid "Are you sure you want to delete your account?"
 msgstr "本当にアカウントを削除しますか？"
 
 #. js-lingui-explicit-id
-#: src/components/community/BotBadge.tsx:22
-msgid "This link is added by the bot"
-msgstr "このリンクはボットによって追加されました"
-
-#. js-lingui-explicit-id
 #: src/components/community/Content.tsx:20
 msgid "Total"
 msgstr "合計"
@@ -553,11 +558,6 @@ msgstr "合計"
 #: src/components/community/Content.tsx:32
 msgid "There are no shared links yet."
 msgstr "まだ共有されたリンクがありません。"
-
-#. js-lingui-explicit-id
-#: src/components/common/Logo.tsx:21
-msgid "Logo"
-msgstr "ロゴ"
 
 #. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:44
@@ -574,6 +574,16 @@ msgstr "様々な検証済みリンクを探索してください。"
 #: src/components/community/Banner.tsx:28
 msgid "The list posted in the community is refreshed every hour."
 msgstr "コミュニティに投稿されたリストは1時間ごとに更新されます。"
+
+#. js-lingui-explicit-id
+#: src/components/community/BotBadge.tsx:22
+msgid "This link is added by the bot"
+msgstr "このリンクはボットによって追加されました"
+
+#. js-lingui-explicit-id
+#: src/components/common/Logo.tsx:21
+msgid "Logo"
+msgstr "ロゴ"
 
 #. js-lingui-explicit-id
 #: src/components/common/LanguageButton.tsx:28
@@ -601,14 +611,14 @@ msgid "Select Language"
 msgstr "言語を選択"
 
 #. js-lingui-explicit-id
-#: src/components/common/Footer.tsx:13
-msgid "© 2025 Linkary. All rights reserved."
-msgstr "© 2025 Linkary. 全ての権利を保有。"
-
-#. js-lingui-explicit-id
 #: src/components/common/Header.client.tsx:36
 msgid "Introduction"
 msgstr "紹介"
+
+#. js-lingui-explicit-id
+#: src/components/common/Footer.tsx:13
+msgid "© 2025 Linkary. All rights reserved."
+msgstr "© 2025 Linkary. 全ての権利を保有。"
 
 #. js-lingui-explicit-id
 #: src/components/auth/Heading.tsx:12

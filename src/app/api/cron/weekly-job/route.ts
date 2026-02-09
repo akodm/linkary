@@ -44,7 +44,7 @@ export async function GET(request: NextRequest) {
     if (botURL.data) {
       console.log(`Added bot URL: ${botURL.data.url}`);
     } else {
-      console.log(`Failed to add bot URL: ${botURL.reason}`);
+      throw new Error(`Failed to add bot URL: ${botURL.reason}`);
     }
 
     step = 'complete';
