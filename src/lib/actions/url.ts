@@ -2,7 +2,7 @@
 
 import ogs from 'open-graph-scraper';
 import { tavily } from '@tavily/core';
-import { uploadImageToVercelBlob } from 'src/lib/utils';
+import { uploadImageToVercelBlob } from 'src/lib/utils.server';
 import dayjs from 'dayjs';
 
 const { TAVILY_API_KEY = '', GOOGLE_API_KEY = '' } = process.env;
