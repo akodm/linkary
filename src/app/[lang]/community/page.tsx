@@ -124,6 +124,8 @@ export const generateMetadata = async ({
   return getMetadata(lang);
 };
 
+export const revalidate = 3600;
+
 export default async function CommunityPage() {
   const response = await fetch(
     `${process.env.API_URL}/api/link?page=1&size=30`,

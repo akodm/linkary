@@ -168,12 +168,6 @@ export default async function RootLayout({
         />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link
-          rel="preload"
-          href="/main-banner.webp"
-          as="image"
-          type="image/webp"
-        />
         <meta name="description" content={manifest.description} />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
