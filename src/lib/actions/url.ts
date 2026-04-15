@@ -1,5 +1,3 @@
-'use server';
-
 import ogs from 'open-graph-scraper';
 import { tavily } from '@tavily/core';
 import { uploadImageToVercelBlob } from 'src/lib/utils.server';
@@ -110,15 +108,13 @@ export async function recommendURL(prompt: string[]) {
 export async function autoSearchURL() {
   const response = await tvly.search(
     `
-      This is not a promotion, marketing, or news story, 
-      but rather a link to the latest self-development, IT, 
-      or technology-related content featured on blogs or personal sites.
+      Please recommend links to the latest IT news, blog posts for self-development, advice for modern people, and emerging web and app services, rather than marketing or PR.
     `,
     {
       topic: 'general',
       searchDepth: 'advanced',
       maxResults: 1,
-      startDate: dayjs().subtract(1, 'week').format('YYYY-MM-DD'),
+      startDate: dayjs().subtract(3, 'days').format('YYYY-MM-DD'),
       endDate: dayjs().format('YYYY-MM-DD'),
     },
   );
