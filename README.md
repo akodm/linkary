@@ -1,120 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Linkary
 
-## Getting Started
+링크를 저장·공유하고, 안전성 검사·메타데이터 수집·AI 추천까지 한곳에서 다루는 웹 앱입니다. 무료로 운영하며, [Next.js](https://nextjs.org)로 만들고 [Vercel](https://vercel.com)에 올리고, 데이터는 [Supabase](https://supabase.com)를 씁니다.
 
-First, run the development server:
+**서비스:** [https://linkary-wheat.vercel.app/ko](https://linkary-wheat.vercel.app/ko)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**더 자세한 내용:** 기능·인프라·개발 정리는 [Notion 문서](https://better-battery-28a.notion.site/Linkary-With-Readdy-AI-246778df989880fe96e2f70a5234939f?pvs=74)에 있습니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 무엇을 하나요
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **링크 저장·공유** — 개인 컬렉션과 공유 흐름
+- **위협 검사** — Google Web Risk API 등으로 링크 안전성 확인
+- **메타데이터·썸네일** — 제목·설명·썸네일 등 링크 정보 자동 수집
+- **AI 링크 추천** — 프롬프트에 맞춰 추천 링크를 받는 흐름
+- **커뮤니티** — 검증을 거친 링크를 공개 피드로 올리는 흐름 (아래 Cron·캐싱과 연결)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 인증
 
-## Learn More
+별도 회원가입 없이 **Google 로그인**만 지원합니다. 부담을 줄이려는 선택입니다.
 
-To learn more about Next.js, take a look at the following resources:
+## PWA·다국어
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**PWA**로 브라우저에서 앱처럼 설치할 수 있고, **여러 언어**를 지원합니다. 언어마다 UI뿐 아니라 웹 앱 매니페스트·메타데이터도 맞춰 두었습니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 인프라와 배경 작업
 
-## Deploy on Vercel
+Next.js·Vercel·Supabase 조합은 배포와 서버리스 작업을 단순하게 가져가기 위해서입니다. Supabase 무료 티어는 **일정 기간 DB 호출이 없으면 프로젝트가 잠시 멈출 수 있어**, **Vercel Cron**으로 **3일마다** 헬스체크 겸 내부 봇을 돌려 DB가 완전히 가만히 있지 않게 했습니다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+그 봇은 **AI 링크 추천**과 이어져, 미리 써 둔 프롬프트에 맞춰 추천 링크를 가져온 뒤 **위협 검사**를 합니다. 통과하면 **공유 처리**되어 커뮤니티에 올라갑니다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 커뮤니티 캐싱
 
-## 모니터링 및 분석
+트래픽이 많다고 가정하고, 커뮤니티 쪽은 **대략 1시간 단위**로 갱신되도록 ISR 재검증을 걸어 두었습니다.
 
-이 프로젝트는 Sentry와 Google Analytics를 통합하여 에러 모니터링과 사용자 분석을 제공합니다.
+## 모니터링·분석
 
-### Sentry 설정
+[Vercel Runtime Logs](https://vercel.com/docs/logs/runtime)는 **보관 기간이 짧아** 장기적으로 에러를 추적하기엔 부족합니다. 그래서 **Sentry**를 붙여 에러·성능 기록을 더 오래 남깁니다.
 
-Sentry는 애플리케이션의 에러를 실시간으로 모니터링하고 추적합니다.
-
-#### 환경 변수 설정
-
-```bash
-# .env.development 또는 .env.production
-NEXT_PUBLIC_SENTRY_DSN=https://your-dsn@sentry.io/your-project
-SENTRY_ORG=your_organization
-SENTRY_PROJECT=your_project
-```
-
-#### 사용법
-
-```typescript
-import * as Sentry from '@sentry/nextjs';
-
-// 에러 발생 시 Sentry로 전송
-try {
-  // 위험한 코드
-} catch (error) {
-  Sentry.captureException(error);
-}
-
-// 커스텀 에러 발생
-throw new Error('사용자 정의 에러 메시지');
-
-// 성능 측정
-Sentry.startSpan(
-  {
-    name: '사용자 액션',
-    op: 'user.action',
-  },
-  async () => {
-    // 측정할 작업
-  },
-);
-```
-
-### Google Analytics 설정
-
-Google Analytics를 통해 사용자 행동과 웹사이트 성능을 분석할 수 있습니다.
-
-#### 환경 변수 설정
-
-```bash
-# .env.development 또는 .env.production
-NEXT_PUBLIC_GA_TAG=G-XXXXXXXXXX
-```
-
-#### 자동 추적
-
-- ✅ **페이지 뷰** - 자동으로 페이지 방문 추적
-- ✅ **사용자 세션** - 사용자별 세션 정보 수집
-- ✅ **성능 메트릭** - Core Web Vitals 자동 수집
-
-#### 커스텀 이벤트 추적
-
-```typescript
-// 커스텀 이벤트 전송
-gtag('event', 'button_click', {
-  event_category: 'engagement',
-  event_label: 'signup_button',
-  value: 1,
-});
-
-// 사용자 속성 설정
-gtag('config', 'G-XXXXXXXXXX', {
-  custom_map: {
-    custom_parameter: 'custom_value',
-  },
-});
-```
-
-### 모니터링 대시보드
-
-- **Sentry**: [https://sentry.io](https://sentry.io) - 에러 및 성능 모니터링
-- **Google Analytics**: [https://analytics.google.com](https://analytics.google.com) - 사용자 행동 분석
+방문·성능 지표는 기본적으로 **[Vercel Analytics](https://vercel.com/docs/analytics)**와 **[Speed Insights](https://vercel.com/docs/speed-insights)**를 쓰고, 필요하면 **Google Analytics**를 선택적으로 함께 씁니다.
