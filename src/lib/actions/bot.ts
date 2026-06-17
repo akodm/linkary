@@ -90,14 +90,14 @@ export const setBotURL = async () => {
     ]);
   });
 
-  if (!response.results.length) {
+  if (!response.result) {
     return { data: null, reason: 'not found search url' };
   }
 
-  const [newLink] = response.results;
+  const newLink = response.result.url;
 
   const findDuplicateLink = await db.query.link.findFirst({
-    where: eq(link.url, newLink.url),
+    where: eq(link.url, newLink),
   });
 
   if (findDuplicateLink) {
@@ -105,7 +105,7 @@ export const setBotURL = async () => {
   }
 
   // 2. GOOGLE API 사용: URL 검증
-  const threatTypes = await verifyURL(newLink.url);
+  const threatTypes = await verifyURL(newLink);
 
   // GOOGLE API 사용량 업데이트
   await db.transaction(async (tx) => {
@@ -134,18 +134,18 @@ export const setBotURL = async () => {
   if (threatTypes.length > 0) {
     return {
       data: null,
-      reason: `unsafe url: ${newLink.url}, threat types: ${threatTypes.join(', ')}`,
+      reason: `unsafe url: ${newLink}, threat types: ${threatTypes.join(', ')}`,
     };
   }
 
   // 3. 스크래핑 (외부 라이브러리 사용, API 사용량 카운트 안 함)
-  const { title, description, image } = await scrapeURL(newLink.url);
+  const { title, description, image } = await scrapeURL(newLink);
 
   // 4. 링크 생성 및 안전 상태 설정
   const [addLink] = await db
     .insert(link)
     .values({
-      url: newLink.url,
+      url: newLink,
       title,
       description,
       image: image.url,
